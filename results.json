@@ -1,0 +1,2153 @@
+Quickblader
+Follower
+[
+    {
+        "type": "Storm"
+    }
+]
+Penguin Guardian
+Follower
+[
+    {
+        "type": "Ward"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Greatshield",
+                        "_stopIndex": 3
+                    }
+                ],
+                "destination": [
+                    "your",
+                    "hand",
+                    ".",
+                    "Rally",
+                    "(",
+                    "5",
+                    ")",
+                    ":",
+                    "Gain",
+                    "+",
+                    "2",
+                    "/",
+                    "+",
+                    "2",
+                    "."
+                ]
+            }
+        ]
+    }
+]
+Kitty Sergeant
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Enhance",
+                "cost": "6",
+                "effects": [
+                    {
+                        "type": "Summon",
+                        "effects": [
+                            {
+                                "type": "SummonUnit",
+                                "quantifer": "a",
+                                "unitName": "Castle Guardian",
+                                "_stopIndex": 4
+                            },
+                            {
+                                "type": "SummonUnit",
+                                "quantifer": "a",
+                                "unitName": "Blitz Lancer",
+                                "_stopIndex": 3
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+Morgenstern Maid
+Follower
+wtf
+['follower', '.', 'Rally', '(', '10', ')', ':', 'Deal', '2', 'damage', 'to', 'all', 'enemy', 'followers', '.']
+[
+    {
+        "type": "Rush"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Deal",
+                "effects": {
+                    "amount": "2",
+                    "targets": "follower",
+                    "times": 1,
+                    "and": {},
+                    "quantifer": "this"
+                }
+            }
+        ]
+    }
+]
+Deep-Sea Scout
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Gilded Boots",
+                        "_stopIndex": 4
+                    }
+                ],
+                "destination": [
+                    "your",
+                    "hand",
+                    ".",
+                    "If",
+                    "you",
+                    "'",
+                    "ve",
+                    "fused",
+                    "or",
+                    "played",
+                    "at",
+                    "least",
+                    "7",
+                    "Loot",
+                    "cards",
+                    "this",
+                    "match",
+                    ",",
+                    "put",
+                    "a",
+                    "Dread",
+                    "Pirate",
+                    "'",
+                    "s",
+                    "Flag",
+                    "into",
+                    "your",
+                    "hand",
+                    "instead",
+                    ".",
+                    "\n"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "Whenever",
+        "effect": [
+            "Whenever",
+            "you",
+            "play"
+        ]
+    }
+]
+Adherent of Hollowness
+Follower
+[]
+Bumpkin Recruit
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": []
+    },
+    {
+        "type": "Last",
+        "effects": []
+    }
+]
+Brave Vanguard
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "If",
+                "effects": [
+                    "there",
+                    "is",
+                    "at",
+                    "least",
+                    "1",
+                    "enemy",
+                    "follower",
+                    "in",
+                    "play",
+                    ",",
+                    "gain",
+                    "Rush",
+                    ".",
+                    "\n"
+                ]
+            }
+        ]
+    }
+]
+Suave Bandit
+Follower
+[
+    {
+        "type": "Bane"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Glittering Gold",
+                        "_stopIndex": 4
+                    }
+                ],
+                "destination": [
+                    "your",
+                    "hand",
+                    "."
+                ]
+            }
+        ]
+    }
+]
+Amerro, Spear Knight
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "If",
+                "effects": [
+                    "any",
+                    "other",
+                    "allied",
+                    "Heroic",
+                    "followers",
+                    "are",
+                    "in",
+                    "play",
+                    ",",
+                    "gain",
+                    "+",
+                    "1",
+                    "/",
+                    "+",
+                    "0",
+                    "and",
+                    "Storm",
+                    "."
+                ]
+            }
+        ]
+    }
+]
+Amerro, Spear Knight
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "If",
+                "effects": [
+                    "any",
+                    "other",
+                    "allied",
+                    "Heroic",
+                    "followers",
+                    "are",
+                    "in",
+                    "play",
+                    ",",
+                    "gain",
+                    "+",
+                    "1",
+                    "/",
+                    "+",
+                    "0",
+                    "and",
+                    "Storm",
+                    "."
+                ]
+            }
+        ]
+    }
+]
+Princess Merveille
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Enhance",
+                "cost": "6",
+                "effects": [
+                    {
+                        "type": "Gain",
+                        "effects": [
+                            {
+                                "operation": "+",
+                                "amount": "2"
+                            },
+                            {
+                                "operation": "+",
+                                "amount": "2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+Unbridled Fury
+Spell
+[
+    [
+        {
+            "type": "Deal",
+            "effects": {
+                "amount": "X",
+                "targets": "follower",
+                "times": 1,
+                "and": {},
+                "quantifer": "an",
+                "user": "enemy"
+            }
+        }
+    ]
+]
+Serration Wave
+Spell
+wtf
+['follower', '.', '\n']
+[
+    [
+        {
+            "type": "Deal",
+            "effects": {
+                "amount": "3",
+                "targets": "enemy",
+                "times": 1,
+                "and": {},
+                "quantifer": "a",
+                "user": "random"
+            }
+        }
+    ],
+    [
+        {
+            "type": "If",
+            "effects": [
+                "there",
+                "are",
+                "any",
+                "evolved",
+                "allied",
+                "followers",
+                "in",
+                "play",
+                ",",
+                "deal",
+                "3",
+                "damage",
+                "to",
+                "2",
+                "random",
+                "enemy",
+                "followers",
+                "instead",
+                ".",
+                "\n"
+            ]
+        }
+    ],
+    [
+        {
+            "type": "Enhance",
+            "cost": "3",
+            "effects": [
+                {
+                    "type": "Deal",
+                    "effects": {
+                        "amount": "6",
+                        "targets": "",
+                        "times": 1,
+                        "and": {},
+                        "debug": [
+                            "6",
+                            "damage",
+                            "instead",
+                            "."
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    {
+        "type": "Enhance",
+        "cost": "3",
+        "effects": [
+            {
+                "type": "Deal",
+                "effects": {
+                    "amount": "6",
+                    "targets": "",
+                    "times": 1,
+                    "and": {},
+                    "debug": [
+                        "6",
+                        "damage",
+                        "instead",
+                        "."
+                    ]
+                }
+            }
+        ]
+    }
+]
+Return from the Brink
+Spell
+[
+    []
+]
+Ultimate Hollow
+Spell
+[
+    [
+        {
+            "type": "Deal",
+            "effects": {
+                "amount": "2",
+                "targets": "follower",
+                "times": 1,
+                "and": {},
+                "quantifer": "an",
+                "user": "enemy"
+            }
+        }
+    ],
+    [
+        {
+            "type": "If",
+            "effects": [
+                "you",
+                "'",
+                "ve",
+                "fused",
+                "or",
+                "played",
+                "at",
+                "least",
+                "4",
+                "other",
+                "Loot",
+                "cards",
+                "this",
+                "match",
+                ",",
+                "deal",
+                "4",
+                "damage",
+                "instead",
+                "and",
+                "restore",
+                "4",
+                "defense",
+                "to",
+                "your",
+                "leader",
+                "."
+            ]
+        }
+    ]
+]
+Night on the Town
+Spell
+[
+    [
+        {
+            "type": "Deal",
+            "effects": {
+                "amount": "3",
+                "targets": "follower",
+                "times": 1,
+                "and": {},
+                "quantifer": "an",
+                "user": "enemy"
+            }
+        }
+    ],
+    [
+        {
+            "type": "Put",
+            "effects": [
+                {
+                    "type": "SummonUnit",
+                    "quantifer": "a",
+                    "unitName": "Glittering Gold",
+                    "_stopIndex": 4
+                }
+            ],
+            "destination": [
+                "your",
+                "hand",
+                ".",
+                "If",
+                "you",
+                "have",
+                "more",
+                "evolution",
+                "points",
+                "than",
+                "your",
+                "opponent",
+                ",",
+                "subtract",
+                "1",
+                "from",
+                "its",
+                "cost",
+                ".",
+                "(",
+                "You",
+                "have",
+                "0",
+                "evolution",
+                "points",
+                "on",
+                "turns",
+                "you",
+                "are",
+                "unable",
+                "to",
+                "evolve",
+                ".",
+                ")"
+            ]
+        }
+    ]
+]
+Oathless Knight
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Summon",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Knight",
+                        "_stopIndex": 3
+                    }
+                ]
+            }
+        ]
+    }
+]
+Kunoichi Trainee
+Follower
+[
+    {
+        "type": "Ambush"
+    }
+]
+Chivalrous Bandit
+Follower
+[
+    {
+        "type": "Rush"
+    }
+]
+Front Desk Frog
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Glittering Gold",
+                        "_stopIndex": 4
+                    }
+                ],
+                "destination": [
+                    "your",
+                    "hand",
+                    ".",
+                    "Then",
+                    ",",
+                    "if",
+                    "at",
+                    "least",
+                    "3",
+                    "Glittering",
+                    "Golds",
+                    "have",
+                    "been",
+                    "added",
+                    "to",
+                    "your",
+                    "hand",
+                    "this",
+                    "match",
+                    ",",
+                    "evolve",
+                    "this",
+                    "follower",
+                    "."
+                ]
+            }
+        ]
+    }
+]
+Illustrious Thief
+Follower
+[
+    {
+        "type": "Ambush"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Gilded Boots",
+                        "_stopIndex": 4
+                    }
+                ],
+                "destination": [
+                    "your",
+                    "hand",
+                    "."
+                ]
+            }
+        ]
+    }
+]
+Lyrala, Luminous Cleric
+Follower
+wtf
+['If', 'any', 'allied', 'Commander', 'cards', 'are', 'in', 'play', ',', 'give', 'your', 'leader', 'the', 'following', 'effect', ':', 'The', 'next', 'time', 'your', 'leader', 'takes', 'damage', ',', 'reduce', 'that', 'damage', 'to', '0', '.']
+[
+    {
+        "type": "Ward"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Deal",
+                "effects": {
+                    "amount": "2",
+                    "targets": ".",
+                    "times": 1,
+                    "and": {},
+                    "quantifer": "your",
+                    "user": "leader"
+                }
+            }
+        ]
+    }
+]
+Flame Soldier
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Deal",
+                "effects": {
+                    "amount": "1",
+                    "targets": "follower",
+                    "times": 1,
+                    "and": {},
+                    "quantifer": "an",
+                    "user": "enemy"
+                }
+            },
+            {
+                "type": "If",
+                "effects": [
+                    "any",
+                    "damaged",
+                    "allied",
+                    "followers",
+                    "are",
+                    "in",
+                    "play",
+                    ",",
+                    "deal",
+                    "2",
+                    "damage",
+                    "instead",
+                    "and",
+                    "then",
+                    "deal",
+                    "2",
+                    "damage",
+                    "to",
+                    "the",
+                    "enemy",
+                    "leader",
+                    "."
+                ]
+            }
+        ]
+    }
+]
+Resplendent Knight
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": []
+    }
+]
+Wandering Knight
+Follower
+[
+    {
+        "type": "Rush"
+    },
+    {
+        "type": "Last",
+        "effects": [
+            {
+                "type": "Summon",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Knight",
+                        "_stopIndex": 3
+                    }
+                ]
+            }
+        ]
+    }
+]
+Luminous Lancer
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Summon",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Knight",
+                        "_stopIndex": 3
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "Enhance",
+        "cost": "4",
+        "effects": []
+    },
+    {
+        "type": "Whenever",
+        "effect": [
+            "Whenever",
+            "an",
+            "allied"
+        ]
+    }
+]
+Spellscourger
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Deal",
+                "effects": {
+                    "amount": "2",
+                    "targets": "enemy",
+                    "times": 1,
+                    "and": {},
+                    "quantifer": "a",
+                    "user": "random"
+                }
+            }
+        ]
+    }
+]
+Tidal Gunner
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Gilded Goblet",
+                        "_stopIndex": 4
+                    }
+                ],
+                "destination": [
+                    "your",
+                    "hand",
+                    ".",
+                    "If",
+                    "you",
+                    "'",
+                    "ve",
+                    "fused",
+                    "or",
+                    "played",
+                    "at",
+                    "least",
+                    "7",
+                    "Loot",
+                    "cards",
+                    "this",
+                    "match",
+                    ",",
+                    "put",
+                    "a",
+                    "Dread",
+                    "Pirate",
+                    "'",
+                    "s",
+                    "Flag",
+                    "into",
+                    "your",
+                    "hand",
+                    "instead",
+                    ".",
+                    "\n"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "Whenever",
+        "effect": [
+            "Whenever",
+            "you",
+            "play"
+        ]
+    }
+]
+Arsène Lupin
+Follower
+[
+    {
+        "type": "Ambush"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Gilded Necklace",
+                        "_stopIndex": 4
+                    }
+                ],
+                "destination": [
+                    "your",
+                    "hand",
+                    ".",
+                    "Rally",
+                    "(",
+                    "15",
+                    ")",
+                    ":",
+                    "If",
+                    "your",
+                    "opponent",
+                    "has",
+                    "at",
+                    "least",
+                    "1",
+                    "evolution",
+                    "point",
+                    ",",
+                    "use",
+                    "1",
+                    "of",
+                    "them",
+                    "and",
+                    "recover",
+                    "1",
+                    "evolution",
+                    "point",
+                    ".",
+                    "(",
+                    "You",
+                    "have",
+                    "0",
+                    "evolution",
+                    "points",
+                    "on",
+                    "turns",
+                    "you",
+                    "are",
+                    "unable",
+                    "to",
+                    "evolve",
+                    ".",
+                    ")"
+                ]
+            }
+        ]
+    }
+]
+Swiftspeed Quickblader
+Follower
+[
+    {
+        "type": "Storm"
+    }
+]
+Steeled Luminous Knight
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Deal",
+                "effects": {
+                    "amount": "1",
+                    "targets": "follower",
+                    "times": 1,
+                    "and": {
+                        "amount": "1",
+                        "user": "enemy",
+                        "targets": "leader",
+                        "times": 1
+                    },
+                    "quantifer": "an",
+                    "user": "enemy"
+                }
+            }
+        ]
+    }
+]
+Taketsumi, Aconite Paladin
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Hero of the Hunt",
+                        "_stopIndex": 6
+                    }
+                ],
+                "destination": [
+                    "your",
+                    "hand",
+                    ".",
+                    "Rally",
+                    "(",
+                    "10",
+                    ")",
+                    ":",
+                    "Recover",
+                    "1",
+                    "evolution",
+                    "point",
+                    "."
+                ]
+            }
+        ]
+    }
+]
+Haggler's Gambit
+Spell
+[
+    [],
+    [
+        {
+            "type": "Put",
+            "effects": [
+                {
+                    "type": "SummonUnit",
+                    "quantifer": "a",
+                    "unitName": "Gilded Boots",
+                    "_stopIndex": 4
+                }
+            ],
+            "destination": [
+                "your",
+                "hand",
+                "."
+            ]
+        }
+    ]
+]
+Shuriken Jutsu
+Spell
+[
+    [
+        {
+            "type": "Destroy",
+            "effects": {
+                "quantifier": "an",
+                "user": "enemy",
+                "targets": "follower"
+            }
+        }
+    ],
+    [
+        {
+            "type": "If",
+            "effects": [
+                "Ambush",
+                "is",
+                "active",
+                "for",
+                "any",
+                "allied",
+                "followers",
+                "in",
+                "play",
+                ",",
+                "banish",
+                "the",
+                "enemy",
+                "follower",
+                "instead",
+                "."
+            ]
+        }
+    ]
+]
+Ninja Onslaught
+Spell
+wtf
+['follower', '.', 'Do', 'this', '1', 'time', '.', 'Draw', 'a', 'card', '.', '\n']
+[
+    [
+        {
+            "type": "Deal",
+            "effects": {
+                "amount": "2",
+                "targets": "enemy",
+                "times": 1,
+                "and": {},
+                "quantifer": "a",
+                "user": "random"
+            }
+        }
+    ],
+    []
+]
+Ascetic Knight
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Summon",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Heavy Knight",
+                        "_stopIndex": 4
+                    }
+                ]
+            }
+        ]
+    }
+]
+Hermit of Usurpation
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": []
+    }
+]
+Heavy Warrior
+Follower
+[
+    {
+        "type": "Ward"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Enhance",
+                "cost": "5",
+                "effects": [
+                    {
+                        "type": "Gain",
+                        "effects": [
+                            {
+                                "operation": "+",
+                                "amount": "2"
+                            },
+                            {
+                                "operation": "+",
+                                "amount": "2"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Deal",
+                        "effects": {
+                            "amount": "3",
+                            "targets": "follower",
+                            "times": 1,
+                            "and": {
+                                "amount": "3",
+                                "user": "enemy",
+                                "targets": "leader",
+                                "times": 1
+                            },
+                            "quantifer": "an",
+                            "user": "enemy"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
+Masterful Musician
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Glittering Gold",
+                        "_stopIndex": 4
+                    }
+                ],
+                "destination": [
+                    "your",
+                    "hand",
+                    ".",
+                    "Then",
+                    ",",
+                    "if",
+                    "at",
+                    "least",
+                    "3",
+                    "Glittering",
+                    "Golds",
+                    "have",
+                    "been",
+                    "added",
+                    "to",
+                    "your",
+                    "hand",
+                    "this",
+                    "match",
+                    ",",
+                    "gain",
+                    "Storm",
+                    ".",
+                    "\n"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "Whenever",
+        "effect": [
+            "Whenever",
+            "you",
+            "play"
+        ]
+    }
+]
+Masterful Musician
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Glittering Gold",
+                        "_stopIndex": 4
+                    }
+                ],
+                "destination": [
+                    "your",
+                    "hand",
+                    ".",
+                    "Then",
+                    ",",
+                    "if",
+                    "at",
+                    "least",
+                    "3",
+                    "Glittering",
+                    "Golds",
+                    "have",
+                    "been",
+                    "added",
+                    "to",
+                    "your",
+                    "hand",
+                    "this",
+                    "match",
+                    ",",
+                    "gain",
+                    "Storm",
+                    ".",
+                    "\n"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "Whenever",
+        "effect": [
+            "Whenever",
+            "you",
+            "play"
+        ]
+    }
+]
+Radiant Luminous Mage
+Follower
+[]
+Ironwrought Defender
+Follower
+[
+    {
+        "type": "Ward"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Gain",
+                "effects": [
+                    {}
+                ]
+            }
+        ]
+    }
+]
+Katze, Lady Thief
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "type": "Effect",
+                        "quantifer": "a",
+                        "unitName": "",
+                        "_stopIndex": 9
+                    }
+                ],
+                "destination": [
+                    "your",
+                    "hand",
+                    "."
+                ]
+            }
+        ]
+    }
+]
+Storm-Wracked First Mate
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Gilded Necklace",
+                        "_stopIndex": 4
+                    }
+                ],
+                "destination": [
+                    "your",
+                    "hand",
+                    ".",
+                    "If",
+                    "you",
+                    "'",
+                    "ve",
+                    "fused",
+                    "or",
+                    "played",
+                    "at",
+                    "least",
+                    "7",
+                    "Loot",
+                    "cards",
+                    "this",
+                    "match",
+                    ",",
+                    "put",
+                    "a",
+                    "Dread",
+                    "Pirate",
+                    "'",
+                    "s",
+                    "Flag",
+                    "into",
+                    "your",
+                    "hand",
+                    "instead",
+                    ".",
+                    "\n"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "Whenever",
+        "effect": [
+            "Whenever",
+            "you",
+            "play"
+        ]
+    }
+]
+Avant Lord
+Follower
+[
+    {
+        "type": "Ward"
+    },
+    {
+        "type": "Whenever",
+        "effect": [
+            "Whenever",
+            "an",
+            "allied"
+        ]
+    }
+]
+Kagemitsu, Lost Samurai
+Follower
+[
+    {
+        "type": "Last",
+        "effects": []
+    }
+]
+Octrice, Hollow Usurpation
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": []
+    },
+    {
+        "type": "Fanfare",
+        "effects": []
+    },
+    {
+        "type": "Fanfare",
+        "effects": []
+    }
+]
+Mars, Belligerent Flame
+Follower
+[
+    {
+        "type": "Bane"
+    }
+]
+Opulent Strategist
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": []
+    }
+]
+Forge Weaponry
+Spell
+[
+    [],
+    []
+]
+White General
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": []
+    }
+]
+Floral Fencer
+Follower
+[]
+Mach Knight
+Follower
+[
+    {
+        "type": "Storm"
+    }
+]
+Leopard Grappler
+Follower
+[
+    {
+        "type": "Rush"
+    }
+]
+Jiemon, Thief Lord
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Glittering Gold",
+                        "_stopIndex": 4
+                    }
+                ],
+                "destination": [
+                    "your",
+                    "hand",
+                    "and",
+                    "subtract",
+                    "1",
+                    "from",
+                    "its",
+                    "cost",
+                    ".",
+                    "Then",
+                    ",",
+                    "if",
+                    "at",
+                    "least",
+                    "3",
+                    "Glittering",
+                    "Golds",
+                    "have",
+                    "been",
+                    "added",
+                    "to",
+                    "your",
+                    "hand",
+                    "this",
+                    "match",
+                    ",",
+                    "give",
+                    "your",
+                    "leader",
+                    "the",
+                    "following",
+                    "effect",
+                    ":",
+                    "Whenever",
+                    "you",
+                    "play",
+                    "a",
+                    "Glittering",
+                    "Gold",
+                    ",",
+                    "deal",
+                    "2",
+                    "damage",
+                    "to",
+                    "all",
+                    "enemy",
+                    "followers",
+                    "and",
+                    "then",
+                    "1",
+                    "damage",
+                    "to",
+                    "the",
+                    "enemy",
+                    "leader",
+                    ".",
+                    "(",
+                    "This",
+                    "effect",
+                    "is",
+                    "not",
+                    "stackable",
+                    "and",
+                    "lasts",
+                    "for",
+                    "the",
+                    "rest",
+                    "of",
+                    "the",
+                    "match",
+                    ".",
+                    ")"
+                ]
+            }
+        ]
+    }
+]
+Valiant Fencer
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Enhance",
+                "cost": "7",
+                "effects": []
+            }
+        ]
+    }
+]
+Barbaros, Briny Convict
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Dread Pirate ' s Flag",
+                        "_stopIndex": 7
+                    }
+                ],
+                "destination": [
+                    "your",
+                    "hand",
+                    ".",
+                    "If",
+                    "you",
+                    "'",
+                    "ve",
+                    "fused",
+                    "or",
+                    "played",
+                    "at",
+                    "least",
+                    "7",
+                    "Loot",
+                    "cards",
+                    "this",
+                    "match",
+                    ",",
+                    "recover",
+                    "3",
+                    "play",
+                    "points",
+                    ".",
+                    "\n"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Enhance",
+                "cost": "7",
+                "effects": [
+                    {
+                        "type": "Gain",
+                        "effects": [
+                            {}
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+Cannon Volley
+Spell
+[
+    [
+        {
+            "type": "Deal",
+            "effects": {
+                "amount": "10",
+                "targets": "follower",
+                "times": 1,
+                "and": {},
+                "quantifer": "an",
+                "user": "enemy"
+            }
+        }
+    ],
+    []
+]
+Royal Banner
+Amulet
+[
+    {
+        "type": "Fanfare",
+        "effects": []
+    },
+    {
+        "type": "Whenever",
+        "effect": [
+            "Whenever",
+            "an",
+            "allied"
+        ]
+    }
+]
+Ninja Master
+Follower
+[
+    {
+        "type": "Ambush"
+    }
+]
+Sword General
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Summon",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "4",
+                        "unitName": "Knights",
+                        "_stopIndex": 3
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "Whenever",
+        "effect": [
+            "Whenever",
+            "an",
+            "allied"
+        ]
+    }
+]
+Windslasher
+Follower
+[
+    {
+        "type": "Rush"
+    },
+    {
+        "type": "Fanfare",
+        "effects": []
+    }
+]
+Strategic Commander
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": []
+    }
+]
+Aurelia, Glorious Saber
+Follower
+[
+    {
+        "type": "Ward"
+    },
+    {
+        "type": "Fanfare",
+        "effects": []
+    }
+]
+Aurelia, Glorious Saber
+Follower
+[
+    {
+        "type": "Ward"
+    },
+    {
+        "type": "Fanfare",
+        "effects": []
+    }
+]
+General Maximus
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "type": "Effect",
+                        "quantifer": "a",
+                        "unitName": "",
+                        "_stopIndex": 8
+                    },
+                    {
+                        "type": "Effect",
+                        "quantifer": "a",
+                        "unitName": "",
+                        "_stopIndex": 6
+                    }
+                ],
+                "destination": [
+                    "and",
+                    "1",
+                    "-",
+                    "play",
+                    "-",
+                    "point",
+                    "Swordcraft",
+                    "follower",
+                    "from",
+                    "your",
+                    "deck",
+                    "into",
+                    "play",
+                    ".",
+                    "Give",
+                    "them",
+                    "+",
+                    "0",
+                    "/",
+                    "+",
+                    "1",
+                    "and",
+                    "Rush",
+                    "."
+                ]
+            }
+        ]
+    }
+]
+Heroic Entry
+Spell
+[
+    [
+        {
+            "type": "Put",
+            "effects": [
+                {
+                    "type": "Effect",
+                    "quantifer": "2",
+                    "unitName": "",
+                    "_stopIndex": 9
+                }
+            ],
+            "destination": [
+                "your",
+                "hand",
+                ".",
+                "Then",
+                "deal",
+                "X",
+                "damage",
+                "to",
+                "all",
+                "enemy",
+                "followers",
+                ".",
+                "X",
+                "equals",
+                "the",
+                "number",
+                "of",
+                "Heroic",
+                "followers",
+                "in",
+                "your",
+                "hand",
+                ".",
+                "\n"
+            ]
+        }
+    ],
+    [
+        {
+            "type": "If",
+            "effects": [
+                "any",
+                "damaged",
+                "allied",
+                "followers",
+                "are",
+                "in",
+                "play",
+                ",",
+                "summon",
+                "a",
+                "Mach",
+                "Knight",
+                "."
+            ]
+        }
+    ]
+]
+Musketeers' Vow
+Spell
+[
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+        {
+            "type": "Enhance",
+            "cost": "8",
+            "effects": [
+                {
+                    "type": "Summon",
+                    "effects": [
+                        {
+                            "type": "Effect",
+                            "quantifer": "all",
+                            "unitName": "",
+                            "_stopIndex": 4
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    {
+        "type": "Enhance",
+        "cost": "8",
+        "effects": [
+            {
+                "type": "Summon",
+                "effects": [
+                    {
+                        "type": "Effect",
+                        "quantifer": "all",
+                        "unitName": "",
+                        "_stopIndex": 4
+                    }
+                ]
+            }
+        ]
+    }
+]
+Calculating Captain
+Follower
+[
+    {
+        "type": "Ward"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Summon",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Buccaneer",
+                        "_stopIndex": 3
+                    },
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Cannoneer",
+                        "_stopIndex": 2
+                    }
+                ]
+            }
+        ]
+    }
+]
+Sage Commander
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": []
+    }
+]
+War Hero
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Destroy",
+                "effects": {
+                    "quantifier": "an",
+                    "user": "enemy",
+                    "targets": "follower"
+                }
+            }
+        ]
+    }
+]
+Warden of Honor
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": []
+    },
+    {
+        "type": "Last",
+        "effects": []
+    },
+    {
+        "type": "Ward"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Summon",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Warden of Honor",
+                        "_stopIndex": 5
+                    }
+                ]
+            }
+        ]
+    }
+]
+Royal Fortress
+Follower
+[
+    {
+        "type": "Storm"
+    }
+]
+Hasty Axeman
+Follower
+[
+    {
+        "type": "Rush"
+    },
+    {
+        "type": "Whenever",
+        "effect": [
+            "Whenever",
+            "an",
+            "enemy"
+        ]
+    }
+]
+Claymore Master
+Follower
+[
+    {
+        "type": "Storm"
+    }
+]
+Noble Shieldmaiden
+Follower
+[
+    {
+        "type": "Accelerate",
+        "cost": "2",
+        "effects": [
+            {
+                "type": "Summon",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Steelclad Knight",
+                        "_stopIndex": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "Ward"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Summon",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Frontguard General",
+                        "_stopIndex": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "Last",
+        "effects": [
+            {
+                "type": "Summon",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Fortress Guard",
+                        "_stopIndex": 4
+                    }
+                ]
+            }
+        ]
+    }
+]
+Radiel, Valorous Enforcer
+Follower
+[
+    {
+        "type": "Storm"
+    },
+    {
+        "type": "Ward"
+    },
+    {
+        "type": "Fanfare",
+        "effects": []
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Banish",
+                "effects": {
+                    "quantifier": "an",
+                    "user": "enemy",
+                    "targets": "follower"
+                }
+            }
+        ]
+    }
+]
+Legendary Sword Commander
+Follower
+[
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Summon",
+                "effects": [
+                    {
+                        "type": "SummonUnit",
+                        "quantifer": "a",
+                        "unitName": "Legendary Sword",
+                        "_stopIndex": 4
+                    }
+                ]
+            }
+        ]
+    }
+]
+Violent Soldier
+Follower
+[
+    {
+        "type": "Accelerate",
+        "cost": "3",
+        "effects": [
+            {
+                "type": "Deal",
+                "effects": {
+                    "amount": "6",
+                    "targets": "follower",
+                    "times": 1,
+                    "and": {},
+                    "quantifer": "an",
+                    "user": "enemy"
+                }
+            }
+        ]
+    },
+    {
+        "type": "Storm"
+    }
+]
