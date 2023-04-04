@@ -24,6 +24,16 @@ def popArrayAfterSearch(lst, search):
     index = safeIndex(lst, search)
     if(index >0):
         return popArrayTill(lst, index+1)
+    return None
+
+def consumeTokens(tokens, numberOfTokens):
+    stack = []
+    i = 0
+    while i < numberOfTokens:
+        stack.append(tokens.pop(0))
+        i += 1
+    return stack
+
 
 def popArrayTill(lst, index):
     stack = []
