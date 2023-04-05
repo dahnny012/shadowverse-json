@@ -1,9 +1,10 @@
+import functools
 import json
 import os
 import re
 import itertools
 from utils import consumeTokens, popArrayAfterSearch, popArrayTill, safeIndex
-
+import logging
 
 bane = "Bane"
 ward = "Ward"
@@ -87,32 +88,46 @@ turnSpecificEffects = {
 constantEffects = {whilee}
 variableEffects = {X, Y, Z}
 
-
-def subEffectParsers():
-    return [
-        summonToken,
-        putToken,
-        gainToken,
-        dealToken,
-        ifToken,
-        parseAlternativeCostEffect,
-        removalToken,
-        restoreToken,
-        drawToken,
-        evolveToken,
-        recoverToken,
-        discardToken,
-        wheneverToken,
-        variableEquals,
-        parensToken,
-        parseOtherwise,
-        thenToken,
-        triggerPhaseOfTurnToken,
-        parseTriggerEffects,
-        changeCard
-    ]
+logging.basicConfig(
+                    level=logging.INFO,
+                    format='[%(levelname)s] [%(name)s] - %(message)s'
+                    )
+_levels = ["base"]
+log = logging.getLogger("base")
 
 
+def getLog(type):
+    global log
+    _levels.append(type)
+    log = logging.getLogger(".".join(_levels))
+
+def checkoutLog(type):
+    global log
+    while(_levels.pop() != type):
+        continue
+    log = logging.getLogger(".".join(_levels))
+    
+PLUGINS = []
+
+def useLog(type):
+    def outer(func):
+        @functools.wraps(func)
+        def inner(*args, **kwargs):
+            getLog(type)
+            result = func(*args, **kwargs)
+            checkoutLog(type)
+            return result
+        return inner
+    return outer
+
+
+def register(func):
+    """Register a function as a plug-in"""
+    PLUGINS.append(func)
+    return func
+
+
+@register
 def changeCard(head, tokens):
     if (head != change and head.capitalize() != change):
         return None
@@ -131,7 +146,7 @@ def changeCard(head, tokens):
     popArrayAfterSearch(tokens, ".")
     return effect
 
-
+@register
 def parseTriggerEffects(head, tokens):
     if head not in triggerEffects:
         return None
@@ -141,7 +156,7 @@ def parseTriggerEffects(head, tokens):
         'effects': parseIffEffect(tokens)
     }
 
-
+@register
 def triggerPhaseOfTurnToken(head, tokens):
     join = " ".join(tokens[0:3])
     if (join not in stateOfTurn):
@@ -159,7 +174,7 @@ def triggerPhaseOfTurnToken(head, tokens):
         'effects': parseSubEffect(tokens)
     }
 
-
+@register
 def parseOtherwise(head, tokens):
     if (head != otherwise):
         return None
@@ -169,40 +184,42 @@ def parseOtherwise(head, tokens):
         'effects': parseSubEffect(tokens)
     }
 
-
+@register
+@useLog("variableEquals")
 def variableEquals(head, tokens):
     if (head not in variableEffects):
         return None
-    print("Found variable definition ", tokens)
+    log.info("Found variable definition %s", tokens)
     tokens.pop(0)
     return {
         'type': 'VariableDefinition',
         'variable': head
     }
 
-
+@register
+@useLog(whenever)
 def wheneverToken(head, tokens):
     if (head != whenever and head.capitalize() != whenever):
         return None
-    print("Entered whenever ", tokens)
+    log.info("Entered whenever ", tokens)
     return {
         'type': whenever,
         "effects": parseIffEffect(tokens)
     }
 
-
+@register
+@useLog(discard)
 def discardToken(head, tokens):
     if (head != discard and head.capitalize() != discard):
         return None
-    print("Entered discard tokens ", tokens)
+    log.info("Entered discard tokens ", tokens)
     tokens.pop(0)
     return {
         'type': discard,
         'effects': parseDiscard(tokens)
     }
 
-
-def parseDiscard(tokens):
+def parseDiscard(head, tokens):
     effect = {
         'cardsToDiscard': tokens[0],
         'effects': []
@@ -213,7 +230,7 @@ def parseDiscard(tokens):
         effect['effects'] = parseSubEffect(tokens)
     return effect
 
-
+@register
 def recoverToken(head, tokens):
     if (head != recover and head.capitalize() != recover):
         return None
@@ -231,22 +248,22 @@ def parseRecover(tokens):
     tokens.pop(0)
     return effect
 
-
+@register
+@useLog(fusion)
 def fusionToken(head, tokens):
     if (head != fusion):
         return None
+    log.info("Entering fusion with %s", tokens)
     # Fusion:
     consumeTokens(tokens, 2)
     types = popArrayAfterSearch(tokens, "\n")
-    print(tokens)
     return {
         'type': fusion,
         'cardTypes': types
     }
 
-
+@register
 def evolveToken(head, tokens):
-    # print(head)
     if (head != evolve and head.capitalize() != evolve):
         return None
     tokens.pop(0)
@@ -255,7 +272,7 @@ def evolveToken(head, tokens):
         "effects": tokens
     }
 
-
+@register
 def removalToken(head, tokens):
     if (head != destroy and head != banish):
         return None
@@ -265,7 +282,7 @@ def removalToken(head, tokens):
         "effects": parseRemoval(tokens)
     }
 
-
+@register
 def drawToken(head, tokens):
     if (head != draw and head.capitalize() != draw):
         return None
@@ -288,28 +305,32 @@ def parseRemoval(tokens):
     }
     return effect
 
-
+@register
+@useLog(summon)
 def summonToken(head, tokens):
     if (head != summon and head.capitalize() != summon):
         return None
+    log.info("Entered with tokens %s", tokens)
     tokens.pop(0)
-    return {
+    result = {
         "type": summon,
         "effects": parseUnits(tokens)
     }
+    return result
 
-
+@register
+@useLog(put)
 def putToken(head, tokens):
     if (head != put and head.capitalize() != put):
         return None
     intoStopWord = "into"
-    print("Entered Put Token ", tokens)
+    log.info("Entered Put Token %s", tokens)
     tokens.pop(0)
     units = parseUnits(tokens, stopWord=intoStopWord)
-    print("Left parse units ", tokens)
+    log.debug("Left parse units ", tokens)
     destinationList = popArrayTill(tokens, 2)
-    print("Checking where to put units ", units)
-    print("DestinationList ", destinationList)
+    log.debug("Checking where to put units ", units)
+    log.debug("DestinationList ", destinationList)
     if (hand in destinationList):
         destination = hand
     if (deck in destinationList):
@@ -320,18 +341,20 @@ def putToken(head, tokens):
         "destination": destination
     }
 
-
+@register
+@useLog(gain)
 def gainToken(head, tokens):
     if (head != gain and head.capitalize() != gain):
         return None
-    print("Entered gain, ", tokens)
+    log.info("Entered gain %s", tokens)
     tokens.pop(0)
     return {
         "type": gain,
         "effects": parseGain(tokens),
     }
 
-
+@register
+@useLog(restore)
 def restoreToken(head, tokens):
     if (head != restore and head.capitalize() != restore):
         return None
@@ -341,7 +364,8 @@ def restoreToken(head, tokens):
         "effects": changeHealth(tokens, defense)
     }
 
-
+@register
+@useLog(deal)
 def dealToken(head, tokens):
     if (head != deal and head.capitalize() != deal):
         return None
@@ -351,11 +375,12 @@ def dealToken(head, tokens):
         "effects": changeHealth(tokens, damage)
     }
 
-
+@register
+@useLog(then)
 def thenToken(head, tokens):
     if (head != then.capitalize()):
         return None
-    print("Starting Then with ", tokens)
+    log.info("Starting Then with ", tokens)
     tokens.pop(0)
     if (tokens[0] == ","):
         tokens.pop(0)
@@ -364,32 +389,33 @@ def thenToken(head, tokens):
         "effects": parseSubEffect(tokens)
     }
 
-
+@register
+@useLog(iff)
 def ifToken(head, tokens):
     if (head != iff and head.capitalize() != iff):
         return None
-    print("Starting if with ", tokens)
+    log.info("Starting if with %s", tokens)
     tokens.pop(0)
     return {
         "type": iff,
         "effects": parseIffEffect(tokens)
     }
 
-
 def parseIffEffect(tokens):
     conditionEffect = parseCondition(tokens)
     endIndex = safeIndex(tokens, endEffectToken)
     if (endIndex >= 0):
         tokens = popArrayTill(tokens, endIndex)
-    print("Parsing if subeffect ", tokens)
+    log.info("Parsing if subeffect %s", tokens)
     thenEffect = parseSubEffect(tokens)
     return {
         'conditions': conditionEffect,
         'then': thenEffect
     }
 
+@useLog(type="condition")
 def parseCondition(tokens):
-    print("Entered conditions with tokens ", tokens)
+    log.info("Entered conditions with tokens %s", tokens)
     conditionTokens = popArrayAfterSearch(tokens, ",")
     conditions = []
     if conditionTokens[0] in stateConditions:
@@ -431,12 +457,12 @@ def parseCondition(tokens):
             'amountToTrigger': amount
         })
     if len(conditionTokens) > 0 and conditionTokens[0] == orr:
-        print("Found OR condition ", conditionTokens)
+        log.info("Found OR condition %s", conditionTokens)
         consumeTokens(conditionTokens, 1)
         conditions.append(parseCondition(conditionTokens)[0])
     return list(conditions)
 
-
+@useLog("changeHealth")
 def changeHealth(tokens, type=None):
     effect = {
         'amount': 0,
@@ -466,7 +492,6 @@ def changeHealth(tokens, type=None):
             # allies
             effect['user'] = nextTarget
             effect['targets'] = 'all'
-            print("TOKENENNE?? ?? ", tokens)
             popArrayTill(tokens, toIndex + 3)
         else:
             # allied followers
@@ -474,7 +499,7 @@ def changeHealth(tokens, type=None):
             effect['user'] = nextTarget
             effect['targets'] = tokens[toIndex + 2]
             popArrayTill(tokens, toIndex + 3)
-    print("damage tokens after ", tokens)
+    log.info("Damage tokens after target checks: ", tokens)
     if len(tokens) >= 3 and tokens[0] == andd and tokens[1] == then:
         if (tokens[2] == the):
             effect['and'] = {
@@ -491,12 +516,13 @@ def changeHealth(tokens, type=None):
         if (tokens[0] == endEffectToken):
             tokens.pop(0)
         else:
-            print("wtf")
-            print(effect)
-            print(tokens)
+            log.warn("Encountered unexpected")
+            log.warn(effect)
+            log.warn(tokens)
     return effect
 
-
+@register
+@useLog("parens")
 def parensToken(head, tokens):
     if (head != "("):
         return None
@@ -505,9 +531,9 @@ def parensToken(head, tokens):
         "condition": popArrayAfterSearch(tokens, ")")
     }
 
-
+@useLog("statChange")
 def parseStatChange(tokens, gainStack):
-    print("Entering stat change", tokens)
+    log.info("Entering stat change", tokens)
     gain = {}
     while len(tokens) > 0:
         token = tokens.pop(0)
@@ -522,7 +548,7 @@ def parseStatChange(tokens, gainStack):
             gain['type'] = 'StatChange'
             gainStack.append(gain)
 
-
+@useLog("parseGain")
 def parseGain(tokens):
     gainStack = []
     while len(tokens) > 0:
@@ -545,7 +571,7 @@ def parseGain(tokens):
             gainStack.append(gain)
             popArrayAfterSearch(tokens, "points")
         else:
-            print("Found Unknown ", tokens)
+            log.warn("Found Unknown %s", tokens)
             gain = {
                 'type': 'Unknown',
                 'tokens': popArrayAfterSearch(tokens, ".")
@@ -557,8 +583,9 @@ def isANameToken(token):
     partOfName = {","}
     return  token[0].isupper() or  token  in partOfName
 
+@useLog(type="parseUnits")
 def parseUnits(tokens, quantifier=None, stopWord=None):
-    print("Starting to parse units , ", tokens)
+    log.info("Parsing tokens: %s", tokens)
     units = []
     unitStack = []
     unit = {}
@@ -584,7 +611,7 @@ def parseUnits(tokens, quantifier=None, stopWord=None):
               or not isANameToken(token)
               or len(tokens) == 0):
             if(len(unitStack) > 0):
-                print("Unit stack", unitStack)
+                log.debug("Unit stack", unitStack)
                 unitName = " ".join(unitStack)
                 # what is this for
                 unit["type"] = SummonUnitOrEffect(unitName)
@@ -593,7 +620,7 @@ def parseUnits(tokens, quantifier=None, stopWord=None):
                 units.append(unit)
                 unitStack = []
                 if(token == andd and not tokens[0][0].isupper()):
-                    print("Card has a trigger ", tokens)
+                    log.debug("Card has a trigger ", tokens)
                     unit['and'] = parseSubEffect(tokens)
                 unit = {}
     return units
@@ -604,9 +631,9 @@ def SummonUnitOrEffect(unitName):
         return None
     return "Card" if (unitName[0].isupper() == True) else "Effect"
 
-
+@useLog(type="subeffect")
 def parseSubEffect(tokens):
-    print("Entered subeffect with tokens ", tokens)
+    log.debug("Parsing subeffects with Tokens %s", tokens)
     effects = []
     stack = []
     while len(tokens) > 0:
@@ -615,7 +642,7 @@ def parseSubEffect(tokens):
         if (token == newLineToken or len(tokens) == 0):
             while (len(stack) > 0):
                 subEffect = None
-                for subEffectParser in subEffectParsers():
+                for subEffectParser in PLUGINS:
                     if (len(stack) == 0):
                         break
                     head = stack[0]
@@ -623,36 +650,35 @@ def parseSubEffect(tokens):
                         stack.pop(0)
                         if (len(stack) > 0):
                             head = stack[0]
-                    # print("Using head", head)
-                    # print("Using stack", stack)
-                    # print("Using tokens", tokens)
+                    log.debug("Head %s, Stack %s, Tokens %s", head, stack, tokens)
                     subEffect = subEffectParser(head, stack)
                     if (subEffect) != None:
-                        print("Found ", subEffect)
+                        log.info("Found %s", subEffect)
                         if (subEffect['type'] == otherwise and effects[-1]['type'] == iff):
                             effects[-1]['effects']['otherwise'] = subEffect
                         elif (subEffect['type'] == "Parens"):
                             effects[-1]['limit'] = subEffect
                         else:
                             effects.append(subEffect)
-                        # print("after subeffect stack: ", stack)
-                        # print("after subeffect tokens: ", tokens)
+                        log.debug("After subeffect stack: %s, tokens: %s", stack, tokens)
                 if (subEffect == None):
                     break
-    print("Exiting subeffect of ", tokens)
+    log.info("Exiting with tokens: %s", tokens)
     return effects
 
-
+@register
+@useLog("alternativeCosts")
 def parseAlternativeCostEffect(head, tokens, stopWord=None):
     if (head not in alternativeCosts):
         return None
+    log.info("Found alternativeCost %s for with %s", head, tokens)
     effect = {
         'type': head,
     }
     costEndIndex = tokens.index(")")
     effect['cost'] = tokens[costEndIndex-1]
     # +1 for ':' and ' '
-    print("Entering subeffect for ", head)
+    log.info("Entering subeffect for ", head)
     effect['effects'] = parseSubEffect(tokens[costEndIndex + 2:])
     return effect
 
