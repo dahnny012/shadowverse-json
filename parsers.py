@@ -71,8 +71,9 @@ cost = "cost"
 its = "its"
 this = "this"
 random = "random"
-give = "give"
+give = "Give"
 thisMatch = "this match"
+leader = "leader"
 
 stateConditions = {resonsance, wraith, vengeance}
 staticEffects = {ward, drain, rush, storm, bane, ambush}
@@ -87,9 +88,12 @@ turnSpecificEffects = {
 }
 constantEffects = {whilee}
 variableEffects = {X, Y, Z}
+traits = {
+    "Festive", "Officer", "Condemned", "Machina", "Academic", "Natura", "Commander", "Mysteria", "Chess", "Loot", "Levin"
+}
 
 logging.basicConfig(
-                    level=logging.INFO,
+                    level=logging.DEBUG,
                     format='[%(levelname)s] [%(name)s] - %(message)s'
                     )
 _levels = ["base"]
@@ -314,7 +318,7 @@ def summonToken(head, tokens):
     tokens.pop(0)
     result = {
         "type": summon,
-        "effects": parseUnits(tokens)
+        "effects": parseCards(tokens)
     }
     return result
 
@@ -326,7 +330,7 @@ def putToken(head, tokens):
     intoStopWord = "into"
     log.info("Entered Put Token %s", tokens)
     tokens.pop(0)
-    units = parseUnits(tokens, stopWord=intoStopWord)
+    units = parseCards(tokens, stopWord=intoStopWord)
     log.debug("Left parse units ", tokens)
     destinationList = popArrayTill(tokens, 2)
     log.debug("Checking where to put units ", units)
@@ -340,6 +344,39 @@ def putToken(head, tokens):
         "effects": units,
         "destination": destination
     }
+
+@register
+@useLog(give)
+def giveToken(head, tokens):
+    if (head != give and head.capitalize() != give):
+        return None
+    log.info("Entered give %s", tokens)
+    tokens.pop(0)
+    effect = {
+        "type": give,
+        "effects": []
+    }
+    if(safeIndex(tokens, to) >= 0):
+        effectTokens = popArrayAfterSearch(tokens , to)
+        effect['effects'].append(parseGain(effectTokens))
+    target = ""
+    # find targets then find the effect
+    while len(tokens) > 0:
+        token = tokens.pop(0)
+        if (token == "it"):
+            effect['target'] = "parent"
+            effect["effects"].append(parseGain(tokens))
+        elif (token == "all"):
+            if(token[0] == "allied" or (" ".join(tokens[0:1]) == "other allied")):
+                effect['target'] = parseCards(tokens)
+        elif(token == "your" or (" ".join(tokens[0:2]) == "the enemy leader")):
+            target = leader
+            user = "self" if token == "your" else "enemy"
+            popArrayAfterSearch(tokens, effect)
+        else:
+            ## Likely encountered an effect
+            break
+    return effect
 
 @register
 @useLog(gain)
@@ -581,59 +618,79 @@ def parseGain(tokens):
 
 def isANameToken(token):
     partOfName = {","}
-    return  token[0].isupper() or  token  in partOfName
+    isAProperNoun = token[0].isupper() or  token  in partOfName
+    notAStaticAbility = token not in staticEffects
+    return isAProperNoun and notAStaticAbility
 
-@useLog(type="parseUnits")
-def parseUnits(tokens, quantifier=None, stopWord=None):
-    log.info("Parsing tokens: %s", tokens)
+@useLog(type="parseCards")
+def parseCards(tokens, quantifier=None, stopWord=None):
+    log.info("Entered with tokens: %s", tokens)
     units = []
     unitStack = []
     unit = {}
     stop = {andd, stopWord, andList}
-    quantifiers = {"an", "a"}
+    quantifiers = {"an", "a", "all", "allied"}
     specifics = {"different", "random"}
-
     while len(tokens) > 0:
         token = tokens.pop(0)
-        if (tokens[0] in quantifiers or token.isnumeric()):
+        if (token in quantifiers or token.isnumeric()):
+            log.debug("Setting quantifiers in parseCards %s", token)
             unit['quantifer'] = token
+        elif("craft" in token):
+            unit['faction'] = token
+            unit['type'] = getCardType(tokens.pop(0))
+        elif token in traits:
+            unit['trait'] = token
+            unit['type'] = getCardType(tokens.pop(0))
         elif(isANameToken(token)):
             unitStack.append(token)
             if(token == "Lloyd"):
-                unitStack.append(consumeTokens(tokens, 3))
+                unitStack = unitStack + consumeTokens(tokens, 3)
+                log.debug("encountered lloyd: stack: %s", unitStack)
+            
+        elif(getCardType(token) != None):
+            unit['type'] = token
         elif(token in specifics):
             if(token == random):
                 unit['random'] = True
             if(token == "different"):
                 unit['different'] = True
-        elif (token == endEffectToken
+        if (token == endEffectToken
               or token in stop
               or not isANameToken(token)
               or len(tokens) == 0):
             if(len(unitStack) > 0):
-                log.debug("Unit stack", unitStack)
+                log.info("Unit stack", unitStack)
                 unitName = " ".join(unitStack)
-                # what is this for
-                unit["type"] = SummonUnitOrEffect(unitName)
-                if unit["type"] == "Card":
+                unit["type"] = getCardType(unitName)
+                if unit["type"] == "NamedCard":
                     unit["cardname"] = unitName
                 units.append(unit)
                 unitStack = []
                 if(token == andd and not tokens[0][0].isupper()):
-                    log.debug("Card has a trigger ", tokens)
-                    unit['and'] = parseSubEffect(tokens)
+                    log.info("Card has a trigger %s", tokens)
+                    unit['effects'] = parseSubEffect(tokens)
                 unit = {}
+        else:
+            log.debug("encountered else %s, %s", token, unitStack)
     return units
 
-
-def SummonUnitOrEffect(unitName):
-    if (len(unitName) == 0):
-        return None
-    return "Card" if (unitName[0].isupper() == True) else "Effect"
+def getCardType(type):
+    if type in "followers":
+        return "Follower"
+    if type in "cards":
+        return "Card"
+    if type in "spells":
+        return "spell"
+    if type in "amulets":
+        return "amulet"
+    if type[0].isupper():
+        return "NamedCard"
+    return None
 
 @useLog(type="subeffect")
 def parseSubEffect(tokens):
-    log.debug("Parsing subeffects with Tokens %s", tokens)
+    log.info("Parsing subeffects with Tokens %s", tokens)
     effects = []
     stack = []
     while len(tokens) > 0:

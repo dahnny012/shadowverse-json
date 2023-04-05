@@ -80,6 +80,6 @@ for card in rotationCardPool:
         if(endOfPhase != None):
             card['effectJson'].append(endOfPhase)
         log.debug("Finished iteration %s", effectStrings)
-    log.debug(json.dumps(card["effectJson"], indent=4))
+    log.info(json.dumps(card["effectJson"], indent=4))
     with open(f'{os.getcwd()}/output/{card["id_"]}.json', 'w') as w:
         w.write(json.dumps(card, indent=4))

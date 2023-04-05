@@ -1,0 +1,184 @@
+{
+    "name_": "Orchis, the Limitless",
+    "id_": 125841010,
+    "pp_": 6,
+    "craft_": "Portalcraft",
+    "rarity_": "Legendary",
+    "type_": "Follower",
+    "trait_": "-",
+    "expansion_": "Roar of the Godwyrm",
+    "baseEffect_": "Fusion: Puppets\nWhenever cards are fused to this card, summon a Puppet and give it +1/+0.\n----------\nFanfare: If this card is fused with at least 1 card, summon a Lloyd, Orchis's Puppet. If fused with at least 3 cards, evolve it and this follower.",
+    "related_": [
+        900811050,
+        900841320
+    ],
+    "baseFlair_": "The more one studies, the easier it is to realize true knowledge requires experience\u2014that of kindness, warmth, and love. Of anger, sorrow, and hate. Even the same phenomenon manifests differently for others. There are as many emotions as there are hearts to feel them.",
+    "rotation_": true,
+    "baseAtk_": 5,
+    "baseDef_": 5,
+    "evoAtk_": 7,
+    "evoDef_": 7,
+    "evoEffect_": "Whenever an allied Puppet comes into play, give it Storm.",
+    "evoFlair_": "No matter how much we study and learn, we cannot know everything. What's odd is that I see this not as something to lament, but to rejoice over. Our journey continues. From now, until the end. I'm sure it will be a wonderful one.",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Fusion",
+            "cardTypes": [
+                "Puppets",
+                "\n"
+            ]
+        },
+        {
+            "type": "Whenever",
+            "effects": {
+                "conditions": [
+                    {
+                        "type": "FusionAction",
+                        "amountToTrigger": 1
+                    }
+                ],
+                "then": [
+                    {
+                        "type": "Summon",
+                        "effects": [
+                            {
+                                "quantifer": "a",
+                                "type": "NamedCard",
+                                "cardname": "Puppet",
+                                "effects": [
+                                    {
+                                        "type": "Give",
+                                        "effects": [
+                                            [
+                                                {
+                                                    "type": "StatChange",
+                                                    "operation": "+",
+                                                    "amount": "1"
+                                                },
+                                                {
+                                                    "type": "StatChange",
+                                                    "operation": "+",
+                                                    "amount": "0"
+                                                }
+                                            ]
+                                        ],
+                                        "target": "parent"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "If",
+                    "effects": {
+                        "conditions": [
+                            {
+                                "type": "FusionAction",
+                                "amountToTrigger": 1
+                            }
+                        ],
+                        "then": [
+                            {
+                                "type": "Summon",
+                                "effects": [
+                                    {
+                                        "quantifer": "a",
+                                        "type": "NamedCard",
+                                        "cardname": "Lloyd , Orchis's Puppet"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "_effectTokens": [
+        [
+            "Fusion",
+            ":",
+            "Puppets",
+            "\n"
+        ],
+        [
+            "Whenever",
+            "cards",
+            "are",
+            "fused",
+            "to",
+            "this",
+            "card",
+            ",",
+            "summon",
+            "a",
+            "Puppet",
+            "and",
+            "give",
+            "it",
+            "+",
+            "1",
+            "/",
+            "+",
+            "0",
+            ".",
+            "\n"
+        ],
+        [
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "\n"
+        ],
+        [
+            "Fanfare",
+            ":",
+            "If",
+            "this",
+            "card",
+            "is",
+            "fused",
+            "with",
+            "at",
+            "least",
+            "1",
+            "card",
+            ",",
+            "summon",
+            "a",
+            "Lloyd",
+            ",",
+            "Orchis's",
+            "Puppet",
+            ".",
+            "If",
+            "fused",
+            "with",
+            "at",
+            "least",
+            "3",
+            "cards",
+            ",",
+            "evolve",
+            "it",
+            "and",
+            "this",
+            "follower",
+            "."
+        ]
+    ]
+}
