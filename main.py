@@ -4,9 +4,9 @@ from parsers import *
 import logging
 
 files = [
-  #"Dragoncraft",
+  "Dragoncraft",
   "Portalcraft",
-  #"Bloodcraft"
+  "Bloodcraft"
 ]
 
 cardpool = []
@@ -18,7 +18,7 @@ for file in files:
 
 rotationCardPool = list()
 debug = True
-testCardsId = {126441030, 126431030, 127611010, 127621030, 125641020, 126631020, 125641010, 125841010, 127841030, 127841010}
+testCardsId = {126441030, 126431030, 127611010, 127621030, 125641020, 126631020, 125641010, 125841010, 127841030, 127841010, 127621020}
 effectDebugSearch = False
 effectSearch = "if"
 doomlord_abyss = 125641010

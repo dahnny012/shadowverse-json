@@ -74,6 +74,7 @@ random = "random"
 give = "Give"
 thisMatch = "this match"
 leader = "leader"
+doThis = "do"
 
 stateConditions = {resonsance, wraith, vengeance}
 staticEffects = {ward, drain, rush, storm, bane, ambush}
@@ -134,6 +135,17 @@ def register(func):
     PLUGINS.append(func)
     return func
 
+@register
+@useLog("repeat")
+def repeatToken(head, tokens):
+    join = " ".join(tokens[0:2])
+    if (join not in "Do this"):
+        return None
+    consumeTokens(tokens, 2)
+    return {
+        'type': "Repeat",
+        'amount': tokens.pop(0)
+    }
 
 @register
 def changeCard(head, tokens):
@@ -282,7 +294,7 @@ def evolveToken(head, tokens):
     tokens.pop(0)
     return {
         "type": evolve,
-        "effects": consumeTokens(tokens, 3)
+        "effects": consumeTokens(tokens, 2)
     }
 
 @register
@@ -472,13 +484,15 @@ def parseCondition(tokens):
     log.info("After Popping %s", tokens)
     conditions = []
     if conditionTokens[0] in stateConditions:
+        conditionTokens.pop(0)
         effect = {
             'type': 'CheckActiveState',
             'state': consumeTokens(conditionTokens, 1),
-            'stateIsActive': True
+            'stateEqualTo': True
         }
         if (" ".join(conditionTokens[0:1]) in "is not"):
-            effect['stateIsActive'] = False
+            print()
+            effect['stateEqualTo'] = False
         conditions.append(effect)
     elif " ".join(conditionTokens[0:2]) == "at least":
         conditions.append({
@@ -646,7 +660,7 @@ def isANameToken(token):
     return isAProperNoun and notAStaticAbility
 
 @useLog(type="parseCards")
-def parseCards(tokens, quantifier=None, stopWord=None):
+def parseCards(tokens, quantifier=None, stopWord=endEffectToken):
     log.info("Entered with tokens: %s", tokens)
     units = []
     unitStack = []
@@ -670,7 +684,7 @@ def parseCards(tokens, quantifier=None, stopWord=None):
             if(token == "Lloyd"):
                 unitStack = unitStack + consumeTokens(tokens, 3)
                 log.debug("encountered lloyd: stack: %s", unitStack)
-            
+
         elif(getCardType(token) != None):
             unit['type'] = token
         elif(token in specifics):
@@ -693,6 +707,8 @@ def parseCards(tokens, quantifier=None, stopWord=None):
                 if(token == andd and not tokens[0][0].isupper()):
                     log.info("Card has a trigger %s", tokens)
                     unit['effects'] = parseSubEffect(tokens)
+                if(token == endEffectToken):
+                    break
                 unit = {}
         else:
             log.debug("encountered else %s, %s", token, unitStack)

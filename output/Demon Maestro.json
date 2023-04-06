@@ -32,9 +32,9 @@
                             {
                                 "type": "CheckActiveState",
                                 "state": [
-                                    "Wrath"
+                                    "is"
                                 ],
-                                "stateIsActive": false
+                                "stateEqualTo": false
                             }
                         ],
                         "then": [
