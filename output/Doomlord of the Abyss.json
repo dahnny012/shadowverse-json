@@ -64,6 +64,17 @@
                     }
                 },
                 {
+                    "type": "VariableDefinition",
+                    "variable": "X",
+                    "value": [
+                        "equals",
+                        "your",
+                        "leader's",
+                        "defense",
+                        "."
+                    ]
+                },
+                {
                     "type": "Then",
                     "effects": [
                         {

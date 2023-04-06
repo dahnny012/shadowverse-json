@@ -4,9 +4,9 @@ from parsers import *
 import logging
 
 files = [
-   "Dragoncraft",
-   "Portalcraft",
-   "Bloodcraft"
+  # "Dragoncraft",
+  # "Portalcraft",
+  # "Bloodcraft"
 ]
 
 cardpool = []

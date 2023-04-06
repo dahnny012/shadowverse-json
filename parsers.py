@@ -202,7 +202,8 @@ def variableEquals(head, tokens):
     tokens.pop(0)
     return {
         'type': 'VariableDefinition',
-        'variable': head
+        'variable': head,
+        'value': popArrayAfterSearch(tokens, endEffectToken) 
     }
 
 @register
@@ -563,12 +564,11 @@ def changeHealth(tokens, type=None):
     else:
         if (len(tokens) == 0):
             return effect
-        if (tokens[0] == endEffectToken):
-            tokens.pop(0)
         else:
             log.warn("Encountered unexpected")
             log.warn(effect)
             log.warn(tokens)
+    log.info("Leaving changeHealth with Tokens %s", tokens)
     return effect
 
 @register
@@ -712,11 +712,13 @@ def parseSubEffect(tokens):
         if (token == newLineToken or len(tokens) == 0):
             while (len(stack) > 0):
                 subEffect = None
+                log.info("Starting new loop of effect parsgin")
                 for subEffectParser in PLUGINS:
                     if (len(stack) == 0):
                         break
                     head = stack[0]
                     log.debug("Head %s, Stack %s, Tokens %s", head, stack, tokens)
+                    log.debug("Subeffect parser %s", subEffectParser.__name__)
                     subEffect = subEffectParser(head, stack)
                     if (subEffect) != None:
                         log.info("Found %s", subEffect)
