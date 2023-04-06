@@ -4,9 +4,9 @@ from parsers import *
 import logging
 
 files = [
-  "Dragoncraft",
+  #"Dragoncraft",
   "Portalcraft",
-  "Bloodcraft"
+  #"Bloodcraft"
 ]
 
 cardpool = []
@@ -18,7 +18,7 @@ for file in files:
 
 rotationCardPool = list()
 debug = True
-testCardsId = {126441030, 126431030, 127611010, 127621030, 125641020, 126631020, 125641010, 125841010}
+testCardsId = {126441030, 126431030, 127611010, 127621030, 125641020, 126631020, 125641010, 125841010, 127841030}
 effectDebugSearch = False
 effectSearch = "if"
 doomlord_abyss = 125641010
@@ -64,7 +64,14 @@ for card in rotationCardPool:
                 effectJson['effects'] = parseSubEffect(effectStrings[3:])
             else:
                 effectJson['type'] = effectStrings[0]
-                effectJson['effects'] = parseSubEffect(effectStrings[2:])
+                baseEffectString = effectStrings[2:]
+                ## How enhance is formatted is so weird, it acts on fanfare but 
+                ## But uses new lines for readability
+                log.info("Next effect %s", card['effectTokens'][0][0])
+                while(len(card['effectTokens']) > 0 and card['effectTokens'][0][0] == "Enhance"):
+                    baseEffectString = baseEffectString + card['effectTokens'].pop(0)
+                    log.info("Modified baseEffectString %s", baseEffectString)
+                effectJson['effects'] = parseSubEffect(baseEffectString)
             card['effectJson'].append(effectJson)
         if card["type_"] == 'Spell':
             card['effectJson'].append(parseSubEffect(effectStrings))
@@ -82,7 +89,7 @@ for card in rotationCardPool:
 
         if effectStrings[0] in alternativeCosts:
             card['effectJson'].append(parseAlternativeCostEffect(
-                effectStrings[0], effectStrings))
+                effectStrings[0], effectStrings[0:]))
         endOfPhase = triggerPhaseOfTurnToken(effectStrings[0], effectStrings)
         if(endOfPhase != None):
             card['effectJson'].append(endOfPhase)

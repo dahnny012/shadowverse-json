@@ -1,0 +1,185 @@
+{
+    "name_": "Judith, Cosmic Observer",
+    "id_": 127841030,
+    "pp_": 2,
+    "craft_": "Portalcraft",
+    "rarity_": "Legendary",
+    "type_": "Follower",
+    "trait_": "All",
+    "expansion_": "Eightfold Abyss: Azvaldt",
+    "baseEffect_": "Fanfare: Enhance (3) - Destroy a random enemy follower.\nEnhance (4): Draw a card.\nEnhance (5): Restore 2 defense to your leader.\nEnhance (6): Give your leader the following effect - The next time your leader takes damage, reduce that damage to 0.\nEnhance (7): Gain Storm and evolve this follower.",
+    "related_": [],
+    "baseFlair_": "In the great play that is life, the script is written by the actors. With a smile on her face, she watches them play their parts, clutching plushies of them to her chest as she cheers them on.",
+    "rotation_": true,
+    "baseAtk_": 2,
+    "baseDef_": 1,
+    "evoAtk_": 4,
+    "evoDef_": 3,
+    "evoEffect_": "-",
+    "evoFlair_": "She never steps onto the stage, for the audience must not interfere with the show; their job is to support and see the actors through to their conclusion. She continues to watch, for weal or woe, as the tale of their lives plays out.",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "Enhance",
+                    "cost": "3",
+                    "effects": [
+                        {
+                            "type": "Destroy",
+                            "effects": {
+                                "quantifier": "a",
+                                "user": "random",
+                                "targets": "enemy"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Enhance",
+                    "cost": "4",
+                    "effects": [
+                        {
+                            "type": "Draw",
+                            "effects": {
+                                "quantifier": "a"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Enhance",
+                    "cost": "5",
+                    "effects": [
+                        {
+                            "type": "Restore",
+                            "effects": {
+                                "amount": "2",
+                                "targets": "leader",
+                                "times": 1,
+                                "and": {},
+                                "quantifer": "your",
+                                "user": "leader"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Enhance",
+                    "cost": "6",
+                    "effects": [
+                        {
+                            "type": "Give",
+                            "effects": [
+                                []
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Enhance",
+                    "cost": "7",
+                    "effects": [
+                        {
+                            "type": "Gain",
+                            "effects": [
+                                {
+                                    "type": "Storm"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "_effectTokens": [
+        [
+            "Fanfare",
+            ":",
+            "Enhance",
+            "(",
+            "3",
+            ")",
+            "-",
+            "Destroy",
+            "a",
+            "random",
+            "enemy",
+            "follower",
+            ".",
+            "\n"
+        ],
+        [
+            "Enhance",
+            "(",
+            "4",
+            ")",
+            ":",
+            "Draw",
+            "a",
+            "card",
+            ".",
+            "\n"
+        ],
+        [
+            "Enhance",
+            "(",
+            "5",
+            ")",
+            ":",
+            "Restore",
+            "2",
+            "defense",
+            "to",
+            "your",
+            "leader",
+            ".",
+            "\n"
+        ],
+        [
+            "Enhance",
+            "(",
+            "6",
+            ")",
+            ":",
+            "Give",
+            "your",
+            "leader",
+            "the",
+            "following",
+            "effect",
+            "-",
+            "The",
+            "next",
+            "time",
+            "your",
+            "leader",
+            "takes",
+            "damage",
+            ",",
+            "reduce",
+            "that",
+            "damage",
+            "to",
+            "0",
+            ".",
+            "\n"
+        ],
+        [
+            "Enhance",
+            "(",
+            "7",
+            ")",
+            ":",
+            "Gain",
+            "Storm",
+            "and",
+            "evolve",
+            "this",
+            "follower",
+            "."
+        ]
+    ]
+}

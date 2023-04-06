@@ -274,19 +274,23 @@ def fusionToken(head, tokens):
     }
 
 @register
+@useLog(evolve)
 def evolveToken(head, tokens):
     if (head != evolve and head.capitalize() != evolve):
         return None
+    log.info("Entering evolve with %s", tokens)
     tokens.pop(0)
     return {
         "type": evolve,
-        "effects": tokens
+        "effects": consumeTokens(tokens, 3)
     }
 
 @register
+@useLog("removal")
 def removalToken(head, tokens):
     if (head != destroy and head != banish):
         return None
+    log.info("Entering removal with %s", tokens)
     tokens.pop(0)
     return {
         "type": head,
@@ -294,9 +298,11 @@ def removalToken(head, tokens):
     }
 
 @register
+@useLog(draw)
 def drawToken(head, tokens):
     if (head != draw and head.capitalize() != draw):
         return None
+    log.info("Entering draw with %s", tokens)
     tokens.pop(0)
     amount = tokens.pop(0)
     tokens.pop(0)
@@ -716,7 +722,7 @@ def parseSubEffect(tokens):
         if (token == newLineToken or len(tokens) == 0):
             while (len(stack) > 0):
                 subEffect = None
-                log.info("Starting new loop of effect parsgin")
+                log.info("Starting new loop of effect parsing")
                 for subEffectParser in PLUGINS:
                     if (len(stack) == 0):
                         break
@@ -750,9 +756,10 @@ def parseAlternativeCostEffect(head, tokens, stopWord=None):
     }
     costEndIndex = tokens.index(")")
     effect['cost'] = tokens[costEndIndex-1]
+    popArrayAfterSearch(tokens,")")
     # +1 for ':' and ' '
-    log.info("Entering subeffect for ", head)
-    effect['effects'] = parseSubEffect(tokens[costEndIndex + 2:])
+    log.info("Entering subeffect for %s", head)
+    effect['effects'] = parseSubEffect(tokens)
     return effect
 
 

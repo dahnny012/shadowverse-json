@@ -110,7 +110,11 @@
                         "then": [
                             {
                                 "type": "Evolve",
-                                "effects": []
+                                "effects": [
+                                    "it",
+                                    "and",
+                                    "this"
+                                ]
                             }
                         ]
                     }
