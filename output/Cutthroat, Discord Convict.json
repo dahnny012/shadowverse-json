@@ -1,0 +1,131 @@
+{
+    "name_": "Cutthroat, Discord Convict",
+    "id_": 127841010,
+    "pp_": 1,
+    "craft_": "Portalcraft",
+    "rarity_": "Legendary",
+    "type_": "Follower",
+    "trait_": "Condemned",
+    "expansion_": "Eightfold Abyss: Azvaldt",
+    "baseEffect_": "Bane.\nFanfare: Enhance (7) - Gain +5/+5. Deal 5 damage to an enemy follower and then the enemy leader.\nEnhance (9): Gain +10/+10 and deal 10 damage instead.",
+    "related_": [
+        717841010
+    ],
+    "baseFlair_": "Keen intellect and natural charisma only attract rabble whose only talent is to take and take until they've bled you dry. That's fine. They can do as they please, and I'll rule them as I please. In the end, I'll turn them all into rubble.",
+    "rotation_": true,
+    "baseAtk_": 1,
+    "baseDef_": 1,
+    "evoAtk_": 3,
+    "evoDef_": 3,
+    "evoEffect_": "Bane.\nEvolve: If there are no duplicate cards in your deck (excluding Condemned cards), give your leader the following effect - Whenever you play a card using its Enhance effect, recover X play points. X equals the Enhance cost minus 2. (This effect is not stackable and lasts for the rest of the match.)",
+    "evoFlair_": "The masses are slow and stupid. Very well. Use and discard them like tools, and I'll do the same. The only thing that's irreplaceable is me. From the scraps, we'll forge a new, better civilization. Let's start with this trash here. Pierce them through, Soulforge.",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Bane"
+        },
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "Enhance",
+                    "cost": "7",
+                    "effects": [
+                        {
+                            "type": "Gain",
+                            "effects": [
+                                {
+                                    "type": "StatChange",
+                                    "operation": "+",
+                                    "amount": "5"
+                                },
+                                {
+                                    "type": "StatChange",
+                                    "operation": "+",
+                                    "amount": "5"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Enhance",
+                    "cost": "9",
+                    "effects": [
+                        {
+                            "type": "Gain",
+                            "effects": [
+                                {
+                                    "type": "StatChange",
+                                    "operation": "+",
+                                    "amount": "10"
+                                },
+                                {
+                                    "type": "StatChange",
+                                    "operation": "+",
+                                    "amount": "10"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "_effectTokens": [
+        [
+            "Bane",
+            ".",
+            "\n"
+        ],
+        [
+            "Fanfare",
+            ":",
+            "Enhance",
+            "(",
+            "7",
+            ")",
+            "-",
+            "Gain",
+            "+",
+            "5",
+            "/",
+            "+",
+            "5",
+            ".",
+            "Deal",
+            "5",
+            "damage",
+            "to",
+            "an",
+            "enemy",
+            "follower",
+            "and",
+            "then",
+            "the",
+            "enemy",
+            "leader",
+            ".",
+            "\n"
+        ],
+        [
+            "Enhance",
+            "(",
+            "9",
+            ")",
+            ":",
+            "Gain",
+            "+",
+            "10",
+            "/",
+            "+",
+            "10",
+            "and",
+            "deal",
+            "10",
+            "damage",
+            "instead",
+            "."
+        ]
+    ]
+}

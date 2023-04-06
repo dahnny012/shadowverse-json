@@ -1,6 +1,86 @@
+[INFO] [base] - Cutthroat, Discord Convict
+[INFO] [base] - Follower
+[INFO] [base] - Finished iteration ['Bane', '.', '\n']
+[INFO] [base] - Modified baseEffectString ['Enhance', '(', '7', ')', '-', 'Gain', '+', '5', '/', '+', '5', '.', 'Deal', '5', 'damage', 'to', 'an', 'enemy', 'follower', 'and', 'then', 'the', 'enemy', 'leader', '.', '\n', 'Enhance', '(', '9', ')', ':', 'Gain', '+', '10', '/', '+', '10', 'and', 'deal', '10', 'damage', 'instead', '.']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['Enhance', '(', '7', ')', '-', 'Gain', '+', '5', '/', '+', '5', '.', 'Deal', '5', 'damage', 'to', 'an', 'enemy', 'follower', 'and', 'then', 'the', 'enemy', 'leader', '.', '\n', 'Enhance', '(', '9', ')', ':', 'Gain', '+', '10', '/', '+', '10', 'and', 'deal', '10', 'damage', 'instead', '.']
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.alternativeCosts] - Found alternativeCost Enhance for with ['Enhance', '(', '7', ')', '-', 'Gain', '+', '5', '/', '+', '5', '.', 'Deal', '5', 'damage', 'to', 'an', 'enemy', 'follower', 'and', 'then', 'the', 'enemy', 'leader', '.', '\n']
+[INFO] [base.subeffect.alternativeCosts] - Entering subeffect for Enhance
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Parsing subeffects with Tokens ['-', 'Gain', '+', '5', '/', '+', '5', '.', 'Deal', '5', 'damage', 'to', 'an', 'enemy', 'follower', 'and', 'then', 'the', 'enemy', 'leader', '.', '\n']
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.alternativeCosts.subeffect.Gain] - Entered gain ['Gain', '+', '5', '/', '+', '5', '.', 'Deal', '5', 'damage', 'to', 'an', 'enemy', 'follower', 'and', 'then', 'the', 'enemy', 'leader', '.', '\n']
+[INFO] [base.subeffect.alternativeCosts.subeffect.Gain.parseGain.statChange] - Entering stat change ['+', '5', '/', '+', '5', '.', 'Deal', '5', 'damage', 'to', 'an', 'enemy', 'follower', 'and', 'then', 'the', 'enemy', 'leader', '.', '\n']
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Found {'type': 'Gain', 'effects': [{'type': 'StatChange', 'operation': '+', 'amount': '5'}, {'type': 'StatChange', 'operation': '+', 'amount': '5'}]}
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'Enhance', 'cost': '7', 'effects': [{'type': 'Gain', 'effects': [{'type': 'StatChange', 'operation': '+', 'amount': '5'}, {'type': 'StatChange', 'operation': '+', 'amount': '5'}]}]}
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.alternativeCosts] - Found alternativeCost Enhance for with ['Enhance', '(', '9', ')', ':', 'Gain', '+', '10', '/', '+', '10', 'and', 'deal', '10', 'damage', 'instead', '.']
+[INFO] [base.subeffect.alternativeCosts] - Entering subeffect for Enhance
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Parsing subeffects with Tokens [':', 'Gain', '+', '10', '/', '+', '10', 'and', 'deal', '10', 'damage', 'instead', '.']
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.alternativeCosts.subeffect.Gain] - Entered gain ['Gain', '+', '10', '/', '+', '10', 'and', 'deal', '10', 'damage', 'instead', '.']
+[INFO] [base.subeffect.alternativeCosts.subeffect.Gain.parseGain.statChange] - Entering stat change ['+', '10', '/', '+', '10', 'and', 'deal', '10', 'damage', 'instead', '.']
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Found {'type': 'Gain', 'effects': [{'type': 'StatChange', 'operation': '+', 'amount': '10'}, {'type': 'StatChange', 'operation': '+', 'amount': '10'}]}
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'Enhance', 'cost': '9', 'effects': [{'type': 'Gain', 'effects': [{'type': 'StatChange', 'operation': '+', 'amount': '10'}, {'type': 'StatChange', 'operation': '+', 'amount': '10'}]}]}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Fanfare', ':', 'Enhance', '(', '7', ')', '-', 'Gain', '+', '5', '/', '+', '5', '.', 'Deal', '5', 'damage', 'to', 'an', 'enemy', 'follower', 'and', 'then', 'the', 'enemy', 'leader', '.', '\n']
+[INFO] [base] - [
+    {
+        "type": "Bane"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Enhance",
+                "cost": "7",
+                "effects": [
+                    {
+                        "type": "Gain",
+                        "effects": [
+                            {
+                                "type": "StatChange",
+                                "operation": "+",
+                                "amount": "5"
+                            },
+                            {
+                                "type": "StatChange",
+                                "operation": "+",
+                                "amount": "5"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "Enhance",
+                "cost": "9",
+                "effects": [
+                    {
+                        "type": "Gain",
+                        "effects": [
+                            {
+                                "type": "StatChange",
+                                "operation": "+",
+                                "amount": "10"
+                            },
+                            {
+                                "type": "StatChange",
+                                "operation": "+",
+                                "amount": "10"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
 [INFO] [base] - Judith, Cosmic Observer
 [INFO] [base] - Follower
-[INFO] [base] - Next effect Enhance
 [INFO] [base] - Modified baseEffectString ['Enhance', '(', '3', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n', 'Enhance', '(', '4', ')', ':', 'Draw', 'a', 'card', '.', '\n']
 [INFO] [base] - Modified baseEffectString ['Enhance', '(', '3', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n', 'Enhance', '(', '4', ')', ':', 'Draw', 'a', 'card', '.', '\n', 'Enhance', '(', '5', ')', ':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.', '\n']
 [INFO] [base] - Modified baseEffectString ['Enhance', '(', '3', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n', 'Enhance', '(', '4', ')', ':', 'Draw', 'a', 'card', '.', '\n', 'Enhance', '(', '5', ')', ':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.', '\n', 'Enhance', '(', '6', ')', ':', 'Give', 'your', 'leader', 'the', 'following', 'effect', '-', 'The', 'next', 'time', 'your', 'leader', 'takes', 'damage', ',', 'reduce', 'that', 'damage', 'to', '0', '.', '\n']
@@ -171,3 +251,131 @@
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Whenever', 'cards', 'are', 'fused', 'to', 'this', 'card', ',', 'summon', 'a', 'Puppet', 'and', 'give', 'it', '+', '1', '/', '+', '0', '.', '\n']
 [INFO] [base] - Finished iteration ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '\n']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['If', 'this', 'card', 'is', 'fused', 'with', 'at', 'least', '1', 'card', ',', 'summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet', '.', 'If', 'fused', 'with', 'at', 'least', '3', 'cards', ',', 'evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.If] - Starting if with ['If', 'this', 'card', 'is', 'fused', 'with', 'at', 'least', '1', 'card', ',', 'summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet', '.', 'If', 'fused', 'with', 'at', 'least', '3', 'cards', ',', 'evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base.subeffect.If.condition] - Entered conditions with tokens ['this', 'card', 'is', 'fused', 'with', 'at', 'least', '1', 'card', ',', 'summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet', '.', 'If', 'fused', 'with', 'at', 'least', '3', 'cards', ',', 'evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base.subeffect.If.condition] - After Popping ['summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet', '.', 'If', 'fused', 'with', 'at', 'least', '3', 'cards', ',', 'evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base.subeffect.If] - Parsing if subeffect ['summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet']
+[INFO] [base.subeffect.If.subeffect] - Parsing subeffects with Tokens ['summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet']
+[INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.If.subeffect.Summon] - Entered with tokens ['summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet']
+[INFO] [base.subeffect.If.subeffect.Summon.parseCards] - Entered with tokens: ['a', 'Lloyd', ',', "Orchis's", 'Puppet']
+[INFO] [base.subeffect.If.subeffect.Summon.parseCards] - Unit stack ['Lloyd', ',', "Orchis's", 'Puppet']
+[INFO] [base.subeffect.If.subeffect] - Found {'type': 'Summon', 'effects': [{'quantifer': 'a', 'type': 'NamedCard', 'cardname': "Lloyd , Orchis's Puppet"}]}
+[INFO] [base.subeffect.If.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'FusionAction', 'amountToTrigger': 1}], 'then': [{'type': 'Summon', 'effects': [{'quantifer': 'a', 'type': 'NamedCard', 'cardname': "Lloyd , Orchis's Puppet"}]}]}}
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.If] - Starting if with ['If', 'fused', 'with', 'at', 'least', '3', 'cards', ',', 'evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base.subeffect.If.condition] - Entered conditions with tokens ['fused', 'with', 'at', 'least', '3', 'cards', ',', 'evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base.subeffect.If.condition] - After Popping ['evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base.subeffect.If] - Parsing if subeffect ['evolve', 'it', 'and', 'this', 'follower']
+[INFO] [base.subeffect.If.subeffect] - Parsing subeffects with Tokens ['evolve', 'it', 'and', 'this', 'follower']
+[INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.If.subeffect.Evolve] - Entering evolve with ['evolve', 'it', 'and', 'this', 'follower']
+[INFO] [base.subeffect.If.subeffect] - Found {'type': 'Evolve', 'effects': ['it', 'and', 'this']}
+[INFO] [base.subeffect.If.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'FusionAction', 'amountToTrigger': '3'}], 'then': [{'type': 'Evolve', 'effects': ['it', 'and', 'this']}]}}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Fanfare', ':', 'If', 'this', 'card', 'is', 'fused', 'with', 'at', 'least', '1', 'card', ',', 'summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet', '.', 'If', 'fused', 'with', 'at', 'least', '3', 'cards', ',', 'evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base] - [
+    {
+        "type": "Fusion",
+        "cardTypes": [
+            "Puppets",
+            "\n"
+        ]
+    },
+    {
+        "type": "Whenever",
+        "effects": {
+            "conditions": [
+                {
+                    "type": "FusionAction",
+                    "amountToTrigger": 1
+                }
+            ],
+            "then": [
+                {
+                    "type": "Summon",
+                    "effects": [
+                        {
+                            "quantifer": "a",
+                            "type": "NamedCard",
+                            "cardname": "Puppet",
+                            "effects": [
+                                {
+                                    "type": "Give",
+                                    "effects": [
+                                        [
+                                            {
+                                                "type": "StatChange",
+                                                "operation": "+",
+                                                "amount": "1"
+                                            },
+                                            {
+                                                "type": "StatChange",
+                                                "operation": "+",
+                                                "amount": "0"
+                                            }
+                                        ]
+                                    ],
+                                    "target": "parent"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "If",
+                "effects": {
+                    "conditions": [
+                        {
+                            "type": "FusionAction",
+                            "amountToTrigger": 1
+                        }
+                    ],
+                    "then": [
+                        {
+                            "type": "Summon",
+                            "effects": [
+                                {
+                                    "quantifer": "a",
+                                    "type": "NamedCard",
+                                    "cardname": "Lloyd , Orchis's Puppet"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "If",
+                "effects": {
+                    "conditions": [
+                        {
+                            "type": "FusionAction",
+                            "amountToTrigger": "3"
+                        }
+                    ],
+                    "then": [
+                        {
+                            "type": "Evolve",
+                            "effects": [
+                                "it",
+                                "and",
+                                "this"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]

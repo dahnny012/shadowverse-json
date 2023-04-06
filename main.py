@@ -18,7 +18,7 @@ for file in files:
 
 rotationCardPool = list()
 debug = True
-testCardsId = {126441030, 126431030, 127611010, 127621030, 125641020, 126631020, 125641010, 125841010, 127841030}
+testCardsId = {126441030, 126431030, 127611010, 127621030, 125641020, 126631020, 125641010, 125841010, 127841030, 127841010}
 effectDebugSearch = False
 effectSearch = "if"
 doomlord_abyss = 125641010
@@ -67,7 +67,6 @@ for card in rotationCardPool:
                 baseEffectString = effectStrings[2:]
                 ## How enhance is formatted is so weird, it acts on fanfare but 
                 ## But uses new lines for readability
-                log.info("Next effect %s", card['effectTokens'][0][0])
                 while(len(card['effectTokens']) > 0 and card['effectTokens'][0][0] == "Enhance"):
                     baseEffectString = baseEffectString + card['effectTokens'].pop(0)
                     log.info("Modified baseEffectString %s", baseEffectString)
