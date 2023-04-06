@@ -97,6 +97,18 @@
                             }
                         ]
                     }
+                },
+                {
+                    "type": "If",
+                    "effects": {
+                        "conditions": [],
+                        "then": [
+                            {
+                                "type": "Evolve",
+                                "effects": []
+                            }
+                        ]
+                    }
                 }
             ]
         }

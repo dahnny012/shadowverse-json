@@ -1,0 +1,187 @@
+{
+    "name_": "Lumiore, Prestigious Gold",
+    "id_": 126441030,
+    "pp_": 8,
+    "craft_": "Dragoncraft",
+    "rarity_": "Legendary",
+    "type_": "Follower",
+    "trait_": "-",
+    "expansion_": "Celestial Dragonblade",
+    "baseEffect_": "Fanfare: Recover 3 play points. If at least 4 allied effects have discarded cards from your hand this match, discard 2 cards from your hand and draw 3 cards.\nDuring your turn, whenever you discard cards from your hand, deal X damage to all enemies. X equals twice the number of cards discarded.",
+    "related_": [],
+    "baseFlair_": "If I had a gold coin for each time someone said my single wing wasn't \"ordinary\"... But I'm nothing less than extraordinary, and I'll prove it! As the eldest, I have to set a good example. Now, step back and leave everything to me, my darling brothers and sisters!",
+    "rotation_": true,
+    "baseAtk_": 5,
+    "baseDef_": 5,
+    "evoAtk_": 7,
+    "evoDef_": 7,
+    "evoEffect_": "(Same as the unevolved form, excluding Fanfare.)",
+    "evoFlair_": "You're so dull... Nothing at all like our brilliant sister!\n\u2014Argente, Purest Silver\nYou can't just order me around 'cause you're older, Sis!\n\u2014Noir, Black-Winged Brother",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "Recover",
+                    "effect": {
+                        "amount": "3",
+                        "resource": "play"
+                    }
+                },
+                {
+                    "type": "If",
+                    "effects": {
+                        "conditions": [
+                            {
+                                "type": "CheckNumericState",
+                                "amount": [
+                                    "at"
+                                ],
+                                "state": [
+                                    "least",
+                                    "4",
+                                    "allied",
+                                    "effects",
+                                    "have",
+                                    "discarded",
+                                    "cards",
+                                    "from",
+                                    "your",
+                                    "hand",
+                                    "this",
+                                    "match",
+                                    ","
+                                ]
+                            }
+                        ],
+                        "then": [
+                            {
+                                "type": "Discard",
+                                "effects": {
+                                    "cardsToDiscard": "2",
+                                    "effects": [
+                                        {
+                                            "type": "draw",
+                                            "effects": {
+                                                "quantifier": "3"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "During",
+            "effect": [
+                {
+                    "type": "Whenever",
+                    "effects": {
+                        "conditions": [
+                            {
+                                "type": "WheneverAction",
+                                "state": [
+                                    "discard",
+                                    "cards",
+                                    "from",
+                                    "your",
+                                    "hand",
+                                    ","
+                                ]
+                            }
+                        ],
+                        "then": [
+                            {
+                                "type": "Deal",
+                                "effects": {
+                                    "amount": "X",
+                                    "targets": "enemies",
+                                    "times": 1,
+                                    "and": {},
+                                    "quantifer": "all",
+                                    "user": "enemies"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "VariableDefinition",
+                    "variable": "X"
+                }
+            ]
+        }
+    ],
+    "_effectTokens": [
+        [
+            "Fanfare",
+            ":",
+            "Recover",
+            "3",
+            "play",
+            "points",
+            ".",
+            "If",
+            "at",
+            "least",
+            "4",
+            "allied",
+            "effects",
+            "have",
+            "discarded",
+            "cards",
+            "from",
+            "your",
+            "hand",
+            "this",
+            "match",
+            ",",
+            "discard",
+            "2",
+            "cards",
+            "from",
+            "your",
+            "hand",
+            "and",
+            "draw",
+            "3",
+            "cards",
+            ".",
+            "\n"
+        ],
+        [
+            "During",
+            "your",
+            "turn",
+            ",",
+            "whenever",
+            "you",
+            "discard",
+            "cards",
+            "from",
+            "your",
+            "hand",
+            ",",
+            "deal",
+            "X",
+            "damage",
+            "to",
+            "all",
+            "enemies",
+            ".",
+            "X",
+            "equals",
+            "twice",
+            "the",
+            "number",
+            "of",
+            "cards",
+            "discarded",
+            "."
+        ]
+    ]
+}

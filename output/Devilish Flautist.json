@@ -1,0 +1,123 @@
+{
+    "name_": "Devilish Flautist",
+    "id_": 127621030,
+    "pp_": 1,
+    "craft_": "Bloodcraft",
+    "rarity_": "Silver",
+    "type_": "Follower",
+    "trait_": "-",
+    "expansion_": "Eightfold Abyss: Azvaldt",
+    "baseEffect_": "Rush.\nDrain.\nFanfare: Deal 1 damage to your leader.\nStrike: If Wrath is active for you, gain +2/+0.",
+    "related_": [],
+    "baseFlair_": "The rhythm picks up and the sounds chain together into a melody that blasts all the noise clear out of existence!\n\u2014Ryoga Jasei",
+    "rotation_": true,
+    "baseAtk_": 1,
+    "baseDef_": 1,
+    "evoAtk_": 3,
+    "evoDef_": 3,
+    "evoEffect_": "(Same as the unevolved form, excluding Fanfare.)",
+    "evoFlair_": "Haha! Hahahaha! What's the matter? Can't follow along with my rhythm?\n\u2014Ryoga Jasei",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Rush"
+        },
+        {
+            "type": "Drain"
+        },
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "Deal",
+                    "effects": {
+                        "amount": "1",
+                        "targets": "leader",
+                        "times": 1,
+                        "and": {},
+                        "quantifer": "your",
+                        "user": "leader"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Strike",
+            "effects": [
+                {
+                    "type": "If",
+                    "effects": {
+                        "conditions": [
+                            {
+                                "type": "CheckActiveState",
+                                "state": [
+                                    "Wrath"
+                                ],
+                                "stateIsActive": false
+                            }
+                        ],
+                        "then": [
+                            {
+                                "type": "Gain",
+                                "effects": [
+                                    {
+                                        "type": "StatChange",
+                                        "operation": "+",
+                                        "amount": "2"
+                                    },
+                                    {
+                                        "type": "StatChange",
+                                        "operation": "+",
+                                        "amount": "0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "_effectTokens": [
+        [
+            "Rush",
+            ".",
+            "\n"
+        ],
+        [
+            "Drain",
+            ".",
+            "\n"
+        ],
+        [
+            "Fanfare",
+            ":",
+            "Deal",
+            "1",
+            "damage",
+            "to",
+            "your",
+            "leader",
+            ".",
+            "\n"
+        ],
+        [
+            "Strike",
+            ":",
+            "If",
+            "Wrath",
+            "is",
+            "active",
+            "for",
+            "you",
+            ",",
+            "gain",
+            "+",
+            "2",
+            "/",
+            "+",
+            "0",
+            "."
+        ]
+    ]
+}

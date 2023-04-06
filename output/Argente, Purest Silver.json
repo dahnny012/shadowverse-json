@@ -1,0 +1,129 @@
+{
+    "name_": "Argente, Purest Silver",
+    "id_": 126431030,
+    "pp_": 3,
+    "craft_": "Dragoncraft",
+    "rarity_": "Gold",
+    "type_": "Follower",
+    "trait_": "-",
+    "expansion_": "Celestial Dragonblade",
+    "baseEffect_": "Ward.\nFanfare: Discard 2 cards from your hand. Gain an empty play point orb. If at least 2 other allied effects have discarded cards from your hand this match, draw 3 cards.",
+    "related_": [],
+    "baseFlair_": "I'm a half-formed dragon because I've only got one wing? I beg to differ. I watched my siblings growing up\u2014they live each day with pride, always supporting each other. Looking up to and learning from them is a privilege only I, as the youngest, can take advantage of.",
+    "rotation_": true,
+    "baseAtk_": 3,
+    "baseDef_": 3,
+    "evoAtk_": 5,
+    "evoDef_": 5,
+    "evoEffect_": "(Same as the unevolved form, excluding Fanfare.)",
+    "evoFlair_": "You got Father to reinforce your shield again? He's putty in your hands, isn't he?\n\u2014Lumiore, Prestigious Gold\nGuess she can get away with it, being the youngest.\n\u2014Blanc, White-Winged Brother",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Ward"
+        },
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "Discard",
+                    "effects": {
+                        "cardsToDiscard": "2",
+                        "effects": [
+                            {
+                                "type": "Gain",
+                                "effects": [
+                                    {
+                                        "type": "An empty play point"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "If",
+                                "effects": {
+                                    "conditions": [
+                                        {
+                                            "type": "CheckNumericState",
+                                            "amount": [
+                                                "at"
+                                            ],
+                                            "state": [
+                                                "least",
+                                                "2",
+                                                "other",
+                                                "allied",
+                                                "effects",
+                                                "have",
+                                                "discarded",
+                                                "cards",
+                                                "from",
+                                                "your",
+                                                "hand",
+                                                "this",
+                                                "match",
+                                                ","
+                                            ]
+                                        }
+                                    ],
+                                    "then": [
+                                        {
+                                            "type": "draw",
+                                            "effects": {
+                                                "quantifier": "3"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "_effectTokens": [
+        [
+            "Ward",
+            ".",
+            "\n"
+        ],
+        [
+            "Fanfare",
+            ":",
+            "Discard",
+            "2",
+            "cards",
+            "from",
+            "your",
+            "hand",
+            ".",
+            "Gain",
+            "an",
+            "empty",
+            "play",
+            "point",
+            "orb",
+            ".",
+            "If",
+            "at",
+            "least",
+            "2",
+            "other",
+            "allied",
+            "effects",
+            "have",
+            "discarded",
+            "cards",
+            "from",
+            "your",
+            "hand",
+            "this",
+            "match",
+            ",",
+            "draw",
+            "3",
+            "cards",
+            "."
+        ]
+    ]
+}

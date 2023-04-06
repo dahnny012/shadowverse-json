@@ -1,0 +1,175 @@
+{
+    "name_": "Demon Maestro",
+    "id_": 126631020,
+    "pp_": 2,
+    "craft_": "Bloodcraft",
+    "rarity_": "Gold",
+    "type_": "Follower",
+    "trait_": "-",
+    "expansion_": "Celestial Dragonblade",
+    "baseEffect_": "Fanfare: If Wrath is not active for you, deal 1 damage to your leader and draw a card. Otherwise, put an Infernal Orchestration into your hand and change its cost to 0.\nLast Words: At the start of your next turn, deal 1 damage to your leader and draw a card.",
+    "related_": [
+        126614010,
+        717614020
+    ],
+    "baseFlair_": "My rhythm's already pumped up to vivace. Better get a move on, Shadowverse College kid.\n\u2014Ryoga Jasei",
+    "rotation_": true,
+    "baseAtk_": 1,
+    "baseDef_": 1,
+    "evoAtk_": 3,
+    "evoDef_": 3,
+    "evoEffect_": "(Same as the unevolved form, excluding Fanfare.)",
+    "evoFlair_": "So, you can still play? Not bad... Then show me the rhythm of your fighting spirit!\n\u2014Ryoga Jasei",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "If",
+                    "effects": {
+                        "conditions": [
+                            {
+                                "type": "CheckActiveState",
+                                "state": [
+                                    "Wrath"
+                                ],
+                                "stateIsActive": false
+                            }
+                        ],
+                        "then": [
+                            {
+                                "type": "Deal",
+                                "effects": {
+                                    "amount": "1",
+                                    "targets": "leader",
+                                    "times": 1,
+                                    "and": {},
+                                    "quantifer": "your",
+                                    "user": "leader"
+                                }
+                            },
+                            {
+                                "type": "draw",
+                                "effects": {
+                                    "quantifier": "a"
+                                }
+                            }
+                        ],
+                        "otherwise": {
+                            "type": "Otherwise",
+                            "effects": [
+                                {
+                                    "type": "Put",
+                                    "effects": [
+                                        {
+                                            "quantifer": "an",
+                                            "type": "NamedCard",
+                                            "cardname": "Infernal Orchestration"
+                                        }
+                                    ],
+                                    "destination": []
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Last Words",
+            "effects": [
+                {
+                    "type": "At the start",
+                    "user": "your",
+                    "when": "next",
+                    "effects": [
+                        {
+                            "type": "Deal",
+                            "effects": {
+                                "amount": "1",
+                                "targets": "leader",
+                                "times": 1,
+                                "and": {},
+                                "quantifer": "your",
+                                "user": "leader"
+                            }
+                        },
+                        {
+                            "type": "draw",
+                            "effects": {
+                                "quantifier": "a"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "_effectTokens": [
+        [
+            "Fanfare",
+            ":",
+            "If",
+            "Wrath",
+            "is",
+            "not",
+            "active",
+            "for",
+            "you",
+            ",",
+            "deal",
+            "1",
+            "damage",
+            "to",
+            "your",
+            "leader",
+            "and",
+            "draw",
+            "a",
+            "card",
+            ".",
+            "Otherwise",
+            ",",
+            "put",
+            "an",
+            "Infernal",
+            "Orchestration",
+            "into",
+            "your",
+            "hand",
+            "and",
+            "change",
+            "its",
+            "cost",
+            "to",
+            "0",
+            ".",
+            "\n"
+        ],
+        [
+            "Last",
+            "Words",
+            ":",
+            "At",
+            "the",
+            "start",
+            "of",
+            "your",
+            "next",
+            "turn",
+            ",",
+            "deal",
+            "1",
+            "damage",
+            "to",
+            "your",
+            "leader",
+            "and",
+            "draw",
+            "a",
+            "card",
+            "."
+        ]
+    ]
+}

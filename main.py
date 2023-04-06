@@ -4,9 +4,9 @@ from parsers import *
 import logging
 
 files = [
-   # "Dragoncraft",
-    "Portalcraft",
-   # "Bloodcraft"
+   "Dragoncraft",
+   "Portalcraft",
+   "Bloodcraft"
 ]
 
 cardpool = []
@@ -27,7 +27,14 @@ for craft in cardpool:
         if card['rotation_'] and (not debug or card["id_"] in testCardsId):
             rotationCardPool.append(card)
 log = logging.getLogger("base")
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(
+                    level=logging.INFO,
+                    format='[%(levelname)s] [%(name)s] - %(message)s',
+                        handlers=[
+                            logging.FileHandler("debug.log"),
+                            logging.StreamHandler()
+                        ]
+                    )
 
 class StackBasedLogger:
     def getLog(self):
@@ -36,8 +43,8 @@ class StackBasedLogger:
 for card in rotationCardPool:
     if (effectDebugSearch and effectSearch not in card["baseEffect_"].lower()):
         continue
-    log.debug(card["name_"])
-    log.debug(card["type_"])
+    log.info(card["name_"])
+    log.info(card["type_"])
     card['effectTokens'] = []
     card['effectJson'] = []
     effect = card['baseEffect_']
@@ -79,7 +86,7 @@ for card in rotationCardPool:
         endOfPhase = triggerPhaseOfTurnToken(effectStrings[0], effectStrings)
         if(endOfPhase != None):
             card['effectJson'].append(endOfPhase)
-        log.debug("Finished iteration %s", effectStrings)
+        log.info("Finished iteration %s", effectStrings)
     log.info(json.dumps(card["effectJson"], indent=4))
-    with open(f'{os.getcwd()}/output/{card["id_"]}.json', 'w') as w:
+    with open(f'{os.getcwd()}/output/{card["name_"]}.json', 'w') as w:
         w.write(json.dumps(card, indent=4))

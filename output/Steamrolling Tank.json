@@ -1,0 +1,135 @@
+{
+    "name_": "Steamrolling Tank",
+    "id_": 127611010,
+    "pp_": 1,
+    "craft_": "Bloodcraft",
+    "rarity_": "Bronze",
+    "type_": "Follower",
+    "trait_": "Condemned",
+    "expansion_": "Eightfold Abyss: Azvaldt",
+    "baseEffect_": "Ward.\nFanfare: Deal 1 damage to your leader.\nDuring your turn, whenever your leader takes damage, restore 1 defense to your leader (up to 8 times per turn).",
+    "related_": [],
+    "baseFlair_": "There's a saying among us demons: \"Like the moon, the nobility is untouchable.\" Don't make me puke. If they're really tough, they'd spill their blood to prove it like the rest of us. I refused to be part of a society like that.\n\u2014Serpent's Lair: Memories of a Convict, Part 1",
+    "rotation_": true,
+    "baseAtk_": 0,
+    "baseDef_": 2,
+    "evoAtk_": 2,
+    "evoDef_": 4,
+    "evoEffect_": "(Same as the unevolved form, excluding Fanfare.)",
+    "evoFlair_": "But he changed me... by beating me to a pulp, roping me into his biker gang, and making me his apprentice. He sure liked to go out of his way to help, even when no one asked him for it.\n\u2014Serpent's Lair: Memories of a Convict, Part 2",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Ward"
+        },
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "Deal",
+                    "effects": {
+                        "amount": "1",
+                        "targets": "leader",
+                        "times": 1,
+                        "and": {},
+                        "quantifer": "your",
+                        "user": "leader"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "During",
+            "effect": [
+                {
+                    "type": "Whenever",
+                    "effects": {
+                        "conditions": [
+                            {
+                                "type": "WheneverAction",
+                                "state": [
+                                    "leader",
+                                    "takes",
+                                    "damage",
+                                    ","
+                                ]
+                            }
+                        ],
+                        "then": [
+                            {
+                                "type": "Restore",
+                                "effects": {
+                                    "amount": "1",
+                                    "targets": "leader",
+                                    "times": 1,
+                                    "and": {},
+                                    "quantifer": "your",
+                                    "user": "leader"
+                                },
+                                "limit": {
+                                    "type": "Parens",
+                                    "condition": [
+                                        "(",
+                                        "up",
+                                        "to",
+                                        "8",
+                                        "times",
+                                        "per",
+                                        "turn",
+                                        ")"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "_effectTokens": [
+        [
+            "Ward",
+            ".",
+            "\n"
+        ],
+        [
+            "Fanfare",
+            ":",
+            "Deal",
+            "1",
+            "damage",
+            "to",
+            "your",
+            "leader",
+            ".",
+            "\n"
+        ],
+        [
+            "During",
+            "your",
+            "turn",
+            ",",
+            "whenever",
+            "your",
+            "leader",
+            "takes",
+            "damage",
+            ",",
+            "restore",
+            "1",
+            "defense",
+            "to",
+            "your",
+            "leader",
+            "(",
+            "up",
+            "to",
+            "8",
+            "times",
+            "per",
+            "turn",
+            ")",
+            "."
+        ]
+    ]
+}

@@ -1,0 +1,112 @@
+{
+    "name_": "Vania, Crimson Majesty",
+    "id_": 125641020,
+    "pp_": 2,
+    "craft_": "Bloodcraft",
+    "rarity_": "Legendary",
+    "type_": "Follower",
+    "trait_": "-",
+    "expansion_": "Roar of the Godwyrm",
+    "baseEffect_": "Fanfare: Put a Gift for Bloodkin into your hand. Then, if Vengeance or Wrath is active for you, put a Summon Bloodkin into your hand and gain the ability to evolve for 0 evolution points.",
+    "related_": [
+        108634010,
+        101614020,
+        900611010,
+        108614010
+    ],
+    "baseFlair_": "I'm the heir apparent to the queen? What does that even mean? All I know is I like it here in this castle! As long as Veight and my bloodkin can be by my side, that's all that matters!",
+    "rotation_": true,
+    "baseAtk_": 2,
+    "baseDef_": 2,
+    "evoAtk_": 4,
+    "evoDef_": 4,
+    "evoEffect_": "Whenever an allied Forest Bat comes into play, give it Storm and Bane and deal 1 damage to the enemy leader.",
+    "evoFlair_": "What's with the scary look on your face, Veight? Everyone knows you're just a big softie deep down, hehe. No, I'm not picking a fight, I just wanted to give you some friendly advice, that's all! That's what sisters do!",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "Put",
+                    "effects": [
+                        {
+                            "quantifer": "a",
+                            "type": "NamedCard",
+                            "cardname": "Gift"
+                        },
+                        {
+                            "type": "NamedCard",
+                            "cardname": "Bloodkin"
+                        },
+                        {
+                            "type": "NamedCard",
+                            "cardname": "Then ,"
+                        },
+                        {
+                            "type": "NamedCard",
+                            "cardname": "Vengeance"
+                        },
+                        {
+                            "type": "NamedCard",
+                            "cardname": "Wrath"
+                        },
+                        {
+                            "type": null
+                        },
+                        {
+                            "quantifer": "a",
+                            "type": "NamedCard",
+                            "cardname": "Summon Bloodkin"
+                        }
+                    ],
+                    "destination": []
+                }
+            ]
+        }
+    ],
+    "_effectTokens": [
+        [
+            "Fanfare",
+            ":",
+            "Put",
+            "a",
+            "Gift",
+            "for",
+            "Bloodkin",
+            "into",
+            "your",
+            "hand",
+            ".",
+            "Then",
+            ",",
+            "if",
+            "Vengeance",
+            "or",
+            "Wrath",
+            "is",
+            "active",
+            "for",
+            "you",
+            ",",
+            "put",
+            "a",
+            "Summon",
+            "Bloodkin",
+            "into",
+            "your",
+            "hand",
+            "and",
+            "gain",
+            "the",
+            "ability",
+            "to",
+            "evolve",
+            "for",
+            "0",
+            "evolution",
+            "points",
+            "."
+        ]
+    ]
+}

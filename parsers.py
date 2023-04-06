@@ -93,8 +93,12 @@ traits = {
 }
 
 logging.basicConfig(
-                    level=logging.DEBUG,
-                    format='[%(levelname)s] [%(name)s] - %(message)s'
+                    level=logging.INFO,
+                    format='[%(levelname)s] [%(name)s] - %(message)s',
+                        handlers=[
+                            logging.FileHandler("debug.log"),
+                            logging.StreamHandler()
+                        ]
                     )
 _levels = ["base"]
 log = logging.getLogger("base")
@@ -191,6 +195,7 @@ def parseOtherwise(head, tokens):
 @register
 @useLog("variableEquals")
 def variableEquals(head, tokens):
+    log.debug("head: %s in %s", head, variableEffects)
     if (head not in variableEffects):
         return None
     log.info("Found variable definition %s", tokens)
@@ -205,25 +210,26 @@ def variableEquals(head, tokens):
 def wheneverToken(head, tokens):
     if (head != whenever and head.capitalize() != whenever):
         return None
-    log.info("Entered whenever ", tokens)
+    log.info("Entered whenever %s", tokens)
     return {
         'type': whenever,
         "effects": parseIffEffect(tokens)
     }
 
-@register
+
 @useLog(discard)
+@register
 def discardToken(head, tokens):
     if (head != discard and head.capitalize() != discard):
         return None
-    log.info("Entered discard tokens ", tokens)
+    log.info("Entered discard tokens %s", tokens)
     tokens.pop(0)
     return {
         'type': discard,
         'effects': parseDiscard(tokens)
     }
 
-def parseDiscard(head, tokens):
+def parseDiscard(tokens):
     effect = {
         'cardsToDiscard': tokens[0],
         'effects': []
@@ -337,8 +343,10 @@ def putToken(head, tokens):
     log.debug("DestinationList ", destinationList)
     if (hand in destinationList):
         destination = hand
-    if (deck in destinationList):
+    elif (deck in destinationList):
         destination = deck
+    else:
+        destination = destinationList
     return {
         "type": put,
         "effects": units,
@@ -454,6 +462,7 @@ def parseIffEffect(tokens):
 def parseCondition(tokens):
     log.info("Entered conditions with tokens %s", tokens)
     conditionTokens = popArrayAfterSearch(tokens, ",")
+    log.info("After Popping %s", tokens)
     conditions = []
     if conditionTokens[0] in stateConditions:
         effect = {
@@ -523,6 +532,10 @@ def changeHealth(tokens, type=None):
     if (nextTarget == follower):
         effect['targets'] = nextTarget
         popArrayTill(tokens, toIndex + 2)
+    if(tokens[toIndex + 2] == "other"):
+        effect['targets'] = 'followers'
+        effect['exceptions'] = 'other'
+        popArrayTill(tokens, toIndex + 4)
     else:
         if (tokens[toIndex + 2] == endEffectToken):
             # enemies
@@ -536,7 +549,7 @@ def changeHealth(tokens, type=None):
             effect['user'] = nextTarget
             effect['targets'] = tokens[toIndex + 2]
             popArrayTill(tokens, toIndex + 3)
-    log.info("Damage tokens after target checks: ", tokens)
+    log.info("Damage tokens after target checks: %s", tokens)
     if len(tokens) >= 3 and tokens[0] == andd and tokens[1] == then:
         if (tokens[2] == the):
             effect['and'] = {
@@ -570,7 +583,7 @@ def parensToken(head, tokens):
 
 @useLog("statChange")
 def parseStatChange(tokens, gainStack):
-    log.info("Entering stat change", tokens)
+    log.info("Entering stat change %s", tokens)
     gain = {}
     while len(tokens) > 0:
         token = tokens.pop(0)
@@ -660,7 +673,7 @@ def parseCards(tokens, quantifier=None, stopWord=None):
               or not isANameToken(token)
               or len(tokens) == 0):
             if(len(unitStack) > 0):
-                log.info("Unit stack", unitStack)
+                log.info("Unit stack %s", unitStack)
                 unitName = " ".join(unitStack)
                 unit["type"] = getCardType(unitName)
                 if unit["type"] == "NamedCard":
@@ -703,10 +716,6 @@ def parseSubEffect(tokens):
                     if (len(stack) == 0):
                         break
                     head = stack[0]
-                    if head == endEffectToken or head == andd or head == newLineToken:
-                        stack.pop(0)
-                        if (len(stack) > 0):
-                            head = stack[0]
                     log.debug("Head %s, Stack %s, Tokens %s", head, stack, tokens)
                     subEffect = subEffectParser(head, stack)
                     if (subEffect) != None:
@@ -719,7 +728,8 @@ def parseSubEffect(tokens):
                             effects.append(subEffect)
                         log.debug("After subeffect stack: %s, tokens: %s", stack, tokens)
                 if (subEffect == None):
-                    break
+                    if(len(stack) > 0):
+                        stack.pop(0)
     log.info("Exiting with tokens: %s", tokens)
     return effects
 

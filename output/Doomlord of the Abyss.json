@@ -1,0 +1,177 @@
+{
+    "name_": "Doomlord of the Abyss",
+    "id_": 125641010,
+    "pp_": 9,
+    "craft_": "Bloodcraft",
+    "rarity_": "Legendary",
+    "type_": "Follower",
+    "trait_": "-",
+    "expansion_": "Roar of the Godwyrm",
+    "baseEffect_": "Fusion: Bloodcraft cards\nWhenever cards are fused to this card, change this card's cost to 6.\n(Can only fuse if Vengeance is active for you.)\n----------\nStorm.\nFanfare: Deal X damage to all other followers. X equals your leader's defense. Then, deal damage to your leader until their defense drops to 1.",
+    "related_": [],
+    "baseFlair_": "Fine. I admit it. I... I love Shadowverse!\n\u2014Luca Yonazuki",
+    "rotation_": true,
+    "baseAtk_": 6,
+    "baseDef_": 4,
+    "evoAtk_": 8,
+    "evoDef_": 6,
+    "evoEffect_": "Storm.\nEvolve: Give your leader the following effect until the start of your next turn - Reduce damage to your leader to 0.",
+    "evoFlair_": "You are the truth made flesh\u2014the great shadow beneath! Rise, Doomlord of the Abyss!\n\u2014Luca Yonazuki",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Fusion",
+            "cardTypes": [
+                "Bloodcraft",
+                "cards",
+                "\n"
+            ]
+        },
+        {
+            "type": "Whenever",
+            "effects": {
+                "conditions": [
+                    {
+                        "type": "FusionAction",
+                        "amountToTrigger": 1
+                    }
+                ],
+                "then": [
+                    {
+                        "type": "ChangeCard",
+                        "target": "this",
+                        "attribute": "cost",
+                        "new": "6"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Storm"
+        },
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "Deal",
+                    "effects": {
+                        "amount": "X",
+                        "targets": "followers",
+                        "times": 1,
+                        "and": {},
+                        "quantifer": "all",
+                        "exceptions": "other"
+                    }
+                },
+                {
+                    "type": "Then",
+                    "effects": [
+                        {
+                            "type": "Deal",
+                            "effects": {
+                                "amount": ".",
+                                "targets": "leader",
+                                "times": 1,
+                                "and": {},
+                                "quantifer": "your",
+                                "user": "leader"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "_effectTokens": [
+        [
+            "Fusion",
+            ":",
+            "Bloodcraft",
+            "cards",
+            "\n"
+        ],
+        [
+            "Whenever",
+            "cards",
+            "are",
+            "fused",
+            "to",
+            "this",
+            "card",
+            ",",
+            "change",
+            "this",
+            "card's",
+            "cost",
+            "to",
+            "6",
+            ".",
+            "\n"
+        ],
+        [
+            "(",
+            "Can",
+            "only",
+            "fuse",
+            "if",
+            "Vengeance",
+            "is",
+            "active",
+            "for",
+            "you",
+            ".",
+            ")",
+            "\n"
+        ],
+        [
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "\n"
+        ],
+        [
+            "Storm",
+            ".",
+            "\n"
+        ],
+        [
+            "Fanfare",
+            ":",
+            "Deal",
+            "X",
+            "damage",
+            "to",
+            "all",
+            "other",
+            "followers",
+            ".",
+            "X",
+            "equals",
+            "your",
+            "leader's",
+            "defense",
+            ".",
+            "Then",
+            ",",
+            "deal",
+            "damage",
+            "to",
+            "your",
+            "leader",
+            "until",
+            "their",
+            "defense",
+            "drops",
+            "to",
+            "1",
+            "."
+        ]
+    ]
+}
