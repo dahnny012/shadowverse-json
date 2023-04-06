@@ -788,3 +788,18 @@ def splitEffectIntoDifferentPhases(card, effect):
             card['effectTokens'].append(effectStack.copy())
             effectStack.clear()
     card['effectTokens'].append(effectStack.copy())
+
+
+def splitEvolveIntoDifferentPhases(card, effect):
+    card['evolveEffectTokens'] = []
+    if(effect == "-" or effect == "(Same as the unevolved form, excluding Fanfare.)"):
+        return
+        
+    effectTokens = re.findall(r"\b[\w']+\b|[^\w\s]|\n", effect)
+    effectStack = []
+    for effectToken in effectTokens:
+        effectStack.append(effectToken)
+        if effectToken == newLineToken:
+            card['evolveEffectTokens'].append(effectStack.copy())
+            effectStack.clear()
+    card['evolveEffectTokens'].append(effectStack.copy())
