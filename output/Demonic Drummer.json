@@ -1,0 +1,191 @@
+{
+    "name_": "Demonic Drummer",
+    "id_": 127621020,
+    "pp_": 5,
+    "craft_": "Bloodcraft",
+    "rarity_": "Silver",
+    "type_": "Follower",
+    "trait_": "-",
+    "expansion_": "Eightfold Abyss: Azvaldt",
+    "baseEffect_": "Accelerate (2): Summon a Demonic Drummer and deal 1 damage to your leader. Do this 2 times.\n----------\nWard.\nFanfare: Summon 4 Demonic Drummers. If Wrath is active for you, evolve this follower.\nLast Words: Restore 1 defense to your leader.",
+    "related_": [],
+    "baseFlair_": "Do you have anything in your deck that can beat back this aural onslaught?!\n\u2014Ryoga Jasei",
+    "rotation_": true,
+    "baseAtk_": 1,
+    "baseDef_": 1,
+    "evoAtk_": 3,
+    "evoDef_": 3,
+    "evoEffect_": "Ward.\nCan't take more than 2 damage at a time.\nLast Words: Restore 2 defense to your leader.",
+    "evoFlair_": "It's all noise in the end! You don't stand a chance against my music!\n\u2014Ryoga Jasei",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Accelerate",
+            "cost": "2",
+            "effects": [
+                {
+                    "type": "Summon",
+                    "effects": [
+                        {
+                            "quantifer": "a",
+                            "type": "NamedCard",
+                            "cardname": "Demonic Drummer",
+                            "effects": [
+                                {
+                                    "type": "Deal",
+                                    "effects": {
+                                        "amount": "1",
+                                        "targets": "leader",
+                                        "times": 1,
+                                        "and": {},
+                                        "quantifer": "your",
+                                        "user": "leader"
+                                    }
+                                },
+                                {
+                                    "type": "Repeat",
+                                    "amount": "2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ward"
+        },
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "Summon",
+                    "effects": [
+                        {
+                            "quantifer": "4",
+                            "type": "NamedCard",
+                            "cardname": "Demonic Drummers"
+                        }
+                    ]
+                },
+                {
+                    "type": "If",
+                    "effects": {
+                        "conditions": [
+                            {
+                                "type": "CheckActiveState",
+                                "state": [
+                                    "is"
+                                ],
+                                "stateEqualTo": true
+                            }
+                        ],
+                        "then": [
+                            {
+                                "type": "Evolve",
+                                "effects": [
+                                    "this",
+                                    "follower"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Last Words",
+            "effects": [
+                {
+                    "type": "Restore",
+                    "effects": {
+                        "amount": "1",
+                        "targets": "leader",
+                        "times": 1,
+                        "and": {},
+                        "quantifer": "your",
+                        "user": "leader"
+                    }
+                }
+            ]
+        }
+    ],
+    "_effectTokens": [
+        [
+            "Accelerate",
+            "(",
+            "2",
+            ")",
+            ":",
+            "Summon",
+            "a",
+            "Demonic",
+            "Drummer",
+            "and",
+            "deal",
+            "1",
+            "damage",
+            "to",
+            "your",
+            "leader",
+            ".",
+            "Do",
+            "this",
+            "2",
+            "times",
+            ".",
+            "\n"
+        ],
+        [
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "\n"
+        ],
+        [
+            "Ward",
+            ".",
+            "\n"
+        ],
+        [
+            "Fanfare",
+            ":",
+            "Summon",
+            "4",
+            "Demonic",
+            "Drummers",
+            ".",
+            "If",
+            "Wrath",
+            "is",
+            "active",
+            "for",
+            "you",
+            ",",
+            "evolve",
+            "this",
+            "follower",
+            ".",
+            "\n"
+        ],
+        [
+            "Last",
+            "Words",
+            ":",
+            "Restore",
+            "1",
+            "defense",
+            "to",
+            "your",
+            "leader",
+            "."
+        ]
+    ]
+}
