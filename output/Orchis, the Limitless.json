@@ -101,7 +101,12 @@
                 {
                     "type": "If",
                     "effects": {
-                        "conditions": [],
+                        "conditions": [
+                            {
+                                "type": "FusionAction",
+                                "amountToTrigger": "3"
+                            }
+                        ],
                         "then": [
                             {
                                 "type": "Evolve",

@@ -1,0 +1,888 @@
+[INFO] [base] - Argente, Purest Silver
+[INFO] [base] - Follower
+[INFO] [base] - Finished iteration ['Ward', '.', '\n']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['Discard', '2', 'cards', 'from', 'your', 'hand', '.', 'Gain', 'an', 'empty', 'play', 'point', 'orb', '.', 'If', 'at', 'least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'draw', '3', 'cards', '.']
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect] - Entered discard tokens ['Discard', '2', 'cards', 'from', 'your', 'hand', '.', 'Gain', 'an', 'empty', 'play', 'point', 'orb', '.', 'If', 'at', 'least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'draw', '3', 'cards', '.']
+[INFO] [base.subeffect.subeffect] - Parsing subeffects with Tokens ['Gain', 'an', 'empty', 'play', 'point', 'orb', '.', 'If', 'at', 'least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'draw', '3', 'cards', '.']
+[INFO] [base.subeffect.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.subeffect.Gain] - Entered gain ['Gain', 'an', 'empty', 'play', 'point', 'orb', '.', 'If', 'at', 'least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'draw', '3', 'cards', '.']
+[WARNING] [base.subeffect.subeffect.Gain.parseGain] - Found Unknown ['orb', '.', 'If', 'at', 'least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'draw', '3', 'cards', '.']
+[INFO] [base.subeffect.subeffect] - Found {'type': 'Gain', 'effects': [{'type': 'An empty play point'}]}
+[INFO] [base.subeffect.subeffect.If] - Starting if with ['If', 'at', 'least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'draw', '3', 'cards', '.']
+[INFO] [base.subeffect.subeffect.If.condition] - Entered conditions with tokens ['at', 'least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'draw', '3', 'cards', '.']
+[INFO] [base.subeffect.subeffect.If.condition] - After Popping ['draw', '3', 'cards', '.']
+[INFO] [base.subeffect.subeffect.If] - Parsing if subeffect ['draw', '3', 'cards']
+[INFO] [base.subeffect.subeffect.If.subeffect] - Parsing subeffects with Tokens ['draw', '3', 'cards']
+[INFO] [base.subeffect.subeffect.If.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.subeffect.If.subeffect] - Found {'type': 'draw', 'effects': {'quantifier': '3'}}
+[INFO] [base.subeffect.subeffect.If.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckNumericState', 'amount': ['at'], 'state': ['least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',']}], 'then': [{'type': 'draw', 'effects': {'quantifier': '3'}}]}}
+[INFO] [base.subeffect.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'Discard', 'effects': {'cardsToDiscard': '2', 'effects': [{'type': 'Gain', 'effects': [{'type': 'An empty play point'}]}, {'type': 'If', 'effects': {'conditions': [{'type': 'CheckNumericState', 'amount': ['at'], 'state': ['least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',']}], 'then': [{'type': 'draw', 'effects': {'quantifier': '3'}}]}}]}}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Fanfare', ':', 'Discard', '2', 'cards', 'from', 'your', 'hand', '.', 'Gain', 'an', 'empty', 'play', 'point', 'orb', '.', 'If', 'at', 'least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'draw', '3', 'cards', '.']
+[INFO] [base] - [
+    {
+        "type": "Ward"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Discard",
+                "effects": {
+                    "cardsToDiscard": "2",
+                    "effects": [
+                        {
+                            "type": "Gain",
+                            "effects": [
+                                {
+                                    "type": "An empty play point"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "If",
+                            "effects": {
+                                "conditions": [
+                                    {
+                                        "type": "CheckNumericState",
+                                        "amount": [
+                                            "at"
+                                        ],
+                                        "state": [
+                                            "least",
+                                            "2",
+                                            "other",
+                                            "allied",
+                                            "effects",
+                                            "have",
+                                            "discarded",
+                                            "cards",
+                                            "from",
+                                            "your",
+                                            "hand",
+                                            "this",
+                                            "match",
+                                            ","
+                                        ]
+                                    }
+                                ],
+                                "then": [
+                                    {
+                                        "type": "draw",
+                                        "effects": {
+                                            "quantifier": "3"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]
+[INFO] [base] - Lumiore, Prestigious Gold
+[INFO] [base] - Follower
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['Recover', '3', 'play', 'points', '.', 'If', 'at', 'least', '4', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'discard', '2', 'cards', 'from', 'your', 'hand', 'and', 'draw', '3', 'cards', '.', '\n']
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect] - Found {'type': 'Recover', 'effect': {'amount': '3', 'resource': 'play'}}
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.If] - Starting if with ['If', 'at', 'least', '4', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'discard', '2', 'cards', 'from', 'your', 'hand', 'and', 'draw', '3', 'cards', '.', '\n']
+[INFO] [base.subeffect.If.condition] - Entered conditions with tokens ['at', 'least', '4', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'discard', '2', 'cards', 'from', 'your', 'hand', 'and', 'draw', '3', 'cards', '.', '\n']
+[INFO] [base.subeffect.If.condition] - After Popping ['discard', '2', 'cards', 'from', 'your', 'hand', 'and', 'draw', '3', 'cards', '.', '\n']
+[INFO] [base.subeffect.If] - Parsing if subeffect ['discard', '2', 'cards', 'from', 'your', 'hand', 'and', 'draw', '3', 'cards']
+[INFO] [base.subeffect.If.subeffect] - Parsing subeffects with Tokens ['discard', '2', 'cards', 'from', 'your', 'hand', 'and', 'draw', '3', 'cards']
+[INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.If.subeffect] - Entered discard tokens ['discard', '2', 'cards', 'from', 'your', 'hand', 'and', 'draw', '3', 'cards']
+[INFO] [base.subeffect.If.subeffect.subeffect] - Parsing subeffects with Tokens ['draw', '3', 'cards']
+[INFO] [base.subeffect.If.subeffect.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.If.subeffect.subeffect] - Found {'type': 'draw', 'effects': {'quantifier': '3'}}
+[INFO] [base.subeffect.If.subeffect.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.If.subeffect] - Found {'type': 'Discard', 'effects': {'cardsToDiscard': '2', 'effects': [{'type': 'draw', 'effects': {'quantifier': '3'}}]}}
+[INFO] [base.subeffect.If.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckNumericState', 'amount': ['at'], 'state': ['least', '4', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',']}], 'then': [{'type': 'Discard', 'effects': {'cardsToDiscard': '2', 'effects': [{'type': 'draw', 'effects': {'quantifier': '3'}}]}}]}}
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Fanfare', ':', 'Recover', '3', 'play', 'points', '.', 'If', 'at', 'least', '4', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'discard', '2', 'cards', 'from', 'your', 'hand', 'and', 'draw', '3', 'cards', '.', '\n']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['whenever', 'you', 'discard', 'cards', 'from', 'your', 'hand', ',', 'deal', 'X', 'damage', 'to', 'all', 'enemies', '.', 'X', 'equals', 'twice', 'the', 'number', 'of', 'cards', 'discarded', '.']
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.Whenever] - Entered whenever ['whenever', 'you', 'discard', 'cards', 'from', 'your', 'hand', ',', 'deal', 'X', 'damage', 'to', 'all', 'enemies', '.', 'X', 'equals', 'twice', 'the', 'number', 'of', 'cards', 'discarded', '.']
+[INFO] [base.subeffect.Whenever.condition] - Entered conditions with tokens ['whenever', 'you', 'discard', 'cards', 'from', 'your', 'hand', ',', 'deal', 'X', 'damage', 'to', 'all', 'enemies', '.', 'X', 'equals', 'twice', 'the', 'number', 'of', 'cards', 'discarded', '.']
+[INFO] [base.subeffect.Whenever.condition] - After Popping ['deal', 'X', 'damage', 'to', 'all', 'enemies', '.', 'X', 'equals', 'twice', 'the', 'number', 'of', 'cards', 'discarded', '.']
+[INFO] [base.subeffect.Whenever] - Parsing if subeffect ['deal', 'X', 'damage', 'to', 'all', 'enemies']
+[INFO] [base.subeffect.Whenever.subeffect] - Parsing subeffects with Tokens ['deal', 'X', 'damage', 'to', 'all', 'enemies']
+[INFO] [base.subeffect.Whenever.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.Whenever.subeffect.Deal.changeHealth] - Damage tokens after target checks: []
+[INFO] [base.subeffect.Whenever.subeffect] - Found {'type': 'Deal', 'effects': {'amount': 'X', 'targets': 'enemies', 'times': 1, 'and': {}, 'quantifer': 'all', 'user': 'enemies'}}
+[INFO] [base.subeffect.Whenever.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'Whenever', 'effects': {'conditions': [{'type': 'WheneverAction', 'state': ['discard', 'cards', 'from', 'your', 'hand', ',']}], 'then': [{'type': 'Deal', 'effects': {'amount': 'X', 'targets': 'enemies', 'times': 1, 'and': {}, 'quantifer': 'all', 'user': 'enemies'}}]}}
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.variableEquals] - Found variable definition ['X', 'equals', 'twice', 'the', 'number', 'of', 'cards', 'discarded', '.']
+[INFO] [base.subeffect] - Found {'type': 'VariableDefinition', 'variable': 'X', 'value': ['equals', 'twice', 'the', 'number', 'of', 'cards', 'discarded', '.']}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['During', 'your', 'turn', ',', 'whenever', 'you', 'discard', 'cards', 'from', 'your', 'hand', ',', 'deal', 'X', 'damage', 'to', 'all', 'enemies', '.', 'X', 'equals', 'twice', 'the', 'number', 'of', 'cards', 'discarded', '.']
+[INFO] [base] - [
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Recover",
+                "effect": {
+                    "amount": "3",
+                    "resource": "play"
+                }
+            },
+            {
+                "type": "If",
+                "effects": {
+                    "conditions": [
+                        {
+                            "type": "CheckNumericState",
+                            "amount": [
+                                "at"
+                            ],
+                            "state": [
+                                "least",
+                                "4",
+                                "allied",
+                                "effects",
+                                "have",
+                                "discarded",
+                                "cards",
+                                "from",
+                                "your",
+                                "hand",
+                                "this",
+                                "match",
+                                ","
+                            ]
+                        }
+                    ],
+                    "then": [
+                        {
+                            "type": "Discard",
+                            "effects": {
+                                "cardsToDiscard": "2",
+                                "effects": [
+                                    {
+                                        "type": "draw",
+                                        "effects": {
+                                            "quantifier": "3"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "type": "During",
+        "effect": [
+            {
+                "type": "Whenever",
+                "effects": {
+                    "conditions": [
+                        {
+                            "type": "WheneverAction",
+                            "state": [
+                                "discard",
+                                "cards",
+                                "from",
+                                "your",
+                                "hand",
+                                ","
+                            ]
+                        }
+                    ],
+                    "then": [
+                        {
+                            "type": "Deal",
+                            "effects": {
+                                "amount": "X",
+                                "targets": "enemies",
+                                "times": 1,
+                                "and": {},
+                                "quantifer": "all",
+                                "user": "enemies"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "VariableDefinition",
+                "variable": "X",
+                "value": [
+                    "equals",
+                    "twice",
+                    "the",
+                    "number",
+                    "of",
+                    "cards",
+                    "discarded",
+                    "."
+                ]
+            }
+        ]
+    }
+]
+[INFO] [base] - Orchis, the Limitless
+[INFO] [base] - Follower
+[INFO] [base.Fusion] - Entering fusion with ['Fusion', ':', 'Puppets', '\n']
+[INFO] [base] - Finished iteration ['Fusion', ':', 'Puppets', '\n']
+[INFO] [base.condition] - Entered conditions with tokens ['cards', 'are', 'fused', 'to', 'this', 'card', ',', 'summon', 'a', 'Puppet', 'and', 'give', 'it', '+', '1', '/', '+', '0', '.', '\n']
+[INFO] [base.condition] - After Popping ['summon', 'a', 'Puppet', 'and', 'give', 'it', '+', '1', '/', '+', '0', '.', '\n']
+[INFO] [base] - Parsing if subeffect ['summon', 'a', 'Puppet', 'and', 'give', 'it', '+', '1', '/', '+', '0']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['summon', 'a', 'Puppet', 'and', 'give', 'it', '+', '1', '/', '+', '0']
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.Summon] - Entered with tokens ['summon', 'a', 'Puppet', 'and', 'give', 'it', '+', '1', '/', '+', '0']
+[INFO] [base.subeffect.Summon.parseCards] - Entered with tokens: ['a', 'Puppet', 'and', 'give', 'it', '+', '1', '/', '+', '0']
+[INFO] [base.subeffect.Summon.parseCards] - Unit stack ['Puppet']
+[INFO] [base.subeffect.Summon.parseCards] - Card has a trigger ['give', 'it', '+', '1', '/', '+', '0']
+[INFO] [base.subeffect.Summon.parseCards.subeffect] - Parsing subeffects with Tokens ['give', 'it', '+', '1', '/', '+', '0']
+[INFO] [base.subeffect.Summon.parseCards.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.Summon.parseCards.subeffect.Give] - Entered give ['give', 'it', '+', '1', '/', '+', '0']
+[INFO] [base.subeffect.Summon.parseCards.subeffect.Give.parseGain.statChange] - Entering stat change ['+', '1', '/', '+', '0']
+[INFO] [base.subeffect.Summon.parseCards.subeffect] - Found {'type': 'Give', 'effects': [[{'type': 'StatChange', 'operation': '+', 'amount': '1'}, {'type': 'StatChange', 'operation': '+', 'amount': '0'}]], 'target': 'parent'}
+[INFO] [base.subeffect.Summon.parseCards.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'Summon', 'effects': [{'quantifer': 'a', 'type': 'NamedCard', 'cardname': 'Puppet', 'effects': [{'type': 'Give', 'effects': [[{'type': 'StatChange', 'operation': '+', 'amount': '1'}, {'type': 'StatChange', 'operation': '+', 'amount': '0'}]], 'target': 'parent'}]}]}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Whenever', 'cards', 'are', 'fused', 'to', 'this', 'card', ',', 'summon', 'a', 'Puppet', 'and', 'give', 'it', '+', '1', '/', '+', '0', '.', '\n']
+[INFO] [base] - Finished iteration ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '\n']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['If', 'this', 'card', 'is', 'fused', 'with', 'at', 'least', '1', 'card', ',', 'summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet', '.', 'If', 'fused', 'with', 'at', 'least', '3', 'cards', ',', 'evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.If] - Starting if with ['If', 'this', 'card', 'is', 'fused', 'with', 'at', 'least', '1', 'card', ',', 'summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet', '.', 'If', 'fused', 'with', 'at', 'least', '3', 'cards', ',', 'evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base.subeffect.If.condition] - Entered conditions with tokens ['this', 'card', 'is', 'fused', 'with', 'at', 'least', '1', 'card', ',', 'summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet', '.', 'If', 'fused', 'with', 'at', 'least', '3', 'cards', ',', 'evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base.subeffect.If.condition] - After Popping ['summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet', '.', 'If', 'fused', 'with', 'at', 'least', '3', 'cards', ',', 'evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base.subeffect.If] - Parsing if subeffect ['summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet']
+[INFO] [base.subeffect.If.subeffect] - Parsing subeffects with Tokens ['summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet']
+[INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.If.subeffect.Summon] - Entered with tokens ['summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet']
+[INFO] [base.subeffect.If.subeffect.Summon.parseCards] - Entered with tokens: ['a', 'Lloyd', ',', "Orchis's", 'Puppet']
+[INFO] [base.subeffect.If.subeffect.Summon.parseCards] - Unit stack ['Lloyd', ',', "Orchis's", 'Puppet']
+[INFO] [base.subeffect.If.subeffect] - Found {'type': 'Summon', 'effects': [{'quantifer': 'a', 'type': 'NamedCard', 'cardname': "Lloyd , Orchis's Puppet"}]}
+[INFO] [base.subeffect.If.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'FusionAction', 'amountToTrigger': 1}], 'then': [{'type': 'Summon', 'effects': [{'quantifer': 'a', 'type': 'NamedCard', 'cardname': "Lloyd , Orchis's Puppet"}]}]}}
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.If] - Starting if with ['If', 'fused', 'with', 'at', 'least', '3', 'cards', ',', 'evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base.subeffect.If.condition] - Entered conditions with tokens ['fused', 'with', 'at', 'least', '3', 'cards', ',', 'evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base.subeffect.If.condition] - After Popping ['evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base.subeffect.If] - Parsing if subeffect ['evolve', 'it', 'and', 'this', 'follower']
+[INFO] [base.subeffect.If.subeffect] - Parsing subeffects with Tokens ['evolve', 'it', 'and', 'this', 'follower']
+[INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.If.subeffect] - Found {'type': 'Evolve', 'effects': ['it', 'and', 'this', 'follower']}
+[INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.If.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'FusionAction', 'amountToTrigger': '3'}], 'then': [{'type': 'Evolve', 'effects': []}]}}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Fanfare', ':', 'If', 'this', 'card', 'is', 'fused', 'with', 'at', 'least', '1', 'card', ',', 'summon', 'a', 'Lloyd', ',', "Orchis's", 'Puppet', '.', 'If', 'fused', 'with', 'at', 'least', '3', 'cards', ',', 'evolve', 'it', 'and', 'this', 'follower', '.']
+[INFO] [base] - [
+    {
+        "type": "Fusion",
+        "cardTypes": [
+            "Puppets",
+            "\n"
+        ]
+    },
+    {
+        "type": "Whenever",
+        "effects": {
+            "conditions": [
+                {
+                    "type": "FusionAction",
+                    "amountToTrigger": 1
+                }
+            ],
+            "then": [
+                {
+                    "type": "Summon",
+                    "effects": [
+                        {
+                            "quantifer": "a",
+                            "type": "NamedCard",
+                            "cardname": "Puppet",
+                            "effects": [
+                                {
+                                    "type": "Give",
+                                    "effects": [
+                                        [
+                                            {
+                                                "type": "StatChange",
+                                                "operation": "+",
+                                                "amount": "1"
+                                            },
+                                            {
+                                                "type": "StatChange",
+                                                "operation": "+",
+                                                "amount": "0"
+                                            }
+                                        ]
+                                    ],
+                                    "target": "parent"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "If",
+                "effects": {
+                    "conditions": [
+                        {
+                            "type": "FusionAction",
+                            "amountToTrigger": 1
+                        }
+                    ],
+                    "then": [
+                        {
+                            "type": "Summon",
+                            "effects": [
+                                {
+                                    "quantifer": "a",
+                                    "type": "NamedCard",
+                                    "cardname": "Lloyd , Orchis's Puppet"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "If",
+                "effects": {
+                    "conditions": [
+                        {
+                            "type": "FusionAction",
+                            "amountToTrigger": "3"
+                        }
+                    ],
+                    "then": [
+                        {
+                            "type": "Evolve",
+                            "effects": []
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]
+[INFO] [base] - Steamrolling Tank
+[INFO] [base] - Follower
+[INFO] [base] - Finished iteration ['Ward', '.', '\n']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['Deal', '1', 'damage', 'to', 'your', 'leader', '.', '\n']
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.Deal.changeHealth] - Damage tokens after target checks: ['.', '\n']
+[WARNING] [base.subeffect.Deal.changeHealth] - Encountered unexpected
+[WARNING] [base.subeffect.Deal.changeHealth] - {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}
+[WARNING] [base.subeffect.Deal.changeHealth] - ['.', '\n']
+[INFO] [base.subeffect.Deal.changeHealth] - Leaving changeHealth with Tokens ['.', '\n']
+[INFO] [base.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Fanfare', ':', 'Deal', '1', 'damage', 'to', 'your', 'leader', '.', '\n']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['whenever', 'your', 'leader', 'takes', 'damage', ',', 'restore', '1', 'defense', 'to', 'your', 'leader', '(', 'up', 'to', '8', 'times', 'per', 'turn', ')', '.']
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.Whenever] - Entered whenever ['whenever', 'your', 'leader', 'takes', 'damage', ',', 'restore', '1', 'defense', 'to', 'your', 'leader', '(', 'up', 'to', '8', 'times', 'per', 'turn', ')', '.']
+[INFO] [base.subeffect.Whenever.condition] - Entered conditions with tokens ['whenever', 'your', 'leader', 'takes', 'damage', ',', 'restore', '1', 'defense', 'to', 'your', 'leader', '(', 'up', 'to', '8', 'times', 'per', 'turn', ')', '.']
+[INFO] [base.subeffect.Whenever.condition] - After Popping ['restore', '1', 'defense', 'to', 'your', 'leader', '(', 'up', 'to', '8', 'times', 'per', 'turn', ')', '.']
+[INFO] [base.subeffect.Whenever] - Parsing if subeffect ['restore', '1', 'defense', 'to', 'your', 'leader', '(', 'up', 'to', '8', 'times', 'per', 'turn', ')']
+[INFO] [base.subeffect.Whenever.subeffect] - Parsing subeffects with Tokens ['restore', '1', 'defense', 'to', 'your', 'leader', '(', 'up', 'to', '8', 'times', 'per', 'turn', ')']
+[INFO] [base.subeffect.Whenever.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.Whenever.subeffect.Restore.changeHealth] - Damage tokens after target checks: ['(', 'up', 'to', '8', 'times', 'per', 'turn', ')']
+[WARNING] [base.subeffect.Whenever.subeffect.Restore.changeHealth] - Encountered unexpected
+[WARNING] [base.subeffect.Whenever.subeffect.Restore.changeHealth] - {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}
+[WARNING] [base.subeffect.Whenever.subeffect.Restore.changeHealth] - ['(', 'up', 'to', '8', 'times', 'per', 'turn', ')']
+[INFO] [base.subeffect.Whenever.subeffect.Restore.changeHealth] - Leaving changeHealth with Tokens ['(', 'up', 'to', '8', 'times', 'per', 'turn', ')']
+[INFO] [base.subeffect.Whenever.subeffect] - Found {'type': 'Restore', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}
+[INFO] [base.subeffect.Whenever.subeffect] - Found {'type': 'Parens', 'condition': ['(', 'up', 'to', '8', 'times', 'per', 'turn', ')']}
+[INFO] [base.subeffect.Whenever.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'Whenever', 'effects': {'conditions': [{'type': 'WheneverAction', 'state': ['leader', 'takes', 'damage', ',']}], 'then': [{'type': 'Restore', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}, 'limit': {'type': 'Parens', 'condition': ['(', 'up', 'to', '8', 'times', 'per', 'turn', ')']}}]}}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['During', 'your', 'turn', ',', 'whenever', 'your', 'leader', 'takes', 'damage', ',', 'restore', '1', 'defense', 'to', 'your', 'leader', '(', 'up', 'to', '8', 'times', 'per', 'turn', ')', '.']
+[INFO] [base] - [
+    {
+        "type": "Ward"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Deal",
+                "effects": {
+                    "amount": "1",
+                    "targets": "leader",
+                    "times": 1,
+                    "and": {},
+                    "quantifer": "your",
+                    "user": "leader"
+                }
+            }
+        ]
+    },
+    {
+        "type": "During",
+        "effect": [
+            {
+                "type": "Whenever",
+                "effects": {
+                    "conditions": [
+                        {
+                            "type": "WheneverAction",
+                            "state": [
+                                "leader",
+                                "takes",
+                                "damage",
+                                ","
+                            ]
+                        }
+                    ],
+                    "then": [
+                        {
+                            "type": "Restore",
+                            "effects": {
+                                "amount": "1",
+                                "targets": "leader",
+                                "times": 1,
+                                "and": {},
+                                "quantifer": "your",
+                                "user": "leader"
+                            },
+                            "limit": {
+                                "type": "Parens",
+                                "condition": [
+                                    "(",
+                                    "up",
+                                    "to",
+                                    "8",
+                                    "times",
+                                    "per",
+                                    "turn",
+                                    ")"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]
+[INFO] [base] - Devilish Flautist
+[INFO] [base] - Follower
+[INFO] [base] - Finished iteration ['Rush', '.', '\n']
+[INFO] [base] - Finished iteration ['Drain', '.', '\n']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['Deal', '1', 'damage', 'to', 'your', 'leader', '.', '\n']
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.Deal.changeHealth] - Damage tokens after target checks: ['.', '\n']
+[WARNING] [base.subeffect.Deal.changeHealth] - Encountered unexpected
+[WARNING] [base.subeffect.Deal.changeHealth] - {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}
+[WARNING] [base.subeffect.Deal.changeHealth] - ['.', '\n']
+[INFO] [base.subeffect.Deal.changeHealth] - Leaving changeHealth with Tokens ['.', '\n']
+[INFO] [base.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Fanfare', ':', 'Deal', '1', 'damage', 'to', 'your', 'leader', '.', '\n']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['If', 'Wrath', 'is', 'active', 'for', 'you', ',', 'gain', '+', '2', '/', '+', '0', '.']
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.If] - Starting if with ['If', 'Wrath', 'is', 'active', 'for', 'you', ',', 'gain', '+', '2', '/', '+', '0', '.']
+[INFO] [base.subeffect.If.condition] - Entered conditions with tokens ['Wrath', 'is', 'active', 'for', 'you', ',', 'gain', '+', '2', '/', '+', '0', '.']
+[INFO] [base.subeffect.If.condition] - After Popping ['gain', '+', '2', '/', '+', '0', '.']
+[INFO] [base.subeffect.If] - Parsing if subeffect ['gain', '+', '2', '/', '+', '0']
+[INFO] [base.subeffect.If.subeffect] - Parsing subeffects with Tokens ['gain', '+', '2', '/', '+', '0']
+[INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.If.subeffect.Gain] - Entered gain ['gain', '+', '2', '/', '+', '0']
+[INFO] [base.subeffect.If.subeffect.Gain.parseGain.statChange] - Entering stat change ['+', '2', '/', '+', '0']
+[INFO] [base.subeffect.If.subeffect] - Found {'type': 'Gain', 'effects': [{'type': 'StatChange', 'operation': '+', 'amount': '2'}, {'type': 'StatChange', 'operation': '+', 'amount': '0'}]}
+[INFO] [base.subeffect.If.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': ['Wrath'], 'stateIsActive': False}], 'then': [{'type': 'Gain', 'effects': [{'type': 'StatChange', 'operation': '+', 'amount': '2'}, {'type': 'StatChange', 'operation': '+', 'amount': '0'}]}]}}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Strike', ':', 'If', 'Wrath', 'is', 'active', 'for', 'you', ',', 'gain', '+', '2', '/', '+', '0', '.']
+[INFO] [base] - [
+    {
+        "type": "Rush"
+    },
+    {
+        "type": "Drain"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Deal",
+                "effects": {
+                    "amount": "1",
+                    "targets": "leader",
+                    "times": 1,
+                    "and": {},
+                    "quantifer": "your",
+                    "user": "leader"
+                }
+            }
+        ]
+    },
+    {
+        "type": "Strike",
+        "effects": [
+            {
+                "type": "If",
+                "effects": {
+                    "conditions": [
+                        {
+                            "type": "CheckActiveState",
+                            "state": [
+                                "Wrath"
+                            ],
+                            "stateIsActive": false
+                        }
+                    ],
+                    "then": [
+                        {
+                            "type": "Gain",
+                            "effects": [
+                                {
+                                    "type": "StatChange",
+                                    "operation": "+",
+                                    "amount": "2"
+                                },
+                                {
+                                    "type": "StatChange",
+                                    "operation": "+",
+                                    "amount": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]
+[INFO] [base] - Demon Maestro
+[INFO] [base] - Follower
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['If', 'Wrath', 'is', 'not', 'active', 'for', 'you', ',', 'deal', '1', 'damage', 'to', 'your', 'leader', 'and', 'draw', 'a', 'card', '.', 'Otherwise', ',', 'put', 'an', 'Infernal', 'Orchestration', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '0', '.', '\n']
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.If] - Starting if with ['If', 'Wrath', 'is', 'not', 'active', 'for', 'you', ',', 'deal', '1', 'damage', 'to', 'your', 'leader', 'and', 'draw', 'a', 'card', '.', 'Otherwise', ',', 'put', 'an', 'Infernal', 'Orchestration', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '0', '.', '\n']
+[INFO] [base.subeffect.If.condition] - Entered conditions with tokens ['Wrath', 'is', 'not', 'active', 'for', 'you', ',', 'deal', '1', 'damage', 'to', 'your', 'leader', 'and', 'draw', 'a', 'card', '.', 'Otherwise', ',', 'put', 'an', 'Infernal', 'Orchestration', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '0', '.', '\n']
+[INFO] [base.subeffect.If.condition] - After Popping ['deal', '1', 'damage', 'to', 'your', 'leader', 'and', 'draw', 'a', 'card', '.', 'Otherwise', ',', 'put', 'an', 'Infernal', 'Orchestration', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '0', '.', '\n']
+[INFO] [base.subeffect.If] - Parsing if subeffect ['deal', '1', 'damage', 'to', 'your', 'leader', 'and', 'draw', 'a', 'card']
+[INFO] [base.subeffect.If.subeffect] - Parsing subeffects with Tokens ['deal', '1', 'damage', 'to', 'your', 'leader', 'and', 'draw', 'a', 'card']
+[INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.If.subeffect.Deal.changeHealth] - Damage tokens after target checks: ['and', 'draw', 'a', 'card']
+[WARNING] [base.subeffect.If.subeffect.Deal.changeHealth] - Encountered unexpected
+[WARNING] [base.subeffect.If.subeffect.Deal.changeHealth] - {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}
+[WARNING] [base.subeffect.If.subeffect.Deal.changeHealth] - ['and', 'draw', 'a', 'card']
+[INFO] [base.subeffect.If.subeffect.Deal.changeHealth] - Leaving changeHealth with Tokens ['and', 'draw', 'a', 'card']
+[INFO] [base.subeffect.If.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}
+[INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.If.subeffect] - Found {'type': 'draw', 'effects': {'quantifier': 'a'}}
+[INFO] [base.subeffect.If.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': ['Wrath'], 'stateIsActive': False}], 'then': [{'type': 'Deal', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}, {'type': 'draw', 'effects': {'quantifier': 'a'}}]}}
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.subeffect] - Parsing subeffects with Tokens ['put', 'an', 'Infernal', 'Orchestration', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '0', '.', '\n']
+[INFO] [base.subeffect.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.subeffect.Put] - Entered Put Token ['put', 'an', 'Infernal', 'Orchestration', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '0', '.', '\n']
+[INFO] [base.subeffect.subeffect.Put.parseCards] - Entered with tokens: ['an', 'Infernal', 'Orchestration', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '0', '.', '\n']
+[INFO] [base.subeffect.subeffect.Put.parseCards] - Unit stack ['Infernal', 'Orchestration']
+[INFO] [base.subeffect.subeffect] - Found {'type': 'Put', 'effects': [{'quantifer': 'an', 'type': 'NamedCard', 'cardname': 'Infernal Orchestration'}], 'destination': []}
+[INFO] [base.subeffect.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'Otherwise', 'effects': [{'type': 'Put', 'effects': [{'quantifer': 'an', 'type': 'NamedCard', 'cardname': 'Infernal Orchestration'}], 'destination': []}]}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Fanfare', ':', 'If', 'Wrath', 'is', 'not', 'active', 'for', 'you', ',', 'deal', '1', 'damage', 'to', 'your', 'leader', 'and', 'draw', 'a', 'card', '.', 'Otherwise', ',', 'put', 'an', 'Infernal', 'Orchestration', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '0', '.', '\n']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['At', 'the', 'start', 'of', 'your', 'next', 'turn', ',', 'deal', '1', 'damage', 'to', 'your', 'leader', 'and', 'draw', 'a', 'card', '.']
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.subeffect] - Parsing subeffects with Tokens ['deal', '1', 'damage', 'to', 'your', 'leader', 'and', 'draw', 'a', 'card', '.']
+[INFO] [base.subeffect.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.subeffect.Deal.changeHealth] - Damage tokens after target checks: ['and', 'draw', 'a', 'card', '.']
+[WARNING] [base.subeffect.subeffect.Deal.changeHealth] - Encountered unexpected
+[WARNING] [base.subeffect.subeffect.Deal.changeHealth] - {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}
+[WARNING] [base.subeffect.subeffect.Deal.changeHealth] - ['and', 'draw', 'a', 'card', '.']
+[INFO] [base.subeffect.subeffect.Deal.changeHealth] - Leaving changeHealth with Tokens ['and', 'draw', 'a', 'card', '.']
+[INFO] [base.subeffect.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}
+[INFO] [base.subeffect.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.subeffect] - Found {'type': 'draw', 'effects': {'quantifier': 'a'}}
+[INFO] [base.subeffect.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'At the start', 'user': 'your', 'when': 'next', 'effects': [{'type': 'Deal', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}, {'type': 'draw', 'effects': {'quantifier': 'a'}}]}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Last', 'Words', ':', 'At', 'the', 'start', 'of', 'your', 'next', 'turn', ',', 'deal', '1', 'damage', 'to', 'your', 'leader', 'and', 'draw', 'a', 'card', '.']
+[INFO] [base] - [
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "If",
+                "effects": {
+                    "conditions": [
+                        {
+                            "type": "CheckActiveState",
+                            "state": [
+                                "Wrath"
+                            ],
+                            "stateIsActive": false
+                        }
+                    ],
+                    "then": [
+                        {
+                            "type": "Deal",
+                            "effects": {
+                                "amount": "1",
+                                "targets": "leader",
+                                "times": 1,
+                                "and": {},
+                                "quantifer": "your",
+                                "user": "leader"
+                            }
+                        },
+                        {
+                            "type": "draw",
+                            "effects": {
+                                "quantifier": "a"
+                            }
+                        }
+                    ],
+                    "otherwise": {
+                        "type": "Otherwise",
+                        "effects": [
+                            {
+                                "type": "Put",
+                                "effects": [
+                                    {
+                                        "quantifer": "an",
+                                        "type": "NamedCard",
+                                        "cardname": "Infernal Orchestration"
+                                    }
+                                ],
+                                "destination": []
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "type": "Last Words",
+        "effects": [
+            {
+                "type": "At the start",
+                "user": "your",
+                "when": "next",
+                "effects": [
+                    {
+                        "type": "Deal",
+                        "effects": {
+                            "amount": "1",
+                            "targets": "leader",
+                            "times": 1,
+                            "and": {},
+                            "quantifer": "your",
+                            "user": "leader"
+                        }
+                    },
+                    {
+                        "type": "draw",
+                        "effects": {
+                            "quantifier": "a"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
+[INFO] [base] - Vania, Crimson Majesty
+[INFO] [base] - Follower
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['Put', 'a', 'Gift', 'for', 'Bloodkin', 'into', 'your', 'hand', '.', 'Then', ',', 'if', 'Vengeance', 'or', 'Wrath', 'is', 'active', 'for', 'you', ',', 'put', 'a', 'Summon', 'Bloodkin', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.Put] - Entered Put Token ['Put', 'a', 'Gift', 'for', 'Bloodkin', 'into', 'your', 'hand', '.', 'Then', ',', 'if', 'Vengeance', 'or', 'Wrath', 'is', 'active', 'for', 'you', ',', 'put', 'a', 'Summon', 'Bloodkin', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
+[INFO] [base.subeffect.Put.parseCards] - Entered with tokens: ['a', 'Gift', 'for', 'Bloodkin', 'into', 'your', 'hand', '.', 'Then', ',', 'if', 'Vengeance', 'or', 'Wrath', 'is', 'active', 'for', 'you', ',', 'put', 'a', 'Summon', 'Bloodkin', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
+[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Gift']
+[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Bloodkin']
+[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Then', ',']
+[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Vengeance']
+[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Wrath']
+[INFO] [base.subeffect.Put.parseCards] - Unit stack [',']
+[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Summon', 'Bloodkin']
+[INFO] [base.subeffect] - Found {'type': 'Put', 'effects': [{'quantifer': 'a', 'type': 'NamedCard', 'cardname': 'Gift'}, {'type': 'NamedCard', 'cardname': 'Bloodkin'}, {'type': 'NamedCard', 'cardname': 'Then ,'}, {'type': 'NamedCard', 'cardname': 'Vengeance'}, {'type': 'NamedCard', 'cardname': 'Wrath'}, {'type': None}, {'quantifer': 'a', 'type': 'NamedCard', 'cardname': 'Summon Bloodkin'}], 'destination': []}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Fanfare', ':', 'Put', 'a', 'Gift', 'for', 'Bloodkin', 'into', 'your', 'hand', '.', 'Then', ',', 'if', 'Vengeance', 'or', 'Wrath', 'is', 'active', 'for', 'you', ',', 'put', 'a', 'Summon', 'Bloodkin', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
+[INFO] [base] - [
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "quantifer": "a",
+                        "type": "NamedCard",
+                        "cardname": "Gift"
+                    },
+                    {
+                        "type": "NamedCard",
+                        "cardname": "Bloodkin"
+                    },
+                    {
+                        "type": "NamedCard",
+                        "cardname": "Then ,"
+                    },
+                    {
+                        "type": "NamedCard",
+                        "cardname": "Vengeance"
+                    },
+                    {
+                        "type": "NamedCard",
+                        "cardname": "Wrath"
+                    },
+                    {
+                        "type": null
+                    },
+                    {
+                        "quantifer": "a",
+                        "type": "NamedCard",
+                        "cardname": "Summon Bloodkin"
+                    }
+                ],
+                "destination": []
+            }
+        ]
+    }
+]
+[INFO] [base] - Doomlord of the Abyss
+[INFO] [base] - Follower
+[INFO] [base.Fusion] - Entering fusion with ['Fusion', ':', 'Bloodcraft', 'cards', '\n']
+[INFO] [base] - Finished iteration ['Fusion', ':', 'Bloodcraft', 'cards', '\n']
+[INFO] [base.condition] - Entered conditions with tokens ['cards', 'are', 'fused', 'to', 'this', 'card', ',', 'change', 'this', "card's", 'cost', 'to', '6', '.', '\n']
+[INFO] [base.condition] - After Popping ['change', 'this', "card's", 'cost', 'to', '6', '.', '\n']
+[INFO] [base] - Parsing if subeffect ['change', 'this', "card's", 'cost', 'to', '6']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['change', 'this', "card's", 'cost', 'to', '6']
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect] - Found {'type': 'ChangeCard', 'target': 'this', 'attribute': 'cost', 'new': '6'}
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Whenever', 'cards', 'are', 'fused', 'to', 'this', 'card', ',', 'change', 'this', "card's", 'cost', 'to', '6', '.', '\n']
+[INFO] [base] - Finished iteration ['(', 'Can', 'only', 'fuse', 'if', 'Vengeance', 'is', 'active', 'for', 'you', '.', ')', '\n']
+[INFO] [base] - Finished iteration ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '\n']
+[INFO] [base] - Finished iteration ['Storm', '.', '\n']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['Deal', 'X', 'damage', 'to', 'all', 'other', 'followers', '.', 'X', 'equals', 'your', "leader's", 'defense', '.', 'Then', ',', 'deal', 'damage', 'to', 'your', 'leader', 'until', 'their', 'defense', 'drops', 'to', '1', '.']
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.Deal.changeHealth] - Damage tokens after target checks: ['.', 'X', 'equals', 'your', "leader's", 'defense', '.', 'Then', ',', 'deal', 'damage', 'to', 'your', 'leader', 'until', 'their', 'defense', 'drops', 'to', '1', '.']
+[WARNING] [base.subeffect.Deal.changeHealth] - Encountered unexpected
+[WARNING] [base.subeffect.Deal.changeHealth] - {'amount': 'X', 'targets': 'followers', 'times': 1, 'and': {}, 'quantifer': 'all', 'exceptions': 'other'}
+[WARNING] [base.subeffect.Deal.changeHealth] - ['.', 'X', 'equals', 'your', "leader's", 'defense', '.', 'Then', ',', 'deal', 'damage', 'to', 'your', 'leader', 'until', 'their', 'defense', 'drops', 'to', '1', '.']
+[INFO] [base.subeffect.Deal.changeHealth] - Leaving changeHealth with Tokens ['.', 'X', 'equals', 'your', "leader's", 'defense', '.', 'Then', ',', 'deal', 'damage', 'to', 'your', 'leader', 'until', 'their', 'defense', 'drops', 'to', '1', '.']
+[INFO] [base.subeffect] - Found {'type': 'Deal', 'effects': {'amount': 'X', 'targets': 'followers', 'times': 1, 'and': {}, 'quantifer': 'all', 'exceptions': 'other'}}
+[INFO] [base.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.variableEquals] - Found variable definition ['X', 'equals', 'your', "leader's", 'defense', '.', 'Then', ',', 'deal', 'damage', 'to', 'your', 'leader', 'until', 'their', 'defense', 'drops', 'to', '1', '.']
+[INFO] [base.subeffect] - Found {'type': 'VariableDefinition', 'variable': 'X', 'value': ['equals', 'your', "leader's", 'defense', '.']}
+[INFO] [base.subeffect.then.subeffect] - Parsing subeffects with Tokens ['deal', 'damage', 'to', 'your', 'leader', 'until', 'their', 'defense', 'drops', 'to', '1', '.']
+[INFO] [base.subeffect.then.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.then.subeffect.Deal.changeHealth] - Damage tokens after target checks: ['until', 'their', 'defense', 'drops', 'to', '1', '.']
+[WARNING] [base.subeffect.then.subeffect.Deal.changeHealth] - Encountered unexpected
+[WARNING] [base.subeffect.then.subeffect.Deal.changeHealth] - {'amount': '.', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}
+[WARNING] [base.subeffect.then.subeffect.Deal.changeHealth] - ['until', 'their', 'defense', 'drops', 'to', '1', '.']
+[INFO] [base.subeffect.then.subeffect.Deal.changeHealth] - Leaving changeHealth with Tokens ['until', 'their', 'defense', 'drops', 'to', '1', '.']
+[INFO] [base.subeffect.then.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '.', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}
+[INFO] [base.subeffect.then.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.then.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.then.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.then.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.then.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.then.subeffect] - Starting new loop of effect parsgin
+[INFO] [base.subeffect.then.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'Then', 'effects': [{'type': 'Deal', 'effects': {'amount': '.', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}]}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Fanfare', ':', 'Deal', 'X', 'damage', 'to', 'all', 'other', 'followers', '.', 'X', 'equals', 'your', "leader's", 'defense', '.', 'Then', ',', 'deal', 'damage', 'to', 'your', 'leader', 'until', 'their', 'defense', 'drops', 'to', '1', '.']
+[INFO] [base] - [
+    {
+        "type": "Fusion",
+        "cardTypes": [
+            "Bloodcraft",
+            "cards",
+            "\n"
+        ]
+    },
+    {
+        "type": "Whenever",
+        "effects": {
+            "conditions": [
+                {
+                    "type": "FusionAction",
+                    "amountToTrigger": 1
+                }
+            ],
+            "then": [
+                {
+                    "type": "ChangeCard",
+                    "target": "this",
+                    "attribute": "cost",
+                    "new": "6"
+                }
+            ]
+        }
+    },
+    {
+        "type": "Storm"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Deal",
+                "effects": {
+                    "amount": "X",
+                    "targets": "followers",
+                    "times": 1,
+                    "and": {},
+                    "quantifer": "all",
+                    "exceptions": "other"
+                }
+            },
+            {
+                "type": "VariableDefinition",
+                "variable": "X",
+                "value": [
+                    "equals",
+                    "your",
+                    "leader's",
+                    "defense",
+                    "."
+                ]
+            },
+            {
+                "type": "Then",
+                "effects": [
+                    {
+                        "type": "Deal",
+                        "effects": {
+                            "amount": ".",
+                            "targets": "leader",
+                            "times": 1,
+                            "and": {},
+                            "quantifer": "your",
+                            "user": "leader"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

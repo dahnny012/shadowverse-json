@@ -111,7 +111,17 @@
                 },
                 {
                     "type": "VariableDefinition",
-                    "variable": "X"
+                    "variable": "X",
+                    "value": [
+                        "equals",
+                        "twice",
+                        "the",
+                        "number",
+                        "of",
+                        "cards",
+                        "discarded",
+                        "."
+                    ]
                 }
             ]
         }

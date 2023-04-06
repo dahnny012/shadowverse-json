@@ -96,7 +96,7 @@ logging.basicConfig(
                     level=logging.INFO,
                     format='[%(levelname)s] [%(name)s] - %(message)s',
                         handlers=[
-                            logging.FileHandler("debug.log"),
+                            logging.FileHandler("debug.log", "w"),
                             logging.StreamHandler()
                         ]
                     )
@@ -495,10 +495,14 @@ def parseCondition(tokens):
             'type': 'WheneverAction',
             'state': conditionTokens[2:]
         })
-    elif safeIndex(conditionTokens, "fused"):
+    elif safeIndex(conditionTokens, "fused") >= 0:
         amount = 1
         if (conditionTokens[0].isnumeric()):
+            exit()
             amount = conditionTokens[0].isnumeric()
+        elif(" ".join(conditionTokens[0:3]) in "fused with at least"):
+            consumeTokens(conditionTokens, 4)
+            amount = conditionTokens.pop(0)
         conditions.append({
             'type': 'FusionAction',
             'amountToTrigger': amount
