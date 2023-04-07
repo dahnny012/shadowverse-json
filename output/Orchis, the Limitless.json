@@ -121,6 +121,22 @@
             ]
         }
     ],
+    "evolveEffectTokens": [],
+    "_evolveEffectTokens": [
+        "Whenever",
+        "an",
+        "allied",
+        "Puppet",
+        "comes",
+        "into",
+        "play",
+        ",",
+        "give",
+        "it",
+        "Storm",
+        "."
+    ],
+    "evolveEffectJson": [],
     "_effectTokens": [
         [
             "Fusion",

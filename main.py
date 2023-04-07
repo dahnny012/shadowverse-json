@@ -3,6 +3,18 @@ import os
 from parsers import *
 import logging
 
+
+log = logging.getLogger("base")
+logging.basicConfig(
+                    level=logging.INFO,
+                    format='[%(levelname)s] [%(name)s] - %(message)s',
+                        handlers=[
+                            logging.FileHandler("debug.log"),
+                            logging.StreamHandler()
+                        ]
+                    )  
+
+
 files = [
   "Dragoncraft",
   "Portalcraft",
@@ -22,23 +34,11 @@ testCardsId = {126441030, 126431030, 127611010, 127621030, 125641020, 126631020,
 effectDebugSearch = False
 effectSearch = "if"
 doomlord_abyss = 125641010
+
 for craft in cardpool:
     for id, card in craft.items():
         if card['rotation_'] and (not debug or card["id_"] in testCardsId):
-            rotationCardPool.append(card)
-log = logging.getLogger("base")
-logging.basicConfig(
-                    level=logging.INFO,
-                    format='[%(levelname)s] [%(name)s] - %(message)s',
-                        handlers=[
-                            logging.FileHandler("debug.log"),
-                            logging.StreamHandler()
-                        ]
-                    )
-
-class StackBasedLogger:
-    def getLog(self):
-        return log
+            rotationCardPool.append(card)  
 
 for card in rotationCardPool:
     if (effectDebugSearch and effectSearch not in card["baseEffect_"].lower()):
@@ -49,6 +49,7 @@ for card in rotationCardPool:
     card['effectJson'] = []
     effect = card['baseEffect_']
     splitEffectIntoDifferentPhases(card, effect)
+    handleEvoEffect(card)
     card['_effectTokens'] = card['effectTokens'][0:]
     while(len(card['effectTokens']) > 0):
         effectStrings = card['effectTokens'].pop(0)

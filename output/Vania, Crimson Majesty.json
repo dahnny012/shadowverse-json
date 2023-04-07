@@ -65,6 +65,33 @@
             ]
         }
     ],
+    "evolveEffectTokens": [],
+    "_evolveEffectTokens": [
+        "Whenever",
+        "an",
+        "allied",
+        "Forest",
+        "Bat",
+        "comes",
+        "into",
+        "play",
+        ",",
+        "give",
+        "it",
+        "Storm",
+        "and",
+        "Bane",
+        "and",
+        "deal",
+        "1",
+        "damage",
+        "to",
+        "the",
+        "enemy",
+        "leader",
+        "."
+    ],
+    "evolveEffectJson": [],
     "_effectTokens": [
         [
             "Fanfare",

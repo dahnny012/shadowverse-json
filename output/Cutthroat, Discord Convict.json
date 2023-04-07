@@ -72,6 +72,125 @@
             ]
         }
     ],
+    "evolveEffectTokens": [],
+    "_evolveEffectTokens": [
+        "Bane",
+        ".",
+        "\n",
+        "Evolve",
+        ":",
+        "If",
+        "there",
+        "are",
+        "no",
+        "duplicate",
+        "cards",
+        "in",
+        "your",
+        "deck",
+        "(",
+        "excluding",
+        "Condemned",
+        "cards",
+        ")",
+        ",",
+        "give",
+        "your",
+        "leader",
+        "the",
+        "following",
+        "effect",
+        "-",
+        "Whenever",
+        "you",
+        "play",
+        "a",
+        "card",
+        "using",
+        "its",
+        "Enhance",
+        "effect",
+        ",",
+        "recover",
+        "X",
+        "play",
+        "points",
+        ".",
+        "X",
+        "equals",
+        "the",
+        "Enhance",
+        "cost",
+        "minus",
+        "2",
+        ".",
+        "(",
+        "This",
+        "effect",
+        "is",
+        "not",
+        "stackable",
+        "and",
+        "lasts",
+        "for",
+        "the",
+        "rest",
+        "of",
+        "the",
+        "match",
+        ".",
+        ")"
+    ],
+    "evolveEffectJson": [
+        {
+            "effects": [
+                {
+                    "type": "If",
+                    "effects": {
+                        "conditions": [],
+                        "then": [
+                            {
+                                "type": "Give",
+                                "effects": []
+                            },
+                            {
+                                "type": "Whenever",
+                                "effects": {
+                                    "conditions": [],
+                                    "then": [
+                                        {
+                                            "type": "Recover",
+                                            "effect": {
+                                                "amount": "X",
+                                                "resource": "play"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "VariableDefinition",
+                    "variable": "X",
+                    "value": [
+                        "equals",
+                        "the",
+                        "Enhance",
+                        "cost",
+                        "minus",
+                        "2",
+                        "."
+                    ],
+                    "limit": {
+                        "type": "Parens",
+                        "condition": null
+                    }
+                }
+            ]
+        }
+    ],
     "_effectTokens": [
         [
             "Bane",

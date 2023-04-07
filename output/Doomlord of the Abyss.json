@@ -93,6 +93,48 @@
             ]
         }
     ],
+    "evolveEffectTokens": [],
+    "_evolveEffectTokens": [
+        "Storm",
+        ".",
+        "\n",
+        "Evolve",
+        ":",
+        "Give",
+        "your",
+        "leader",
+        "the",
+        "following",
+        "effect",
+        "until",
+        "the",
+        "start",
+        "of",
+        "your",
+        "next",
+        "turn",
+        "-",
+        "Reduce",
+        "damage",
+        "to",
+        "your",
+        "leader",
+        "to",
+        "0",
+        "."
+    ],
+    "evolveEffectJson": [
+        {
+            "effects": [
+                {
+                    "type": "Give",
+                    "effects": [
+                        []
+                    ]
+                }
+            ]
+        }
+    ],
     "_effectTokens": [
         [
             "Fusion",

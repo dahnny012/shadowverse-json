@@ -126,6 +126,8 @@
             ]
         }
     ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [],
     "_effectTokens": [
         [
             "Fanfare",

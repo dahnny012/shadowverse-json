@@ -81,6 +81,8 @@
             ]
         }
     ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [],
     "_effectTokens": [
         [
             "Ward",

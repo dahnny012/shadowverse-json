@@ -110,6 +110,34 @@
             ]
         }
     ],
+    "evolveEffectTokens": [],
+    "_evolveEffectTokens": [
+        "Ward",
+        ".",
+        "\n",
+        "Can't",
+        "take",
+        "more",
+        "than",
+        "2",
+        "damage",
+        "at",
+        "a",
+        "time",
+        ".",
+        "\n",
+        "Last",
+        "Words",
+        ":",
+        "Restore",
+        "2",
+        "defense",
+        "to",
+        "your",
+        "leader",
+        "."
+    ],
+    "evolveEffectJson": [],
     "_effectTokens": [
         [
             "Accelerate",

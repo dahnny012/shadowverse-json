@@ -802,4 +802,19 @@ def splitEvolveIntoDifferentPhases(card, effect):
         if effectToken == newLineToken:
             card['evolveEffectTokens'].append(effectStack.copy())
             effectStack.clear()
+    card['_evolveEffectTokens'] = effectTokens.copy()
     card['evolveEffectTokens'].append(effectStack.copy())
+
+@useLog("evolveEffect")
+def handleEvoEffect(card):
+    evoEffect = card['evoEffect_']
+    splitEvolveIntoDifferentPhases(card, evoEffect)
+    card['evolveEffectJson'] = []
+    while(len(card['evolveEffectTokens']) > 0):
+        effectStrings = card['evolveEffectTokens'].pop(0)
+        effectJson = {}
+        if len(effectStrings) == 0:
+            continue
+        if effectStrings[0] == evolve:
+            effectJson['effects'] = parseSubEffect(effectStrings[2:])
+            card['evolveEffectJson'].append(effectJson)
