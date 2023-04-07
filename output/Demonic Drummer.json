@@ -81,9 +81,7 @@
                         "conditions": [
                             {
                                 "type": "CheckActiveState",
-                                "state": [
-                                    "Wrath"
-                                ],
+                                "state": "Wrath",
                                 "stateEqualTo": false
                             }
                         ],

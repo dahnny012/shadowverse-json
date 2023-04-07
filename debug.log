@@ -12,6 +12,8 @@
 [INFO] [base.subeffect.subeffect.Gain.parseGain] - Starting with Token orb
 [WARNING] [base.subeffect.subeffect.Gain.parseGain] - Found Unknown ['orb', '.', 'If', 'at', 'least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'draw', '3', 'cards', '.']
 [INFO] [base.subeffect.subeffect] - Found {'type': 'Gain', 'effects': [{'type': 'An empty play point'}]}
+[INFO] [base.subeffect.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.subeffect.If] - Starting if with ['If', 'at', 'least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'draw', '3', 'cards', '.']
 [INFO] [base.subeffect.subeffect.If.condition] - Entered conditions with tokens ['at', 'least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'draw', '3', 'cards', '.']
 [INFO] [base.subeffect.subeffect.If.condition] - Condition Tokens ['at', 'least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',']
@@ -20,11 +22,11 @@
 [INFO] [base.subeffect.subeffect.If.subeffect] - Parsing subeffects with Tokens ['draw', '3', 'cards']
 [INFO] [base.subeffect.subeffect.If.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.subeffect.If.subeffect.Draw] - Entering draw with ['draw', '3', 'cards']
-[INFO] [base.subeffect.subeffect.If.subeffect] - Found {'type': 'draw', 'effects': {'quantifier': '3'}}
+[INFO] [base.subeffect.subeffect.If.subeffect] - Found {'type': 'draw', 'amount': '3'}
 [INFO] [base.subeffect.subeffect.If.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckNumericState', 'amount': ['at'], 'state': ['least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',']}], 'then': [{'type': 'draw', 'effects': {'quantifier': '3'}}]}}
+[INFO] [base.subeffect.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckNumericState', 'amount': ['at'], 'state': ['least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',']}], 'then': [{'type': 'draw', 'amount': '3'}]}}
 [INFO] [base.subeffect.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'Discard', 'effects': {'cardsToDiscard': '2', 'effects': [{'type': 'Gain', 'effects': [{'type': 'An empty play point'}]}, {'type': 'If', 'effects': {'conditions': [{'type': 'CheckNumericState', 'amount': ['at'], 'state': ['least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',']}], 'then': [{'type': 'draw', 'effects': {'quantifier': '3'}}]}}]}}
+[INFO] [base.subeffect] - Found {'type': 'Discard', 'effects': {'cardsToDiscard': '2', 'effects': [{'type': 'Gain', 'effects': [{'type': 'An empty play point'}]}, {'type': 'If', 'effects': {'conditions': [{'type': 'CheckNumericState', 'amount': ['at'], 'state': ['least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',']}], 'then': [{'type': 'draw', 'amount': '3'}]}}]}}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Fanfare', '[/b]', ':', 'Discard', '2', 'cards', 'from', 'your', 'hand', '.', 'Gain', 'an', 'empty', 'play', 'point', 'orb', '.', 'If', 'at', 'least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'draw', '3', 'cards', '.']
 [INFO] [base] - [
@@ -77,9 +79,7 @@
                                 "then": [
                                     {
                                         "type": "draw",
-                                        "effects": {
-                                            "quantifier": "3"
-                                        }
+                                        "amount": "3"
                                     }
                                 ]
                             }
@@ -108,11 +108,11 @@
 [INFO] [base.subeffect.If.subeffect.subeffect] - Parsing subeffects with Tokens ['draw', '3', 'cards']
 [INFO] [base.subeffect.If.subeffect.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.If.subeffect.subeffect.Draw] - Entering draw with ['draw', '3', 'cards']
-[INFO] [base.subeffect.If.subeffect.subeffect] - Found {'type': 'draw', 'effects': {'quantifier': '3'}}
+[INFO] [base.subeffect.If.subeffect.subeffect] - Found {'type': 'draw', 'amount': '3'}
 [INFO] [base.subeffect.If.subeffect.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect.If.subeffect] - Found {'type': 'Discard', 'effects': {'cardsToDiscard': '2', 'effects': [{'type': 'draw', 'effects': {'quantifier': '3'}}]}}
+[INFO] [base.subeffect.If.subeffect] - Found {'type': 'Discard', 'effects': {'cardsToDiscard': '2', 'effects': [{'type': 'draw', 'amount': '3'}]}}
 [INFO] [base.subeffect.If.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckNumericState', 'amount': ['at'], 'state': ['least', '4', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',']}], 'then': [{'type': 'Discard', 'effects': {'cardsToDiscard': '2', 'effects': [{'type': 'draw', 'effects': {'quantifier': '3'}}]}}]}}
+[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckNumericState', 'amount': ['at'], 'state': ['least', '4', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',']}], 'then': [{'type': 'Discard', 'effects': {'cardsToDiscard': '2', 'effects': [{'type': 'draw', 'amount': '3'}]}}]}}
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Fanfare', '[/b]', ':', 'Recover', '3', 'play', 'points', '.', 'If', 'at', 'least', '4', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'discard', '2', 'cards', 'from', 'your', 'hand', 'and', 'draw', '3', 'cards', '.', '\n']
@@ -179,9 +179,7 @@
                                 "effects": [
                                     {
                                         "type": "draw",
-                                        "effects": {
-                                            "quantifier": "3"
-                                        }
+                                        "amount": "3"
                                     }
                                 ]
                             }
@@ -238,6 +236,102 @@
                     "discarded",
                     "."
                 ]
+            }
+        ]
+    }
+]
+[INFO] [base] - Augite Wyrm
+[INFO] [base] - Follower
+[INFO] [base.alternativeCosts] - Found alternativeCost Accelerate for with ['Accelerate', '[/b]', '[b]', '(', '1', ')', '[/b]', ':', 'Discard', 'a', 'card', 'from', 'your', 'hand', '.', 'Draw', 'a', 'card', '.', 'If', '[b]', 'Overflow', '[/b]', 'is', 'active', 'for', 'you', ',', 'draw', '2', 'cards', 'instead', '.', '\n']
+[INFO] [base.alternativeCosts] - Entering subeffect for Accelerate
+[INFO] [base.alternativeCosts.subeffect] - Parsing subeffects with Tokens ['[/b]', ':', 'Discard', 'a', 'card', 'from', 'your', 'hand', '.', 'Draw', 'a', 'card', '.', 'If', '[b]', 'Overflow', '[/b]', 'is', 'active', 'for', 'you', ',', 'draw', '2', 'cards', 'instead', '.', '\n']
+[INFO] [base.alternativeCosts.subeffect] - Starting new loop of effect parsing
+[INFO] [base.alternativeCosts.subeffect] - Starting new loop of effect parsing
+[INFO] [base.alternativeCosts.subeffect] - Starting new loop of effect parsing
+[INFO] [base.alternativeCosts.subeffect] - Entered discard tokens ['Discard', 'a', 'card', 'from', 'your', 'hand', '.', 'Draw', 'a', 'card', '.', 'If', '[b]', 'Overflow', '[/b]', 'is', 'active', 'for', 'you', ',', 'draw', '2', 'cards', 'instead', '.', '\n']
+[INFO] [base.alternativeCosts.subeffect.subeffect] - Parsing subeffects with Tokens ['Draw', 'a', 'card', '.', 'If', '[b]', 'Overflow', '[/b]', 'is', 'active', 'for', 'you', ',', 'draw', '2', 'cards', 'instead', '.', '\n']
+[INFO] [base.alternativeCosts.subeffect.subeffect] - Starting new loop of effect parsing
+[INFO] [base.alternativeCosts.subeffect.subeffect.Draw] - Entering draw with ['Draw', 'a', 'card', '.', 'If', '[b]', 'Overflow', '[/b]', 'is', 'active', 'for', 'you', ',', 'draw', '2', 'cards', 'instead', '.', '\n']
+[INFO] [base.alternativeCosts.subeffect.subeffect] - Found {'type': 'Draw', 'amount': 'a'}
+[INFO] [base.alternativeCosts.subeffect.subeffect] - Starting new loop of effect parsing
+[INFO] [base.alternativeCosts.subeffect.subeffect.If] - Starting if with ['If', '[b]', 'Overflow', '[/b]', 'is', 'active', 'for', 'you', ',', 'draw', '2', 'cards', 'instead', '.', '\n']
+[INFO] [base.alternativeCosts.subeffect.subeffect.If.condition] - Entered conditions with tokens ['[b]', 'Overflow', '[/b]', 'is', 'active', 'for', 'you', ',', 'draw', '2', 'cards', 'instead', '.', '\n']
+[INFO] [base.alternativeCosts.subeffect.subeffect.If.condition] - Condition Tokens ['[b]', 'Overflow', '[/b]', 'is', 'active', 'for', 'you', ',']
+[INFO] [base.alternativeCosts.subeffect.subeffect.If.condition] - Tokens after Popping ['draw', '2', 'cards', 'instead', '.', '\n']
+[INFO] [base.alternativeCosts.subeffect.subeffect.If] - Parsing if subeffect ['draw', '2', 'cards', 'instead']
+[INFO] [base.alternativeCosts.subeffect.subeffect.If.subeffect] - Parsing subeffects with Tokens ['draw', '2', 'cards', 'instead']
+[INFO] [base.alternativeCosts.subeffect.subeffect.If.subeffect] - Starting new loop of effect parsing
+[INFO] [base.alternativeCosts.subeffect.subeffect.If.subeffect.Draw] - Entering draw with ['draw', '2', 'cards', 'instead']
+[INFO] [base.alternativeCosts.subeffect.subeffect.If.subeffect] - Found {'type': 'draw', 'amount': '2'}
+[INFO] [base.alternativeCosts.subeffect.subeffect.If.subeffect] - Exiting with tokens: []
+[INFO] [base.alternativeCosts.subeffect.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Overflow', 'stateEqualTo': False}], 'then': [{'type': 'draw', 'amount': '2'}]}}
+[INFO] [base.alternativeCosts.subeffect.subeffect] - Starting new loop of effect parsing
+[INFO] [base.alternativeCosts.subeffect.subeffect] - Exiting with tokens: []
+[INFO] [base.alternativeCosts.subeffect] - Found {'type': 'Discard', 'effects': {'cardsToDiscard': 'a', 'effects': [{'type': 'Draw', 'amount': 'a'}, {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Overflow', 'stateEqualTo': False}], 'then': [{'type': 'draw', 'amount': '2'}]}}]}}
+[INFO] [base.alternativeCosts.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Accelerate', '[/b]', '[b]', '(', '1', ')', '[/b]', ':', 'Discard', 'a', 'card', 'from', 'your', 'hand', '.', 'Draw', 'a', 'card', '.', 'If', '[b]', 'Overflow', '[/b]', 'is', 'active', 'for', 'you', ',', 'draw', '2', 'cards', 'instead', '.', '\n']
+[INFO] [base] - Finished iteration ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '\n']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens [':', 'Deal', '6', 'damage', 'to', 'all', 'enemies', '.']
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Deal.changeHealth] - Damage tokens after target checks: ['.']
+[WARNING] [base.subeffect.Deal.changeHealth] - Encountered unexpected
+[WARNING] [base.subeffect.Deal.changeHealth] - {'amount': '6', 'targets': 'enemies', 'times': 1, 'and': {}, 'quantifer': 'all', 'user': 'enemies'}
+[WARNING] [base.subeffect.Deal.changeHealth] - ['.']
+[INFO] [base.subeffect.Deal.changeHealth] - Leaving changeHealth with Tokens ['.']
+[INFO] [base.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '6', 'targets': 'enemies', 'times': 1, 'and': {}, 'quantifer': 'all', 'user': 'enemies'}}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Fanfare', '[/b]', ':', 'Deal', '6', 'damage', 'to', 'all', 'enemies', '.']
+[INFO] [base] - [
+    {
+        "type": "Accelerate",
+        "cost": "1",
+        "effects": [
+            {
+                "type": "Discard",
+                "effects": {
+                    "cardsToDiscard": "a",
+                    "effects": [
+                        {
+                            "type": "Draw",
+                            "amount": "a"
+                        },
+                        {
+                            "type": "If",
+                            "effects": {
+                                "conditions": [
+                                    {
+                                        "type": "CheckActiveState",
+                                        "state": "Overflow",
+                                        "stateEqualTo": false
+                                    }
+                                ],
+                                "then": [
+                                    {
+                                        "type": "draw",
+                                        "amount": "2"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Deal",
+                "effects": {
+                    "amount": "6",
+                    "targets": "enemies",
+                    "times": 1,
+                    "and": {},
+                    "quantifer": "all",
+                    "user": "enemies"
+                }
             }
         ]
     }
@@ -404,7 +498,7 @@
 [INFO] [base.alternativeCosts.subeffect] - Starting new loop of effect parsing
 [INFO] [base.alternativeCosts.subeffect] - Starting new loop of effect parsing
 [INFO] [base.alternativeCosts.subeffect.Draw] - Entering draw with ['Draw', 'a', 'card', '.', '\n']
-[INFO] [base.alternativeCosts.subeffect] - Found {'type': 'Draw', 'effects': {'quantifier': 'a'}}
+[INFO] [base.alternativeCosts.subeffect] - Found {'type': 'Draw', 'amount': 'a'}
 [INFO] [base.alternativeCosts.subeffect] - Starting new loop of effect parsing
 [INFO] [base.alternativeCosts.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Enhance', '[/b]', '[b]', '(', '5', ')', '[/b]', ':', 'Draw', 'a', 'card', '.', '\n']
@@ -444,9 +538,12 @@
 [INFO] [base.alternativeCosts.subeffect] - Starting new loop of effect parsing
 [INFO] [base.alternativeCosts.subeffect.Gain] - Entered gain ['Gain', '[b]', 'Storm', '[/b]', 'and', 'evolve', 'this', 'follower', '.']
 [INFO] [base.alternativeCosts.subeffect.Gain.parseGain] - Starting with Token [b]
-[INFO] [base.alternativeCosts.subeffect.Gain.parseGain] - Starting with Token evolve
-[WARNING] [base.alternativeCosts.subeffect.Gain.parseGain] - Found Unknown ['evolve', 'this', 'follower', '.']
-[INFO] [base.alternativeCosts.subeffect] - Found {'type': 'Gain', 'effects': [{'type': ['Storm']}]}
+[INFO] [base.alternativeCosts.subeffect.Gain.parseGain] - Starting with Token and
+[WARNING] [base.alternativeCosts.subeffect.Gain.parseGain] - Found Unknown ['and', 'evolve', 'this', 'follower', '.']
+[INFO] [base.alternativeCosts.subeffect] - Found {'type': 'Gain', 'effects': [{'type': 'Storm'}]}
+[INFO] [base.alternativeCosts.subeffect] - Starting new loop of effect parsing
+[INFO] [base.alternativeCosts.subeffect.Evolve] - Entering evolve with ['evolve', 'this', 'follower', '.']
+[INFO] [base.alternativeCosts.subeffect] - Found {'type': 'Evolve', 'effects': ['this', 'follower']}
 [INFO] [base.alternativeCosts.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Enhance', '[/b]', '[b]', '(', '8', ')', '[/b]', ':', 'Gain', '[b]', 'Storm', '[/b]', 'and', 'evolve', 'this', 'follower', '.']
 [INFO] [base] - [
@@ -475,9 +572,7 @@
         "effects": [
             {
                 "type": "Draw",
-                "effects": {
-                    "quantifier": "a"
-                }
+                "amount": "a"
             }
         ]
     },
@@ -518,10 +613,15 @@
                 "type": "Gain",
                 "effects": [
                     {
-                        "type": [
-                            "Storm"
-                        ]
+                        "type": "Storm"
                     }
+                ]
+            },
+            {
+                "type": "Evolve",
+                "effects": [
+                    "this",
+                    "follower"
                 ]
             }
         ]
@@ -801,7 +901,7 @@
 [INFO] [base.subeffect.If.subeffect.Gain.parseGain.statChange] - Entering stat change ['+', '2', '/', '+', '0']
 [INFO] [base.subeffect.If.subeffect] - Found {'type': 'Gain', 'effects': [{'type': 'StatChange', 'operation': '+', 'amount': '2'}, {'type': 'StatChange', 'operation': '+', 'amount': '0'}]}
 [INFO] [base.subeffect.If.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': ['Wrath'], 'stateEqualTo': False}], 'then': [{'type': 'Gain', 'effects': [{'type': 'StatChange', 'operation': '+', 'amount': '2'}, {'type': 'StatChange', 'operation': '+', 'amount': '0'}]}]}}
+[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Wrath', 'stateEqualTo': False}], 'then': [{'type': 'Gain', 'effects': [{'type': 'StatChange', 'operation': '+', 'amount': '2'}, {'type': 'StatChange', 'operation': '+', 'amount': '0'}]}]}}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Strike', '[/b]', ':', 'If', '[b]', 'Wrath', '[/b]', 'is', 'active', 'for', 'you', ',', 'gain', '+', '2', '/', '+', '0', '.']
 [INFO] [base] - [
@@ -836,9 +936,7 @@
                     "conditions": [
                         {
                             "type": "CheckActiveState",
-                            "state": [
-                                "Wrath"
-                            ],
+                            "state": "Wrath",
                             "stateEqualTo": false
                         }
                     ],
@@ -895,9 +993,9 @@
 [INFO] [base.subeffect.then.subeffect.If.subeffect.Gain.parseGain] - Starting with Token the
 [INFO] [base.subeffect.then.subeffect.If.subeffect] - Found {'type': 'Gain', 'effects': [{'type': '0 EP Evolve'}]}
 [INFO] [base.subeffect.then.subeffect.If.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect.then.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': ['Vengeance'], 'stateEqualTo': True}, {'type': 'IfOr'}, {'type': 'CheckActiveState', 'state': ['Wrath'], 'stateEqualTo': True}], 'then': [{'type': 'Put', 'effects': [{'quantifer': 'a', 'card_name': 'Summon Bloodkin', 'type': 'NamedCard'}], 'destination': 'hand'}, {'type': 'Gain', 'effects': [{'type': '0 EP Evolve'}]}]}}
+[INFO] [base.subeffect.then.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Vengeance', 'stateEqualTo': True}, {'type': 'IfOr'}, {'type': 'CheckActiveState', 'state': 'Wrath', 'stateEqualTo': True}], 'then': [{'type': 'Put', 'effects': [{'quantifer': 'a', 'card_name': 'Summon Bloodkin', 'type': 'NamedCard'}], 'destination': 'hand'}, {'type': 'Gain', 'effects': [{'type': '0 EP Evolve'}]}]}}
 [INFO] [base.subeffect.then.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'Then', 'effects': [{'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': ['Vengeance'], 'stateEqualTo': True}, {'type': 'IfOr'}, {'type': 'CheckActiveState', 'state': ['Wrath'], 'stateEqualTo': True}], 'then': [{'type': 'Put', 'effects': [{'quantifer': 'a', 'card_name': 'Summon Bloodkin', 'type': 'NamedCard'}], 'destination': 'hand'}, {'type': 'Gain', 'effects': [{'type': '0 EP Evolve'}]}]}}]}
+[INFO] [base.subeffect] - Found {'type': 'Then', 'effects': [{'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Vengeance', 'stateEqualTo': True}, {'type': 'IfOr'}, {'type': 'CheckActiveState', 'state': 'Wrath', 'stateEqualTo': True}], 'then': [{'type': 'Put', 'effects': [{'quantifer': 'a', 'card_name': 'Summon Bloodkin', 'type': 'NamedCard'}], 'destination': 'hand'}, {'type': 'Gain', 'effects': [{'type': '0 EP Evolve'}]}]}}]}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Fanfare', '[/b]', ':', 'Put', 'a', '[b]', 'Gift', 'for', 'Bloodkin', '[/b]', 'into', 'your', 'hand', '.', 'Then', ',', 'if', '[b]', 'Vengeance', '[/b]', 'or', '[b]', 'Wrath', '[/b]', 'is', 'active', 'for', 'you', ',', 'put', 'a', '[b]', 'Summon', 'Bloodkin', '[/b]', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
 [INFO] [base] - [
@@ -924,9 +1022,7 @@
                             "conditions": [
                                 {
                                     "type": "CheckActiveState",
-                                    "state": [
-                                        "Vengeance"
-                                    ],
+                                    "state": "Vengeance",
                                     "stateEqualTo": true
                                 },
                                 {
@@ -934,9 +1030,7 @@
                                 },
                                 {
                                     "type": "CheckActiveState",
-                                    "state": [
-                                        "Wrath"
-                                    ],
+                                    "state": "Wrath",
                                     "stateEqualTo": true
                                 }
                             ],
@@ -988,9 +1082,9 @@
 [INFO] [base.subeffect.If.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}
 [INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.If.subeffect.Draw] - Entering draw with ['draw', 'a', 'card']
-[INFO] [base.subeffect.If.subeffect] - Found {'type': 'draw', 'effects': {'quantifier': 'a'}}
+[INFO] [base.subeffect.If.subeffect] - Found {'type': 'draw', 'amount': 'a'}
 [INFO] [base.subeffect.If.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': ['Wrath'], 'stateEqualTo': False}], 'then': [{'type': 'Deal', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}, {'type': 'draw', 'effects': {'quantifier': 'a'}}]}}
+[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Wrath', 'stateEqualTo': False}], 'then': [{'type': 'Deal', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}, {'type': 'draw', 'amount': 'a'}]}}
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.subeffect] - Parsing subeffects with Tokens ['put', 'an', '[b]', 'Infernal', 'Orchestration', '[/b]', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '0', '.', '\n']
 [INFO] [base.subeffect.subeffect] - Starting new loop of effect parsing
@@ -1016,9 +1110,9 @@
 [INFO] [base.subeffect.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}
 [INFO] [base.subeffect.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.subeffect.Draw] - Entering draw with ['draw', 'a', 'card', '.']
-[INFO] [base.subeffect.subeffect] - Found {'type': 'draw', 'effects': {'quantifier': 'a'}}
+[INFO] [base.subeffect.subeffect] - Found {'type': 'draw', 'amount': 'a'}
 [INFO] [base.subeffect.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'At the start', 'user': 'your', 'when': 'next', 'effects': [{'type': 'Deal', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}, {'type': 'draw', 'effects': {'quantifier': 'a'}}]}
+[INFO] [base.subeffect] - Found {'type': 'At the start', 'user': 'your', 'when': 'next', 'effects': [{'type': 'Deal', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}, {'type': 'draw', 'amount': 'a'}]}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Last', 'Words', '[/b]', ':', 'At', 'the', 'start', 'of', 'your', 'next', 'turn', ',', 'deal', '1', 'damage', 'to', 'your', 'leader', 'and', 'draw', 'a', 'card', '.']
 [INFO] [base] - [
@@ -1031,9 +1125,7 @@
                     "conditions": [
                         {
                             "type": "CheckActiveState",
-                            "state": [
-                                "Wrath"
-                            ],
+                            "state": "Wrath",
                             "stateEqualTo": false
                         }
                     ],
@@ -1051,9 +1143,7 @@
                         },
                         {
                             "type": "draw",
-                            "effects": {
-                                "quantifier": "a"
-                            }
+                            "amount": "a"
                         }
                     ],
                     "otherwise": {
@@ -1103,9 +1193,7 @@
                     },
                     {
                         "type": "draw",
-                        "effects": {
-                            "quantifier": "a"
-                        }
+                        "amount": "a"
                     }
                 ]
             }
@@ -1161,7 +1249,7 @@
 [INFO] [base.subeffect.If.subeffect.Evolve] - Entering evolve with ['evolve', 'this', 'follower']
 [INFO] [base.subeffect.If.subeffect] - Found {'type': 'Evolve', 'effects': ['this', 'follower']}
 [INFO] [base.subeffect.If.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': ['Wrath'], 'stateEqualTo': False}], 'then': [{'type': 'Evolve', 'effects': ['this', 'follower']}]}}
+[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Wrath', 'stateEqualTo': False}], 'then': [{'type': 'Evolve', 'effects': ['this', 'follower']}]}}
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Fanfare', '[/b]', ':', 'Summon', '4', '[b]', 'Demonic', 'Drummer', '[/b]', '[b]', 's', '[/b]', '.', 'If', '[b]', 'Wrath', '[/b]', 'is', 'active', 'for', 'you', ',', 'evolve', 'this', 'follower', '.', '\n']
@@ -1215,9 +1303,7 @@
                     "conditions": [
                         {
                             "type": "CheckActiveState",
-                            "state": [
-                                "Wrath"
-                            ],
+                            "state": "Wrath",
                             "stateEqualTo": false
                         }
                     ],

@@ -52,9 +52,7 @@
                         "conditions": [
                             {
                                 "type": "CheckActiveState",
-                                "state": [
-                                    "Wrath"
-                                ],
+                                "state": "Wrath",
                                 "stateEqualTo": false
                             }
                         ],
@@ -72,9 +70,7 @@
                             },
                             {
                                 "type": "draw",
-                                "effects": {
-                                    "quantifier": "a"
-                                }
+                                "amount": "a"
                             }
                         ],
                         "otherwise": {
@@ -124,9 +120,7 @@
                         },
                         {
                             "type": "draw",
-                            "effects": {
-                                "quantifier": "a"
-                            }
+                            "amount": "a"
                         }
                     ]
                 }

@@ -68,9 +68,7 @@
             "effects": [
                 {
                     "type": "Draw",
-                    "effects": {
-                        "quantifier": "a"
-                    }
+                    "amount": "a"
                 }
             ]
         },
@@ -111,10 +109,15 @@
                     "type": "Gain",
                     "effects": [
                         {
-                            "type": [
-                                "Storm"
-                            ]
+                            "type": "Storm"
                         }
+                    ]
+                },
+                {
+                    "type": "Evolve",
+                    "effects": [
+                        "this",
+                        "follower"
                     ]
                 }
             ]

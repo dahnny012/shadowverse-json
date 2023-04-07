@@ -250,9 +250,7 @@ def drawToken(head, tokens):
     tokens.pop(0)
     return {
         "type": head,
-        "effects": {
-            'quantifier': amount
-        }
+        "amount": amount
     }
 
 
@@ -587,7 +585,6 @@ def parseGain(tokens):
             gain = {}
             gain['type'] = extractNameFromStartName(tokens)
             gainStack.append(gain)
-            tokens.pop(0)
         elif (" ".join(tokens[0:3]) in "an empty play point"):
             gain = {}
             gain['type'] = 'An empty play point'
@@ -615,7 +612,7 @@ def isStartName(token):
 def extractNameFromStartName(tokens):
     name = popArrayAfterSearch(tokens, endName)
     name.pop()
-    return name
+    return " ".join(name)
 
 
 @useLog(type="parseCards")
@@ -638,7 +635,7 @@ def parseCards(tokens, quantifier=None, stopWord=endEffectToken):
             unit['trait'] = token
             unit['type'] = getCardType(tokens.pop(0))
         elif (isStartName(token)):
-            unit["card_name"] = " ".join(extractNameFromStartName(tokens))
+            unit["card_name"] = extractNameFromStartName(tokens)
             unit["type"] = "NamedCard"
             units.append(unit)
             unit = {}

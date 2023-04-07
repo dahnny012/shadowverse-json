@@ -66,9 +66,7 @@
                                 "conditions": [
                                     {
                                         "type": "CheckActiveState",
-                                        "state": [
-                                            "Vengeance"
-                                        ],
+                                        "state": "Vengeance",
                                         "stateEqualTo": true
                                     },
                                     {
@@ -76,9 +74,7 @@
                                     },
                                     {
                                         "type": "CheckActiveState",
-                                        "state": [
-                                            "Wrath"
-                                        ],
+                                        "state": "Wrath",
                                         "stateEqualTo": true
                                     }
                                 ],

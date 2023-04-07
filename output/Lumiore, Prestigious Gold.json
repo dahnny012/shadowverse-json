@@ -87,9 +87,7 @@
                                     "effects": [
                                         {
                                             "type": "draw",
-                                            "effects": {
-                                                "quantifier": "3"
-                                            }
+                                            "amount": "3"
                                         }
                                     ]
                                 }
