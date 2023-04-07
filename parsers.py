@@ -780,9 +780,9 @@ def parseAlternativeCostEffect(head, tokens, stopWord=None):
 
 
 def splitEffectIntoDifferentPhases(card, effect):
-    effectTokens = re.findall(r"\b[\w']+\b|[^\w\s]|\n", effect)
+    tokens = re.findall(r"\b[\w']+\b|[^\w\s]|\[b\]|\[/b\>|<br>|<\w+>|<\/\w+>|\n", effect)
     effectStack = []
-    for effectToken in effectTokens:
+    for effectToken in tokens:
         effectStack.append(effectToken)
         if effectToken == newLineToken:
             card['effectTokens'].append(effectStack.copy())
@@ -795,14 +795,14 @@ def splitEvolveIntoDifferentPhases(card, effect):
     if(effect == "-" or effect == "(Same as the unevolved form, excluding Fanfare.)"):
         return
         
-    effectTokens = re.findall(r"\b[\w']+\b|[^\w\s]|\n", effect)
+    tokens = re.findall(r"\b[\w']+\b|[^\w\s]|\[b\]|\[/b\>|<br>|<\w+>|<\/\w+>|\n", effect)
     effectStack = []
-    for effectToken in effectTokens:
+    for effectToken in tokens:
         effectStack.append(effectToken)
         if effectToken == newLineToken:
             card['evolveEffectTokens'].append(effectStack.copy())
             effectStack.clear()
-    card['_evolveEffectTokens'] = effectTokens.copy()
+    card['_evolveEffectTokens'] = tokens.copy()
     card['evolveEffectTokens'].append(effectStack.copy())
 
 @useLog("evolveEffect")

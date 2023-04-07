@@ -1,5 +1,6 @@
 import json
 import os
+from data import getCardPoolFromShadowverseJson
 from parsers import *
 import logging
 
@@ -12,37 +13,11 @@ logging.basicConfig(
                             logging.FileHandler("debug.log"),
                             logging.StreamHandler()
                         ]
-                    )  
+                    )
 
-
-files = [
-  "Dragoncraft",
-  "Portalcraft",
-  "Bloodcraft"
-]
-
-cardpool = []
-
-for file in files:
-    with open(f'{os.getcwd()}/en/{file}.json', 'r') as f:
-        cardpool.append(json.load(f))
-
-
-rotationCardPool = list()
-debug = True
-testCardsId = {126441030, 126431030, 127611010, 127621030, 125641020, 126631020, 125641010, 125841010, 127841030, 127841010, 127621020}
-effectDebugSearch = False
-effectSearch = "if"
-doomlord_abyss = 125641010
-
-for craft in cardpool:
-    for id, card in craft.items():
-        if card['rotation_'] and (not debug or card["id_"] in testCardsId):
-            rotationCardPool.append(card)  
+rotationCardPool = getCardPoolFromShadowverseJson()
 
 for card in rotationCardPool:
-    if (effectDebugSearch and effectSearch not in card["baseEffect_"].lower()):
-        continue
     log.info(card["name_"])
     log.info(card["type_"])
     card['effectTokens'] = []
