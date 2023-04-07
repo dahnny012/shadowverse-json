@@ -1,6 +1,6 @@
 import json
 import os
-from data import getCardPoolFromShadowverseJson
+from data import getCardPoolFromShadowverseJson, getCardPoolFromShadowversePortal
 from parsers import *
 import logging
 
@@ -15,7 +15,7 @@ logging.basicConfig(
                         ]
                     )
 
-rotationCardPool = getCardPoolFromShadowverseJson()
+rotationCardPool = getCardPoolFromShadowversePortal()
 
 for card in rotationCardPool:
     log.info(card["name_"])

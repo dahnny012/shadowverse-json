@@ -13,24 +13,33 @@ def getCardPoolFromShadowversePortal():
     for file in files:
         with open(f'{os.getcwd()}/json/{file}.json', 'r') as f:
             cards = json.load(f)
-            cardpool.append(cards['cards'])
+            cardpool = cardpool + cards['cards']
     debug = True
     testCardsId = {126441030, 126431030, 127611010, 127621030, 125641020, 126631020, 125641010, 125841010, 127841030, 127841010, 127621020}
     effectDebugSearch = False
     effectSearch = "if"
-    for card in cardpool['cards']:
+    for card in cardpool:
+        SVP2SVPJSON(card)
         if card['rotation_'] and (not debug or card["id_"] in testCardsId):
             if (effectDebugSearch and effectSearch not in card["org_skill_disc"].lower()):
                 continue
-            rotationCardPool.append(SVP2SVPJSON(card) )
+            rotationCardPool.append(card)
     return rotationCardPool
+
+typeMap = {
+    1: 'Follower',
+    2: 'Amulet',
+    3: 'Countdown Amulet',
+    4: 'Spell'
+}
 
 def SVP2SVPJSON(card):
     card['id_'] = card['card_id']
     card['name_'] = card['card_name']
     card['rotation_'] = card['format_type'] == 1
-    card['baseEffect_'] = card['skill_disc']
-    card['evolveEffect_'] = card['evo_skill_disc']
+    card['baseEffect_'] = card['skill_disc'].replace("<br>","\n")
+    card['evoEffect_'] = card['evo_skill_disc'].replace("<br>","\n")
+    card['type_'] = typeMap[card['char_type']]
     return card
 
 

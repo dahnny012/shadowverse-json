@@ -362,13 +362,13 @@
 ]
 [INFO] [base] - Judith, Cosmic Observer
 [INFO] [base] - Follower
-[INFO] [base] - Modified baseEffectString ['Enhance', '(', '3', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n', 'Enhance', '(', '4', ')', ':', 'Draw', 'a', 'card', '.', '\n']
-[INFO] [base] - Modified baseEffectString ['Enhance', '(', '3', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n', 'Enhance', '(', '4', ')', ':', 'Draw', 'a', 'card', '.', '\n', 'Enhance', '(', '5', ')', ':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.', '\n']
-[INFO] [base] - Modified baseEffectString ['Enhance', '(', '3', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n', 'Enhance', '(', '4', ')', ':', 'Draw', 'a', 'card', '.', '\n', 'Enhance', '(', '5', ')', ':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.', '\n', 'Enhance', '(', '6', ')', ':', 'Give', 'your', 'leader', 'the', 'following', 'effect', '-', 'The', 'next', 'time', 'your', 'leader', 'takes', 'damage', ',', 'reduce', 'that', 'damage', 'to', '0', '.', '\n']
-[INFO] [base] - Modified baseEffectString ['Enhance', '(', '3', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n', 'Enhance', '(', '4', ')', ':', 'Draw', 'a', 'card', '.', '\n', 'Enhance', '(', '5', ')', ':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.', '\n', 'Enhance', '(', '6', ')', ':', 'Give', 'your', 'leader', 'the', 'following', 'effect', '-', 'The', 'next', 'time', 'your', 'leader', 'takes', 'damage', ',', 'reduce', 'that', 'damage', 'to', '0', '.', '\n', 'Enhance', '(', '7', ')', ':', 'Gain', 'Storm', 'and', 'evolve', 'this', 'follower', '.']
-[INFO] [base.subeffect] - Parsing subeffects with Tokens ['Enhance', '(', '3', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n', 'Enhance', '(', '4', ')', ':', 'Draw', 'a', 'card', '.', '\n', 'Enhance', '(', '5', ')', ':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.', '\n', 'Enhance', '(', '6', ')', ':', 'Give', 'your', 'leader', 'the', 'following', 'effect', '-', 'The', 'next', 'time', 'your', 'leader', 'takes', 'damage', ',', 'reduce', 'that', 'damage', 'to', '0', '.', '\n', 'Enhance', '(', '7', ')', ':', 'Gain', 'Storm', 'and', 'evolve', 'this', 'follower', '.']
+[INFO] [base] - Modified baseEffectString ['Enhance', '(', '4', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n', 'Enhance', '(', '5', ')', ':', 'Draw', 'a', 'card', '.', '\n']
+[INFO] [base] - Modified baseEffectString ['Enhance', '(', '4', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n', 'Enhance', '(', '5', ')', ':', 'Draw', 'a', 'card', '.', '\n', 'Enhance', '(', '6', ')', ':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.', '\n']
+[INFO] [base] - Modified baseEffectString ['Enhance', '(', '4', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n', 'Enhance', '(', '5', ')', ':', 'Draw', 'a', 'card', '.', '\n', 'Enhance', '(', '6', ')', ':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.', '\n', 'Enhance', '(', '7', ')', ':', 'Give', 'your', 'leader', 'the', 'following', 'effect', '-', 'The', 'next', 'time', 'your', 'leader', 'takes', 'damage', ',', 'reduce', 'that', 'damage', 'to', '0', '.', '\n']
+[INFO] [base] - Modified baseEffectString ['Enhance', '(', '4', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n', 'Enhance', '(', '5', ')', ':', 'Draw', 'a', 'card', '.', '\n', 'Enhance', '(', '6', ')', ':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.', '\n', 'Enhance', '(', '7', ')', ':', 'Give', 'your', 'leader', 'the', 'following', 'effect', '-', 'The', 'next', 'time', 'your', 'leader', 'takes', 'damage', ',', 'reduce', 'that', 'damage', 'to', '0', '.', '\n', 'Enhance', '(', '8', ')', ':', 'Gain', 'Storm', 'and', 'evolve', 'this', 'follower', '.']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['Enhance', '(', '4', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n', 'Enhance', '(', '5', ')', ':', 'Draw', 'a', 'card', '.', '\n', 'Enhance', '(', '6', ')', ':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.', '\n', 'Enhance', '(', '7', ')', ':', 'Give', 'your', 'leader', 'the', 'following', 'effect', '-', 'The', 'next', 'time', 'your', 'leader', 'takes', 'damage', ',', 'reduce', 'that', 'damage', 'to', '0', '.', '\n', 'Enhance', '(', '8', ')', ':', 'Gain', 'Storm', 'and', 'evolve', 'this', 'follower', '.']
 [INFO] [base.subeffect] - Starting new loop of effect parsing
-[INFO] [base.subeffect.alternativeCosts] - Found alternativeCost Enhance for with ['Enhance', '(', '3', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n']
+[INFO] [base.subeffect.alternativeCosts] - Found alternativeCost Enhance for with ['Enhance', '(', '4', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n']
 [INFO] [base.subeffect.alternativeCosts] - Entering subeffect for Enhance
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Parsing subeffects with Tokens ['-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n']
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
@@ -381,9 +381,9 @@
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'Enhance', 'cost': '3', 'effects': [{'type': 'Destroy', 'effects': {'quantifier': 'a', 'user': 'random', 'targets': 'enemy'}}]}
+[INFO] [base.subeffect] - Found {'type': 'Enhance', 'cost': '4', 'effects': [{'type': 'Destroy', 'effects': {'quantifier': 'a', 'user': 'random', 'targets': 'enemy'}}]}
 [INFO] [base.subeffect] - Starting new loop of effect parsing
-[INFO] [base.subeffect.alternativeCosts] - Found alternativeCost Enhance for with ['Enhance', '(', '4', ')', ':', 'Draw', 'a', 'card', '.', '\n']
+[INFO] [base.subeffect.alternativeCosts] - Found alternativeCost Enhance for with ['Enhance', '(', '5', ')', ':', 'Draw', 'a', 'card', '.', '\n']
 [INFO] [base.subeffect.alternativeCosts] - Entering subeffect for Enhance
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Parsing subeffects with Tokens [':', 'Draw', 'a', 'card', '.', '\n']
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
@@ -392,9 +392,9 @@
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Found {'type': 'Draw', 'effects': {'quantifier': 'a'}}
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'Enhance', 'cost': '4', 'effects': [{'type': 'Draw', 'effects': {'quantifier': 'a'}}]}
+[INFO] [base.subeffect] - Found {'type': 'Enhance', 'cost': '5', 'effects': [{'type': 'Draw', 'effects': {'quantifier': 'a'}}]}
 [INFO] [base.subeffect] - Starting new loop of effect parsing
-[INFO] [base.subeffect.alternativeCosts] - Found alternativeCost Enhance for with ['Enhance', '(', '5', ')', ':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.', '\n']
+[INFO] [base.subeffect.alternativeCosts] - Found alternativeCost Enhance for with ['Enhance', '(', '6', ')', ':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.', '\n']
 [INFO] [base.subeffect.alternativeCosts] - Entering subeffect for Enhance
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Parsing subeffects with Tokens [':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.', '\n']
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
@@ -407,9 +407,9 @@
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Found {'type': 'Restore', 'effects': {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'Enhance', 'cost': '5', 'effects': [{'type': 'Restore', 'effects': {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}]}
+[INFO] [base.subeffect] - Found {'type': 'Enhance', 'cost': '6', 'effects': [{'type': 'Restore', 'effects': {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}]}
 [INFO] [base.subeffect] - Starting new loop of effect parsing
-[INFO] [base.subeffect.alternativeCosts] - Found alternativeCost Enhance for with ['Enhance', '(', '6', ')', ':', 'Give', 'your', 'leader', 'the', 'following', 'effect', '-', 'The', 'next', 'time', 'your', 'leader', 'takes', 'damage', ',', 'reduce', 'that', 'damage', 'to', '0', '.', '\n']
+[INFO] [base.subeffect.alternativeCosts] - Found alternativeCost Enhance for with ['Enhance', '(', '7', ')', ':', 'Give', 'your', 'leader', 'the', 'following', 'effect', '-', 'The', 'next', 'time', 'your', 'leader', 'takes', 'damage', ',', 'reduce', 'that', 'damage', 'to', '0', '.', '\n']
 [INFO] [base.subeffect.alternativeCosts] - Entering subeffect for Enhance
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Parsing subeffects with Tokens [':', 'Give', 'your', 'leader', 'the', 'following', 'effect', '-', 'The', 'next', 'time', 'your', 'leader', 'takes', 'damage', ',', 'reduce', 'that', 'damage', 'to', '0', '.', '\n']
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
@@ -419,9 +419,9 @@
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Found {'type': 'Give', 'effects': [[]]}
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'Enhance', 'cost': '6', 'effects': [{'type': 'Give', 'effects': [[]]}]}
+[INFO] [base.subeffect] - Found {'type': 'Enhance', 'cost': '7', 'effects': [{'type': 'Give', 'effects': [[]]}]}
 [INFO] [base.subeffect] - Starting new loop of effect parsing
-[INFO] [base.subeffect.alternativeCosts] - Found alternativeCost Enhance for with ['Enhance', '(', '7', ')', ':', 'Gain', 'Storm', 'and', 'evolve', 'this', 'follower', '.']
+[INFO] [base.subeffect.alternativeCosts] - Found alternativeCost Enhance for with ['Enhance', '(', '8', ')', ':', 'Gain', 'Storm', 'and', 'evolve', 'this', 'follower', '.']
 [INFO] [base.subeffect.alternativeCosts] - Entering subeffect for Enhance
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Parsing subeffects with Tokens [':', 'Gain', 'Storm', 'and', 'evolve', 'this', 'follower', '.']
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
@@ -430,16 +430,16 @@
 [WARNING] [base.subeffect.alternativeCosts.subeffect.Gain.parseGain] - Found Unknown ['and', 'evolve', 'this', 'follower', '.']
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Found {'type': 'Gain', 'effects': [{'type': 'Storm'}]}
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'Enhance', 'cost': '7', 'effects': [{'type': 'Gain', 'effects': [{'type': 'Storm'}]}]}
+[INFO] [base.subeffect] - Found {'type': 'Enhance', 'cost': '8', 'effects': [{'type': 'Gain', 'effects': [{'type': 'Storm'}]}]}
 [INFO] [base.subeffect] - Exiting with tokens: []
-[INFO] [base] - Finished iteration ['Fanfare', ':', 'Enhance', '(', '3', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n']
+[INFO] [base] - Finished iteration ['Fanfare', ':', 'Enhance', '(', '4', ')', '-', 'Destroy', 'a', 'random', 'enemy', 'follower', '.', '\n']
 [INFO] [base] - [
     {
         "type": "Fanfare",
         "effects": [
             {
                 "type": "Enhance",
-                "cost": "3",
+                "cost": "4",
                 "effects": [
                     {
                         "type": "Destroy",
@@ -453,7 +453,7 @@
             },
             {
                 "type": "Enhance",
-                "cost": "4",
+                "cost": "5",
                 "effects": [
                     {
                         "type": "Draw",
@@ -465,7 +465,7 @@
             },
             {
                 "type": "Enhance",
-                "cost": "5",
+                "cost": "6",
                 "effects": [
                     {
                         "type": "Restore",
@@ -482,7 +482,7 @@
             },
             {
                 "type": "Enhance",
-                "cost": "6",
+                "cost": "7",
                 "effects": [
                     {
                         "type": "Give",
@@ -494,7 +494,7 @@
             },
             {
                 "type": "Enhance",
-                "cost": "7",
+                "cost": "8",
                 "effects": [
                     {
                         "type": "Gain",
@@ -851,6 +851,64 @@
         ]
     }
 ]
+[INFO] [base] - Vania, Crimson Majesty
+[INFO] [base] - Follower
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['Put', 'a', 'Gift', 'for', 'Bloodkin', 'into', 'your', 'hand', '.', 'Then', ',', 'if', 'Vengeance', 'or', 'Wrath', 'is', 'active', 'for', 'you', ',', 'put', 'a', 'Summon', 'Bloodkin', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Put] - Entered Put Token ['Put', 'a', 'Gift', 'for', 'Bloodkin', 'into', 'your', 'hand', '.', 'Then', ',', 'if', 'Vengeance', 'or', 'Wrath', 'is', 'active', 'for', 'you', ',', 'put', 'a', 'Summon', 'Bloodkin', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
+[INFO] [base.subeffect.Put.parseCards] - Entered with tokens: ['a', 'Gift', 'for', 'Bloodkin', 'into', 'your', 'hand', '.', 'Then', ',', 'if', 'Vengeance', 'or', 'Wrath', 'is', 'active', 'for', 'you', ',', 'put', 'a', 'Summon', 'Bloodkin', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
+[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Gift']
+[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Bloodkin']
+[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Then', ',']
+[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Vengeance']
+[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Wrath']
+[INFO] [base.subeffect.Put.parseCards] - Unit stack [',']
+[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Summon', 'Bloodkin']
+[INFO] [base.subeffect] - Found {'type': 'Put', 'effects': [{'quantifer': 'a', 'type': 'NamedCard', 'cardname': 'Gift'}, {'type': 'NamedCard', 'cardname': 'Bloodkin'}, {'type': 'NamedCard', 'cardname': 'Then ,'}, {'type': 'NamedCard', 'cardname': 'Vengeance'}, {'type': 'NamedCard', 'cardname': 'Wrath'}, {'type': None}, {'quantifer': 'a', 'type': 'NamedCard', 'cardname': 'Summon Bloodkin'}], 'destination': []}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Fanfare', ':', 'Put', 'a', 'Gift', 'for', 'Bloodkin', 'into', 'your', 'hand', '.', 'Then', ',', 'if', 'Vengeance', 'or', 'Wrath', 'is', 'active', 'for', 'you', ',', 'put', 'a', 'Summon', 'Bloodkin', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
+[INFO] [base] - [
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "quantifer": "a",
+                        "type": "NamedCard",
+                        "cardname": "Gift"
+                    },
+                    {
+                        "type": "NamedCard",
+                        "cardname": "Bloodkin"
+                    },
+                    {
+                        "type": "NamedCard",
+                        "cardname": "Then ,"
+                    },
+                    {
+                        "type": "NamedCard",
+                        "cardname": "Vengeance"
+                    },
+                    {
+                        "type": "NamedCard",
+                        "cardname": "Wrath"
+                    },
+                    {
+                        "type": null
+                    },
+                    {
+                        "quantifer": "a",
+                        "type": "NamedCard",
+                        "cardname": "Summon Bloodkin"
+                    }
+                ],
+                "destination": []
+            }
+        ]
+    }
+]
 [INFO] [base] - Demon Maestro
 [INFO] [base] - Follower
 [INFO] [base.subeffect] - Parsing subeffects with Tokens ['If', 'Wrath', 'is', 'not', 'active', 'for', 'you', ',', 'deal', '1', 'damage', 'to', 'your', 'leader', 'and', 'draw', 'a', 'card', '.', 'Otherwise', ',', 'put', 'an', 'Infernal', 'Orchestration', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '0', '.', '\n']
@@ -981,64 +1039,6 @@
                         }
                     }
                 ]
-            }
-        ]
-    }
-]
-[INFO] [base] - Vania, Crimson Majesty
-[INFO] [base] - Follower
-[INFO] [base.subeffect] - Parsing subeffects with Tokens ['Put', 'a', 'Gift', 'for', 'Bloodkin', 'into', 'your', 'hand', '.', 'Then', ',', 'if', 'Vengeance', 'or', 'Wrath', 'is', 'active', 'for', 'you', ',', 'put', 'a', 'Summon', 'Bloodkin', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
-[INFO] [base.subeffect] - Starting new loop of effect parsing
-[INFO] [base.subeffect.Put] - Entered Put Token ['Put', 'a', 'Gift', 'for', 'Bloodkin', 'into', 'your', 'hand', '.', 'Then', ',', 'if', 'Vengeance', 'or', 'Wrath', 'is', 'active', 'for', 'you', ',', 'put', 'a', 'Summon', 'Bloodkin', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
-[INFO] [base.subeffect.Put.parseCards] - Entered with tokens: ['a', 'Gift', 'for', 'Bloodkin', 'into', 'your', 'hand', '.', 'Then', ',', 'if', 'Vengeance', 'or', 'Wrath', 'is', 'active', 'for', 'you', ',', 'put', 'a', 'Summon', 'Bloodkin', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
-[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Gift']
-[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Bloodkin']
-[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Then', ',']
-[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Vengeance']
-[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Wrath']
-[INFO] [base.subeffect.Put.parseCards] - Unit stack [',']
-[INFO] [base.subeffect.Put.parseCards] - Unit stack ['Summon', 'Bloodkin']
-[INFO] [base.subeffect] - Found {'type': 'Put', 'effects': [{'quantifer': 'a', 'type': 'NamedCard', 'cardname': 'Gift'}, {'type': 'NamedCard', 'cardname': 'Bloodkin'}, {'type': 'NamedCard', 'cardname': 'Then ,'}, {'type': 'NamedCard', 'cardname': 'Vengeance'}, {'type': 'NamedCard', 'cardname': 'Wrath'}, {'type': None}, {'quantifer': 'a', 'type': 'NamedCard', 'cardname': 'Summon Bloodkin'}], 'destination': []}
-[INFO] [base.subeffect] - Exiting with tokens: []
-[INFO] [base] - Finished iteration ['Fanfare', ':', 'Put', 'a', 'Gift', 'for', 'Bloodkin', 'into', 'your', 'hand', '.', 'Then', ',', 'if', 'Vengeance', 'or', 'Wrath', 'is', 'active', 'for', 'you', ',', 'put', 'a', 'Summon', 'Bloodkin', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
-[INFO] [base] - [
-    {
-        "type": "Fanfare",
-        "effects": [
-            {
-                "type": "Put",
-                "effects": [
-                    {
-                        "quantifer": "a",
-                        "type": "NamedCard",
-                        "cardname": "Gift"
-                    },
-                    {
-                        "type": "NamedCard",
-                        "cardname": "Bloodkin"
-                    },
-                    {
-                        "type": "NamedCard",
-                        "cardname": "Then ,"
-                    },
-                    {
-                        "type": "NamedCard",
-                        "cardname": "Vengeance"
-                    },
-                    {
-                        "type": "NamedCard",
-                        "cardname": "Wrath"
-                    },
-                    {
-                        "type": null
-                    },
-                    {
-                        "quantifer": "a",
-                        "type": "NamedCard",
-                        "cardname": "Summon Bloodkin"
-                    }
-                ],
-                "destination": []
             }
         ]
     }
