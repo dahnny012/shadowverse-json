@@ -38,7 +38,7 @@
     "id_": 127841030,
     "name_": "Judith, Cosmic Observer",
     "rotation_": true,
-    "baseEffect_": "Fanfare: Enhance (4) - Destroy a random enemy follower.\nEnhance (5): Draw a card.\nEnhance (6): Restore 2 defense to your leader.\nEnhance (7): Give your leader the following effect - The next time your leader takes damage, reduce that damage to 0.\nEnhance (8): Gain Storm and evolve this follower.",
+    "baseEffect_": "[b]Fanfare[/b]: [b]Enhance[/b] [b](4)[/b] - Destroy a random enemy follower.\n[b]Enhance[/b] [b](5)[/b]: Draw a card.\n[b]Enhance[/b] [b](6)[/b]: Restore 2 defense to your leader.\n[b]Enhance[/b] [b](7)[/b]: Give your leader the following effect - The next time your leader takes damage, reduce that damage to 0.\n[b]Enhance[/b] [b](8)[/b]: Gain [b]Storm[/b] and evolve this follower.",
     "evoEffect_": "",
     "type_": "Follower",
     "effectTokens": [],
@@ -59,58 +59,60 @@
                             }
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "type": "Enhance",
+            "cost": "5",
+            "effects": [
                 {
-                    "type": "Enhance",
-                    "cost": "5",
+                    "type": "Draw",
+                    "effects": {
+                        "quantifier": "a"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Enhance",
+            "cost": "6",
+            "effects": [
+                {
+                    "type": "Restore",
+                    "effects": {
+                        "amount": "2",
+                        "targets": "leader",
+                        "times": 1,
+                        "and": {},
+                        "quantifer": "your",
+                        "user": "leader"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Enhance",
+            "cost": "7",
+            "effects": [
+                {
+                    "type": "Give",
                     "effects": [
-                        {
-                            "type": "Draw",
-                            "effects": {
-                                "quantifier": "a"
-                            }
-                        }
+                        []
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "type": "Enhance",
+            "cost": "8",
+            "effects": [
                 {
-                    "type": "Enhance",
-                    "cost": "6",
+                    "type": "Gain",
                     "effects": [
                         {
-                            "type": "Restore",
-                            "effects": {
-                                "amount": "2",
-                                "targets": "leader",
-                                "times": 1,
-                                "and": {},
-                                "quantifer": "your",
-                                "user": "leader"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "Enhance",
-                    "cost": "7",
-                    "effects": [
-                        {
-                            "type": "Give",
-                            "effects": [
-                                []
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "Enhance",
-                    "cost": "8",
-                    "effects": [
-                        {
-                            "type": "Gain",
-                            "effects": [
-                                {
-                                    "type": "Storm"
-                                }
+                            "type": [
+                                "Storm"
                             ]
                         }
                     ]
@@ -124,11 +126,16 @@
     "_effectTokens": [
         [
             "Fanfare",
+            "[/b]",
             ":",
+            "[b]",
             "Enhance",
+            "[/b]",
+            "[b]",
             "(",
             "4",
             ")",
+            "[/b]",
             "-",
             "Destroy",
             "a",
@@ -140,9 +147,12 @@
         ],
         [
             "Enhance",
+            "[/b]",
+            "[b]",
             "(",
             "5",
             ")",
+            "[/b]",
             ":",
             "Draw",
             "a",
@@ -152,9 +162,12 @@
         ],
         [
             "Enhance",
+            "[/b]",
+            "[b]",
             "(",
             "6",
             ")",
+            "[/b]",
             ":",
             "Restore",
             "2",
@@ -167,9 +180,12 @@
         ],
         [
             "Enhance",
+            "[/b]",
+            "[b]",
             "(",
             "7",
             ")",
+            "[/b]",
             ":",
             "Give",
             "your",
@@ -196,12 +212,17 @@
         ],
         [
             "Enhance",
+            "[/b]",
+            "[b]",
             "(",
             "8",
             ")",
+            "[/b]",
             ":",
             "Gain",
+            "[b]",
             "Storm",
+            "[/b]",
             "and",
             "evolve",
             "this",

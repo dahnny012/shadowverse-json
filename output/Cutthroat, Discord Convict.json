@@ -38,8 +38,8 @@
     "id_": 127841010,
     "name_": "Cutthroat, Discord Convict",
     "rotation_": true,
-    "baseEffect_": "Bane.\nFanfare: Enhance (7) - Gain +5/+5. Deal 5 damage to an enemy follower and then the enemy leader.\nEnhance (9): Gain +10/+10 and deal 10 damage instead.",
-    "evoEffect_": "Bane.\nEvolve: If there are no duplicate cards in your deck (excluding Condemned cards), give your leader the following effect - Whenever you play a card using its Enhance effect, recover X play points. X equals the Enhance cost minus 2. (This effect is not stackable and lasts for the rest of the match.)",
+    "baseEffect_": "[b]Bane[/b].\n[b]Fanfare[/b]: [b]Enhance[/b] [b](7)[/b] - Gain +5/+5. Deal 5 damage to an enemy follower and then the enemy leader.\n[b]Enhance[/b] [b](9)[/b]: Gain +10/+10 and deal 10 damage instead.",
+    "evoEffect_": "[b]Bane[/b].\n[b]Evolve[/b]: If there are no duplicate cards in your deck (excluding Condemned cards), give your leader the following effect - Whenever you play a card using its [b]Enhance[/b] effect, recover X play points. X equals the [b]Enhance[/b] cost minus 2. (This effect is not stackable and lasts for the rest of the match.)",
     "type_": "Follower",
     "effectTokens": [],
     "effectJson": [
@@ -69,25 +69,25 @@
                             ]
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "type": "Enhance",
+            "cost": "9",
+            "effects": [
                 {
-                    "type": "Enhance",
-                    "cost": "9",
+                    "type": "Gain",
                     "effects": [
                         {
-                            "type": "Gain",
-                            "effects": [
-                                {
-                                    "type": "StatChange",
-                                    "operation": "+",
-                                    "amount": "10"
-                                },
-                                {
-                                    "type": "StatChange",
-                                    "operation": "+",
-                                    "amount": "10"
-                                }
-                            ]
+                            "type": "StatChange",
+                            "operation": "+",
+                            "amount": "10"
+                        },
+                        {
+                            "type": "StatChange",
+                            "operation": "+",
+                            "amount": "10"
                         }
                     ]
                 }
@@ -96,10 +96,14 @@
     ],
     "evolveEffectTokens": [],
     "_evolveEffectTokens": [
+        "[b]",
         "Bane",
+        "[/b]",
         ".",
         "\n",
+        "[b]",
         "Evolve",
+        "[/b]",
         ":",
         "If",
         "there",
@@ -130,7 +134,9 @@
         "card",
         "using",
         "its",
+        "[b]",
         "Enhance",
+        "[/b]",
         "effect",
         ",",
         "recover",
@@ -141,7 +147,9 @@
         "X",
         "equals",
         "the",
+        "[b]",
         "Enhance",
+        "[/b]",
         "cost",
         "minus",
         "2",
@@ -199,7 +207,9 @@
                     "value": [
                         "equals",
                         "the",
+                        "[b]",
                         "Enhance",
+                        "[/b]",
                         "cost",
                         "minus",
                         "2",
@@ -216,16 +226,22 @@
     "_effectTokens": [
         [
             "Bane",
+            "[/b]",
             ".",
             "\n"
         ],
         [
             "Fanfare",
+            "[/b]",
             ":",
+            "[b]",
             "Enhance",
+            "[/b]",
+            "[b]",
             "(",
             "7",
             ")",
+            "[/b]",
             "-",
             "Gain",
             "+",
@@ -251,9 +267,12 @@
         ],
         [
             "Enhance",
+            "[/b]",
+            "[b]",
             "(",
             "9",
             ")",
+            "[/b]",
             ":",
             "Gain",
             "+",

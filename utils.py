@@ -45,7 +45,6 @@ def popArrayTill(lst, index):
         i += 1
     return stack
 
-
 def safeIndex(lst, search, stop="."):
     for i, word in enumerate(lst):
         if search == word:
@@ -53,3 +52,10 @@ def safeIndex(lst, search, stop="."):
         if word == stop:
             return notFound
     return notFound
+
+def getIndexAfter(lst, search):
+    index = safeIndex(lst, search)
+    if(index >=0 ):
+        return lst[index:]
+    else:
+        return lst[0:]

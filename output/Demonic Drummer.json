@@ -38,8 +38,8 @@
     "id_": 127621020,
     "name_": "Demonic Drummer",
     "rotation_": true,
-    "baseEffect_": "Accelerate (2): Summon a Demonic Drummer and deal 1 damage to your leader. Do this 2 times.\n---------- \nWard.\nFanfare: Summon 4 Demonic Drummers. If Wrath is active for you, evolve this follower.\nLast Words: Restore 1 defense to your leader.",
-    "evoEffect_": "Ward.\nCan't take more than 2 damage at a time.\nLast Words: Restore 2 defense to your leader.",
+    "baseEffect_": "[b]Accelerate[/b] [b](2)[/b]: Summon a [b]Demonic Drummer[/b] and deal 1 damage to your leader. Do this 2 times.\n---------- \n[b]Ward[/b].\n[b]Fanfare[/b]: Summon 4 [b]Demonic Drummer[/b][b]s[/b]. If [b]Wrath[/b] is active for you, evolve this follower.\n[b]Last Words[/b]: Restore 1 defense to your leader.",
+    "evoEffect_": "[b]Ward[/b].\nCan't take more than 2 damage at a time.\n[b]Last Words[/b]: Restore 2 defense to your leader.",
     "type_": "Follower",
     "effectTokens": [],
     "effectJson": [
@@ -52,25 +52,8 @@
                     "effects": [
                         {
                             "quantifer": "a",
-                            "type": "NamedCard",
-                            "cardname": "Demonic Drummer",
-                            "effects": [
-                                {
-                                    "type": "Deal",
-                                    "effects": {
-                                        "amount": "1",
-                                        "targets": "leader",
-                                        "times": 1,
-                                        "and": {},
-                                        "quantifer": "your",
-                                        "user": "leader"
-                                    }
-                                },
-                                {
-                                    "type": "Repeat",
-                                    "amount": "2"
-                                }
-                            ]
+                            "card_name": "Demonic Drummer",
+                            "type": "NamedCard"
                         }
                     ]
                 }
@@ -87,8 +70,8 @@
                     "effects": [
                         {
                             "quantifer": "4",
-                            "type": "NamedCard",
-                            "cardname": "Demonic Drummers"
+                            "card_name": "Demonic Drummer",
+                            "type": "NamedCard"
                         }
                     ]
                 },
@@ -99,9 +82,9 @@
                             {
                                 "type": "CheckActiveState",
                                 "state": [
-                                    "is"
+                                    "Wrath"
                                 ],
-                                "stateEqualTo": true
+                                "stateEqualTo": false
                             }
                         ],
                         "then": [
@@ -136,7 +119,9 @@
     ],
     "evolveEffectTokens": [],
     "_evolveEffectTokens": [
+        "[b]",
         "Ward",
+        "[/b]",
         ".",
         "\n",
         "Can't",
@@ -150,8 +135,10 @@
         "time",
         ".",
         "\n",
+        "[b]",
         "Last",
         "Words",
+        "[/b]",
         ":",
         "Restore",
         "2",
@@ -165,14 +152,19 @@
     "_effectTokens": [
         [
             "Accelerate",
+            "[/b]",
+            "[b]",
             "(",
             "2",
             ")",
+            "[/b]",
             ":",
             "Summon",
             "a",
+            "[b]",
             "Demonic",
             "Drummer",
+            "[/b]",
             "and",
             "deal",
             "1",
@@ -203,19 +195,28 @@
         ],
         [
             "Ward",
+            "[/b]",
             ".",
             "\n"
         ],
         [
             "Fanfare",
+            "[/b]",
             ":",
             "Summon",
             "4",
+            "[b]",
             "Demonic",
-            "Drummers",
+            "Drummer",
+            "[/b]",
+            "[b]",
+            "s",
+            "[/b]",
             ".",
             "If",
+            "[b]",
             "Wrath",
+            "[/b]",
             "is",
             "active",
             "for",
@@ -230,6 +231,7 @@
         [
             "Last",
             "Words",
+            "[/b]",
             ":",
             "Restore",
             "1",

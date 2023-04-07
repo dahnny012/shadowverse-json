@@ -38,15 +38,21 @@
     "id_": 125841010,
     "name_": "Orchis, the Limitless",
     "rotation_": true,
-    "baseEffect_": "Fusion: Puppets\nWhenever cards are fused to this card, summon a Puppet and give it +1/+0.\n----------\nFanfare: If this card is fused with at least 1 card, summon a Lloyd, Orchis's Puppet. If fused with at least 3 cards, evolve it and this follower.",
-    "evoEffect_": "Whenever an allied Puppet comes into play, give it Storm.",
+    "baseEffect_": "[b]Fusion[/b]: [b]Puppet[/b][b]s[/b]\nWhenever cards are fused to this card, summon a [b]Puppet[/b] and give it +1/+0.\n----------\n[b]Fanfare[/b]: If this card is fused with at least 1 card, summon a [b]Lloyd, Orchis's Puppet[/b]. If fused with at least 3 cards, evolve it and this follower.",
+    "evoEffect_": "Whenever an allied [b]Puppet[/b] comes into play, give it [b]Storm[/b].",
     "type_": "Follower",
     "effectTokens": [],
     "effectJson": [
         {
             "type": "Fusion",
             "cardTypes": [
-                "Puppets",
+                ":",
+                "[b]",
+                "Puppet",
+                "[/b]",
+                "[b]",
+                "s",
+                "[/b]",
                 "\n"
             ]
         },
@@ -65,28 +71,8 @@
                         "effects": [
                             {
                                 "quantifer": "a",
-                                "type": "NamedCard",
-                                "cardname": "Puppet",
-                                "effects": [
-                                    {
-                                        "type": "Give",
-                                        "effects": [
-                                            [
-                                                {
-                                                    "type": "StatChange",
-                                                    "operation": "+",
-                                                    "amount": "1"
-                                                },
-                                                {
-                                                    "type": "StatChange",
-                                                    "operation": "+",
-                                                    "amount": "0"
-                                                }
-                                            ]
-                                        ],
-                                        "target": "parent"
-                                    }
-                                ]
+                                "card_name": "Puppet",
+                                "type": "NamedCard"
                             }
                         ]
                     }
@@ -111,8 +97,8 @@
                                 "effects": [
                                     {
                                         "quantifer": "a",
-                                        "type": "NamedCard",
-                                        "cardname": "Lloyd , Orchis's Puppet"
+                                        "card_name": "Lloyd , Orchis's Puppet",
+                                        "type": "NamedCard"
                                     }
                                 ]
                             }
@@ -147,22 +133,32 @@
         "Whenever",
         "an",
         "allied",
+        "[b]",
         "Puppet",
+        "[/b]",
         "comes",
         "into",
         "play",
         ",",
         "give",
         "it",
+        "[b]",
         "Storm",
+        "[/b]",
         "."
     ],
     "evolveEffectJson": [],
     "_effectTokens": [
         [
             "Fusion",
+            "[/b]",
             ":",
-            "Puppets",
+            "[b]",
+            "Puppet",
+            "[/b]",
+            "[b]",
+            "s",
+            "[/b]",
             "\n"
         ],
         [
@@ -176,7 +172,9 @@
             ",",
             "summon",
             "a",
+            "[b]",
             "Puppet",
+            "[/b]",
             "and",
             "give",
             "it",
@@ -203,6 +201,7 @@
         ],
         [
             "Fanfare",
+            "[/b]",
             ":",
             "If",
             "this",
@@ -217,10 +216,12 @@
             ",",
             "summon",
             "a",
+            "[b]",
             "Lloyd",
             ",",
             "Orchis's",
             "Puppet",
+            "[/b]",
             ".",
             "If",
             "fused",

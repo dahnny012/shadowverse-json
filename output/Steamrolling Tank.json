@@ -38,8 +38,8 @@
     "id_": 127611010,
     "name_": "Steamrolling Tank",
     "rotation_": true,
-    "baseEffect_": "Ward.\nFanfare: Deal 1 damage to your leader.\nDuring your turn, whenever your leader takes damage, restore 1 defense to your leader (up to 8 times per turn).",
-    "evoEffect_": "(Same as the unevolved form, excluding Fanfare.)",
+    "baseEffect_": "[b]Ward[/b].\n[b]Fanfare[/b]: Deal 1 damage to your leader.\nDuring your turn, whenever your leader takes damage, restore 1 defense to your leader (up to 8 times per turn).",
+    "evoEffect_": "(Same as the unevolved form, excluding [b]Fanfare[/b].)",
     "type_": "Follower",
     "effectTokens": [],
     "effectJson": [
@@ -111,15 +111,32 @@
         }
     ],
     "evolveEffectTokens": [],
+    "_evolveEffectTokens": [
+        "(",
+        "Same",
+        "as",
+        "the",
+        "unevolved",
+        "form",
+        ",",
+        "excluding",
+        "[b]",
+        "Fanfare",
+        "[/b]",
+        ".",
+        ")"
+    ],
     "evolveEffectJson": [],
     "_effectTokens": [
         [
             "Ward",
+            "[/b]",
             ".",
             "\n"
         ],
         [
             "Fanfare",
+            "[/b]",
             ":",
             "Deal",
             "1",

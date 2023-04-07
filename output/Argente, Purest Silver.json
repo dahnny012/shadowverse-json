@@ -38,8 +38,8 @@
     "id_": 126431030,
     "name_": "Argente, Purest Silver",
     "rotation_": true,
-    "baseEffect_": "Ward.\nFanfare: Discard 2 cards from your hand. Gain an empty play point orb. If at least 2 other allied effects have discarded cards from your hand this match, draw 3 cards.",
-    "evoEffect_": "(Same as the unevolved form, excluding Fanfare.)",
+    "baseEffect_": "[b]Ward[/b].\n[b]Fanfare[/b]: Discard 2 cards from your hand. Gain an empty play point orb. If at least 2 other allied effects have discarded cards from your hand this match, draw 3 cards.",
+    "evoEffect_": "(Same as the unevolved form, excluding [b]Fanfare[/b].)",
     "type_": "Follower",
     "effectTokens": [],
     "effectJson": [
@@ -106,15 +106,32 @@
         }
     ],
     "evolveEffectTokens": [],
+    "_evolveEffectTokens": [
+        "(",
+        "Same",
+        "as",
+        "the",
+        "unevolved",
+        "form",
+        ",",
+        "excluding",
+        "[b]",
+        "Fanfare",
+        "[/b]",
+        ".",
+        ")"
+    ],
     "evolveEffectJson": [],
     "_effectTokens": [
         [
             "Ward",
+            "[/b]",
             ".",
             "\n"
         ],
         [
             "Fanfare",
+            "[/b]",
             ":",
             "Discard",
             "2",

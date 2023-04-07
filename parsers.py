@@ -5,104 +5,18 @@ import re
 import itertools
 from utils import consumeTokens, popArrayAfterSearch, popArrayTill, safeIndex
 import logging
-
-bane = "Bane"
-ward = "Ward"
-fanfare = 'Fanfare'
-lastword = 'Last'
-rush = 'Rush'
-endEffectToken = '.'
-summon = 'Summon'
-put = 'Put'
-oneQuantifier = 'a'
-enhance = 'Enhance'
-rally = 'Rally'
-draw = 'Draw'
-then = 'then'
-andd = 'and'
-andList = ","
-evolve = 'Evolve'
-drain = 'Drain'
-storm = 'Storm'
-accel = 'Accelerate'
-gain = 'Gain'
-clash = "Clash"
-strike = "Strike"
-deal = "Deal"
-damage = "damage"
-to = "to"
-follower = 'follower'
-iff = "If"
-burialRite = "Bural"
-newLineToken = "\n"
-increase = "+"
-decrease = "-"
-attackHealthSeperator = "/"
-the = "the"
-during = "during"
-whenever = "Whenever"
-thenAnd = re.compile(r'(and|\.)')
-whilee = "while"
-startOfTurn = "At the start"
-endOfTurn = "At the end"
-during = "During"
-destroy = "Destroy"
-banish = "Banish"
-restore = "Restore"
-defense = "defense"
-ambush = "Ambush"
-resonsance = "Resonance"
-wraith = "Wrath"
-vengeance = "Vengeance"
-fusion = "Fusion"
-recover = "Recover"
-cantBeDestroyedByEffects = "Can't be destroyed by effects."
-discard = "Discard"
-X, Y, Z = "X", "Y", "Z"
-instead = "instead"
-otherwise = "Otherwise"
-hand = "hand"
-deck = "deck"
-orr = "or"
-the_ability_to_evolve = "the ability to evolve"
-nott = "noy"
-change = "Change"
-cost = "cost"
-its = "its"
-this = "this"
-random = "random"
-give = "Give"
-thisMatch = "this match"
-leader = "leader"
-doThis = "do"
-
-stateConditions = {resonsance, wraith, vengeance}
-staticEffects = {ward, drain, rush, storm, bane, ambush}
-effectsWithSubeffects = {fanfare, lastword, strike}
-additionalEffects = {deal, gain, draw}
-subeffectsWithQuantitfiers = [summon, put, draw]
-alternativeCosts = {enhance, accel, burialRite}
-triggerEffects = {whenever}
-stateOfTurn = {startOfTurn, endOfTurn}
-turnSpecificEffects = {
-    during
-}
-constantEffects = {whilee}
-variableEffects = {X, Y, Z}
-traits = {
-    "Festive", "Officer", "Condemned", "Machina", "Academic", "Natura", "Commander", "Mysteria", "Chess", "Loot", "Levin"
-}
+from constants import *
 
 logging.basicConfig(
-                    level=logging.INFO,
-                    format='[%(levelname)s] [%(name)s] - %(message)s',
-                        handlers=[
-                            logging.FileHandler("debug.log", "w"),
-                            logging.StreamHandler()
-                        ]
-                    )
-_levels = ["base"]
-log = logging.getLogger("base")
+    level=logging.INFO,
+    format='[%(levelname)s] [%(name)s] - %(message)s',
+    handlers=[
+        logging.FileHandler("debug.log", "w"),
+        logging.StreamHandler()
+    ]
+)
+_levels = []
+log = logging.getLogger()
 
 
 def getLog(type):
@@ -110,13 +24,16 @@ def getLog(type):
     _levels.append(type)
     log = logging.getLogger(".".join(_levels))
 
+
 def checkoutLog(type):
     global log
-    while(_levels.pop() != type):
+    while (_levels.pop() != type):
         continue
     log = logging.getLogger(".".join(_levels))
-    
+
+
 PLUGINS = []
+
 
 def useLog(type):
     def outer(func):
@@ -135,6 +52,7 @@ def register(func):
     PLUGINS.append(func)
     return func
 
+
 @register
 @useLog("repeat")
 def repeatToken(head, tokens):
@@ -146,6 +64,7 @@ def repeatToken(head, tokens):
         'type': "Repeat",
         'amount': tokens.pop(0)
     }
+
 
 @register
 def changeCard(head, tokens):
@@ -166,6 +85,7 @@ def changeCard(head, tokens):
     popArrayAfterSearch(tokens, ".")
     return effect
 
+
 @register
 def parseTriggerEffects(head, tokens):
     if head not in triggerEffects:
@@ -175,6 +95,7 @@ def parseTriggerEffects(head, tokens):
         'type': head,
         'effects': parseIffEffect(tokens)
     }
+
 
 @register
 def triggerPhaseOfTurnToken(head, tokens):
@@ -194,6 +115,7 @@ def triggerPhaseOfTurnToken(head, tokens):
         'effects': parseSubEffect(tokens)
     }
 
+
 @register
 def parseOtherwise(head, tokens):
     if (head != otherwise):
@@ -203,6 +125,7 @@ def parseOtherwise(head, tokens):
         'type': otherwise,
         'effects': parseSubEffect(tokens)
     }
+
 
 @register
 @useLog("variableEquals")
@@ -215,8 +138,9 @@ def variableEquals(head, tokens):
     return {
         'type': 'VariableDefinition',
         'variable': head,
-        'value': popArrayAfterSearch(tokens, endEffectToken) 
+        'value': popArrayAfterSearch(tokens, endEffectToken)
     }
+
 
 @register
 @useLog(whenever)
@@ -242,6 +166,7 @@ def discardToken(head, tokens):
         'effects': parseDiscard(tokens)
     }
 
+
 def parseDiscard(tokens):
     effect = {
         'cardsToDiscard': tokens[0],
@@ -252,6 +177,7 @@ def parseDiscard(tokens):
         tokens.pop(0)
         effect['effects'] = parseSubEffect(tokens)
     return effect
+
 
 @register
 def recoverToken(head, tokens):
@@ -271,6 +197,7 @@ def parseRecover(tokens):
     tokens.pop(0)
     return effect
 
+
 @register
 @useLog(fusion)
 def fusionToken(head, tokens):
@@ -285,6 +212,7 @@ def fusionToken(head, tokens):
         'cardTypes': types
     }
 
+
 @register
 @useLog(evolve)
 def evolveToken(head, tokens):
@@ -297,6 +225,7 @@ def evolveToken(head, tokens):
         "effects": consumeTokens(tokens, 2)
     }
 
+
 @register
 @useLog("removal")
 def removalToken(head, tokens):
@@ -308,6 +237,7 @@ def removalToken(head, tokens):
         "type": head,
         "effects": parseRemoval(tokens)
     }
+
 
 @register
 @useLog(draw)
@@ -334,6 +264,7 @@ def parseRemoval(tokens):
     }
     return effect
 
+
 @register
 @useLog(summon)
 def summonToken(head, tokens):
@@ -346,6 +277,7 @@ def summonToken(head, tokens):
         "effects": parseCards(tokens)
     }
     return result
+
 
 @register
 @useLog(put)
@@ -372,6 +304,7 @@ def putToken(head, tokens):
         "destination": destination
     }
 
+
 @register
 @useLog(give)
 def giveToken(head, tokens):
@@ -383,8 +316,8 @@ def giveToken(head, tokens):
         "type": give,
         "effects": []
     }
-    if(safeIndex(tokens, to) >= 0):
-        effectTokens = popArrayAfterSearch(tokens , to)
+    if (safeIndex(tokens, to) >= 0):
+        effectTokens = popArrayAfterSearch(tokens, to)
         effect['effects'].append(parseGain(effectTokens))
     target = ""
     # find targets then find the effect
@@ -394,16 +327,17 @@ def giveToken(head, tokens):
             effect['target'] = "parent"
             effect["effects"].append(parseGain(tokens))
         elif (token == "all"):
-            if(token[0] == "allied" or (" ".join(tokens[0:1]) == "other allied")):
+            if (token[0] == "allied" or (" ".join(tokens[0:1]) == "other allied")):
                 effect['target'] = parseCards(tokens)
-        elif(token == "your" or (" ".join(tokens[0:2]) == "the enemy leader")):
+        elif (token == "your" or (" ".join(tokens[0:2]) == "the enemy leader")):
             target = leader
             user = "self" if token == "your" else "enemy"
             popArrayAfterSearch(tokens, effect)
         else:
-            ## Likely encountered an effect
+            # Likely encountered an effect
             break
     return effect
+
 
 @register
 @useLog(gain)
@@ -417,6 +351,7 @@ def gainToken(head, tokens):
         "effects": parseGain(tokens),
     }
 
+
 @register
 @useLog(restore)
 def restoreToken(head, tokens):
@@ -427,6 +362,7 @@ def restoreToken(head, tokens):
         "type": restore,
         "effects": changeHealth(tokens, defense)
     }
+
 
 @register
 @useLog(deal)
@@ -439,12 +375,13 @@ def dealToken(head, tokens):
         "effects": changeHealth(tokens, damage)
     }
 
+
 @register
 @useLog(then)
 def thenToken(head, tokens):
     if (head != then.capitalize()):
         return None
-    log.info("Starting Then with ", tokens)
+    log.info("Starting Then with %s", tokens)
     tokens.pop(0)
     if (tokens[0] == ","):
         tokens.pop(0)
@@ -452,6 +389,7 @@ def thenToken(head, tokens):
         "type": then.capitalize(),
         "effects": parseSubEffect(tokens)
     }
+
 
 @register
 @useLog(iff)
@@ -465,6 +403,7 @@ def ifToken(head, tokens):
         "effects": parseIffEffect(tokens)
     }
 
+
 def parseIffEffect(tokens):
     conditionEffect = parseCondition(tokens)
     endIndex = safeIndex(tokens, endEffectToken)
@@ -477,17 +416,19 @@ def parseIffEffect(tokens):
         'then': thenEffect
     }
 
+
 @useLog(type="condition")
 def parseCondition(tokens):
     log.info("Entered conditions with tokens %s", tokens)
     conditionTokens = popArrayAfterSearch(tokens, ",")
-    log.info("After Popping %s", tokens)
+    log.info("Condition Tokens %s", conditionTokens)
+    log.info("Tokens after Popping %s", tokens)
     conditions = []
-    if conditionTokens[0] in stateConditions:
+    if isStartName(conditionTokens[0]):
         conditionTokens.pop(0)
         effect = {
             'type': 'CheckActiveState',
-            'state': consumeTokens(conditionTokens, 1),
+            'state': extractNameFromStartName(conditionTokens),
             'stateEqualTo': True
         }
         if (" ".join(conditionTokens[0:1]) in "is not"):
@@ -520,7 +461,7 @@ def parseCondition(tokens):
         if (conditionTokens[0].isnumeric()):
             exit()
             amount = conditionTokens[0].isnumeric()
-        elif(" ".join(conditionTokens[0:3]) in "fused with at least"):
+        elif (" ".join(conditionTokens[0:3]) in "fused with at least"):
             consumeTokens(conditionTokens, 4)
             amount = conditionTokens.pop(0)
         conditions.append({
@@ -530,8 +471,16 @@ def parseCondition(tokens):
     if len(conditionTokens) > 0 and conditionTokens[0] == orr:
         log.info("Found OR condition %s", conditionTokens)
         consumeTokens(conditionTokens, 1)
-        conditions.append(parseCondition(conditionTokens)[0])
+        conditions.append({
+            'type': 'IfOr'
+        })
+        OrCondition = parseCondition(conditionTokens)[0]
+        # Wrait or Vengence is Active
+        if(OrCondition['type'] == 'CheckActiveState'):
+            OrCondition['stateEqualTo'] = conditions[0]['stateEqualTo']
+        conditions.append(OrCondition)
     return list(conditions)
+
 
 @useLog("changeHealth")
 def changeHealth(tokens, type=None):
@@ -557,7 +506,7 @@ def changeHealth(tokens, type=None):
     if (nextTarget == follower):
         effect['targets'] = nextTarget
         popArrayTill(tokens, toIndex + 2)
-    if(tokens[toIndex + 2] == "other"):
+    if (tokens[toIndex + 2] == "other"):
         effect['targets'] = 'followers'
         effect['exceptions'] = 'other'
         popArrayTill(tokens, toIndex + 4)
@@ -595,6 +544,7 @@ def changeHealth(tokens, type=None):
     log.info("Leaving changeHealth with Tokens %s", tokens)
     return effect
 
+
 @register
 @useLog("parens")
 def parensToken(head, tokens):
@@ -604,6 +554,7 @@ def parensToken(head, tokens):
         "type": "Parens",
         "condition": popArrayAfterSearch(tokens, ")")
     }
+
 
 @useLog("statChange")
 def parseStatChange(tokens, gainStack):
@@ -622,16 +573,19 @@ def parseStatChange(tokens, gainStack):
             gain['type'] = 'StatChange'
             gainStack.append(gain)
 
+
 @useLog("parseGain")
 def parseGain(tokens):
     gainStack = []
     while len(tokens) > 0:
         token = tokens[0]
+        log.info("Starting with Token %s", token)
         if (token == increase or token == decrease):
             parseStatChange(tokens, gainStack)
-        elif (token in staticEffects):
+        elif (isStartName(token)):
+            tokens.pop(0)
             gain = {}
-            gain['type'] = token
+            gain['type'] = extractNameFromStartName(tokens)
             gainStack.append(gain)
             tokens.pop(0)
         elif (" ".join(tokens[0:3]) in "an empty play point"):
@@ -653,17 +607,21 @@ def parseGain(tokens):
             break
     return gainStack
 
-def isANameToken(token):
-    partOfName = {","}
-    isAProperNoun = token[0].isupper() or  token  in partOfName
-    notAStaticAbility = token not in staticEffects
-    return isAProperNoun and notAStaticAbility
+
+def isStartName(token):
+    return token == startName
+
+
+def extractNameFromStartName(tokens):
+    name = popArrayAfterSearch(tokens, endName)
+    name.pop()
+    return name
+
 
 @useLog(type="parseCards")
 def parseCards(tokens, quantifier=None, stopWord=endEffectToken):
     log.info("Entered with tokens: %s", tokens)
     units = []
-    unitStack = []
     unit = {}
     stop = {andd, stopWord, andList}
     quantifiers = {"an", "a", "all", "allied"}
@@ -673,46 +631,42 @@ def parseCards(tokens, quantifier=None, stopWord=endEffectToken):
         if (token in quantifiers or token.isnumeric()):
             log.debug("Setting quantifiers in parseCards %s", token)
             unit['quantifer'] = token
-        elif("craft" in token):
+        elif ("craft" in token):
             unit['faction'] = token
             unit['type'] = getCardType(tokens.pop(0))
         elif token in traits:
             unit['trait'] = token
             unit['type'] = getCardType(tokens.pop(0))
-        elif(isANameToken(token)):
-            unitStack.append(token)
-            if(token == "Lloyd"):
-                unitStack = unitStack + consumeTokens(tokens, 3)
-                log.debug("encountered lloyd: stack: %s", unitStack)
-
-        elif(getCardType(token) != None):
+        elif (isStartName(token)):
+            unit["card_name"] = " ".join(extractNameFromStartName(tokens))
+            unit["type"] = "NamedCard"
+            units.append(unit)
+            unit = {}
+            if (len(tokens) > 0 and tokens[0] not in stop):
+                break
+        elif (getCardType(token) != None):
             unit['type'] = token
-        elif(token in specifics):
-            if(token == random):
+            units.append(unit)
+        elif (token in specifics):
+            if (token == random):
                 unit['random'] = True
-            if(token == "different"):
+            if (token == "different"):
                 unit['different'] = True
-        if (token == endEffectToken
-              or token in stop
-              or not isANameToken(token)
-              or len(tokens) == 0):
-            if(len(unitStack) > 0):
-                log.info("Unit stack %s", unitStack)
-                unitName = " ".join(unitStack)
-                unit["type"] = getCardType(unitName)
-                if unit["type"] == "NamedCard":
-                    unit["cardname"] = unitName
-                units.append(unit)
-                unitStack = []
-                if(token == andd and not tokens[0][0].isupper()):
-                    log.info("Card has a trigger %s", tokens)
-                    unit['effects'] = parseSubEffect(tokens)
-                if(token == endEffectToken):
-                    break
-                unit = {}
+        elif (token == endEffectToken
+            or token in stop
+            or not isStartName(token)
+                or len(tokens) == 0):
+            if (token == andd):
+                log.info("Card has a trigger %s", tokens)
+                unit['effects'] = parseSubEffect(tokens)
+            if (token == endEffectToken):
+                break
+            else:
+                break
         else:
-            log.debug("encountered else %s, %s", token, unitStack)
+            log.debug("encountered else %s, %s", token)
     return units
+
 
 def getCardType(type):
     if type in "followers":
@@ -726,6 +680,7 @@ def getCardType(type):
     if type[0].isupper():
         return "NamedCard"
     return None
+
 
 @useLog(type="subeffect")
 def parseSubEffect(tokens):
@@ -743,7 +698,8 @@ def parseSubEffect(tokens):
                     if (len(stack) == 0):
                         break
                     head = stack[0]
-                    log.debug("Head %s, Stack %s, Tokens %s", head, stack, tokens)
+                    log.debug("Head %s, Stack %s, Tokens %s",
+                              head, stack, tokens)
                     log.debug("Subeffect parser %s", subEffectParser.__name__)
                     subEffect = subEffectParser(head, stack)
                     if (subEffect) != None:
@@ -754,12 +710,14 @@ def parseSubEffect(tokens):
                             effects[-1]['limit'] = subEffect
                         else:
                             effects.append(subEffect)
-                        log.debug("After subeffect stack: %s, tokens: %s", stack, tokens)
+                        log.debug(
+                            "After subeffect stack: %s, tokens: %s", stack, tokens)
                 if (subEffect == None):
-                    if(len(stack) > 0):
+                    if (len(stack) > 0):
                         stack.pop(0)
     log.info("Exiting with tokens: %s", tokens)
     return effects
+
 
 @register
 @useLog("alternativeCosts")
@@ -772,15 +730,19 @@ def parseAlternativeCostEffect(head, tokens, stopWord=None):
     }
     costEndIndex = tokens.index(")")
     effect['cost'] = tokens[costEndIndex-1]
-    popArrayAfterSearch(tokens,")")
+    popArrayAfterSearch(tokens, ")")
     # +1 for ':' and ' '
     log.info("Entering subeffect for %s", head)
     effect['effects'] = parseSubEffect(tokens)
     return effect
 
 
+def splitTokens(effect):
+    return re.findall(r"\[b\]|\[/b\]|\b[\w']+\b|[^\w\s]|\n", effect)
+
+
 def splitEffectIntoDifferentPhases(card, effect):
-    tokens = re.findall(r"\b[\w']+\b|[^\w\s]|\[b\]|\[/b\>|<br>|<\w+>|<\/\w+>|\n", effect)
+    tokens = splitTokens(effect)
     effectStack = []
     for effectToken in tokens:
         effectStack.append(effectToken)
@@ -792,10 +754,10 @@ def splitEffectIntoDifferentPhases(card, effect):
 
 def splitEvolveIntoDifferentPhases(card, effect):
     card['evolveEffectTokens'] = []
-    if(effect == "-" or effect == "(Same as the unevolved form, excluding Fanfare.)"):
+    if (effect == "-" or effect == "(Same as the unevolved form, excluding Fanfare.)"):
         return
-        
-    tokens = re.findall(r"\b[\w']+\b|[^\w\s]|\[b\]|\[/b\>|<br>|<\w+>|<\/\w+>|\n", effect)
+
+    tokens = splitTokens(effect)
     effectStack = []
     for effectToken in tokens:
         effectStack.append(effectToken)
@@ -805,16 +767,80 @@ def splitEvolveIntoDifferentPhases(card, effect):
     card['_evolveEffectTokens'] = tokens.copy()
     card['evolveEffectTokens'].append(effectStack.copy())
 
+
 @useLog("evolveEffect")
 def handleEvoEffect(card):
     evoEffect = card['evoEffect_']
     splitEvolveIntoDifferentPhases(card, evoEffect)
     card['evolveEffectJson'] = []
-    while(len(card['evolveEffectTokens']) > 0):
+    while (len(card['evolveEffectTokens']) > 0):
         effectStrings = card['evolveEffectTokens'].pop(0)
         effectJson = {}
         if len(effectStrings) == 0:
             continue
+        if (effectStrings[0] == startName):
+            effectStrings.pop(0)
         if effectStrings[0] == evolve:
             effectJson['effects'] = parseSubEffect(effectStrings[2:])
             card['evolveEffectJson'].append(effectJson)
+
+
+@useLog("base")
+def baseParser(card):
+    log.info(card["name_"])
+    log.info(card["type_"])
+    card['effectTokens'] = []
+    card['effectJson'] = []
+    effect = card['baseEffect_']
+    splitEffectIntoDifferentPhases(card, effect)
+    handleEvoEffect(card)
+    card['_effectTokens'] = card['effectTokens'][0:]
+    while (len(card['effectTokens']) > 0):
+        effectStrings = card['effectTokens'].pop(0)
+        effectJson = {}
+        if len(effectStrings) == 0:
+            continue
+        if (effectStrings[0] == startName):
+            effectStrings.pop(0)
+        if effectStrings[0] == fusion:
+            card['effectJson'].append(fusionToken(
+                effectStrings[0], effectStrings[0:]))
+        if effectStrings[0] in effectsWithSubeffects:
+            if (effectStrings[0] == lastword):
+                log.debug("Entering last words: %s", effectStrings[3:])
+                effectJson['type'] = " ".join(effectStrings[0:2])
+                effectJson['effects'] = parseSubEffect(effectStrings[3:])
+            else:
+                effectJson['type'] = effectStrings[0]
+                baseEffectString = effectStrings[2:]
+                # How enhance is formatted is so weird, it acts on fanfare but
+                # But uses new lines for readability
+                while (len(card['effectTokens']) > 0 and card['effectTokens'][0][0] == "Enhance"):
+                    baseEffectString = baseEffectString + \
+                        card['effectTokens'].pop(0)
+                    log.info("Modified baseEffectString %s", baseEffectString)
+                effectJson['effects'] = parseSubEffect(baseEffectString)
+            card['effectJson'].append(effectJson)
+        if card["type_"] == 'Spell':
+            card['effectJson'].append(parseSubEffect(effectStrings))
+        if effectStrings[0] in staticEffects:
+            effectJson['type'] = effectStrings[0]
+            card['effectJson'].append(effectJson)
+        if effectStrings[0] in triggerEffects:
+            effectJson = parseTriggerEffects(
+                effectStrings[0], effectStrings[0:])
+            card['effectJson'].append(effectJson)
+        if effectStrings[0] in turnSpecificEffects:
+            log.debug("Found a During your Turn")
+            effectJson['type'] = effectStrings[0]
+            effectJson['effect'] = parseSubEffect(effectStrings[4:])
+            card['effectJson'].append(effectJson)
+
+        if effectStrings[0] in alternativeCosts:
+            card['effectJson'].append(parseAlternativeCostEffect(
+                effectStrings[0], effectStrings[0:]))
+        endOfPhase = triggerPhaseOfTurnToken(effectStrings[0], effectStrings)
+        if (endOfPhase != None):
+            card['effectJson'].append(endOfPhase)
+        log.info("Finished iteration %s", effectStrings)
+    log.info(json.dumps(card["effectJson"], indent=4))

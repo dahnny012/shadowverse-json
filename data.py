@@ -37,8 +37,8 @@ def SVP2SVPJSON(card):
     card['id_'] = card['card_id']
     card['name_'] = card['card_name']
     card['rotation_'] = card['format_type'] == 1
-    card['baseEffect_'] = card['skill_disc'].replace("<br>","\n")
-    card['evoEffect_'] = card['evo_skill_disc'].replace("<br>","\n")
+    card['baseEffect_'] = card['org_skill_disc'].replace("<br>","\n")
+    card['evoEffect_'] = card['org_evo_skill_disc'].replace("<br>","\n")
     card['type_'] = typeMap[card['char_type']]
     return card
 
@@ -46,8 +46,8 @@ def SVP2SVPJSON(card):
 def getCardPoolFromShadowverseJson():
     cardpool = []
     files = [
-    "Dragoncraft",
-    "Portalcraft",
+    #"Dragoncraft",
+    #"Portalcraft",
     "Bloodcraft"
     ]
     for file in files:

@@ -38,8 +38,8 @@
     "id_": 125641020,
     "name_": "Vania, Crimson Majesty",
     "rotation_": true,
-    "baseEffect_": "Fanfare: Put a Gift for Bloodkin into your hand. Then, if Vengeance or Wrath is active for you, put a Summon Bloodkin into your hand and gain the ability to evolve for 0 evolution points.",
-    "evoEffect_": "Whenever an allied Forest Bat comes into play, give it Storm and Bane and deal 1 damage to the enemy leader.",
+    "baseEffect_": "[b]Fanfare[/b]: Put a [b]Gift for Bloodkin[/b] into your hand. Then, if [b]Vengeance[/b] or [b]Wrath[/b] is active for you, put a [b]Summon Bloodkin[/b] into your hand and gain the ability to evolve for 0 evolution points.",
+    "evoEffect_": "Whenever an allied [b]Forest Bat[/b] comes into play, give it [b]Storm[/b] and [b]Bane[/b] and deal 1 damage to the enemy leader.",
     "type_": "Follower",
     "effectTokens": [],
     "effectJson": [
@@ -51,35 +51,61 @@
                     "effects": [
                         {
                             "quantifer": "a",
-                            "type": "NamedCard",
-                            "cardname": "Gift"
-                        },
-                        {
-                            "type": "NamedCard",
-                            "cardname": "Bloodkin"
-                        },
-                        {
-                            "type": "NamedCard",
-                            "cardname": "Then ,"
-                        },
-                        {
-                            "type": "NamedCard",
-                            "cardname": "Vengeance"
-                        },
-                        {
-                            "type": "NamedCard",
-                            "cardname": "Wrath"
-                        },
-                        {
-                            "type": null
-                        },
-                        {
-                            "quantifer": "a",
-                            "type": "NamedCard",
-                            "cardname": "Summon Bloodkin"
+                            "card_name": "Gift for Bloodkin",
+                            "type": "NamedCard"
                         }
                     ],
-                    "destination": []
+                    "destination": "hand"
+                },
+                {
+                    "type": "Then",
+                    "effects": [
+                        {
+                            "type": "If",
+                            "effects": {
+                                "conditions": [
+                                    {
+                                        "type": "CheckActiveState",
+                                        "state": [
+                                            "Vengeance"
+                                        ],
+                                        "stateEqualTo": true
+                                    },
+                                    {
+                                        "type": "IfOr"
+                                    },
+                                    {
+                                        "type": "CheckActiveState",
+                                        "state": [
+                                            "Wrath"
+                                        ],
+                                        "stateEqualTo": true
+                                    }
+                                ],
+                                "then": [
+                                    {
+                                        "type": "Put",
+                                        "effects": [
+                                            {
+                                                "quantifer": "a",
+                                                "card_name": "Summon Bloodkin",
+                                                "type": "NamedCard"
+                                            }
+                                        ],
+                                        "destination": "hand"
+                                    },
+                                    {
+                                        "type": "Gain",
+                                        "effects": [
+                                            {
+                                                "type": "0 EP Evolve"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
                 }
             ]
         }
@@ -89,17 +115,23 @@
         "Whenever",
         "an",
         "allied",
+        "[b]",
         "Forest",
         "Bat",
+        "[/b]",
         "comes",
         "into",
         "play",
         ",",
         "give",
         "it",
+        "[b]",
         "Storm",
+        "[/b]",
         "and",
+        "[b]",
         "Bane",
+        "[/b]",
         "and",
         "deal",
         "1",
@@ -114,12 +146,15 @@
     "_effectTokens": [
         [
             "Fanfare",
+            "[/b]",
             ":",
             "Put",
             "a",
+            "[b]",
             "Gift",
             "for",
             "Bloodkin",
+            "[/b]",
             "into",
             "your",
             "hand",
@@ -127,9 +162,13 @@
             "Then",
             ",",
             "if",
+            "[b]",
             "Vengeance",
+            "[/b]",
             "or",
+            "[b]",
             "Wrath",
+            "[/b]",
             "is",
             "active",
             "for",
@@ -137,8 +176,10 @@
             ",",
             "put",
             "a",
+            "[b]",
             "Summon",
             "Bloodkin",
+            "[/b]",
             "into",
             "your",
             "hand",

@@ -38,8 +38,8 @@
     "id_": 127621030,
     "name_": "Devilish Flautist",
     "rotation_": true,
-    "baseEffect_": "Rush.\nDrain.\nFanfare: Deal 1 damage to your leader.\nStrike: If Wrath is active for you, gain +2/+0.",
-    "evoEffect_": "(Same as the unevolved form, excluding Fanfare.)",
+    "baseEffect_": "[b]Rush[/b].\n[b]Drain[/b].\n[b]Fanfare[/b]: Deal 1 damage to your leader.\n[b]Strike[/b]: If [b]Wrath[/b] is active for you, gain +2/+0.",
+    "evoEffect_": "(Same as the unevolved form, excluding [b]Fanfare[/b].)",
     "type_": "Follower",
     "effectTokens": [],
     "effectJson": [
@@ -75,9 +75,9 @@
                             {
                                 "type": "CheckActiveState",
                                 "state": [
-                                    "is"
+                                    "Wrath"
                                 ],
-                                "stateEqualTo": true
+                                "stateEqualTo": false
                             }
                         ],
                         "then": [
@@ -103,20 +103,38 @@
         }
     ],
     "evolveEffectTokens": [],
+    "_evolveEffectTokens": [
+        "(",
+        "Same",
+        "as",
+        "the",
+        "unevolved",
+        "form",
+        ",",
+        "excluding",
+        "[b]",
+        "Fanfare",
+        "[/b]",
+        ".",
+        ")"
+    ],
     "evolveEffectJson": [],
     "_effectTokens": [
         [
             "Rush",
+            "[/b]",
             ".",
             "\n"
         ],
         [
             "Drain",
+            "[/b]",
             ".",
             "\n"
         ],
         [
             "Fanfare",
+            "[/b]",
             ":",
             "Deal",
             "1",
@@ -129,9 +147,12 @@
         ],
         [
             "Strike",
+            "[/b]",
             ":",
             "If",
+            "[b]",
             "Wrath",
+            "[/b]",
             "is",
             "active",
             "for",

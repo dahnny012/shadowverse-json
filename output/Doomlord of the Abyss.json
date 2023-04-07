@@ -38,14 +38,15 @@
     "id_": 125641010,
     "name_": "Doomlord of the Abyss",
     "rotation_": true,
-    "baseEffect_": "Fusion: Bloodcraft cards\nWhenever cards are fused to this card, change this card's cost to 6.\n(Can only fuse if Vengeance is active for you.)\n----------\nStorm.\nFanfare: Deal X damage to all other followers. X equals your leader's defense. Then, deal damage to your leader until their defense drops to 1.",
-    "evoEffect_": "Storm.\nEvolve: Give your leader the following effect until the start of your next turn - Reduce damage to your leader to 0.",
+    "baseEffect_": "[b]Fusion[/b]: Bloodcraft cards\nWhenever cards are fused to this card, change this card's cost to 6.\n(Can only fuse if [b]Vengeance[/b] is active for you.)\n----------\n[b]Storm[/b].\n[b]Fanfare[/b]: Deal X damage to all other followers. X equals your leader's defense. Then, deal damage to your leader until their defense drops to 1.",
+    "evoEffect_": "[b]Storm[/b].\n[b]Evolve[/b]: Give your leader the following effect until the start of your next turn - Reduce damage to your leader to 0.",
     "type_": "Follower",
     "effectTokens": [],
     "effectJson": [
         {
             "type": "Fusion",
             "cardTypes": [
+                ":",
                 "Bloodcraft",
                 "cards",
                 "\n"
@@ -119,10 +120,14 @@
     ],
     "evolveEffectTokens": [],
     "_evolveEffectTokens": [
+        "[b]",
         "Storm",
+        "[/b]",
         ".",
         "\n",
+        "[b]",
         "Evolve",
+        "[/b]",
         ":",
         "Give",
         "your",
@@ -162,6 +167,7 @@
     "_effectTokens": [
         [
             "Fusion",
+            "[/b]",
             ":",
             "Bloodcraft",
             "cards",
@@ -191,7 +197,9 @@
             "only",
             "fuse",
             "if",
+            "[b]",
             "Vengeance",
+            "[/b]",
             "is",
             "active",
             "for",
@@ -215,11 +223,13 @@
         ],
         [
             "Storm",
+            "[/b]",
             ".",
             "\n"
         ],
         [
             "Fanfare",
+            "[/b]",
             ":",
             "Deal",
             "X",

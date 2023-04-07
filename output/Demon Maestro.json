@@ -38,8 +38,8 @@
     "id_": 126631020,
     "name_": "Demon Maestro",
     "rotation_": true,
-    "baseEffect_": "Fanfare: If Wrath is not active for you, deal 1 damage to your leader and draw a card. Otherwise, put an Infernal Orchestration into your hand and change its cost to 0.\nLast Words: At the start of your next turn, deal 1 damage to your leader and draw a card.",
-    "evoEffect_": "(Same as the unevolved form, excluding Fanfare.)",
+    "baseEffect_": "[b]Fanfare[/b]: If [b]Wrath[/b] is not active for you, deal 1 damage to your leader and draw a card. Otherwise, put an [b]Infernal Orchestration[/b] into your hand and change its cost to 0.\n[b]Last Words[/b]: At the start of your next turn, deal 1 damage to your leader and draw a card.",
+    "evoEffect_": "(Same as the unevolved form, excluding [b]Fanfare[/b].)",
     "type_": "Follower",
     "effectTokens": [],
     "effectJson": [
@@ -53,7 +53,7 @@
                             {
                                 "type": "CheckActiveState",
                                 "state": [
-                                    "is"
+                                    "Wrath"
                                 ],
                                 "stateEqualTo": false
                             }
@@ -85,11 +85,17 @@
                                     "effects": [
                                         {
                                             "quantifer": "an",
-                                            "type": "NamedCard",
-                                            "cardname": "Infernal Orchestration"
+                                            "card_name": "Infernal Orchestration",
+                                            "type": "NamedCard"
                                         }
                                     ],
-                                    "destination": []
+                                    "destination": "hand"
+                                },
+                                {
+                                    "type": "ChangeCard",
+                                    "target": "context",
+                                    "attribute": "cost",
+                                    "new": "0"
                                 }
                             ]
                         }
@@ -128,13 +134,31 @@
         }
     ],
     "evolveEffectTokens": [],
+    "_evolveEffectTokens": [
+        "(",
+        "Same",
+        "as",
+        "the",
+        "unevolved",
+        "form",
+        ",",
+        "excluding",
+        "[b]",
+        "Fanfare",
+        "[/b]",
+        ".",
+        ")"
+    ],
     "evolveEffectJson": [],
     "_effectTokens": [
         [
             "Fanfare",
+            "[/b]",
             ":",
             "If",
+            "[b]",
             "Wrath",
+            "[/b]",
             "is",
             "not",
             "active",
@@ -156,8 +180,10 @@
             ",",
             "put",
             "an",
+            "[b]",
             "Infernal",
             "Orchestration",
+            "[/b]",
             "into",
             "your",
             "hand",
@@ -173,6 +199,7 @@
         [
             "Last",
             "Words",
+            "[/b]",
             ":",
             "At",
             "the",

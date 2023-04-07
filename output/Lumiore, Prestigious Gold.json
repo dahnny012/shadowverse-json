@@ -38,8 +38,8 @@
     "id_": 126441030,
     "name_": "Lumiore, Prestigious Gold",
     "rotation_": true,
-    "baseEffect_": "Fanfare: Recover 3 play points. If at least 4 allied effects have discarded cards from your hand this match, discard 2 cards from your hand and draw 3 cards.\nDuring your turn, whenever you discard cards from your hand, deal X damage to all enemies. X equals twice the number of cards discarded.",
-    "evoEffect_": "(Same as the unevolved form, excluding Fanfare.)",
+    "baseEffect_": "[b]Fanfare[/b]: Recover 3 play points. If at least 4 allied effects have discarded cards from your hand this match, discard 2 cards from your hand and draw 3 cards.\nDuring your turn, whenever you discard cards from your hand, deal X damage to all enemies. X equals twice the number of cards discarded.",
+    "evoEffect_": "(Same as the unevolved form, excluding [b]Fanfare[/b].)",
     "type_": "Follower",
     "effectTokens": [],
     "effectJson": [
@@ -151,10 +151,26 @@
         }
     ],
     "evolveEffectTokens": [],
+    "_evolveEffectTokens": [
+        "(",
+        "Same",
+        "as",
+        "the",
+        "unevolved",
+        "form",
+        ",",
+        "excluding",
+        "[b]",
+        "Fanfare",
+        "[/b]",
+        ".",
+        ")"
+    ],
     "evolveEffectJson": [],
     "_effectTokens": [
         [
             "Fanfare",
+            "[/b]",
             ":",
             "Recover",
             "3",
