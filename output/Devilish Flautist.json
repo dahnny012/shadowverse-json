@@ -101,6 +101,7 @@
         }
     ],
     "evolveEffectTokens": [],
+    "evolveEffectJson": [],
     "_evolveEffectTokens": [
         "(",
         "Same",
@@ -116,7 +117,6 @@
         ".",
         ")"
     ],
-    "evolveEffectJson": [],
     "_effectTokens": [
         [
             "Rush",

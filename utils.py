@@ -59,3 +59,14 @@ def getIndexAfter(lst, search):
         return lst[index:]
     else:
         return lst[0:]
+    
+def getValuesBetween(lst, search, stop):
+    startIndex = safeIndex(lst, search)
+    endIndex = safeIndex(lst, stop)
+    
+    if(startIndex >= 0 and endIndex >= 0):
+        result =  lst[startIndex+1:endIndex-1]
+        popArrayAfterSearch(lst, ")")
+        return result
+    else:
+        return lst

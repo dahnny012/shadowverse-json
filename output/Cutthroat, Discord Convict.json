@@ -95,6 +95,11 @@
         }
     ],
     "evolveEffectTokens": [],
+    "evolveEffectJson": [
+        {
+            "type": "Bane"
+        }
+    ],
     "_evolveEffectTokens": [
         "[b]",
         "Bane",
@@ -170,58 +175,6 @@
         "match",
         ".",
         ")"
-    ],
-    "evolveEffectJson": [
-        {
-            "effects": [
-                {
-                    "type": "If",
-                    "effects": {
-                        "conditions": [],
-                        "then": [
-                            {
-                                "type": "Give",
-                                "effects": []
-                            },
-                            {
-                                "type": "Whenever",
-                                "effects": {
-                                    "conditions": [],
-                                    "then": [
-                                        {
-                                            "type": "Recover",
-                                            "effect": {
-                                                "amount": "X",
-                                                "resource": "play"
-                                            }
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                },
-                {
-                    "type": "VariableDefinition",
-                    "variable": "X",
-                    "value": [
-                        "equals",
-                        "the",
-                        "[b]",
-                        "Enhance",
-                        "[/b]",
-                        "cost",
-                        "minus",
-                        "2",
-                        "."
-                    ],
-                    "limit": {
-                        "type": "Parens",
-                        "condition": null
-                    }
-                }
-            ]
-        }
     ],
     "_effectTokens": [
         [

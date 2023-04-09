@@ -107,6 +107,22 @@
         }
     ],
     "evolveEffectTokens": [],
+    "evolveEffectJson": [
+        {
+            "type": "Whenever",
+            "effects": {
+                "conditions": [],
+                "then": [
+                    {
+                        "type": "Give",
+                        "effects": [
+                            []
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
     "_evolveEffectTokens": [
         "Whenever",
         "an",
@@ -138,7 +154,6 @@
         "leader",
         "."
     ],
-    "evolveEffectJson": [],
     "_effectTokens": [
         [
             "Fanfare",

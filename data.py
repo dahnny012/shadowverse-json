@@ -4,8 +4,8 @@ from parsers import *
 
 
 debug = True
-testCardsId = {126441030, 126431030, 127611010, 127621030, 125641020,
-               126631020, 125641010, 125841010, 127841030, 127841010, 127621020, 126411030}
+testCardsId = {126441030, 126431030, 127611010, 127621030, 125641020,125131010,
+               126631020, 125641010, 125841010, 127841030, 127841010, 127621020, 126411030, 128241010}
 effectDebugSearch = False
 effectSearch = "if"
 typeMap = {
@@ -22,7 +22,9 @@ def getCardPoolFromShadowversePortal():
     files = [
         "dragon",
         "portal",
-        "blood"
+        "blood",
+        "sword",
+        "forest"
     ]
     for file in files:
         with open(f'{os.getcwd()}/json/{file}.json', 'r') as f:

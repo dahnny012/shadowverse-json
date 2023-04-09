@@ -116,6 +116,27 @@
         }
     ],
     "evolveEffectTokens": [],
+    "evolveEffectJson": [
+        {
+            "type": "Ward"
+        },
+        {
+            "type": "Last Words",
+            "effects": [
+                {
+                    "type": "Restore",
+                    "effects": {
+                        "amount": "2",
+                        "targets": "leader",
+                        "times": 1,
+                        "and": {},
+                        "quantifer": "your",
+                        "user": "leader"
+                    }
+                }
+            ]
+        }
+    ],
     "_evolveEffectTokens": [
         "[b]",
         "Ward",
@@ -146,7 +167,6 @@
         "leader",
         "."
     ],
-    "evolveEffectJson": [],
     "_effectTokens": [
         [
             "Accelerate",

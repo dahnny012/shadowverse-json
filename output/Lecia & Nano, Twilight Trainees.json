@@ -1,0 +1,140 @@
+{
+    "card_id": 128241010,
+    "foil_card_id": 128241011,
+    "card_set_id": 10028,
+    "card_name": "Lecia & Nano, Twilight Trainees",
+    "card_name_ruby": "",
+    "is_foil": 0,
+    "char_type": 1,
+    "clan": 2,
+    "tribe_name": "Cmdr./Acad.",
+    "skill": "killer,token_draw,cost_change//summon_token",
+    "skill_condition": "character=me,{me.inplay.class.rally_count}>=15,{me.inplay.class.rally_count}>=15//character=me",
+    "skill_target": "character=me&target=self,none,character=me&target=skill_drew_card&card_type=all//none",
+    "skill_option": "none,token_draw=900244010,set=1//summon_token=104232010",
+    "skill_preprocess": "none,none,none//none",
+    "skill_disc": "Bane.<br>Fanfare: Rally (15) - Put a Twilight Blade into your hand and change its cost to 1.",
+    "org_skill_disc": "[b]Bane[/b].<br>[b]Fanfare[/b]: [b]Rally[/b] [b](15)[/b] - Put a [b]Twilight Blade[/b] into your hand and change its cost to 1.",
+    "evo_skill_disc": "Bane.<br>Evolve: Summon a Support Cannon.",
+    "org_evo_skill_disc": "[b]Bane[/b].<br>[b]Evolve[/b]: Summon a [b]Support Cannon[/b].",
+    "cost": 3,
+    "atk": 2,
+    "life": 3,
+    "evo_atk": 4,
+    "evo_life": 5,
+    "rarity": 4,
+    "get_red_ether": 1000,
+    "use_red_ether": 3500,
+    "description": "\"Enchanting a sword is harder than it sounds...\"<br>\"Need help, Lecia? Let's give it a try together!\"<br>\"Thanks, Nano! C'mon, let's think of something that'll blow Monika away when we get back!\"<br>\u2014L\u00e9gen Exchange Experience",
+    "evo_description": "I underestimated you two. I mean, look at that! I can hardly believe my eyes! It seems like L\u00e9gen was the perfect fit. And, uh... what's a \"polliwog?\" <br>\u2014Monika, Exchange Program Afterparty",
+    "cv": "",
+    "copyright": null,
+    "base_card_id": 128241010,
+    "normal_card_id": 128241010,
+    "format_type": 1,
+    "restricted_count": 3,
+    "restricted_count_co_main": 3,
+    "restricted_count_co_sub": 3,
+    "id_": 128241010,
+    "name_": "Lecia & Nano, Twilight Trainees",
+    "rotation_": true,
+    "baseEffect_": "[b]Bane[/b].\n[b]Fanfare[/b]: [b]Rally[/b] [b](15)[/b] - Put a [b]Twilight Blade[/b] into your hand and change its cost to 1.",
+    "evoEffect_": "[b]Bane[/b].\n[b]Evolve[/b]: Summon a [b]Support Cannon[/b].",
+    "type_": "Follower",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Bane"
+        },
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "Rally",
+                    "cost": "15",
+                    "effects": [
+                        {
+                            "type": "Put",
+                            "effects": [
+                                {
+                                    "quantifer": "a",
+                                    "card_name": "Twilight Blade",
+                                    "type": "NamedCard"
+                                }
+                            ],
+                            "destination": "hand"
+                        },
+                        {
+                            "type": "ChangeCard",
+                            "target": "context",
+                            "attribute": "cost",
+                            "new": "1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [
+        {
+            "type": "Bane"
+        }
+    ],
+    "_evolveEffectTokens": [
+        "[b]",
+        "Bane",
+        "[/b]",
+        ".",
+        "\n",
+        "[b]",
+        "Evolve",
+        "[/b]",
+        ":",
+        "Summon",
+        "a",
+        "[b]",
+        "Support",
+        "Cannon",
+        "[/b]",
+        "."
+    ],
+    "_effectTokens": [
+        [
+            "Bane",
+            "[/b]",
+            ".",
+            "\n"
+        ],
+        [
+            "Fanfare",
+            "[/b]",
+            ":",
+            "[b]",
+            "Rally",
+            "[/b]",
+            "[b]",
+            "(",
+            "15",
+            ")",
+            "[/b]",
+            "-",
+            "Put",
+            "a",
+            "[b]",
+            "Twilight",
+            "Blade",
+            "[/b]",
+            "into",
+            "your",
+            "hand",
+            "and",
+            "change",
+            "its",
+            "cost",
+            "to",
+            "1",
+            "."
+        ]
+    ]
+}

@@ -129,6 +129,27 @@
         }
     ],
     "evolveEffectTokens": [],
+    "evolveEffectJson": [
+        {
+            "type": "Whenever",
+            "effects": {
+                "conditions": [],
+                "then": [
+                    {
+                        "type": "Give",
+                        "effects": [
+                            [
+                                {
+                                    "type": "Storm"
+                                }
+                            ]
+                        ],
+                        "target": "parent"
+                    }
+                ]
+            }
+        }
+    ],
     "_evolveEffectTokens": [
         "Whenever",
         "an",
@@ -147,7 +168,6 @@
         "[/b]",
         "."
     ],
-    "evolveEffectJson": [],
     "_effectTokens": [
         [
             "Fusion",

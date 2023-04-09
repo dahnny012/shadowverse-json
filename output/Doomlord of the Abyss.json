@@ -119,6 +119,11 @@
         }
     ],
     "evolveEffectTokens": [],
+    "evolveEffectJson": [
+        {
+            "type": "Storm"
+        }
+    ],
     "_evolveEffectTokens": [
         "[b]",
         "Storm",
@@ -151,18 +156,6 @@
         "to",
         "0",
         "."
-    ],
-    "evolveEffectJson": [
-        {
-            "effects": [
-                {
-                    "type": "Give",
-                    "effects": [
-                        []
-                    ]
-                }
-            ]
-        }
     ],
     "_effectTokens": [
         [

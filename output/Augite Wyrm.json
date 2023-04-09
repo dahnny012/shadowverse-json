@@ -1,0 +1,165 @@
+{
+    "card_id": 126411030,
+    "foil_card_id": 126411031,
+    "card_set_id": 10026,
+    "card_name": "Augite Wyrm",
+    "card_name_ruby": "",
+    "is_foil": 0,
+    "char_type": 1,
+    "clan": 4,
+    "tribe_name": "-",
+    "skill": "pp_fixeduse,transform,damage",
+    "skill_condition": "{me.inplay.class.pp}>=1&{me.inplay.class.pp}<{me.hand_self.cost},{me.inplay.class.pp}>=1&{me.inplay.class.pp}<{me.hand_self.cost},{me.inplay.class.pp}>={me.hand_self.cost}",
+    "skill_target": "none,none,character=op&target=inplay&card_type=unit_and_class",
+    "skill_option": "fixeduse=1,card_id=800414040,damage=6",
+    "skill_preprocess": "none,none,none",
+    "skill_disc": "Accelerate (1): Discard a card from your hand. Draw a card. If Overflow is active for you, draw 2 cards instead.<br>---------- <br>Fanfare: Deal 6 damage to all enemies.",
+    "org_skill_disc": "[b]Accelerate[/b] [b](1)[/b]: Discard a card from your hand. Draw a card. If [b]Overflow[/b] is active for you, draw 2 cards instead.<br>---------- <br>[b]Fanfare[/b]: Deal 6 damage to all enemies.",
+    "evo_skill_disc": "",
+    "org_evo_skill_disc": "",
+    "cost": 9,
+    "atk": 6,
+    "life": 5,
+    "evo_atk": 8,
+    "evo_life": 7,
+    "rarity": 1,
+    "get_red_ether": 10,
+    "use_red_ether": 50,
+    "description": "The pyroxene that sprouts offa dragons helps 'em digest food into energy. If you can scrape one of them shiny rocks off, bring it straight home. Trophy like that shows the elders that you're worthy of a good marriage. <br>\u2014Local Mountain Village Custom",
+    "evo_description": "That \"marriage\" custom is a buncha hooey. Anyone that isn't the heir is just another mouth to feed, so they feed those poor fools to the dragons. How often does this happen? Take a hike in the mountains and find out. <br>\u2014Local Mountain Village Guide",
+    "cv": "",
+    "copyright": null,
+    "base_card_id": 126411030,
+    "normal_card_id": 126411030,
+    "format_type": 1,
+    "restricted_count": 3,
+    "restricted_count_co_main": 3,
+    "restricted_count_co_sub": 3,
+    "id_": 126411030,
+    "name_": "Augite Wyrm",
+    "rotation_": true,
+    "baseEffect_": "[b]Accelerate[/b] [b](1)[/b]: Discard a card from your hand. Draw a card. If [b]Overflow[/b] is active for you, draw 2 cards instead.\n---------- \n[b]Fanfare[/b]: Deal 6 damage to all enemies.",
+    "evoEffect_": "",
+    "type_": "Follower",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Accelerate",
+            "cost": "1",
+            "effects": [
+                {
+                    "type": "Discard",
+                    "effects": {
+                        "cardsToDiscard": "a",
+                        "effects": [
+                            {
+                                "type": "Draw",
+                                "amount": "a"
+                            },
+                            {
+                                "type": "If",
+                                "effects": {
+                                    "conditions": [
+                                        {
+                                            "type": "CheckActiveState",
+                                            "state": "Overflow",
+                                            "stateEqualTo": false
+                                        }
+                                    ],
+                                    "then": [
+                                        {
+                                            "type": "draw",
+                                            "amount": "2"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "Deal",
+                    "effects": {
+                        "amount": "6",
+                        "targets": "enemies",
+                        "times": 1,
+                        "and": {},
+                        "quantifer": "all",
+                        "user": "enemies"
+                    }
+                }
+            ]
+        }
+    ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [],
+    "_evolveEffectTokens": [],
+    "_effectTokens": [
+        [
+            "Accelerate",
+            "[/b]",
+            "[b]",
+            "(",
+            "1",
+            ")",
+            "[/b]",
+            ":",
+            "Discard",
+            "a",
+            "card",
+            "from",
+            "your",
+            "hand",
+            ".",
+            "Draw",
+            "a",
+            "card",
+            ".",
+            "If",
+            "[b]",
+            "Overflow",
+            "[/b]",
+            "is",
+            "active",
+            "for",
+            "you",
+            ",",
+            "draw",
+            "2",
+            "cards",
+            "instead",
+            ".",
+            "\n"
+        ],
+        [
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "\n"
+        ],
+        [
+            "Fanfare",
+            "[/b]",
+            ":",
+            "Deal",
+            "6",
+            "damage",
+            "to",
+            "all",
+            "enemies",
+            "."
+        ]
+    ]
+}

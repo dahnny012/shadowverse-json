@@ -3,7 +3,7 @@ import json
 import os
 import re
 import itertools
-from utils import consumeTokens, popArrayAfterSearch, popArrayTill, safeIndex
+from utils import consumeTokens, getValuesBetween, popArrayAfterSearch, popArrayTill, safeIndex
 import logging
 from constants import *
 
@@ -51,6 +51,18 @@ def register(func):
     """Register a function as a plug-in"""
     PLUGINS.append(func)
     return func
+
+
+@useLog("CountDown")
+def countDownToken(head, tokens):
+    if (head != countdown and head.capitalize() != countdown):
+        return None
+    tokens.pop(0)
+    return {
+        'Type': 'Countdown',
+        "count": getValuesBetween(tokens, "(", ")")
+    }
+
 
 
 @register
@@ -328,13 +340,20 @@ def giveToken(head, tokens):
             if (token[0] == "allied" or (" ".join(tokens[0:1]) == "other allied")):
                 effect['target'] = parseCards(tokens)
         elif (token == "your" or (" ".join(tokens[0:2]) == "the enemy leader")):
-            target = leader
-            user = "self" if token == "your" else "enemy"
-            popArrayAfterSearch(tokens, effect)
+            effect["user"] = "self" if token == "your" else "enemy"
+            effect["effects"].append(parseLeaderEffect(tokens))
         else:
             # Likely encountered an effect
             break
     return effect
+
+@useLog("leaderEffect")
+def parseLeaderEffect(tokens):
+    popArrayAfterSearch(tokens, ":")
+    return {
+        'type': "LeaderEffect",
+        "effects": parseSubEffect(tokens)
+    }
 
 
 @register
@@ -597,10 +616,6 @@ def parseGain(tokens):
             popArrayAfterSearch(tokens, "points")
         else:
             log.warn("Found Unknown %s", tokens)
-            gain = {
-                'type': 'Unknown',
-                'tokens': popArrayAfterSearch(tokens, ".")
-            }
             break
     return gainStack
 
@@ -765,22 +780,67 @@ def splitEvolveIntoDifferentPhases(card, effect):
     card['evolveEffectTokens'].append(effectStack.copy())
 
 
-@useLog("evolveEffect")
-def handleEvoEffect(card):
-    evoEffect = card['evoEffect_']
-    splitEvolveIntoDifferentPhases(card, evoEffect)
-    card['evolveEffectJson'] = []
-    while (len(card['evolveEffectTokens']) > 0):
-        effectStrings = card['evolveEffectTokens'].pop(0)
-        effectJson = {}
-        if len(effectStrings) == 0:
-            continue
-        if (effectStrings[0] == startName):
-            effectStrings.pop(0)
-        if effectStrings[0] == evolve:
-            effectJson['effects'] = parseSubEffect(effectStrings[2:])
-            card['evolveEffectJson'].append(effectJson)
-
+def handleEffects(card, tokens):
+    effectStrings = tokens.pop(0)
+    effectJson = {}
+    effects = []
+    if len(effectStrings) == 0:
+        return effects
+    if effectStrings[0] == evolve:
+        effectJson['effects'] = parseSubEffect(effectStrings[2:])
+        effects.append(effectJson)
+    if (effectStrings[0] == startName):
+        effectStrings.pop(0)
+    if effectStrings[0] == fusion:
+        effects.append(fusionToken(
+            effectStrings[0], effectStrings[0:]))
+    if effectStrings[0] in effectsWithSubeffects:
+        if (effectStrings[0] == lastword):
+            log.debug("Entering last words: %s", effectStrings[3:])
+            effectJson['type'] = " ".join(effectStrings[0:2])
+            effectJson['effects'] = parseSubEffect(effectStrings[3:])
+        else:
+            effectJson['type'] = effectStrings[0]
+            baseEffectString = effectStrings[2:]
+            # How enhance is formatted is so weird, it acts on fanfare but
+            # uses new lines for readability
+            while (len(tokens) > 0 and tokens[0][0] == "Enhance"):
+                baseEffectString = baseEffectString + \
+                    tokens.pop(0)
+                log.info("Modified baseEffectString %s", baseEffectString)
+            # Amulets have fanfare and last words sometimes, duplicate the subeffect if that happens
+            if(baseEffectString[0] == endName and baseEffectString[1] == andd):
+                effect = parseSubEffect(baseEffectString)
+                lastWordsJson  = {}
+                lastWordsJson["type"] = "Last Words"
+                lastWordsJson["effects"] = effect
+                effects.append(lastWordsJson)
+            effectJson['effects'] = parseSubEffect(baseEffectString)
+        effects.append(effectJson)
+    if card["type_"] == 'Spell':
+        effects.append(parseSubEffect(effectStrings))
+    if effectStrings[0] in staticEffects:
+        effectJson['type'] = effectStrings[0]
+        effects.append(effectJson)
+    if effectStrings[0] in triggerEffects:
+        effectJson = parseTriggerEffects(
+            effectStrings[0], effectStrings[0:])
+        effects.append(effectJson)
+    if effectStrings[0] in turnSpecificEffects:
+        log.debug("Found a During your Turn")
+        effectJson['type'] = effectStrings[0]
+        effectJson['effect'] = parseSubEffect(effectStrings[4:])
+        effects.append(effectJson)
+    if effectStrings[0] in alternativeCosts:
+        effects.append(parseAlternativeCostEffect(
+            effectStrings[0], effectStrings[0:]))
+    endOfPhase = triggerPhaseOfTurnToken(effectStrings[0], effectStrings)
+    countDownResult = countDownToken(effectStrings[0], effectStrings)
+    for result in [endOfPhase, countDownResult]:
+        if result != None:
+            effects.append(result)
+    log.info("Finished iteration %s", effectStrings)
+    return effects
 
 @useLog("base")
 def baseParser(card):
@@ -788,56 +848,18 @@ def baseParser(card):
     log.info(card["type_"])
     card['effectTokens'] = []
     card['effectJson'] = []
-    effect = card['baseEffect_']
-    splitEffectIntoDifferentPhases(card, effect)
-    handleEvoEffect(card)
+    card['evolveEffectTokens'] = []
+    card['evolveEffectJson'] = []
+    
+    splitEffectIntoDifferentPhases(card, card['baseEffect_'])
+    splitEvolveIntoDifferentPhases(card, card['evoEffect_'])
     card['_effectTokens'] = card['effectTokens'][0:]
     while (len(card['effectTokens']) > 0):
-        effectStrings = card['effectTokens'].pop(0)
-        effectJson = {}
-        if len(effectStrings) == 0:
-            continue
-        if (effectStrings[0] == startName):
-            effectStrings.pop(0)
-        if effectStrings[0] == fusion:
-            card['effectJson'].append(fusionToken(
-                effectStrings[0], effectStrings[0:]))
-        if effectStrings[0] in effectsWithSubeffects:
-            if (effectStrings[0] == lastword):
-                log.debug("Entering last words: %s", effectStrings[3:])
-                effectJson['type'] = " ".join(effectStrings[0:2])
-                effectJson['effects'] = parseSubEffect(effectStrings[3:])
-            else:
-                effectJson['type'] = effectStrings[0]
-                baseEffectString = effectStrings[2:]
-                # How enhance is formatted is so weird, it acts on fanfare but
-                # But uses new lines for readability
-                while (len(card['effectTokens']) > 0 and card['effectTokens'][0][0] == "Enhance"):
-                    baseEffectString = baseEffectString + \
-                        card['effectTokens'].pop(0)
-                    log.info("Modified baseEffectString %s", baseEffectString)
-                effectJson['effects'] = parseSubEffect(baseEffectString)
-            card['effectJson'].append(effectJson)
-        if card["type_"] == 'Spell':
-            card['effectJson'].append(parseSubEffect(effectStrings))
-        if effectStrings[0] in staticEffects:
-            effectJson['type'] = effectStrings[0]
-            card['effectJson'].append(effectJson)
-        if effectStrings[0] in triggerEffects:
-            effectJson = parseTriggerEffects(
-                effectStrings[0], effectStrings[0:])
-            card['effectJson'].append(effectJson)
-        if effectStrings[0] in turnSpecificEffects:
-            log.debug("Found a During your Turn")
-            effectJson['type'] = effectStrings[0]
-            effectJson['effect'] = parseSubEffect(effectStrings[4:])
-            card['effectJson'].append(effectJson)
-
-        if effectStrings[0] in alternativeCosts:
-            card['effectJson'].append(parseAlternativeCostEffect(
-                effectStrings[0], effectStrings[0:]))
-        endOfPhase = triggerPhaseOfTurnToken(effectStrings[0], effectStrings)
-        if (endOfPhase != None):
-            card['effectJson'].append(endOfPhase)
-        log.info("Finished iteration %s", effectStrings)
+        effects = handleEffects(card, card['effectTokens'])
+        card['effectJson'] = card['effectJson'] + effects
+    getLog("evolveEffect")
+    while (len(card['evolveEffectTokens']) > 0):
+        effects = handleEffects(card, card['evolveEffectTokens'])
+        card['evolveEffectJson'] = card['evolveEffectJson'] + effects
     log.info(json.dumps(card["effectJson"], indent=4))
+    log.info(json.dumps(card["evolveEffectJson"], indent=4))

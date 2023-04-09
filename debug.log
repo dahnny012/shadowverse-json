@@ -29,7 +29,8 @@
 [INFO] [base.subeffect] - Found {'type': 'Discard', 'effects': {'cardsToDiscard': '2', 'effects': [{'type': 'Gain', 'effects': [{'type': 'An empty play point'}]}, {'type': 'If', 'effects': {'conditions': [{'type': 'CheckNumericState', 'amount': ['at'], 'state': ['least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',']}], 'then': [{'type': 'draw', 'amount': '3'}]}}]}}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Fanfare', '[/b]', ':', 'Discard', '2', 'cards', 'from', 'your', 'hand', '.', 'Gain', 'an', 'empty', 'play', 'point', 'orb', '.', 'If', 'at', 'least', '2', 'other', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'draw', '3', 'cards', '.']
-[INFO] [base] - [
+[INFO] [base.evolveEffect] - Finished iteration ['(', 'Same', 'as', 'the', 'unevolved', 'form', ',', 'excluding', '[b]', 'Fanfare', '[/b]', '.', ')']
+[INFO] [base.evolveEffect] - [
     {
         "type": "Ward"
     },
@@ -90,6 +91,7 @@
         ]
     }
 ]
+[INFO] [base.evolveEffect] - []
 [INFO] [base] - Lumiore, Prestigious Gold
 [INFO] [base] - Follower
 [INFO] [base.subeffect] - Parsing subeffects with Tokens [':', 'Recover', '3', 'play', 'points', '.', 'If', 'at', 'least', '4', 'allied', 'effects', 'have', 'discarded', 'cards', 'from', 'your', 'hand', 'this', 'match', ',', 'discard', '2', 'cards', 'from', 'your', 'hand', 'and', 'draw', '3', 'cards', '.', '\n']
@@ -134,7 +136,8 @@
 [INFO] [base.subeffect] - Found {'type': 'VariableDefinition', 'variable': 'X', 'value': ['equals', 'twice', 'the', 'number', 'of', 'cards', 'discarded', '.']}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['During', 'your', 'turn', ',', 'whenever', 'you', 'discard', 'cards', 'from', 'your', 'hand', ',', 'deal', 'X', 'damage', 'to', 'all', 'enemies', '.', 'X', 'equals', 'twice', 'the', 'number', 'of', 'cards', 'discarded', '.']
-[INFO] [base] - [
+[INFO] [base.evolveEffect] - Finished iteration ['(', 'Same', 'as', 'the', 'unevolved', 'form', ',', 'excluding', '[b]', 'Fanfare', '[/b]', '.', ')']
+[INFO] [base.evolveEffect] - [
     {
         "type": "Fanfare",
         "effects": [
@@ -240,6 +243,7 @@
         ]
     }
 ]
+[INFO] [base.evolveEffect] - []
 [INFO] [base] - Augite Wyrm
 [INFO] [base] - Follower
 [INFO] [base.alternativeCosts] - Found alternativeCost Accelerate for with ['Accelerate', '[/b]', '[b]', '(', '1', ')', '[/b]', ':', 'Discard', 'a', 'card', 'from', 'your', 'hand', '.', 'Draw', 'a', 'card', '.', 'If', '[b]', 'Overflow', '[/b]', 'is', 'active', 'for', 'you', ',', 'draw', '2', 'cards', 'instead', '.', '\n']
@@ -282,7 +286,7 @@
 [INFO] [base.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '6', 'targets': 'enemies', 'times': 1, 'and': {}, 'quantifer': 'all', 'user': 'enemies'}}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Fanfare', '[/b]', ':', 'Deal', '6', 'damage', 'to', 'all', 'enemies', '.']
-[INFO] [base] - [
+[INFO] [base.evolveEffect] - [
     {
         "type": "Accelerate",
         "cost": "1",
@@ -336,55 +340,9 @@
         ]
     }
 ]
+[INFO] [base.evolveEffect] - []
 [INFO] [base] - Cutthroat, Discord Convict
 [INFO] [base] - Follower
-[INFO] [base.evolveEffect.subeffect] - Parsing subeffects with Tokens [':', 'If', 'there', 'are', 'no', 'duplicate', 'cards', 'in', 'your', 'deck', '(', 'excluding', 'Condemned', 'cards', ')', ',', 'give', 'your', 'leader', 'the', 'following', 'effect', '-', 'Whenever', 'you', 'play', 'a', 'card', 'using', 'its', '[b]', 'Enhance', '[/b]', 'effect', ',', 'recover', 'X', 'play', 'points', '.', 'X', 'equals', 'the', '[b]', 'Enhance', '[/b]', 'cost', 'minus', '2', '.', '(', 'This', 'effect', 'is', 'not', 'stackable', 'and', 'lasts', 'for', 'the', 'rest', 'of', 'the', 'match', '.', ')']
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect.If] - Starting if with ['If', 'there', 'are', 'no', 'duplicate', 'cards', 'in', 'your', 'deck', '(', 'excluding', 'Condemned', 'cards', ')', ',', 'give', 'your', 'leader', 'the', 'following', 'effect', '-', 'Whenever', 'you', 'play', 'a', 'card', 'using', 'its', '[b]', 'Enhance', '[/b]', 'effect', ',', 'recover', 'X', 'play', 'points', '.', 'X', 'equals', 'the', '[b]', 'Enhance', '[/b]', 'cost', 'minus', '2', '.', '(', 'This', 'effect', 'is', 'not', 'stackable', 'and', 'lasts', 'for', 'the', 'rest', 'of', 'the', 'match', '.', ')']
-[INFO] [base.evolveEffect.subeffect.If.condition] - Entered conditions with tokens ['there', 'are', 'no', 'duplicate', 'cards', 'in', 'your', 'deck', '(', 'excluding', 'Condemned', 'cards', ')', ',', 'give', 'your', 'leader', 'the', 'following', 'effect', '-', 'Whenever', 'you', 'play', 'a', 'card', 'using', 'its', '[b]', 'Enhance', '[/b]', 'effect', ',', 'recover', 'X', 'play', 'points', '.', 'X', 'equals', 'the', '[b]', 'Enhance', '[/b]', 'cost', 'minus', '2', '.', '(', 'This', 'effect', 'is', 'not', 'stackable', 'and', 'lasts', 'for', 'the', 'rest', 'of', 'the', 'match', '.', ')']
-[INFO] [base.evolveEffect.subeffect.If.condition] - Condition Tokens ['there', 'are', 'no', 'duplicate', 'cards', 'in', 'your', 'deck', '(', 'excluding', 'Condemned', 'cards', ')', ',']
-[INFO] [base.evolveEffect.subeffect.If.condition] - Tokens after Popping ['give', 'your', 'leader', 'the', 'following', 'effect', '-', 'Whenever', 'you', 'play', 'a', 'card', 'using', 'its', '[b]', 'Enhance', '[/b]', 'effect', ',', 'recover', 'X', 'play', 'points', '.', 'X', 'equals', 'the', '[b]', 'Enhance', '[/b]', 'cost', 'minus', '2', '.', '(', 'This', 'effect', 'is', 'not', 'stackable', 'and', 'lasts', 'for', 'the', 'rest', 'of', 'the', 'match', '.', ')']
-[INFO] [base.evolveEffect.subeffect.If] - Parsing if subeffect ['give', 'your', 'leader', 'the', 'following', 'effect', '-', 'Whenever', 'you', 'play', 'a', 'card', 'using', 'its', '[b]', 'Enhance', '[/b]', 'effect', ',', 'recover', 'X', 'play', 'points']
-[INFO] [base.evolveEffect.subeffect.If.subeffect] - Parsing subeffects with Tokens ['give', 'your', 'leader', 'the', 'following', 'effect', '-', 'Whenever', 'you', 'play', 'a', 'card', 'using', 'its', '[b]', 'Enhance', '[/b]', 'effect', ',', 'recover', 'X', 'play', 'points']
-[INFO] [base.evolveEffect.subeffect.If.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect.If.subeffect.Give] - Entered give ['give', 'your', 'leader', 'the', 'following', 'effect', '-', 'Whenever', 'you', 'play', 'a', 'card', 'using', 'its', '[b]', 'Enhance', '[/b]', 'effect', ',', 'recover', 'X', 'play', 'points']
-[INFO] [base.evolveEffect.subeffect.If.subeffect] - Found {'type': 'Give', 'effects': []}
-[INFO] [base.evolveEffect.subeffect.If.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect.If.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect.If.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect.If.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect.If.subeffect.condition] - Entered conditions with tokens ['you', 'play', 'a', 'card', 'using', 'its', '[b]', 'Enhance', '[/b]', 'effect', ',', 'recover', 'X', 'play', 'points']
-[INFO] [base.evolveEffect.subeffect.If.subeffect.condition] - Condition Tokens ['you', 'play', 'a', 'card', 'using', 'its', '[b]', 'Enhance', '[/b]', 'effect', ',']
-[INFO] [base.evolveEffect.subeffect.If.subeffect.condition] - Tokens after Popping ['recover', 'X', 'play', 'points']
-[INFO] [base.evolveEffect.subeffect.If.subeffect] - Parsing if subeffect ['recover', 'X', 'play', 'points']
-[INFO] [base.evolveEffect.subeffect.If.subeffect.subeffect] - Parsing subeffects with Tokens ['recover', 'X', 'play', 'points']
-[INFO] [base.evolveEffect.subeffect.If.subeffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect.If.subeffect.subeffect] - Found {'type': 'Recover', 'effect': {'amount': 'X', 'resource': 'play'}}
-[INFO] [base.evolveEffect.subeffect.If.subeffect.subeffect] - Exiting with tokens: []
-[INFO] [base.evolveEffect.subeffect.If.subeffect] - Found {'type': 'Whenever', 'effects': {'conditions': [], 'then': [{'type': 'Recover', 'effect': {'amount': 'X', 'resource': 'play'}}]}}
-[INFO] [base.evolveEffect.subeffect.If.subeffect] - Exiting with tokens: []
-[INFO] [base.evolveEffect.subeffect] - Found {'type': 'If', 'effects': {'conditions': [], 'then': [{'type': 'Give', 'effects': []}, {'type': 'Whenever', 'effects': {'conditions': [], 'then': [{'type': 'Recover', 'effect': {'amount': 'X', 'resource': 'play'}}]}}]}}
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect.variableEquals] - Found variable definition ['X', 'equals', 'the', '[b]', 'Enhance', '[/b]', 'cost', 'minus', '2', '.', '(', 'This', 'effect', 'is', 'not', 'stackable', 'and', 'lasts', 'for', 'the', 'rest', 'of', 'the', 'match', '.', ')']
-[INFO] [base.evolveEffect.subeffect] - Found {'type': 'VariableDefinition', 'variable': 'X', 'value': ['equals', 'the', '[b]', 'Enhance', '[/b]', 'cost', 'minus', '2', '.']}
-[INFO] [base.evolveEffect.subeffect] - Found {'type': 'Parens', 'condition': None}
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Bane', '[/b]', '.', '\n']
 [INFO] [base.subeffect] - Parsing subeffects with Tokens [':', '[b]', 'Enhance', '[/b]', '[b]', '(', '7', ')', '[/b]', '-', 'Gain', '+', '5', '/', '+', '5', '.', 'Deal', '5', 'damage', 'to', 'an', 'enemy', 'follower', 'and', 'then', 'the', 'enemy', 'leader', '.', '\n']
 [INFO] [base.subeffect] - Starting new loop of effect parsing
@@ -416,7 +374,9 @@
 [INFO] [base.alternativeCosts.subeffect] - Found {'type': 'Gain', 'effects': [{'type': 'StatChange', 'operation': '+', 'amount': '10'}, {'type': 'StatChange', 'operation': '+', 'amount': '10'}]}
 [INFO] [base.alternativeCosts.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Enhance', '[/b]', '[b]', '(', '9', ')', '[/b]', ':', 'Gain', '+', '10', '/', '+', '10', 'and', 'deal', '10', 'damage', 'instead', '.']
-[INFO] [base] - [
+[INFO] [base.evolveEffect] - Finished iteration ['Bane', '[/b]', '.', '\n']
+[INFO] [base.evolveEffect] - Finished iteration ['Evolve', '[/b]', ':', 'If', 'there', 'are', 'no', 'duplicate', 'cards', 'in', 'your', 'deck', '(', 'excluding', 'Condemned', 'cards', ')', ',', 'give', 'your', 'leader', 'the', 'following', 'effect', '-', 'Whenever', 'you', 'play', 'a', 'card', 'using', 'its', '[b]', 'Enhance', '[/b]', 'effect', ',', 'recover', 'X', 'play', 'points', '.', 'X', 'equals', 'the', '[b]', 'Enhance', '[/b]', 'cost', 'minus', '2', '.', '(', 'This', 'effect', 'is', 'not', 'stackable', 'and', 'lasts', 'for', 'the', 'rest', 'of', 'the', 'match', '.', ')']
+[INFO] [base.evolveEffect] - [
     {
         "type": "Bane"
     },
@@ -466,6 +426,11 @@
                 ]
             }
         ]
+    }
+]
+[INFO] [base.evolveEffect] - [
+    {
+        "type": "Bane"
     }
 ]
 [INFO] [base] - Judith, Cosmic Observer
@@ -546,7 +511,7 @@
 [INFO] [base.alternativeCosts.subeffect] - Found {'type': 'Evolve', 'effects': ['this', 'follower']}
 [INFO] [base.alternativeCosts.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Enhance', '[/b]', '[b]', '(', '8', ')', '[/b]', ':', 'Gain', '[b]', 'Storm', '[/b]', 'and', 'evolve', 'this', 'follower', '.']
-[INFO] [base] - [
+[INFO] [base.evolveEffect] - [
     {
         "type": "Fanfare",
         "effects": [
@@ -627,6 +592,7 @@
         ]
     }
 ]
+[INFO] [base.evolveEffect] - []
 [INFO] [base] - Orchis, the Limitless
 [INFO] [base] - Follower
 [INFO] [base.Fusion] - Entering fusion with ['Fusion', '[/b]', ':', '[b]', 'Puppet', '[/b]', '[b]', 's', '[/b]', '\n']
@@ -681,7 +647,18 @@
 [INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'FusionAction', 'amountToTrigger': '3'}], 'then': [{'type': 'Evolve', 'effects': ['it', 'and']}]}}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Fanfare', '[/b]', ':', 'If', 'this', 'card', 'is', 'fused', 'with', 'at', 'least', '1', 'card', ',', 'summon', 'a', '[b]', 'Lloyd', ',', "Orchis's", 'Puppet', '[/b]', '.', 'If', 'fused', 'with', 'at', 'least', '3', 'cards', ',', 'evolve', 'it', 'and', 'this', 'follower', '.']
-[INFO] [base] - [
+[INFO] [base.evolveEffect.condition] - Entered conditions with tokens ['an', 'allied', '[b]', 'Puppet', '[/b]', 'comes', 'into', 'play', ',', 'give', 'it', '[b]', 'Storm', '[/b]', '.']
+[INFO] [base.evolveEffect.condition] - Condition Tokens ['an', 'allied', '[b]', 'Puppet', '[/b]', 'comes', 'into', 'play', ',']
+[INFO] [base.evolveEffect.condition] - Tokens after Popping ['give', 'it', '[b]', 'Storm', '[/b]', '.']
+[INFO] [base.evolveEffect] - Parsing if subeffect ['give', 'it', '[b]', 'Storm', '[/b]']
+[INFO] [base.evolveEffect.subeffect] - Parsing subeffects with Tokens ['give', 'it', '[b]', 'Storm', '[/b]']
+[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
+[INFO] [base.evolveEffect.subeffect.Give] - Entered give ['give', 'it', '[b]', 'Storm', '[/b]']
+[INFO] [base.evolveEffect.subeffect.Give.parseGain] - Starting with Token [b]
+[INFO] [base.evolveEffect.subeffect] - Found {'type': 'Give', 'effects': [[{'type': 'Storm'}]], 'target': 'parent'}
+[INFO] [base.evolveEffect.subeffect] - Exiting with tokens: []
+[INFO] [base.evolveEffect] - Finished iteration ['Whenever', 'an', 'allied', '[b]', 'Puppet', '[/b]', 'comes', 'into', 'play', ',', 'give', 'it', '[b]', 'Storm', '[/b]', '.']
+[INFO] [base.evolveEffect] - [
     {
         "type": "Fusion",
         "cardTypes": [
@@ -767,6 +744,27 @@
         ]
     }
 ]
+[INFO] [base.evolveEffect] - [
+    {
+        "type": "Whenever",
+        "effects": {
+            "conditions": [],
+            "then": [
+                {
+                    "type": "Give",
+                    "effects": [
+                        [
+                            {
+                                "type": "Storm"
+                            }
+                        ]
+                    ],
+                    "target": "parent"
+                }
+            ]
+        }
+    }
+]
 [INFO] [base] - Steamrolling Tank
 [INFO] [base] - Follower
 [INFO] [base] - Finished iteration ['Ward', '[/b]', '.', '\n']
@@ -802,7 +800,8 @@
 [INFO] [base.subeffect] - Found {'type': 'Whenever', 'effects': {'conditions': [{'type': 'WheneverAction', 'state': ['leader', 'takes', 'damage', ',']}], 'then': [{'type': 'Restore', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}, 'limit': {'type': 'Parens', 'condition': ['(', 'up', 'to', '8', 'times', 'per', 'turn', ')']}}]}}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['During', 'your', 'turn', ',', 'whenever', 'your', 'leader', 'takes', 'damage', ',', 'restore', '1', 'defense', 'to', 'your', 'leader', '(', 'up', 'to', '8', 'times', 'per', 'turn', ')', '.']
-[INFO] [base] - [
+[INFO] [base.evolveEffect] - Finished iteration ['(', 'Same', 'as', 'the', 'unevolved', 'form', ',', 'excluding', '[b]', 'Fanfare', '[/b]', '.', ')']
+[INFO] [base.evolveEffect] - [
     {
         "type": "Ward"
     },
@@ -870,6 +869,7 @@
         ]
     }
 ]
+[INFO] [base.evolveEffect] - []
 [INFO] [base] - Devilish Flautist
 [INFO] [base] - Follower
 [INFO] [base] - Finished iteration ['Rush', '[/b]', '.', '\n']
@@ -904,7 +904,8 @@
 [INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Wrath', 'stateEqualTo': False}], 'then': [{'type': 'Gain', 'effects': [{'type': 'StatChange', 'operation': '+', 'amount': '2'}, {'type': 'StatChange', 'operation': '+', 'amount': '0'}]}]}}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Strike', '[/b]', ':', 'If', '[b]', 'Wrath', '[/b]', 'is', 'active', 'for', 'you', ',', 'gain', '+', '2', '/', '+', '0', '.']
-[INFO] [base] - [
+[INFO] [base.evolveEffect] - Finished iteration ['(', 'Same', 'as', 'the', 'unevolved', 'form', ',', 'excluding', '[b]', 'Fanfare', '[/b]', '.', ')']
+[INFO] [base.evolveEffect] - [
     {
         "type": "Rush"
     },
@@ -962,6 +963,7 @@
         ]
     }
 ]
+[INFO] [base.evolveEffect] - []
 [INFO] [base] - Vania, Crimson Majesty
 [INFO] [base] - Follower
 [INFO] [base.subeffect] - Parsing subeffects with Tokens [':', 'Put', 'a', '[b]', 'Gift', 'for', 'Bloodkin', '[/b]', 'into', 'your', 'hand', '.', 'Then', ',', 'if', '[b]', 'Vengeance', '[/b]', 'or', '[b]', 'Wrath', '[/b]', 'is', 'active', 'for', 'you', ',', 'put', 'a', '[b]', 'Summon', 'Bloodkin', '[/b]', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
@@ -998,7 +1000,20 @@
 [INFO] [base.subeffect] - Found {'type': 'Then', 'effects': [{'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Vengeance', 'stateEqualTo': True}, {'type': 'IfOr'}, {'type': 'CheckActiveState', 'state': 'Wrath', 'stateEqualTo': True}], 'then': [{'type': 'Put', 'effects': [{'quantifer': 'a', 'card_name': 'Summon Bloodkin', 'type': 'NamedCard'}], 'destination': 'hand'}, {'type': 'Gain', 'effects': [{'type': '0 EP Evolve'}]}]}}]}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Fanfare', '[/b]', ':', 'Put', 'a', '[b]', 'Gift', 'for', 'Bloodkin', '[/b]', 'into', 'your', 'hand', '.', 'Then', ',', 'if', '[b]', 'Vengeance', '[/b]', 'or', '[b]', 'Wrath', '[/b]', 'is', 'active', 'for', 'you', ',', 'put', 'a', '[b]', 'Summon', 'Bloodkin', '[/b]', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
-[INFO] [base] - [
+[INFO] [base.evolveEffect.condition] - Entered conditions with tokens ['an', 'allied', '[b]', 'Forest', 'Bat', '[/b]', 'comes', 'into', 'play', ',', 'give', 'it', '[b]', 'Storm', '[/b]', 'and', '[b]', 'Bane', '[/b]', 'and', 'deal', '1', 'damage', 'to', 'the', 'enemy', 'leader', '.']
+[INFO] [base.evolveEffect.condition] - Condition Tokens ['an', 'allied', '[b]', 'Forest', 'Bat', '[/b]', 'comes', 'into', 'play', ',']
+[INFO] [base.evolveEffect.condition] - Tokens after Popping ['give', 'it', '[b]', 'Storm', '[/b]', 'and', '[b]', 'Bane', '[/b]', 'and', 'deal', '1', 'damage', 'to', 'the', 'enemy', 'leader', '.']
+[INFO] [base.evolveEffect] - Parsing if subeffect ['give', 'it', '[b]', 'Storm', '[/b]', 'and', '[b]', 'Bane', '[/b]', 'and', 'deal', '1', 'damage', 'to', 'the', 'enemy', 'leader']
+[INFO] [base.evolveEffect.subeffect] - Parsing subeffects with Tokens ['give', 'it', '[b]', 'Storm', '[/b]', 'and', '[b]', 'Bane', '[/b]', 'and', 'deal', '1', 'damage', 'to', 'the', 'enemy', 'leader']
+[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
+[INFO] [base.evolveEffect.subeffect.Give] - Entered give ['give', 'it', '[b]', 'Storm', '[/b]', 'and', '[b]', 'Bane', '[/b]', 'and', 'deal', '1', 'damage', 'to', 'the', 'enemy', 'leader']
+[INFO] [base.evolveEffect.subeffect.Give.parseGain] - Starting with Token it
+[WARNING] [base.evolveEffect.subeffect.Give.parseGain] - Found Unknown ['it', '[b]', 'Storm', '[/b]', 'and', '[b]', 'Bane', '[/b]', 'and', 'deal', '1', 'damage', 'to']
+[INFO] [base.evolveEffect.subeffect] - Found {'type': 'Give', 'effects': [[]]}
+[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
+[INFO] [base.evolveEffect.subeffect] - Exiting with tokens: []
+[INFO] [base.evolveEffect] - Finished iteration ['Whenever', 'an', 'allied', '[b]', 'Forest', 'Bat', '[/b]', 'comes', 'into', 'play', ',', 'give', 'it', '[b]', 'Storm', '[/b]', 'and', '[b]', 'Bane', '[/b]', 'and', 'deal', '1', 'damage', 'to', 'the', 'enemy', 'leader', '.']
+[INFO] [base.evolveEffect] - [
     {
         "type": "Fanfare",
         "effects": [
@@ -1062,6 +1077,22 @@
         ]
     }
 ]
+[INFO] [base.evolveEffect] - [
+    {
+        "type": "Whenever",
+        "effects": {
+            "conditions": [],
+            "then": [
+                {
+                    "type": "Give",
+                    "effects": [
+                        []
+                    ]
+                }
+            ]
+        }
+    }
+]
 [INFO] [base] - Demon Maestro
 [INFO] [base] - Follower
 [INFO] [base.subeffect] - Parsing subeffects with Tokens [':', 'If', '[b]', 'Wrath', '[/b]', 'is', 'not', 'active', 'for', 'you', ',', 'deal', '1', 'damage', 'to', 'your', 'leader', 'and', 'draw', 'a', 'card', '.', 'Otherwise', ',', 'put', 'an', '[b]', 'Infernal', 'Orchestration', '[/b]', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '0', '.', '\n']
@@ -1115,7 +1146,8 @@
 [INFO] [base.subeffect] - Found {'type': 'At the start', 'user': 'your', 'when': 'next', 'effects': [{'type': 'Deal', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}, {'type': 'draw', 'amount': 'a'}]}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Last', 'Words', '[/b]', ':', 'At', 'the', 'start', 'of', 'your', 'next', 'turn', ',', 'deal', '1', 'damage', 'to', 'your', 'leader', 'and', 'draw', 'a', 'card', '.']
-[INFO] [base] - [
+[INFO] [base.evolveEffect] - Finished iteration ['(', 'Same', 'as', 'the', 'unevolved', 'form', ',', 'excluding', '[b]', 'Fanfare', '[/b]', '.', ')']
+[INFO] [base.evolveEffect] - [
     {
         "type": "Fanfare",
         "effects": [
@@ -1200,6 +1232,7 @@
         ]
     }
 ]
+[INFO] [base.evolveEffect] - []
 [INFO] [base] - Demonic Drummer
 [INFO] [base] - Follower
 [INFO] [base.alternativeCosts] - Found alternativeCost Accelerate for with ['Accelerate', '[/b]', '[b]', '(', '2', ')', '[/b]', ':', 'Summon', 'a', '[b]', 'Demonic', 'Drummer', '[/b]', 'and', 'deal', '1', 'damage', 'to', 'your', 'leader', '.', 'Do', 'this', '2', 'times', '.', '\n']
@@ -1264,7 +1297,20 @@
 [INFO] [base.subeffect] - Found {'type': 'Restore', 'effects': {'amount': '1', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Last', 'Words', '[/b]', ':', 'Restore', '1', 'defense', 'to', 'your', 'leader', '.']
-[INFO] [base] - [
+[INFO] [base.evolveEffect] - Finished iteration ['Ward', '[/b]', '.', '\n']
+[INFO] [base.evolveEffect] - Finished iteration ["Can't", 'take', 'more', 'than', '2', 'damage', 'at', 'a', 'time', '.', '\n']
+[INFO] [base.evolveEffect.subeffect] - Parsing subeffects with Tokens [':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.']
+[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
+[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
+[INFO] [base.evolveEffect.subeffect.Restore.changeHealth] - Damage tokens after target checks: ['.']
+[WARNING] [base.evolveEffect.subeffect.Restore.changeHealth] - Encountered unexpected
+[WARNING] [base.evolveEffect.subeffect.Restore.changeHealth] - {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}
+[WARNING] [base.evolveEffect.subeffect.Restore.changeHealth] - ['.']
+[INFO] [base.evolveEffect.subeffect.Restore.changeHealth] - Leaving changeHealth with Tokens ['.']
+[INFO] [base.evolveEffect.subeffect] - Found {'type': 'Restore', 'effects': {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}
+[INFO] [base.evolveEffect.subeffect] - Exiting with tokens: []
+[INFO] [base.evolveEffect] - Finished iteration ['Last', 'Words', '[/b]', ':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.']
+[INFO] [base.evolveEffect] - [
     {
         "type": "Accelerate",
         "cost": "2",
@@ -1337,18 +1383,29 @@
         ]
     }
 ]
+[INFO] [base.evolveEffect] - [
+    {
+        "type": "Ward"
+    },
+    {
+        "type": "Last Words",
+        "effects": [
+            {
+                "type": "Restore",
+                "effects": {
+                    "amount": "2",
+                    "targets": "leader",
+                    "times": 1,
+                    "and": {},
+                    "quantifer": "your",
+                    "user": "leader"
+                }
+            }
+        ]
+    }
+]
 [INFO] [base] - Doomlord of the Abyss
 [INFO] [base] - Follower
-[INFO] [base.evolveEffect.subeffect] - Parsing subeffects with Tokens [':', 'Give', 'your', 'leader', 'the', 'following', 'effect', 'until', 'the', 'start', 'of', 'your', 'next', 'turn', '-', 'Reduce', 'damage', 'to', 'your', 'leader', 'to', '0', '.']
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect.Give] - Entered give ['Give', 'your', 'leader', 'the', 'following', 'effect', 'until', 'the', 'start', 'of', 'your', 'next', 'turn', '-', 'Reduce', 'damage', 'to', 'your', 'leader', 'to', '0', '.']
-[INFO] [base.evolveEffect.subeffect.Give.parseGain] - Starting with Token your
-[WARNING] [base.evolveEffect.subeffect.Give.parseGain] - Found Unknown ['your', 'leader', 'the', 'following', 'effect', 'until', 'the', 'start', 'of', 'your', 'next', 'turn', '-', 'Reduce', 'damage', 'to']
-[INFO] [base.evolveEffect.subeffect] - Found {'type': 'Give', 'effects': [[]]}
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Exiting with tokens: []
 [INFO] [base.Fusion] - Entering fusion with ['Fusion', '[/b]', ':', 'Bloodcraft', 'cards', '\n']
 [INFO] [base] - Finished iteration ['Fusion', '[/b]', ':', 'Bloodcraft', 'cards', '\n']
 [INFO] [base.condition] - Entered conditions with tokens ['cards', 'are', 'fused', 'to', 'this', 'card', ',', 'change', 'this', "card's", 'cost', 'to', '6', '.', '\n']
@@ -1398,7 +1455,9 @@
 [INFO] [base.subeffect] - Found {'type': 'Then', 'effects': [{'type': 'Deal', 'effects': {'amount': '.', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}]}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Fanfare', '[/b]', ':', 'Deal', 'X', 'damage', 'to', 'all', 'other', 'followers', '.', 'X', 'equals', 'your', "leader's", 'defense', '.', 'Then', ',', 'deal', 'damage', 'to', 'your', 'leader', 'until', 'their', 'defense', 'drops', 'to', '1', '.']
-[INFO] [base] - [
+[INFO] [base.evolveEffect] - Finished iteration ['Storm', '[/b]', '.', '\n']
+[INFO] [base.evolveEffect] - Finished iteration ['Evolve', '[/b]', ':', 'Give', 'your', 'leader', 'the', 'following', 'effect', 'until', 'the', 'start', 'of', 'your', 'next', 'turn', '-', 'Reduce', 'damage', 'to', 'your', 'leader', 'to', '0', '.']
+[INFO] [base.evolveEffect] - [
     {
         "type": "Fusion",
         "cardTypes": [
@@ -1474,3 +1533,105 @@
         ]
     }
 ]
+[INFO] [base.evolveEffect] - [
+    {
+        "type": "Storm"
+    }
+]
+[INFO] [base] - Lecia & Nano, Twilight Trainees
+[INFO] [base] - Follower
+[INFO] [base] - Finished iteration ['Bane', '[/b]', '.', '\n']
+[INFO] [base.subeffect] - Parsing subeffects with Tokens [':', '[b]', 'Rally', '[/b]', '[b]', '(', '15', ')', '[/b]', '-', 'Put', 'a', '[b]', 'Twilight', 'Blade', '[/b]', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '1', '.']
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.alternativeCosts] - Found alternativeCost Rally for with ['Rally', '[/b]', '[b]', '(', '15', ')', '[/b]', '-', 'Put', 'a', '[b]', 'Twilight', 'Blade', '[/b]', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '1', '.']
+[INFO] [base.subeffect.alternativeCosts] - Entering subeffect for Rally
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Parsing subeffects with Tokens ['[/b]', '-', 'Put', 'a', '[b]', 'Twilight', 'Blade', '[/b]', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '1', '.']
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.alternativeCosts.subeffect.Put] - Entered Put Token ['Put', 'a', '[b]', 'Twilight', 'Blade', '[/b]', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '1', '.']
+[INFO] [base.subeffect.alternativeCosts.subeffect.Put.parseCards] - Entered with tokens: ['a', '[b]', 'Twilight', 'Blade', '[/b]', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '1', '.']
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Found {'type': 'Put', 'effects': [{'quantifer': 'a', 'card_name': 'Twilight Blade', 'type': 'NamedCard'}], 'destination': 'hand'}
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Found {'type': 'ChangeCard', 'target': 'context', 'attribute': 'cost', 'new': '1'}
+[INFO] [base.subeffect.alternativeCosts.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect] - Found {'type': 'Rally', 'cost': '15', 'effects': [{'type': 'Put', 'effects': [{'quantifer': 'a', 'card_name': 'Twilight Blade', 'type': 'NamedCard'}], 'destination': 'hand'}, {'type': 'ChangeCard', 'target': 'context', 'attribute': 'cost', 'new': '1'}]}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Fanfare', '[/b]', ':', '[b]', 'Rally', '[/b]', '[b]', '(', '15', ')', '[/b]', '-', 'Put', 'a', '[b]', 'Twilight', 'Blade', '[/b]', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '1', '.']
+[INFO] [base.evolveEffect] - Finished iteration ['Bane', '[/b]', '.', '\n']
+[INFO] [base.evolveEffect] - Finished iteration ['Evolve', '[/b]', ':', 'Summon', 'a', '[b]', 'Support', 'Cannon', '[/b]', '.']
+[INFO] [base.evolveEffect] - [
+    {
+        "type": "Bane"
+    },
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Rally",
+                "cost": "15",
+                "effects": [
+                    {
+                        "type": "Put",
+                        "effects": [
+                            {
+                                "quantifer": "a",
+                                "card_name": "Twilight Blade",
+                                "type": "NamedCard"
+                            }
+                        ],
+                        "destination": "hand"
+                    },
+                    {
+                        "type": "ChangeCard",
+                        "target": "context",
+                        "attribute": "cost",
+                        "new": "1"
+                    }
+                ]
+            }
+        ]
+    }
+]
+[INFO] [base.evolveEffect] - [
+    {
+        "type": "Bane"
+    }
+]
+[INFO] [base] - Aqua Fairy
+[INFO] [base] - Follower
+[INFO] [base.subeffect] - Parsing subeffects with Tokens ['and', '[b]', 'Last', 'Words', '[/b]', ':', 'Put', 'a', '[b]', 'Fairy', '[/b]', 'into', 'your', 'hand', '.']
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Put] - Entered Put Token ['Put', 'a', '[b]', 'Fairy', '[/b]', 'into', 'your', 'hand', '.']
+[INFO] [base.subeffect.Put.parseCards] - Entered with tokens: ['a', '[b]', 'Fairy', '[/b]', 'into', 'your', 'hand', '.']
+[INFO] [base.subeffect] - Found {'type': 'Put', 'effects': [{'quantifer': 'a', 'card_name': 'Fairy', 'type': 'NamedCard'}], 'destination': 'hand'}
+[INFO] [base.subeffect] - Exiting with tokens: []
+[INFO] [base] - Finished iteration ['Fanfare', '[/b]', 'and', '[b]', 'Last', 'Words', '[/b]', ':', 'Put', 'a', '[b]', 'Fairy', '[/b]', 'into', 'your', 'hand', '.']
+[INFO] [base.evolveEffect] - Finished iteration ['(', 'Same', 'as', 'the', 'unevolved', 'form', ',', 'excluding', '[b]', 'Fanfare', '[/b]', '.', ')']
+[INFO] [base.evolveEffect] - [
+    {
+        "type": "Fanfare",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "quantifer": "a",
+                        "card_name": "Fairy",
+                        "type": "NamedCard"
+                    }
+                ],
+                "destination": "hand"
+            }
+        ]
+    }
+]
+[INFO] [base.evolveEffect] - []

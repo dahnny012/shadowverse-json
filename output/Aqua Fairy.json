@@ -1,0 +1,101 @@
+{
+    "card_id": 125131010,
+    "foil_card_id": 125131011,
+    "card_set_id": 10025,
+    "card_name": "Aqua Fairy",
+    "card_name_ruby": "",
+    "is_foil": 0,
+    "char_type": 1,
+    "clan": 1,
+    "tribe_name": "-",
+    "skill": "token_draw,token_draw",
+    "skill_condition": "character=me,character=me",
+    "skill_target": "none,none",
+    "skill_option": "token_draw=900111010,token_draw=900111010",
+    "skill_preprocess": "none,none",
+    "skill_disc": "Fanfare and Last Words: Put a Fairy into your hand.",
+    "org_skill_disc": "[b]Fanfare[/b] and [b]Last Words[/b]: Put a [b]Fairy[/b] into your hand.",
+    "evo_skill_disc": "(Same as the unevolved form, excluding Fanfare.)",
+    "org_evo_skill_disc": "(Same as the unevolved form, excluding [b]Fanfare[/b].)",
+    "cost": 1,
+    "atk": 1,
+    "life": 1,
+    "evo_atk": 3,
+    "evo_life": 3,
+    "rarity": 3,
+    "get_red_ether": 250,
+    "use_red_ether": 800,
+    "description": "Fairies are easily hurt, so we're extra careful about keeping bad people out of the forest! The moment we spot a threat, we gather our friends, and pow! Bye-bye bad guys!",
+    "evo_description": "Fairies get lonely, so we like having lots of friends around! We especially remember the good people! Treat a fairy right, and you'll make a ton of new friends in one day!",
+    "cv": "",
+    "copyright": null,
+    "base_card_id": 125131010,
+    "normal_card_id": 125131010,
+    "format_type": 1,
+    "restricted_count": 3,
+    "restricted_count_co_main": 3,
+    "restricted_count_co_sub": 3,
+    "id_": 125131010,
+    "name_": "Aqua Fairy",
+    "rotation_": true,
+    "baseEffect_": "[b]Fanfare[/b] and [b]Last Words[/b]: Put a [b]Fairy[/b] into your hand.",
+    "evoEffect_": "(Same as the unevolved form, excluding [b]Fanfare[/b].)",
+    "type_": "Follower",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "Put",
+                    "effects": [
+                        {
+                            "quantifer": "a",
+                            "card_name": "Fairy",
+                            "type": "NamedCard"
+                        }
+                    ],
+                    "destination": "hand"
+                }
+            ]
+        }
+    ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [],
+    "_evolveEffectTokens": [
+        "(",
+        "Same",
+        "as",
+        "the",
+        "unevolved",
+        "form",
+        ",",
+        "excluding",
+        "[b]",
+        "Fanfare",
+        "[/b]",
+        ".",
+        ")"
+    ],
+    "_effectTokens": [
+        [
+            "Fanfare",
+            "[/b]",
+            "and",
+            "[b]",
+            "Last",
+            "Words",
+            "[/b]",
+            ":",
+            "Put",
+            "a",
+            "[b]",
+            "Fairy",
+            "[/b]",
+            "into",
+            "your",
+            "hand",
+            "."
+        ]
+    ]
+}
