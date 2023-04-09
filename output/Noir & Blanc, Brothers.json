@@ -1,0 +1,165 @@
+{
+    "card_id": 124441030,
+    "foil_card_id": 124441031,
+    "card_set_id": 10024,
+    "card_name": "Noir & Blanc, Brothers",
+    "card_name_ruby": "",
+    "is_foil": 0,
+    "char_type": 1,
+    "clan": 4,
+    "tribe_name": "-",
+    "skill": "summon_token,cant_evolution,quick,evolve//guard,shield,indestructible",
+    "skill_condition": "character=me,character=me,character=me,{me.inplay_self.count}>0&{me.inplay.class.max_pp}=10//character=me,character=me,character=me",
+    "skill_target": "none,character=me&target=self,character=me,character=me&target=self//character=me,character=me&target=self,character=me&target=self",
+    "skill_option": "summon_token=900441110,type=ep_use,none,none//none,type=skill,none",
+    "skill_preprocess": "none,none,evolution_end_stop,none//none,none,none",
+    "skill_disc": "If this card is discarded from your hand, summon a 1/1 Noir & Blanc, Brothers.<br>----------<br>Storm.<br>Can't be evolved using evolution points. (Can be evolved using card effects.)<br>At the end of your turn, if you have 10 play point orbs, evolve this follower.",
+    "org_skill_disc": "If this card is discarded from your hand, summon a 1/1 [b]Noir & Blanc, Brothers[/b].<br>----------<br>[b]Storm[/b].<br>Can't be evolved using evolution points. (Can be evolved using card effects.)<br>At the end of your turn, if you have 10 play point orbs, evolve this follower.",
+    "evo_skill_disc": "Ward.<br>Reduce damage from effects to 0.<br>Can't be destroyed by effects.",
+    "org_evo_skill_disc": "[b]Ward[/b].<br>Reduce damage from effects to 0.<br>Can't be destroyed by effects.",
+    "cost": 5,
+    "atk": 4,
+    "life": 4,
+    "evo_atk": 4,
+    "evo_life": 4,
+    "rarity": 4,
+    "get_red_ether": 1000,
+    "use_red_ether": 3500,
+    "description": "One-winged? Halfling? Yeah, and what about it? My brother's way cooler than you and could totally kick your ass! With him by my side, there's nothing that can stop us!<br>\u2014Noir, Black-Winged Brother",
+    "evo_description": "Yes, indeed I am a halfling. But rather than focus on my shortcomings, I made up for them with the power of knowledge. Even if I can't be like my brother, I still want to have his back.<br>\u2014Blanc, White-Winged Brother",
+    "cv": "",
+    "copyright": null,
+    "base_card_id": 124441030,
+    "normal_card_id": 124441030,
+    "format_type": 1,
+    "restricted_count": 3,
+    "restricted_count_co_main": 3,
+    "restricted_count_co_sub": 3,
+    "id_": 124441030,
+    "name_": "Noir & Blanc, Brothers",
+    "rotation_": true,
+    "baseEffect_": "If this card is discarded from your hand, summon a 1/1 [b]Noir & Blanc, Brothers[/b].\n----------\n[b]Storm[/b].\nCan't be evolved using evolution points. (Can be evolved using card effects.)\nAt the end of your turn, if you have 10 play point orbs, evolve this follower.",
+    "evoEffect_": "[b]Ward[/b].\nReduce damage from effects to 0.\nCan't be destroyed by effects.",
+    "type_": "Follower",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Storm"
+        },
+        {
+            "type": "At the end",
+            "user": "your",
+            "when": "current",
+            "effects": [
+                {
+                    "type": "If",
+                    "effects": {
+                        "conditions": [],
+                        "then": [
+                            {
+                                "type": "Evolve",
+                                "effects": [
+                                    "this",
+                                    "follower"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [
+        {
+            "type": "Ward"
+        }
+    ],
+    "_evolveEffectTokens": [
+        "[b]",
+        "Ward",
+        "[/b]",
+        ".",
+        "\n",
+        "Reduce",
+        "damage",
+        "from",
+        "effects",
+        "to",
+        "0",
+        ".",
+        "\n",
+        "Can't",
+        "be",
+        "destroyed",
+        "by",
+        "effects",
+        "."
+    ],
+    "_effectTokens": [
+        [
+            "If",
+            "this",
+            "card",
+            "is",
+            "discarded",
+            "from",
+            "your",
+            "hand",
+            ",",
+            "summon",
+            "a",
+            "1",
+            "/",
+            "1",
+            "[b]",
+            "Noir",
+            "&",
+            "Blanc",
+            ",",
+            "Brothers",
+            "[/b]",
+            ".",
+            "\n"
+        ],
+        [
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "\n"
+        ],
+        [
+            "Storm",
+            "[/b]",
+            ".",
+            "\n"
+        ],
+        [
+            "Can't",
+            "be",
+            "evolved",
+            "using",
+            "evolution",
+            "points",
+            ".",
+            "(",
+            "Can",
+            "be",
+            "evolved",
+            "using",
+            "card",
+            "effects",
+            ".",
+            ")",
+            "\n"
+        ],
+        []
+    ]
+}

@@ -448,8 +448,8 @@ def parseCondition(tokens):
             'state': extractNameFromStartName(conditionTokens),
             'stateEqualTo': True
         }
-        if (" ".join(conditionTokens[0:1]) in "is not"):
-            print()
+        if (" ".join(conditionTokens[0:1]) == "is not"):
+            log.info("Wtd? %s", conditionTokens)
             effect['stateEqualTo'] = False
         conditions.append(effect)
     elif " ".join(conditionTokens[0:2]) == "at least":
@@ -821,23 +821,23 @@ def handleEffects(card, tokens):
         effects.append(effectJson)
     if card["type_"] == 'Spell':
         effects.append(parseSubEffect(effectStrings))
-    if effectStrings[0] in staticEffects:
+    if next(iter(effectStrings), None) in staticEffects:
         effectJson['type'] = effectStrings[0]
         effects.append(effectJson)
-    if effectStrings[0] in triggerEffects:
+    if next(iter(effectStrings), None) in triggerEffects:
         effectJson = parseTriggerEffects(
             effectStrings[0], effectStrings[0:])
         effects.append(effectJson)
-    if effectStrings[0] in turnSpecificEffects:
+    if next(iter(effectStrings), None)in turnSpecificEffects:
         log.debug("Found a During your Turn")
         effectJson['type'] = effectStrings[0]
         effectJson['effect'] = parseSubEffect(effectStrings[4:])
         effects.append(effectJson)
-    if effectStrings[0] in alternativeCosts:
+    if next(iter(effectStrings), None) in alternativeCosts:
         effects.append(parseAlternativeCostEffect(
             effectStrings[0], effectStrings[0:]))
-    endOfPhase = triggerPhaseOfTurnToken(effectStrings[0], effectStrings)
-    countDownResult = countDownToken(effectStrings[0], effectStrings)
+    endOfPhase = triggerPhaseOfTurnToken(next(iter(effectStrings), ""), effectStrings)
+    countDownResult = countDownToken(next(iter(effectStrings), ""), effectStrings)
     for result in [endOfPhase, countDownResult]:
         if result != None:
             effects.append(result)

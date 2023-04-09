@@ -1,0 +1,119 @@
+{
+    "card_id": 128441010,
+    "foil_card_id": 128441011,
+    "card_set_id": 10028,
+    "card_name": "Lilium, the Wyrmwitch",
+    "card_name_ruby": "",
+    "is_foil": 0,
+    "char_type": 1,
+    "clan": 4,
+    "tribe_name": "Academic",
+    "skill": "discard,token_draw//cost_change",
+    "skill_condition": "character=me&target=hand_other_self&card_type=all,character=me//character=me",
+    "skill_target": "character=me&target=hand_other_self&card_type=all&select_count=1,none//character=me&target=hand&card_type=spell&base_card_id=900444070&random_count=1",
+    "skill_option": "none,token_draw=900444070//add=-2",
+    "skill_preprocess": "none,none//none",
+    "skill_disc": "Fanfare: Discard a card from your hand. Put a Draconic Creation into your hand.",
+    "org_skill_disc": "[b]Fanfare[/b]: Discard a card from your hand. Put a [b]Draconic Creation[/b] into your hand.",
+    "evo_skill_disc": "Evolve: Subtract 2 from the cost of a random Draconic Creation in your hand.",
+    "org_evo_skill_disc": "[b]Evolve[/b]: Subtract 2 from the cost of a random [b]Draconic Creation[/b] in your hand.",
+    "cost": 2,
+    "atk": 2,
+    "life": 2,
+    "evo_atk": 4,
+    "evo_life": 4,
+    "rarity": 4,
+    "get_red_ether": 1000,
+    "use_red_ether": 3500,
+    "description": "I've been waiting for someone like you this entire time, you see. Someone willing to save her. To bring us closer to our happy ending. I trust you will play your part until all is over... dear Knight.",
+    "evo_description": "\"The wyrmwitch took the princess by the hand and led her back to the castle, where they lived happily ever after.\"<br>...Oh, what a lovely ending!",
+    "cv": "",
+    "copyright": null,
+    "base_card_id": 128441010,
+    "normal_card_id": 128441010,
+    "format_type": 1,
+    "restricted_count": 3,
+    "restricted_count_co_main": 3,
+    "restricted_count_co_sub": 3,
+    "id_": 128441010,
+    "name_": "Lilium, the Wyrmwitch",
+    "rotation_": true,
+    "baseEffect_": "[b]Fanfare[/b]: Discard a card from your hand. Put a [b]Draconic Creation[/b] into your hand.",
+    "evoEffect_": "[b]Evolve[/b]: Subtract 2 from the cost of a random [b]Draconic Creation[/b] in your hand.",
+    "type_": "Follower",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "Discard",
+                    "effects": {
+                        "cardsToDiscard": "a",
+                        "effects": [
+                            {
+                                "type": "Put",
+                                "effects": [
+                                    {
+                                        "quantifer": "a",
+                                        "card_name": "Draconic Creation",
+                                        "type": "NamedCard"
+                                    }
+                                ],
+                                "destination": "hand"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [],
+    "_evolveEffectTokens": [
+        "[b]",
+        "Evolve",
+        "[/b]",
+        ":",
+        "Subtract",
+        "2",
+        "from",
+        "the",
+        "cost",
+        "of",
+        "a",
+        "random",
+        "[b]",
+        "Draconic",
+        "Creation",
+        "[/b]",
+        "in",
+        "your",
+        "hand",
+        "."
+    ],
+    "_effectTokens": [
+        [
+            "Fanfare",
+            "[/b]",
+            ":",
+            "Discard",
+            "a",
+            "card",
+            "from",
+            "your",
+            "hand",
+            ".",
+            "Put",
+            "a",
+            "[b]",
+            "Draconic",
+            "Creation",
+            "[/b]",
+            "into",
+            "your",
+            "hand",
+            "."
+        ]
+    ]
+}

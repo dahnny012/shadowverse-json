@@ -1,0 +1,84 @@
+{
+    "card_id": 705414010,
+    "foil_card_id": 705414011,
+    "card_set_id": 70005,
+    "card_name": "Dragon Oracle",
+    "card_name_ruby": "",
+    "is_foil": 0,
+    "char_type": 4,
+    "clan": 4,
+    "tribe_name": "-",
+    "skill": "pp_modifier,draw",
+    "skill_condition": "character=me&target=self&card_type=spell,character=me&target=self&card_type=spell&awake=true",
+    "skill_target": "character=me&target=inplay&card_type=class,character=me&target=deck&card_type=all&random_count=1",
+    "skill_option": "add_pptotal=1,none",
+    "skill_preprocess": "none,none",
+    "skill_disc": "Gain an empty play point orb.<br>If Overflow is already active for you when this card is played, draw a card.",
+    "org_skill_disc": "Gain an empty play point orb.<br>If [b]Overflow[/b] is already active for you when this card is played, draw a card.",
+    "evo_skill_disc": "",
+    "org_evo_skill_disc": "",
+    "cost": 2,
+    "atk": 0,
+    "life": 0,
+    "evo_atk": 0,
+    "evo_life": 0,
+    "rarity": 1,
+    "get_red_ether": 0,
+    "use_red_ether": 0,
+    "description": "My sword, blue as the skies, will rend all of the despair from this world!",
+    "evo_description": "",
+    "cv": "",
+    "copyright": null,
+    "base_card_id": 100414010,
+    "normal_card_id": 705414010,
+    "format_type": 1,
+    "restricted_count": 3,
+    "restricted_count_co_main": 1,
+    "restricted_count_co_sub": 1,
+    "id_": 705414010,
+    "name_": "Dragon Oracle",
+    "rotation_": true,
+    "baseEffect_": "Gain an empty play point orb.\nIf [b]Overflow[/b] is already active for you when this card is played, draw a card.",
+    "evoEffect_": "",
+    "type_": "Spell",
+    "effectTokens": [],
+    "effectJson": [
+        [
+            {
+                "type": "Gain",
+                "effects": [
+                    {
+                        "type": "An empty play point"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "type": "If",
+                "effects": {
+                    "conditions": [
+                        {
+                            "type": "CheckActiveState",
+                            "state": "Overflow",
+                            "stateEqualTo": true
+                        }
+                    ],
+                    "then": [
+                        {
+                            "type": "draw",
+                            "amount": "a"
+                        }
+                    ]
+                }
+            }
+        ]
+    ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [],
+    "_evolveEffectTokens": [],
+    "_effectTokens": [
+        [],
+        []
+    ]
+}

@@ -1,0 +1,212 @@
+{
+    "card_id": 719441010,
+    "foil_card_id": 719441011,
+    "card_set_id": 10025,
+    "card_name": "Masamune, One-Eyed Dragon",
+    "card_name_ruby": "",
+    "is_foil": 0,
+    "char_type": 1,
+    "clan": 4,
+    "tribe_name": "-",
+    "skill": "killer,shield,evolve,attach_skill",
+    "skill_condition": "character=me,character=me&awake=true,character=me&awake=true,{me.inplay.class.max_pp}=10",
+    "skill_target": "character=me&target=self,character=me&target=self,character=me&target=self,character=me&target=inplay&card_type=class",
+    "skill_option": "none,none,none,skill=(skill:damage)(timing:when_attack_self_and_other)(condition:character=op&target=be_attacked&card_type=unit&turn=self&{me.attacker.unit.count}>0)(target:character=op&target=inplay&card_type=class)(option:damage=2)(preprocess:none)(effect_path:btl_125441030_4)(se_path:se_btl_125441030_4)(effect_move_type:DIRECT)(engine_type:SHURIKEN)(effect_time:0.2)(effect_target_type:single)&duplicate_ban_id=1254410301",
+    "skill_preprocess": "none,damage_after_stop,none,none",
+    "skill_disc": "Bane.<br>Fanfare: If Overflow is active for you, gain the following effect and evolve this follower - The next time this follower takes damage, reduce that damage to 0. If you have 10 play point orbs, give your leader the following effect: During your turn, whenever an allied follower attacks an enemy follower, deal 2 damage to the enemy leader. (This effect is not stackable and lasts for the rest of the match.)",
+    "org_skill_disc": "[b]Bane[/b].<br>[b]Fanfare[/b]: If [b]Overflow[/b] is active for you, gain the following effect and evolve this follower - The next time this follower takes damage, reduce that damage to 0. If you have 10 play point orbs, give your leader the following effect: During your turn, whenever an allied follower attacks an enemy follower, deal 2 damage to the enemy leader. (This effect is not stackable and lasts for the rest of the match.)",
+    "evo_skill_disc": "(Same as the unevolved form, excluding Fanfare.)",
+    "org_evo_skill_disc": "(Same as the unevolved form, excluding [b]Fanfare[/b].)",
+    "cost": 2,
+    "atk": 2,
+    "life": 2,
+    "evo_atk": 4,
+    "evo_life": 4,
+    "rarity": 4,
+    "get_red_ether": 1000,
+    "use_red_ether": 0,
+    "description": "My eye burns\u2014a worthy challenger approaches! I will unleash the beast within and meet them in battle. Prepare yourself, for the One-Eyed Dragon will have your head!",
+    "evo_description": "I pray you won't mind me revealing my secret technique. But be warned: once the dragon bares its fangs, there is no stopping it until its bloodthirst is slaked. Hear my roar! We will battle until only one of us stands!",
+    "cv": "",
+    "copyright": null,
+    "base_card_id": 125441030,
+    "normal_card_id": 719441010,
+    "format_type": 1,
+    "restricted_count": 3,
+    "restricted_count_co_main": 3,
+    "restricted_count_co_sub": 3,
+    "id_": 719441010,
+    "name_": "Masamune, One-Eyed Dragon",
+    "rotation_": true,
+    "baseEffect_": "[b]Bane[/b].\n[b]Fanfare[/b]: If [b]Overflow[/b] is active for you, gain the following effect and evolve this follower - The next time this follower takes damage, reduce that damage to 0. If you have 10 play point orbs, give your leader the following effect: During your turn, whenever an allied follower attacks an enemy follower, deal 2 damage to the enemy leader. (This effect is not stackable and lasts for the rest of the match.)",
+    "evoEffect_": "(Same as the unevolved form, excluding [b]Fanfare[/b].)",
+    "type_": "Follower",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Bane"
+        },
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "If",
+                    "effects": {
+                        "conditions": [
+                            {
+                                "type": "CheckActiveState",
+                                "state": "Overflow",
+                                "stateEqualTo": true
+                            }
+                        ],
+                        "then": [
+                            {
+                                "type": "Gain",
+                                "effects": []
+                            },
+                            {
+                                "type": "Evolve",
+                                "effects": [
+                                    "this",
+                                    "follower"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "If",
+                    "effects": {
+                        "conditions": [],
+                        "then": [
+                            {
+                                "type": "Give",
+                                "effects": [
+                                    []
+                                ]
+                            }
+                        ]
+                    },
+                    "limit": {
+                        "type": "Parens",
+                        "condition": null
+                    }
+                }
+            ]
+        }
+    ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [],
+    "_evolveEffectTokens": [
+        "(",
+        "Same",
+        "as",
+        "the",
+        "unevolved",
+        "form",
+        ",",
+        "excluding",
+        "[b]",
+        "Fanfare",
+        "[/b]",
+        ".",
+        ")"
+    ],
+    "_effectTokens": [
+        [
+            "Bane",
+            "[/b]",
+            ".",
+            "\n"
+        ],
+        [
+            "Fanfare",
+            "[/b]",
+            ":",
+            "If",
+            "[b]",
+            "Overflow",
+            "[/b]",
+            "is",
+            "active",
+            "for",
+            "you",
+            ",",
+            "gain",
+            "the",
+            "following",
+            "effect",
+            "and",
+            "evolve",
+            "this",
+            "follower",
+            "-",
+            "The",
+            "next",
+            "time",
+            "this",
+            "follower",
+            "takes",
+            "damage",
+            ",",
+            "reduce",
+            "that",
+            "damage",
+            "to",
+            "0",
+            ".",
+            "If",
+            "you",
+            "have",
+            "10",
+            "play",
+            "point",
+            "orbs",
+            ",",
+            "give",
+            "your",
+            "leader",
+            "the",
+            "following",
+            "effect",
+            ":",
+            "During",
+            "your",
+            "turn",
+            ",",
+            "whenever",
+            "an",
+            "allied",
+            "follower",
+            "attacks",
+            "an",
+            "enemy",
+            "follower",
+            ",",
+            "deal",
+            "2",
+            "damage",
+            "to",
+            "the",
+            "enemy",
+            "leader",
+            ".",
+            "(",
+            "This",
+            "effect",
+            "is",
+            "not",
+            "stackable",
+            "and",
+            "lasts",
+            "for",
+            "the",
+            "rest",
+            "of",
+            "the",
+            "match",
+            ".",
+            ")"
+        ]
+    ]
+}

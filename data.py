@@ -6,6 +6,19 @@ from parsers import *
 debug = True
 testCardsId = {126441030, 126431030, 127611010, 127621030, 125641020,125131010,
                126631020, 125641010, 125841010, 127841030, 127841010, 127621020, 126411030, 128241010}
+
+discardDragonDeck = {
+    127431020,
+    719441010,
+    128441010,
+    705414010,
+    126414010,
+    717024010,
+    124441010,
+    128424010,
+    124441030,
+    127441020
+}
 effectDebugSearch = False
 effectSearch = "if"
 typeMap = {
@@ -20,11 +33,7 @@ def getCardPoolFromShadowversePortal():
     rotationCardPool = list()
     cardpool = []
     files = [
-        "dragon",
-        "portal",
-        "blood",
-        "sword",
-        "forest"
+        "all"
     ]
     for file in files:
         with open(f'{os.getcwd()}/json/{file}.json', 'r') as f:
@@ -33,7 +42,7 @@ def getCardPoolFromShadowversePortal():
 
     for card in cardpool:
         SVP2SVPJSON(card)
-        if card['rotation_'] and (not debug or card["id_"] in testCardsId):
+        if card['rotation_'] and (not debug or card["id_"] in discardDragonDeck):
             if (effectDebugSearch and effectSearch not in card["org_skill_disc"].lower()):
                 continue
             rotationCardPool.append(card)

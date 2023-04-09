@@ -1,0 +1,103 @@
+{
+    "card_id": 717024010,
+    "foil_card_id": 717024011,
+    "card_set_id": 70021,
+    "card_name": "Angel's Blessing",
+    "card_name_ruby": "",
+    "is_foil": 0,
+    "char_type": 4,
+    "clan": 0,
+    "tribe_name": "-",
+    "skill": "draw,heal,pp_modifier",
+    "skill_condition": "character=me,{me.usable_ep}>{op.usable_ep},{me.usable_ep}>{op.usable_ep}",
+    "skill_target": "character=me&target=deck&card_type=all&random_count=2,character=me&target=inplay&card_type=class,character=me&target=inplay&card_type=class",
+    "skill_option": "none,healing=2,add_pp=2",
+    "skill_preprocess": "none,none,none",
+    "skill_disc": "Draw 2 cards.<br>If you have more evolution points than your opponent, restore 2 defense to your leader and recover 2 play points. (You have 0 evolution points on turns you are unable to evolve.)",
+    "org_skill_disc": "Draw 2 cards.<br>If you have more evolution points than your opponent, restore 2 defense to your leader and recover 2 play points. (You have 0 evolution points on turns you are unable to evolve.)",
+    "evo_skill_disc": "",
+    "org_evo_skill_disc": "",
+    "cost": 3,
+    "atk": 0,
+    "life": 0,
+    "evo_atk": 0,
+    "evo_life": 0,
+    "rarity": 2,
+    "get_red_ether": 0,
+    "use_red_ether": 0,
+    "description": "Blessed are those who seek peace and righteousness.",
+    "evo_description": "",
+    "cv": "",
+    "copyright": null,
+    "base_card_id": 124024010,
+    "normal_card_id": 717024010,
+    "format_type": 1,
+    "restricted_count": 3,
+    "restricted_count_co_main": 3,
+    "restricted_count_co_sub": 3,
+    "id_": 717024010,
+    "name_": "Angel's Blessing",
+    "rotation_": true,
+    "baseEffect_": "Draw 2 cards.\nIf you have more evolution points than your opponent, restore 2 defense to your leader and recover 2 play points. (You have 0 evolution points on turns you are unable to evolve.)",
+    "evoEffect_": "",
+    "type_": "Spell",
+    "effectTokens": [],
+    "effectJson": [
+        [
+            {
+                "type": "Draw",
+                "amount": "2"
+            }
+        ],
+        [
+            {
+                "type": "If",
+                "effects": {
+                    "conditions": [
+                        {
+                            "type": "CheckEvolutionHigherThanOpponent"
+                        }
+                    ],
+                    "then": [
+                        {
+                            "type": "Restore",
+                            "effects": {
+                                "amount": "2",
+                                "targets": "leader",
+                                "times": 1,
+                                "and": {},
+                                "quantifer": "your",
+                                "user": "leader"
+                            }
+                        },
+                        {
+                            "type": "Recover",
+                            "effect": {
+                                "amount": "2",
+                                "resource": "play"
+                            }
+                        }
+                    ]
+                },
+                "limit": {
+                    "type": "Parens",
+                    "condition": null
+                }
+            },
+            {
+                "type": "Evolve",
+                "effects": [
+                    ".",
+                    ")"
+                ]
+            }
+        ]
+    ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [],
+    "_evolveEffectTokens": [],
+    "_effectTokens": [
+        [],
+        []
+    ]
+}
