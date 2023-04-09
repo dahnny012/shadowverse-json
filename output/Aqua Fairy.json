@@ -44,6 +44,22 @@
     "effectTokens": [],
     "effectJson": [
         {
+            "type": "Last Words",
+            "effects": [
+                {
+                    "type": "Put",
+                    "effects": [
+                        {
+                            "quantifer": "a",
+                            "card_name": "Fairy",
+                            "type": "NamedCard"
+                        }
+                    ],
+                    "destination": "hand"
+                }
+            ]
+        },
+        {
             "type": "Fanfare",
             "effects": [
                 {

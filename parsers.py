@@ -809,13 +809,15 @@ def handleEffects(card, tokens):
                     tokens.pop(0)
                 log.info("Modified baseEffectString %s", baseEffectString)
             # Amulets have fanfare and last words sometimes, duplicate the subeffect if that happens
-            if(baseEffectString[0] == endName and baseEffectString[1] == andd):
+            if(baseEffectString[0] == andd and baseEffectString[1] == startName):
                 effect = parseSubEffect(baseEffectString)
                 lastWordsJson  = {}
                 lastWordsJson["type"] = "Last Words"
                 lastWordsJson["effects"] = effect
                 effects.append(lastWordsJson)
-            effectJson['effects'] = parseSubEffect(baseEffectString)
+                effectJson['effects'] = effect
+            else:
+                effectJson['effects'] = parseSubEffect(baseEffectString)
         effects.append(effectJson)
     if card["type_"] == 'Spell':
         effects.append(parseSubEffect(effectStrings))

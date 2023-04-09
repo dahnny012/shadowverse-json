@@ -1618,6 +1618,22 @@
 [INFO] [base.evolveEffect] - Finished iteration ['(', 'Same', 'as', 'the', 'unevolved', 'form', ',', 'excluding', '[b]', 'Fanfare', '[/b]', '.', ')']
 [INFO] [base.evolveEffect] - [
     {
+        "type": "Last Words",
+        "effects": [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "quantifer": "a",
+                        "card_name": "Fairy",
+                        "type": "NamedCard"
+                    }
+                ],
+                "destination": "hand"
+            }
+        ]
+    },
+    {
         "type": "Fanfare",
         "effects": [
             {
