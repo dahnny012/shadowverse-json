@@ -72,7 +72,20 @@
         }
     ],
     "evolveEffectTokens": [],
-    "evolveEffectJson": [],
+    "evolveEffectJson": [
+        {
+            "effects": [
+                {
+                    "type": "Gain",
+                    "effects": [
+                        {
+                            "type": "An empty play point"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
     "_evolveEffectTokens": [
         "[b]",
         "Evolve",

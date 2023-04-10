@@ -71,7 +71,34 @@
         }
     ],
     "evolveEffectTokens": [],
-    "evolveEffectJson": [],
+    "evolveEffectJson": [
+        {
+            "effects": [
+                {
+                    "type": "Deal",
+                    "effects": {
+                        "amount": "X",
+                        "targets": "enemy",
+                        "times": 1,
+                        "and": {},
+                        "quantifer": "an",
+                        "user": "enemy"
+                    }
+                },
+                {
+                    "type": "VariableDefinition",
+                    "variable": "X",
+                    "value": [
+                        "equals",
+                        "this",
+                        "follower's",
+                        "attack",
+                        "."
+                    ]
+                }
+            ]
+        }
+    ],
     "_evolveEffectTokens": [
         "[b]",
         "Evolve",

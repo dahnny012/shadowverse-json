@@ -47,7 +47,11 @@
             {
                 "type": "If",
                 "effects": {
-                    "conditions": [],
+                    "conditions": [
+                        {
+                            "type": "CheckDiscardedFromHand"
+                        }
+                    ],
                     "then": [
                         {
                             "type": "draw",

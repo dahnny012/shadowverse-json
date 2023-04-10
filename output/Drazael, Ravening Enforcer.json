@@ -74,7 +74,10 @@
                                 "amount": "5"
                             }
                         ]
-                    ]
+                    ],
+                    "quantifier": "all",
+                    "user": "enemy",
+                    "target": "follower"
                 },
                 {
                     "type": "Restore",

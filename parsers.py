@@ -329,23 +329,55 @@ def giveToken(head, tokens):
     if (safeIndex(tokens, to) >= 0):
         effectTokens = popArrayAfterSearch(tokens, to)
         effect['effects'].append(parseGain(effectTokens))
-    target = ""
     # find targets then find the effect
+    findGiveTargets(effect, tokens)
+    return effect
+
+@useLog("findTarget")
+def findTarget(effect, tokens):
+    log.info("Finding targets for effect %s , with %s", effect, tokens)
     while len(tokens) > 0:
         token = tokens.pop(0)
+        log.info(token)
+        if (token == "it"):
+            effect['target'] = "parent"
+        elif (token == "all"):
+            if (token[0] == "allied" or (" ".join(tokens[0:1]) == "other allied")):
+                effect['target'] = parseCards(tokens)
+            effect["quantifier"] = "all"
+        elif (token == "your" or (" ".join(tokens[0:2]) == "the enemy leader")):
+            effect["user"] = "self" if token == "your" else "enemy"
+        elif(token == "enemy"):
+            effect['user'] = "enemy"
+        elif(token in 'followers'):
+            effect['target'] = "follower"
+        else:
+            # Likely encountered an effect
+            break
+
+@useLog("findGiveTargets")
+def findGiveTargets(effect, tokens):
+    log.info("Finding targets for effect %s , with %s", effect, tokens)
+    while len(tokens) > 0:
+        token = tokens.pop(0)
+        log.info(token)
         if (token == "it"):
             effect['target'] = "parent"
             effect["effects"].append(parseGain(tokens))
         elif (token == "all"):
             if (token[0] == "allied" or (" ".join(tokens[0:1]) == "other allied")):
                 effect['target'] = parseCards(tokens)
+            effect["quantifier"] = "all"
         elif (token == "your" or (" ".join(tokens[0:2]) == "the enemy leader")):
             effect["user"] = "self" if token == "your" else "enemy"
             effect["effects"].append(parseLeaderEffect(tokens))
+        elif(token == "enemy"):
+            effect['user'] = "enemy"
+        elif(token in 'followers'):
+            effect['target'] = "follower"
         else:
             # Likely encountered an effect
             break
-    return effect
 
 @useLog("leaderEffect")
 def parseLeaderEffect(tokens):
@@ -452,6 +484,11 @@ def parseCondition(tokens):
             log.info("Wtd? %s", conditionTokens)
             effect['stateEqualTo'] = False
         conditions.append(effect)
+    elif " ".join(conditionTokens[0:4]) == "this card is discarded":
+        conditions.append({
+            'type': 'CheckDiscardedFromHand'
+        })
+        popArrayAfterSearch(conditionTokens, ",")
     elif " ".join(conditionTokens[0:2]) == "at least":
         conditions.append({
             'type': 'CheckNumericState',
@@ -730,6 +767,35 @@ def parseSubEffect(tokens):
     log.info("Exiting with tokens: %s", tokens)
     return effects
 
+@register
+@useLog("subtract")
+def parseSubtract(head, tokens):
+    if (head != subtract and head.capitalize() != subtract):
+        return None
+    tokens.pop(0)
+    effect = {
+        'type': subtract,
+        'amount': tokens.pop(0)
+    }
+    def detrmineAttribute():
+        token = tokens.pop(0)
+        if(token == "cost"):
+            effect['attribute'] = cost
+        if(token == "Countdown"):
+            effect['attribute'] = countdown
+    # From
+    while(len(tokens) > 0):
+        token = tokens.pop(0)
+        if(token == "from"):
+            continue
+        if token == "the":
+            detrmineAttribute()
+            
+        if token == "its":
+            detrmineAttribute()
+        if token== "this":
+    
+    return 
 
 @register
 @useLog("alternativeCosts")
@@ -786,11 +852,11 @@ def handleEffects(card, tokens):
     effects = []
     if len(effectStrings) == 0:
         return effects
+    if (effectStrings[0] == startName):
+        effectStrings.pop(0)
     if effectStrings[0] == evolve:
         effectJson['effects'] = parseSubEffect(effectStrings[2:])
         effects.append(effectJson)
-    if (effectStrings[0] == startName):
-        effectStrings.pop(0)
     if effectStrings[0] == fusion:
         effects.append(fusionToken(
             effectStrings[0], effectStrings[0:]))

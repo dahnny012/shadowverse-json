@@ -69,7 +69,11 @@
         }
     ],
     "evolveEffectTokens": [],
-    "evolveEffectJson": [],
+    "evolveEffectJson": [
+        {
+            "effects": []
+        }
+    ],
     "_evolveEffectTokens": [
         "[b]",
         "Evolve",
