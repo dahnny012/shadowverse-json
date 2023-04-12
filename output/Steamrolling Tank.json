@@ -56,7 +56,7 @@
                         "targets": "leader",
                         "times": 1,
                         "and": {},
-                        "quantifer": "your",
+                        "quantifier": "your",
                         "user": "leader"
                     }
                 }
@@ -87,7 +87,7 @@
                                     "targets": "leader",
                                     "times": 1,
                                     "and": {},
-                                    "quantifer": "your",
+                                    "quantifier": "your",
                                     "user": "leader"
                                 },
                                 "limit": {

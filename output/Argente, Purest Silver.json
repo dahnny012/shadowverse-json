@@ -58,7 +58,7 @@
                                 "type": "Gain",
                                 "effects": [
                                     {
-                                        "type": "An empty play point"
+                                        "skill": "An empty play point"
                                     }
                                 ]
                             },

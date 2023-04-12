@@ -50,9 +50,9 @@
                     "type": "Put",
                     "effects": [
                         {
-                            "quantifer": "a",
+                            "quantifier": "a",
                             "card_name": "Fairy",
-                            "type": "NamedCard"
+                            "card_type": "NamedCard"
                         }
                     ],
                     "destination": "hand"
@@ -66,9 +66,9 @@
                     "type": "Put",
                     "effects": [
                         {
-                            "quantifer": "a",
+                            "quantifier": "a",
                             "card_name": "Fairy",
-                            "type": "NamedCard"
+                            "card_type": "NamedCard"
                         }
                     ],
                     "destination": "hand"

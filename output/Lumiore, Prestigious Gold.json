@@ -98,22 +98,14 @@
             ]
         },
         {
-            "type": "During",
+            "type": "During Your Turn",
             "effect": [
                 {
                     "type": "Whenever",
                     "effects": {
                         "conditions": [
                             {
-                                "type": "WheneverAction",
-                                "state": [
-                                    "discard",
-                                    "cards",
-                                    "from",
-                                    "your",
-                                    "hand",
-                                    ","
-                                ]
+                                "type": "DiscardCardCondition"
                             }
                         ],
                         "then": [
@@ -124,7 +116,7 @@
                                     "targets": "enemies",
                                     "times": 1,
                                     "and": {},
-                                    "quantifer": "all",
+                                    "quantifier": "all",
                                     "user": "enemies"
                                 }
                             }

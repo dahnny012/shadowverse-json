@@ -83,7 +83,7 @@
                         "targets": "leader",
                         "times": 1,
                         "and": {},
-                        "quantifer": "your",
+                        "quantifier": "your",
                         "user": "leader"
                     }
                 }
@@ -109,7 +109,7 @@
                     "type": "Gain",
                     "effects": [
                         {
-                            "type": "Storm"
+                            "skill": "Storm"
                         }
                     ]
                 },

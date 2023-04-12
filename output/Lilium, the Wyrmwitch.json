@@ -55,9 +55,9 @@
                                 "type": "Put",
                                 "effects": [
                                     {
-                                        "quantifer": "a",
+                                        "quantifier": "a",
                                         "card_name": "Draconic Creation",
-                                        "type": "NamedCard"
+                                        "card_type": "NamedCard"
                                     }
                                 ],
                                 "destination": "hand"
@@ -71,7 +71,13 @@
     "evolveEffectTokens": [],
     "evolveEffectJson": [
         {
-            "effects": []
+            "effects": [
+                {
+                    "type": "Subtract",
+                    "amount": "2",
+                    "attribute": "cost"
+                }
+            ]
         }
     ],
     "_evolveEffectTokens": [

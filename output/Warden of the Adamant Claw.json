@@ -81,7 +81,7 @@
                         "targets": "enemy",
                         "times": 1,
                         "and": {},
-                        "quantifer": "an",
+                        "quantifier": "an",
                         "user": "enemy"
                     }
                 },

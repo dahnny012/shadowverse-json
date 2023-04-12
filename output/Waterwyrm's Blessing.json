@@ -48,7 +48,7 @@
                 "type": "Gain",
                 "effects": [
                     {
-                        "type": "An empty play point"
+                        "skill": "An empty play point"
                     }
                 ]
             }
@@ -72,7 +72,7 @@
                                 "targets": "leader",
                                 "times": 1,
                                 "and": {},
-                                "quantifer": "your",
+                                "quantifier": "your",
                                 "user": "leader"
                             }
                         },

@@ -84,7 +84,7 @@
                         "targets": "followers",
                         "times": 1,
                         "and": {},
-                        "quantifer": "all",
+                        "quantifier": "all",
                         "exceptions": "other"
                     }
                 },
@@ -109,7 +109,7 @@
                                 "targets": "leader",
                                 "times": 1,
                                 "and": {},
-                                "quantifer": "your",
+                                "quantifier": "your",
                                 "user": "leader"
                             }
                         }
@@ -122,6 +122,21 @@
     "evolveEffectJson": [
         {
             "type": "Storm"
+        },
+        {
+            "effects": [
+                {
+                    "type": "Give",
+                    "effects": [
+                        [],
+                        {
+                            "type": "LeaderEffect",
+                            "effects": []
+                        }
+                    ],
+                    "user": "self"
+                }
+            ]
         }
     ],
     "_evolveEffectTokens": [

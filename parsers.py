@@ -409,7 +409,7 @@ def restoreToken(head, tokens):
     tokens.pop(0)
     return {
         "type": restore,
-        "effects": changeHealth(tokens, defense)
+        "effects": changeHealthV2(tokens, defense)
     }
 
 
@@ -421,7 +421,7 @@ def dealToken(head, tokens):
     tokens.pop(0)
     return {
         "type": deal,
-        "effects": changeHealth(tokens, damage)
+        "effects": changeHealthV2(tokens, damage)
     }
 
 
@@ -536,15 +536,63 @@ def parseCondition(tokens):
     return list(conditions)
 
 
+@useLog("changeHealthV2")
+def changeHealthV2(tokens, type=None):
+    stopQuantifier = {
+        "leader", "follower"
+    }
+    allied = {
+        "allied", "allies"
+    }
+    enemy = {
+        "enemy", "enemies"
+    }
+    effect = {
+        'amount': 0,
+        'character': '',
+        'targets': 'single',
+        'targetType': '',
+        'randomCount':''
+    }
+    if(tokens[0] == "damage"):
+        effect['_debug'] = tokens[0:]
+        log.warn("Not handling at the moment")
+    effect['amount'] = tokens.pop(0)
+    type = tokens.pop(0)
+    if(tokens[0]==to):
+        tokens.pop(0)
+    
+    while(len(tokens) >0):
+        token = tokens.pop(0)
+        if(token.isnumeric() and tokens[0] == random):
+            effect['randomCount'] = token
+        if(token == "all"):
+            targets = "all"
+        if(token in enemy):
+            effect['character'] = "enemy"
+        if(token in allied):
+            effect['character'] = 'self'
+        if(token in stopQuantifier):
+            effect['targetType'] = 'follower'
+            break
+    return effect
+
+
 @useLog("changeHealth")
 def changeHealth(tokens, type=None):
     effect = {
         'amount': 0,
         'targets': "",
-        'times': 1,
-        'and': {
-        }
+        'character': '',
+        'cardType':'',
+        'randomCount':'',
+        'selectable': 0
     }
+    
+    selectable1Count = {
+        "a", "an"
+    }
+    
 
     amountIndex = tokens.index(type) - 1
     effect['amount'] = tokens[amountIndex]
@@ -555,7 +603,7 @@ def changeHealth(tokens, type=None):
         return effect
     toIndex = tokens.index(to)
     quantifer = tokens[toIndex + 1]
-    effect['quantifer'] = quantifer
+    effect['quantifier'] = quantifer
     nextTarget = tokens[toIndex + 2]
     if (nextTarget == follower):
         effect['targets'] = nextTarget
@@ -568,13 +616,13 @@ def changeHealth(tokens, type=None):
         if (tokens[toIndex + 2] == endEffectToken):
             # enemies
             # allies
-            effect['user'] = nextTarget
+            effect['owner'] = nextTarget
             effect['targets'] = 'all'
             popArrayTill(tokens, toIndex + 3)
         else:
             # allied followers
             # enemey followers
-            effect['user'] = nextTarget
+            effect['owner'] = nextTarget
             effect['targets'] = tokens[toIndex + 2]
             popArrayTill(tokens, toIndex + 3)
     log.info("Damage tokens after target checks: %s", tokens)
@@ -582,9 +630,8 @@ def changeHealth(tokens, type=None):
         if (tokens[2] == the):
             effect['and'] = {
                 'amount': effect['amount'],
-                'user': tokens[3],
+                'owner': tokens[3],
                 'targets': "leader",
-                'times': effect['times']
             }
         if (tokens[2].isnumeric()):
             effect['and'] = changeHealth(tokens, type)
@@ -639,16 +686,16 @@ def parseGain(tokens):
         elif (isStartName(token)):
             tokens.pop(0)
             gain = {}
-            gain['type'] = extractNameFromStartName(tokens)
+            gain['skill'] = extractNameFromStartName(tokens)
             gainStack.append(gain)
         elif (" ".join(tokens[0:3]) in "an empty play point"):
             gain = {}
-            gain['type'] = 'An empty play point'
+            gain['skill'] = 'An empty play point'
             gainStack.append(gain)
             popArrayAfterSearch(tokens, "point")
         elif (" ".join(tokens[0:3]) in the_ability_to_evolve):
             gain = {}
-            gain['type'] = '0 EP Evolve'
+            gain['skill'] = '0 EP Evolve'
             gainStack.append(gain)
             popArrayAfterSearch(tokens, "points")
         else:
@@ -679,22 +726,22 @@ def parseCards(tokens, quantifier=None, stopWord=endEffectToken):
         token = tokens.pop(0)
         if (token in quantifiers or token.isnumeric()):
             log.debug("Setting quantifiers in parseCards %s", token)
-            unit['quantifer'] = token
+            unit['quantifier'] = token
         elif ("craft" in token):
             unit['faction'] = token
-            unit['type'] = getCardType(tokens.pop(0))
+            unit['card_type'] = getCardType(tokens.pop(0))
         elif token in traits:
             unit['trait'] = token
-            unit['type'] = getCardType(tokens.pop(0))
+            unit['card_type'] = getCardType(tokens.pop(0))
         elif (isStartName(token)):
             unit["card_name"] = extractNameFromStartName(tokens)
-            unit["type"] = "NamedCard"
+            unit["card_type"] = "NamedCard"
             units.append(unit)
             unit = {}
             if (len(tokens) > 0 and tokens[0] not in stop):
                 break
         elif (getCardType(token) != None):
-            unit['type'] = token
+            unit['card_type'] = token
             units.append(unit)
         elif (token in specifics):
             if (token == random):
@@ -706,8 +753,8 @@ def parseCards(tokens, quantifier=None, stopWord=endEffectToken):
             or not isStartName(token)
                 or len(tokens) == 0):
             if (token == andd):
-                log.info("Card has a trigger %s", tokens)
-                unit['effects'] = parseSubEffect(tokens)
+                log.info("Card has %s a trigger %s",units[-1], tokens)
+                units[-1]['effects'] = parseSubEffect(tokens)
             if (token == endEffectToken):
                 break
             else:
@@ -793,9 +840,8 @@ def parseSubtract(head, tokens):
             
         if token == "its":
             detrmineAttribute()
-        if token== "this":
-    
-    return 
+        #if token== "this":
+    return effect
 
 @register
 @useLog("alternativeCosts")

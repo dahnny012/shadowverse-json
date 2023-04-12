@@ -57,9 +57,9 @@
                             "type": "Put",
                             "effects": [
                                 {
-                                    "quantifer": "a",
+                                    "quantifier": "a",
                                     "card_name": "Twilight Blade",
-                                    "type": "NamedCard"
+                                    "card_type": "NamedCard"
                                 }
                             ],
                             "destination": "hand"
@@ -79,6 +79,20 @@
     "evolveEffectJson": [
         {
             "type": "Bane"
+        },
+        {
+            "effects": [
+                {
+                    "type": "Summon",
+                    "effects": [
+                        {
+                            "quantifier": "a",
+                            "card_name": "Support Cannon",
+                            "card_type": "NamedCard"
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "_evolveEffectTokens": [

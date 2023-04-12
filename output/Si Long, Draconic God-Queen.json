@@ -53,7 +53,7 @@
                         "targets": "leader",
                         "times": 1,
                         "and": {},
-                        "quantifer": "your",
+                        "quantifier": "your",
                         "user": "leader"
                     }
                 },
@@ -61,9 +61,9 @@
                     "type": "Put",
                     "effects": [
                         {
-                            "quantifer": "a",
+                            "quantifier": "a",
                             "card_name": "Tidal Tyranny",
-                            "type": "NamedCard"
+                            "card_type": "NamedCard"
                         }
                     ],
                     "destination": "hand"
@@ -79,7 +79,7 @@
                     "type": "Gain",
                     "effects": [
                         {
-                            "type": "An empty play point"
+                            "skill": "An empty play point"
                         }
                     ]
                 }

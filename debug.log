@@ -23,10 +23,10 @@
 [INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
 [INFO] [base.evolveEffect.subeffect.Deal.changeHealth] - Damage tokens after target checks: ['follower', '.', 'X', 'equals', 'this', "follower's", 'attack', '.']
 [WARNING] [base.evolveEffect.subeffect.Deal.changeHealth] - Encountered unexpected
-[WARNING] [base.evolveEffect.subeffect.Deal.changeHealth] - {'amount': 'X', 'targets': 'enemy', 'times': 1, 'and': {}, 'quantifer': 'an', 'user': 'enemy'}
+[WARNING] [base.evolveEffect.subeffect.Deal.changeHealth] - {'amount': 'X', 'targets': 'enemy', 'times': 1, 'and': {}, 'quantifier': 'an', 'user': 'enemy'}
 [WARNING] [base.evolveEffect.subeffect.Deal.changeHealth] - ['follower', '.', 'X', 'equals', 'this', "follower's", 'attack', '.']
 [INFO] [base.evolveEffect.subeffect.Deal.changeHealth] - Leaving changeHealth with Tokens ['follower', '.', 'X', 'equals', 'this', "follower's", 'attack', '.']
-[INFO] [base.evolveEffect.subeffect] - Found {'type': 'Deal', 'effects': {'amount': 'X', 'targets': 'enemy', 'times': 1, 'and': {}, 'quantifer': 'an', 'user': 'enemy'}}
+[INFO] [base.evolveEffect.subeffect] - Found {'type': 'Deal', 'effects': {'amount': 'X', 'targets': 'enemy', 'times': 1, 'and': {}, 'quantifier': 'an', 'user': 'enemy'}}
 [INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
 [INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
 [INFO] [base.evolveEffect.subeffect.variableEquals] - Found variable definition ['X', 'equals', 'this', "follower's", 'attack', '.']
@@ -71,7 +71,7 @@
                     "targets": "enemy",
                     "times": 1,
                     "and": {},
-                    "quantifer": "an",
+                    "quantifier": "an",
                     "user": "enemy"
                 }
             },
@@ -228,29 +228,15 @@
 [INFO] [base.subeffect.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.subeffect.Put] - Entered Put Token ['Put', 'a', '[b]', 'Draconic', 'Creation', '[/b]', 'into', 'your', 'hand', '.']
 [INFO] [base.subeffect.subeffect.Put.parseCards] - Entered with tokens: ['a', '[b]', 'Draconic', 'Creation', '[/b]', 'into', 'your', 'hand', '.']
-[INFO] [base.subeffect.subeffect] - Found {'type': 'Put', 'effects': [{'quantifer': 'a', 'card_name': 'Draconic Creation', 'type': 'NamedCard'}], 'destination': 'hand'}
+[INFO] [base.subeffect.subeffect] - Found {'type': 'Put', 'effects': [{'quantifier': 'a', 'card_name': 'Draconic Creation', 'card_type': 'NamedCard'}], 'destination': 'hand'}
 [INFO] [base.subeffect.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'Discard', 'effects': {'cardsToDiscard': 'a', 'effects': [{'type': 'Put', 'effects': [{'quantifer': 'a', 'card_name': 'Draconic Creation', 'type': 'NamedCard'}], 'destination': 'hand'}]}}
+[INFO] [base.subeffect] - Found {'type': 'Discard', 'effects': {'cardsToDiscard': 'a', 'effects': [{'type': 'Put', 'effects': [{'quantifier': 'a', 'card_name': 'Draconic Creation', 'card_type': 'NamedCard'}], 'destination': 'hand'}]}}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Fanfare', '[/b]', ':', 'Discard', 'a', 'card', 'from', 'your', 'hand', '.', 'Put', 'a', '[b]', 'Draconic', 'Creation', '[/b]', 'into', 'your', 'hand', '.']
 [INFO] [base.evolveEffect.subeffect] - Parsing subeffects with Tokens [':', 'Subtract', '2', 'from', 'the', 'cost', 'of', 'a', 'random', '[b]', 'Draconic', 'Creation', '[/b]', 'in', 'your', 'hand', '.']
 [INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
 [INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
-[INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
+[INFO] [base.evolveEffect.subeffect] - Found {'type': 'Subtract', 'amount': '2', 'attribute': 'cost'}
 [INFO] [base.evolveEffect.subeffect] - Exiting with tokens: []
 [INFO] [base.evolveEffect] - Finished iteration ['Evolve', '[/b]', ':', 'Subtract', '2', 'from', 'the', 'cost', 'of', 'a', 'random', '[b]', 'Draconic', 'Creation', '[/b]', 'in', 'your', 'hand', '.']
 [INFO] [base.evolveEffect] - [
@@ -266,9 +252,9 @@
                             "type": "Put",
                             "effects": [
                                 {
-                                    "quantifer": "a",
+                                    "quantifier": "a",
                                     "card_name": "Draconic Creation",
-                                    "type": "NamedCard"
+                                    "card_type": "NamedCard"
                                 }
                             ],
                             "destination": "hand"
@@ -281,7 +267,13 @@
 ]
 [INFO] [base.evolveEffect] - [
     {
-        "effects": []
+        "effects": [
+            {
+                "type": "Subtract",
+                "amount": "2",
+                "attribute": "cost"
+            }
+        ]
     }
 ]
 [INFO] [base] - Dragon Oracle
@@ -292,7 +284,7 @@
 [INFO] [base.subeffect.Gain.parseGain] - Starting with Token an
 [INFO] [base.subeffect.Gain.parseGain] - Starting with Token orb
 [WARNING] [base.subeffect.Gain.parseGain] - Found Unknown ['orb', '.', '\n']
-[INFO] [base.subeffect] - Found {'type': 'Gain', 'effects': [{'type': 'An empty play point'}]}
+[INFO] [base.subeffect] - Found {'type': 'Gain', 'effects': [{'skill': 'An empty play point'}]}
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect] - Exiting with tokens: []
@@ -318,7 +310,7 @@
             "type": "Gain",
             "effects": [
                 {
-                    "type": "An empty play point"
+                    "skill": "An empty play point"
                 }
             ]
         }
@@ -373,16 +365,16 @@
 [INFO] [base.subeffect.then.subeffect.If.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.then.subeffect.If.subeffect.Deal.changeHealth] - Damage tokens after target checks: ['enemy', 'follower']
 [WARNING] [base.subeffect.then.subeffect.If.subeffect.Deal.changeHealth] - Encountered unexpected
-[WARNING] [base.subeffect.then.subeffect.If.subeffect.Deal.changeHealth] - {'amount': '3', 'targets': 'random', 'times': 1, 'and': {}, 'quantifer': 'a', 'user': 'random'}
+[WARNING] [base.subeffect.then.subeffect.If.subeffect.Deal.changeHealth] - {'amount': '3', 'targets': 'random', 'times': 1, 'and': {}, 'quantifier': 'a', 'user': 'random'}
 [WARNING] [base.subeffect.then.subeffect.If.subeffect.Deal.changeHealth] - ['enemy', 'follower']
 [INFO] [base.subeffect.then.subeffect.If.subeffect.Deal.changeHealth] - Leaving changeHealth with Tokens ['enemy', 'follower']
-[INFO] [base.subeffect.then.subeffect.If.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '3', 'targets': 'random', 'times': 1, 'and': {}, 'quantifer': 'a', 'user': 'random'}}
+[INFO] [base.subeffect.then.subeffect.If.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '3', 'targets': 'random', 'times': 1, 'and': {}, 'quantifier': 'a', 'user': 'random'}}
 [INFO] [base.subeffect.then.subeffect.If.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.then.subeffect.If.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect.then.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Overflow', 'stateEqualTo': True}], 'then': [{'type': 'Deal', 'effects': {'amount': '3', 'targets': 'random', 'times': 1, 'and': {}, 'quantifer': 'a', 'user': 'random'}}]}}
+[INFO] [base.subeffect.then.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Overflow', 'stateEqualTo': True}], 'then': [{'type': 'Deal', 'effects': {'amount': '3', 'targets': 'random', 'times': 1, 'and': {}, 'quantifier': 'a', 'user': 'random'}}]}}
 [INFO] [base.subeffect.then.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.then.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'Then', 'effects': [{'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Overflow', 'stateEqualTo': True}], 'then': [{'type': 'Deal', 'effects': {'amount': '3', 'targets': 'random', 'times': 1, 'and': {}, 'quantifer': 'a', 'user': 'random'}}]}}]}
+[INFO] [base.subeffect] - Found {'type': 'Then', 'effects': [{'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Overflow', 'stateEqualTo': True}], 'then': [{'type': 'Deal', 'effects': {'amount': '3', 'targets': 'random', 'times': 1, 'and': {}, 'quantifier': 'a', 'user': 'random'}}]}}]}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration []
 [INFO] [base.subeffect] - Parsing subeffects with Tokens ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '\n']
@@ -419,10 +411,10 @@
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.Deal.changeHealth] - Damage tokens after target checks: ['enemy', 'follower', '.']
 [WARNING] [base.subeffect.Deal.changeHealth] - Encountered unexpected
-[WARNING] [base.subeffect.Deal.changeHealth] - {'amount': '3', 'targets': 'random', 'times': 1, 'and': {}, 'quantifer': 'a', 'user': 'random'}
+[WARNING] [base.subeffect.Deal.changeHealth] - {'amount': '3', 'targets': 'random', 'times': 1, 'and': {}, 'quantifier': 'a', 'user': 'random'}
 [WARNING] [base.subeffect.Deal.changeHealth] - ['enemy', 'follower', '.']
 [INFO] [base.subeffect.Deal.changeHealth] - Leaving changeHealth with Tokens ['enemy', 'follower', '.']
-[INFO] [base.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '3', 'targets': 'random', 'times': 1, 'and': {}, 'quantifer': 'a', 'user': 'random'}}
+[INFO] [base.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '3', 'targets': 'random', 'times': 1, 'and': {}, 'quantifier': 'a', 'user': 'random'}}
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect] - Exiting with tokens: []
@@ -466,7 +458,7 @@
                                     "targets": "random",
                                     "times": 1,
                                     "and": {},
-                                    "quantifer": "a",
+                                    "quantifier": "a",
                                     "user": "random"
                                 }
                             }
@@ -500,7 +492,7 @@
                 "targets": "random",
                 "times": 1,
                 "and": {},
-                "quantifer": "a",
+                "quantifier": "a",
                 "user": "random"
             }
         }
@@ -527,14 +519,14 @@
 [INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.If.subeffect.Restore.changeHealth] - Damage tokens after target checks: ['and', 'recover', '2', 'play', 'points']
 [WARNING] [base.subeffect.If.subeffect.Restore.changeHealth] - Encountered unexpected
-[WARNING] [base.subeffect.If.subeffect.Restore.changeHealth] - {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}
+[WARNING] [base.subeffect.If.subeffect.Restore.changeHealth] - {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifier': 'your', 'user': 'leader'}
 [WARNING] [base.subeffect.If.subeffect.Restore.changeHealth] - ['and', 'recover', '2', 'play', 'points']
 [INFO] [base.subeffect.If.subeffect.Restore.changeHealth] - Leaving changeHealth with Tokens ['and', 'recover', '2', 'play', 'points']
-[INFO] [base.subeffect.If.subeffect] - Found {'type': 'Restore', 'effects': {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}
+[INFO] [base.subeffect.If.subeffect] - Found {'type': 'Restore', 'effects': {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifier': 'your', 'user': 'leader'}}
 [INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.If.subeffect] - Found {'type': 'Recover', 'effect': {'amount': '2', 'resource': 'play'}}
 [INFO] [base.subeffect.If.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckEvolutionHigherThanOpponent'}], 'then': [{'type': 'Restore', 'effects': {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}, {'type': 'Recover', 'effect': {'amount': '2', 'resource': 'play'}}]}}
+[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckEvolutionHigherThanOpponent'}], 'then': [{'type': 'Restore', 'effects': {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifier': 'your', 'user': 'leader'}}, {'type': 'Recover', 'effect': {'amount': '2', 'resource': 'play'}}]}}
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect] - Found {'type': 'Parens', 'condition': None}
 [INFO] [base.subeffect] - Starting new loop of effect parsing
@@ -577,7 +569,7 @@
                             "targets": "leader",
                             "times": 1,
                             "and": {},
-                            "quantifer": "your",
+                            "quantifier": "your",
                             "user": "leader"
                         }
                     },
@@ -612,14 +604,14 @@
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.Restore.changeHealth] - Damage tokens after target checks: ['.', 'Put', 'a', '[b]', 'Tidal', 'Tyranny', '[/b]', 'into', 'your', 'hand', '.']
 [WARNING] [base.subeffect.Restore.changeHealth] - Encountered unexpected
-[WARNING] [base.subeffect.Restore.changeHealth] - {'amount': '3', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}
+[WARNING] [base.subeffect.Restore.changeHealth] - {'amount': '3', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifier': 'your', 'user': 'leader'}
 [WARNING] [base.subeffect.Restore.changeHealth] - ['.', 'Put', 'a', '[b]', 'Tidal', 'Tyranny', '[/b]', 'into', 'your', 'hand', '.']
 [INFO] [base.subeffect.Restore.changeHealth] - Leaving changeHealth with Tokens ['.', 'Put', 'a', '[b]', 'Tidal', 'Tyranny', '[/b]', 'into', 'your', 'hand', '.']
-[INFO] [base.subeffect] - Found {'type': 'Restore', 'effects': {'amount': '3', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}
+[INFO] [base.subeffect] - Found {'type': 'Restore', 'effects': {'amount': '3', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifier': 'your', 'user': 'leader'}}
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.Put] - Entered Put Token ['Put', 'a', '[b]', 'Tidal', 'Tyranny', '[/b]', 'into', 'your', 'hand', '.']
 [INFO] [base.subeffect.Put.parseCards] - Entered with tokens: ['a', '[b]', 'Tidal', 'Tyranny', '[/b]', 'into', 'your', 'hand', '.']
-[INFO] [base.subeffect] - Found {'type': 'Put', 'effects': [{'quantifer': 'a', 'card_name': 'Tidal Tyranny', 'type': 'NamedCard'}], 'destination': 'hand'}
+[INFO] [base.subeffect] - Found {'type': 'Put', 'effects': [{'quantifier': 'a', 'card_name': 'Tidal Tyranny', 'card_type': 'NamedCard'}], 'destination': 'hand'}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Fanfare', '[/b]', ':', 'Restore', '3', 'defense', 'to', 'your', 'leader', '.', 'Put', 'a', '[b]', 'Tidal', 'Tyranny', '[/b]', 'into', 'your', 'hand', '.']
 [INFO] [base.evolveEffect.subeffect] - Parsing subeffects with Tokens [':', 'Gain', 'an', 'empty', 'play', 'point', 'orb', '.']
@@ -629,7 +621,7 @@
 [INFO] [base.evolveEffect.subeffect.Gain.parseGain] - Starting with Token an
 [INFO] [base.evolveEffect.subeffect.Gain.parseGain] - Starting with Token orb
 [WARNING] [base.evolveEffect.subeffect.Gain.parseGain] - Found Unknown ['orb', '.']
-[INFO] [base.evolveEffect.subeffect] - Found {'type': 'Gain', 'effects': [{'type': 'An empty play point'}]}
+[INFO] [base.evolveEffect.subeffect] - Found {'type': 'Gain', 'effects': [{'skill': 'An empty play point'}]}
 [INFO] [base.evolveEffect.subeffect] - Starting new loop of effect parsing
 [INFO] [base.evolveEffect.subeffect] - Exiting with tokens: []
 [INFO] [base.evolveEffect] - Finished iteration ['Evolve', '[/b]', ':', 'Gain', 'an', 'empty', 'play', 'point', 'orb', '.']
@@ -644,7 +636,7 @@
                     "targets": "leader",
                     "times": 1,
                     "and": {},
-                    "quantifer": "your",
+                    "quantifier": "your",
                     "user": "leader"
                 }
             },
@@ -652,9 +644,9 @@
                 "type": "Put",
                 "effects": [
                     {
-                        "quantifer": "a",
+                        "quantifier": "a",
                         "card_name": "Tidal Tyranny",
-                        "type": "NamedCard"
+                        "card_type": "NamedCard"
                     }
                 ],
                 "destination": "hand"
@@ -669,7 +661,7 @@
                 "type": "Gain",
                 "effects": [
                     {
-                        "type": "An empty play point"
+                        "skill": "An empty play point"
                     }
                 ]
             }
@@ -684,7 +676,7 @@
 [INFO] [base.subeffect.Gain.parseGain] - Starting with Token an
 [INFO] [base.subeffect.Gain.parseGain] - Starting with Token orb
 [WARNING] [base.subeffect.Gain.parseGain] - Found Unknown ['orb', '.', '\n']
-[INFO] [base.subeffect] - Found {'type': 'Gain', 'effects': [{'type': 'An empty play point'}]}
+[INFO] [base.subeffect] - Found {'type': 'Gain', 'effects': [{'skill': 'An empty play point'}]}
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect] - Exiting with tokens: []
@@ -700,15 +692,15 @@
 [INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.If.subeffect.Restore.changeHealth] - Damage tokens after target checks: ['and', 'draw', '2', 'cards']
 [WARNING] [base.subeffect.If.subeffect.Restore.changeHealth] - Encountered unexpected
-[WARNING] [base.subeffect.If.subeffect.Restore.changeHealth] - {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}
+[WARNING] [base.subeffect.If.subeffect.Restore.changeHealth] - {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifier': 'your', 'user': 'leader'}
 [WARNING] [base.subeffect.If.subeffect.Restore.changeHealth] - ['and', 'draw', '2', 'cards']
 [INFO] [base.subeffect.If.subeffect.Restore.changeHealth] - Leaving changeHealth with Tokens ['and', 'draw', '2', 'cards']
-[INFO] [base.subeffect.If.subeffect] - Found {'type': 'Restore', 'effects': {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}
+[INFO] [base.subeffect.If.subeffect] - Found {'type': 'Restore', 'effects': {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifier': 'your', 'user': 'leader'}}
 [INFO] [base.subeffect.If.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.If.subeffect.Draw] - Entering draw with ['draw', '2', 'cards']
 [INFO] [base.subeffect.If.subeffect] - Found {'type': 'draw', 'amount': '2'}
 [INFO] [base.subeffect.If.subeffect] - Exiting with tokens: []
-[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Overflow', 'stateEqualTo': True}], 'then': [{'type': 'Restore', 'effects': {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}, {'type': 'draw', 'amount': '2'}]}}
+[INFO] [base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Overflow', 'stateEqualTo': True}], 'then': [{'type': 'Restore', 'effects': {'amount': '2', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifier': 'your', 'user': 'leader'}}, {'type': 'draw', 'amount': '2'}]}}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration []
 [INFO] [base.evolveEffect] - [
@@ -717,7 +709,7 @@
             "type": "Gain",
             "effects": [
                 {
-                    "type": "An empty play point"
+                    "skill": "An empty play point"
                 }
             ]
         }
@@ -741,7 +733,7 @@
                             "targets": "leader",
                             "times": 1,
                             "and": {},
-                            "quantifer": "your",
+                            "quantifier": "your",
                             "user": "leader"
                         }
                     },
@@ -840,10 +832,10 @@
 [INFO] [base.subeffect] - Found {'type': 'Give', 'effects': [[{'type': 'StatChange', 'operation': '-', 'amount': '5'}, {'type': 'StatChange', 'operation': '-', 'amount': '5'}]], 'quantifier': 'all', 'user': 'enemy', 'target': 'follower'}
 [INFO] [base.subeffect.Restore.changeHealth] - Damage tokens after target checks: ['.', '\n']
 [WARNING] [base.subeffect.Restore.changeHealth] - Encountered unexpected
-[WARNING] [base.subeffect.Restore.changeHealth] - {'amount': '5', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}
+[WARNING] [base.subeffect.Restore.changeHealth] - {'amount': '5', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifier': 'your', 'user': 'leader'}
 [WARNING] [base.subeffect.Restore.changeHealth] - ['.', '\n']
 [INFO] [base.subeffect.Restore.changeHealth] - Leaving changeHealth with Tokens ['.', '\n']
-[INFO] [base.subeffect] - Found {'type': 'Restore', 'effects': {'amount': '5', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifer': 'your', 'user': 'leader'}}
+[INFO] [base.subeffect] - Found {'type': 'Restore', 'effects': {'amount': '5', 'targets': 'leader', 'times': 1, 'and': {}, 'quantifier': 'your', 'user': 'leader'}}
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Fanfare', '[/b]', ':', 'Give', '-', '5', '/', '-', '5', 'to', 'all', 'enemy', 'followers', '.', 'Restore', '5', 'defense', 'to', 'your', 'leader', '.', '\n']
@@ -893,7 +885,7 @@
                     "targets": "leader",
                     "times": 1,
                     "and": {},
-                    "quantifer": "your",
+                    "quantifier": "your",
                     "user": "leader"
                 }
             }

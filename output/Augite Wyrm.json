@@ -63,7 +63,7 @@
                                         {
                                             "type": "CheckActiveState",
                                             "state": "Overflow",
-                                            "stateEqualTo": false
+                                            "stateEqualTo": true
                                         }
                                     ],
                                     "then": [
@@ -89,7 +89,7 @@
                         "targets": "enemies",
                         "times": 1,
                         "and": {},
-                        "quantifer": "all",
+                        "quantifier": "all",
                         "user": "enemies"
                     }
                 }

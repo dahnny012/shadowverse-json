@@ -70,9 +70,29 @@
                         "type": "Summon",
                         "effects": [
                             {
-                                "quantifer": "a",
+                                "quantifier": "a",
                                 "card_name": "Puppet",
-                                "type": "NamedCard"
+                                "card_type": "NamedCard",
+                                "effects": [
+                                    {
+                                        "type": "Give",
+                                        "effects": [
+                                            [
+                                                {
+                                                    "type": "StatChange",
+                                                    "operation": "+",
+                                                    "amount": "1"
+                                                },
+                                                {
+                                                    "type": "StatChange",
+                                                    "operation": "+",
+                                                    "amount": "0"
+                                                }
+                                            ]
+                                        ],
+                                        "target": "parent"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -96,9 +116,9 @@
                                 "type": "Summon",
                                 "effects": [
                                     {
-                                        "quantifer": "a",
+                                        "quantifier": "a",
                                         "card_name": "Lloyd , Orchis's Puppet",
-                                        "type": "NamedCard"
+                                        "card_type": "NamedCard"
                                     }
                                 ]
                             }
@@ -140,7 +160,7 @@
                         "effects": [
                             [
                                 {
-                                    "type": "Storm"
+                                    "skill": "Storm"
                                 }
                             ]
                         ],

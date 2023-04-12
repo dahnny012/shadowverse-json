@@ -1,0 +1,81 @@
+{
+    "card_id": 100211030,
+    "foil_card_id": 100211031,
+    "card_set_id": 10000,
+    "card_name": "Ascetic Knight",
+    "card_name_ruby": "",
+    "is_foil": 0,
+    "char_type": 1,
+    "clan": 2,
+    "tribe_name": "Officer",
+    "skill": "summon_token",
+    "skill_condition": "character=me",
+    "skill_target": "none",
+    "skill_option": "summon_token=900211020",
+    "skill_preprocess": "none",
+    "skill_disc": "Fanfare: Summon a Heavy Knight.",
+    "org_skill_disc": "[b]Fanfare[/b][b]:[/b] Summon a [b]Heavy Knight[/b].",
+    "evo_skill_disc": "",
+    "org_evo_skill_disc": "",
+    "cost": 3,
+    "atk": 1,
+    "life": 2,
+    "evo_atk": 3,
+    "evo_life": 4,
+    "rarity": 1,
+    "get_red_ether": 0,
+    "use_red_ether": 0,
+    "description": "Think nothing of my swordsmanship. Pay no heed to my armor. But malign those whom I call friends at your peril.",
+    "evo_description": "Safety is found in solidarity, and from it is born unparalleled power. Yes, comradeship trumps all, and I am living proof of it.",
+    "cv": "",
+    "copyright": null,
+    "base_card_id": 100211030,
+    "normal_card_id": 100211030,
+    "format_type": 1,
+    "restricted_count": 3,
+    "restricted_count_co_main": 3,
+    "restricted_count_co_sub": 3,
+    "id_": 100211030,
+    "name_": "Ascetic Knight",
+    "rotation_": true,
+    "baseEffect_": "[b]Fanfare[/b][b]:[/b] Summon a [b]Heavy Knight[/b].",
+    "evoEffect_": "",
+    "type_": "Follower",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Fanfare",
+            "effects": [
+                {
+                    "type": "Summon",
+                    "effects": [
+                        {
+                            "quantifier": "a",
+                            "card_name": "Heavy Knight",
+                            "card_type": "NamedCard"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [],
+    "_evolveEffectTokens": [],
+    "_effectTokens": [
+        [
+            "Fanfare",
+            "[/b]",
+            "[b]",
+            ":",
+            "[/b]",
+            "Summon",
+            "a",
+            "[b]",
+            "Heavy",
+            "Knight",
+            "[/b]",
+            "."
+        ]
+    ]
+}

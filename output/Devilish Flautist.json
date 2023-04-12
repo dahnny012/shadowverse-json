@@ -59,7 +59,7 @@
                         "targets": "leader",
                         "times": 1,
                         "and": {},
-                        "quantifer": "your",
+                        "quantifier": "your",
                         "user": "leader"
                     }
                 }
@@ -75,7 +75,7 @@
                             {
                                 "type": "CheckActiveState",
                                 "state": "Wrath",
-                                "stateEqualTo": false
+                                "stateEqualTo": true
                             }
                         ],
                         "then": [

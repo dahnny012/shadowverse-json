@@ -81,7 +81,7 @@
                                         "targets": "random",
                                         "times": 1,
                                         "and": {},
-                                        "quantifer": "a",
+                                        "quantifier": "a",
                                         "user": "random"
                                     }
                                 }
@@ -115,7 +115,7 @@
                     "targets": "random",
                     "times": 1,
                     "and": {},
-                    "quantifer": "a",
+                    "quantifier": "a",
                     "user": "random"
                 }
             }

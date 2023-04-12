@@ -98,6 +98,63 @@
     "evolveEffectJson": [
         {
             "type": "Bane"
+        },
+        {
+            "effects": [
+                {
+                    "type": "If",
+                    "effects": {
+                        "conditions": [],
+                        "then": [
+                            {
+                                "type": "Give",
+                                "effects": [
+                                    {
+                                        "type": "LeaderEffect",
+                                        "effects": [
+                                            {
+                                                "type": "Whenever",
+                                                "effects": {
+                                                    "conditions": [],
+                                                    "then": [
+                                                        {
+                                                            "type": "Recover",
+                                                            "effect": {
+                                                                "amount": "X",
+                                                                "resource": "play"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "user": "self"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "VariableDefinition",
+                    "variable": "X",
+                    "value": [
+                        "equals",
+                        "the",
+                        "[b]",
+                        "Enhance",
+                        "[/b]",
+                        "cost",
+                        "minus",
+                        "2",
+                        "."
+                    ],
+                    "limit": {
+                        "type": "Parens",
+                        "condition": null
+                    }
+                }
+            ]
         }
     ],
     "_evolveEffectTokens": [

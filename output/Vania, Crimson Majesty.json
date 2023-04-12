@@ -50,9 +50,9 @@
                     "type": "Put",
                     "effects": [
                         {
-                            "quantifer": "a",
+                            "quantifier": "a",
                             "card_name": "Gift for Bloodkin",
-                            "type": "NamedCard"
+                            "card_type": "NamedCard"
                         }
                     ],
                     "destination": "hand"
@@ -83,9 +83,9 @@
                                         "type": "Put",
                                         "effects": [
                                             {
-                                                "quantifer": "a",
+                                                "quantifier": "a",
                                                 "card_name": "Summon Bloodkin",
-                                                "type": "NamedCard"
+                                                "card_type": "NamedCard"
                                             }
                                         ],
                                         "destination": "hand"
@@ -94,7 +94,7 @@
                                         "type": "Gain",
                                         "effects": [
                                             {
-                                                "type": "0 EP Evolve"
+                                                "skill": "0 EP Evolve"
                                             }
                                         ]
                                     }
