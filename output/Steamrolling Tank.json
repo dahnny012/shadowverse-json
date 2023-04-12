@@ -53,11 +53,10 @@
                     "type": "Deal",
                     "effects": {
                         "amount": "1",
-                        "targets": "leader",
-                        "times": 1,
-                        "and": {},
-                        "quantifier": "your",
-                        "user": "leader"
+                        "owner": "self",
+                        "targets": "single",
+                        "entity": "leader",
+                        "randomCount": ""
                     }
                 }
             ]
@@ -84,11 +83,10 @@
                                 "type": "Restore",
                                 "effects": {
                                     "amount": "1",
-                                    "targets": "leader",
-                                    "times": 1,
-                                    "and": {},
-                                    "quantifier": "your",
-                                    "user": "leader"
+                                    "owner": "self",
+                                    "targets": "single",
+                                    "entity": "leader",
+                                    "randomCount": ""
                                 },
                                 "limit": {
                                     "type": "Parens",

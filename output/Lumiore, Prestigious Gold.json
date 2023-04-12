@@ -98,14 +98,22 @@
             ]
         },
         {
-            "type": "During Your Turn",
+            "type": "During",
             "effect": [
                 {
                     "type": "Whenever",
                     "effects": {
                         "conditions": [
                             {
-                                "type": "DiscardCardCondition"
+                                "type": "WheneverAction",
+                                "state": [
+                                    "discard",
+                                    "cards",
+                                    "from",
+                                    "your",
+                                    "hand",
+                                    ","
+                                ]
                             }
                         ],
                         "then": [
@@ -113,11 +121,10 @@
                                 "type": "Deal",
                                 "effects": {
                                     "amount": "X",
-                                    "targets": "enemies",
-                                    "times": 1,
-                                    "and": {},
-                                    "quantifier": "all",
-                                    "user": "enemies"
+                                    "owner": "enemy",
+                                    "targets": "all",
+                                    "entity": "leader_and_followers",
+                                    "randomCount": ""
                                 }
                             }
                         ]

@@ -539,19 +539,25 @@ def parseCondition(tokens):
 @useLog("changeHealthV2")
 def changeHealthV2(tokens, type=None):
     stopQuantifier = {
-        "leader", "follower"
+        "leader", "follower", "allies", "enemies"
+    }
+    allQuantifiers = {
+        "allies", "enemies"
+    }
+    followerQuantifier = {
+        "follower", "followers"
     }
     allied = {
-        "allied", "allies"
+        "allied", "allies", "your"
     }
     enemy = {
         "enemy", "enemies"
     }
     effect = {
         'amount': 0,
-        'character': '',
+        'owner': '',
         'targets': 'single',
-        'targetType': '',
+        'entity': '',
         'randomCount':''
     }
     if(tokens[0] == "damage"):
@@ -567,13 +573,18 @@ def changeHealthV2(tokens, type=None):
         if(token.isnumeric() and tokens[0] == random):
             effect['randomCount'] = token
         if(token == "all"):
-            targets = "all"
+            effect['targets'] = "all"
         if(token in enemy):
-            effect['character'] = "enemy"
+            effect['owner'] = "enemy"
         if(token in allied):
-            effect['character'] = 'self'
+            effect['owner'] = 'self'
         if(token in stopQuantifier):
-            effect['targetType'] = 'follower'
+            if(token == "leader"):
+                effect['entity'] = "leader"
+            if(token in followerQuantifier):
+                effect['entity'] = "follower"
+            if(token in allQuantifiers):
+                effect['entity'] = 'leader_and_followers'
             break
     return effect
 

@@ -78,11 +78,10 @@
                     "type": "Deal",
                     "effects": {
                         "amount": "X",
-                        "targets": "enemy",
-                        "times": 1,
-                        "and": {},
-                        "quantifier": "an",
-                        "user": "enemy"
+                        "owner": "enemy",
+                        "targets": "single",
+                        "entity": "follower",
+                        "randomCount": ""
                     }
                 },
                 {

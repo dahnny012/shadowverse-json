@@ -63,11 +63,10 @@
                             "type": "Restore",
                             "effects": {
                                 "amount": "2",
-                                "targets": "leader",
-                                "times": 1,
-                                "and": {},
-                                "quantifier": "your",
-                                "user": "leader"
+                                "owner": "self",
+                                "targets": "single",
+                                "entity": "leader",
+                                "randomCount": ""
                             }
                         },
                         {

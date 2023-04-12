@@ -81,39 +81,11 @@
                     "type": "Deal",
                     "effects": {
                         "amount": "X",
-                        "targets": "followers",
-                        "times": 1,
-                        "and": {},
-                        "quantifier": "all",
-                        "exceptions": "other"
+                        "owner": "self",
+                        "targets": "all",
+                        "entity": "leader",
+                        "randomCount": ""
                     }
-                },
-                {
-                    "type": "VariableDefinition",
-                    "variable": "X",
-                    "value": [
-                        "equals",
-                        "your",
-                        "leader's",
-                        "defense",
-                        "."
-                    ]
-                },
-                {
-                    "type": "Then",
-                    "effects": [
-                        {
-                            "type": "Deal",
-                            "effects": {
-                                "amount": ".",
-                                "targets": "leader",
-                                "times": 1,
-                                "and": {},
-                                "quantifier": "your",
-                                "user": "leader"
-                            }
-                        }
-                    ]
                 }
             ]
         }

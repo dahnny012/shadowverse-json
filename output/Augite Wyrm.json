@@ -86,11 +86,10 @@
                     "type": "Deal",
                     "effects": {
                         "amount": "6",
-                        "targets": "enemies",
-                        "times": 1,
-                        "and": {},
-                        "quantifier": "all",
-                        "user": "enemies"
+                        "owner": "enemy",
+                        "targets": "all",
+                        "entity": "leader_and_followers",
+                        "randomCount": ""
                     }
                 }
             ]

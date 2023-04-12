@@ -78,11 +78,10 @@
                                     "type": "Deal",
                                     "effects": {
                                         "amount": "3",
-                                        "targets": "random",
-                                        "times": 1,
-                                        "and": {},
-                                        "quantifier": "a",
-                                        "user": "random"
+                                        "owner": "enemy",
+                                        "targets": "single",
+                                        "entity": "follower",
+                                        "randomCount": ""
                                     }
                                 }
                             ]
@@ -112,11 +111,10 @@
                 "type": "Deal",
                 "effects": {
                     "amount": "3",
-                    "targets": "random",
-                    "times": 1,
-                    "and": {},
-                    "quantifier": "a",
-                    "user": "random"
+                    "owner": "enemy",
+                    "targets": "single",
+                    "entity": "follower",
+                    "randomCount": ""
                 }
             }
         ]
