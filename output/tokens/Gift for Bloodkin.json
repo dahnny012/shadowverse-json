@@ -1,0 +1,78 @@
+{
+    "card_id": 108634010,
+    "foil_card_id": 108634011,
+    "card_set_id": 10008,
+    "card_name": "Gift for Bloodkin",
+    "card_name_ruby": "",
+    "is_foil": 0,
+    "char_type": 4,
+    "clan": 6,
+    "tribe_name": "-",
+    "skill": "damage,summon_token,summon_token",
+    "skill_condition": "character=me&card_type=spell,character=me&card_type=spell,character=me&card_type=spell",
+    "skill_target": "character=both&target=inplay&card_type=class,none,none",
+    "skill_option": "damage=1,summon_token=900611010,summon_token=900611010&summon_side=op",
+    "skill_preprocess": "none,none,none",
+    "skill_disc": "Deal 1 damage to both leaders.<br>Summon a Forest Bat for both leaders.",
+    "org_skill_disc": "Deal 1 damage to both leaders.<br>Summon a [b]Forest Bat[/b] for both leaders.",
+    "evo_skill_disc": "",
+    "org_evo_skill_disc": "",
+    "cost": 0,
+    "atk": 0,
+    "life": 0,
+    "evo_atk": 0,
+    "evo_life": 0,
+    "rarity": 3,
+    "get_red_ether": 250,
+    "use_red_ether": 800,
+    "description": "Hey, can I make you my bloodkin too? \u2014Vania, Vampire Princess",
+    "evo_description": "",
+    "cv": "",
+    "copyright": null,
+    "base_card_id": 108634010,
+    "normal_card_id": 108634010,
+    "format_type": 0,
+    "restricted_count": 3,
+    "restricted_count_co_main": 3,
+    "restricted_count_co_sub": 3,
+    "id_": 108634010,
+    "name_": "Gift for Bloodkin",
+    "rotation_": false,
+    "baseEffect_": "Deal 1 damage to both leaders.\nSummon a [b]Forest Bat[/b] for both leaders.",
+    "evoEffect_": "",
+    "type_": "Spell",
+    "effectTokens": [],
+    "effectJson": [
+        [
+            {
+                "type": "Deal",
+                "effects": {
+                    "amount": "1",
+                    "owner": "",
+                    "targets": "all",
+                    "entity": "leader",
+                    "randomCount": ""
+                }
+            }
+        ],
+        [
+            {
+                "type": "Summon",
+                "effects": [
+                    {
+                        "quantifier": "a",
+                        "card_name": "Forest Bat",
+                        "card_type": "NamedCard"
+                    }
+                ]
+            }
+        ]
+    ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [],
+    "_evolveEffectTokens": [],
+    "_effectTokens": [
+        [],
+        []
+    ]
+}

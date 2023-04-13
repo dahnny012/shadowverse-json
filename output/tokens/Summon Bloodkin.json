@@ -1,0 +1,65 @@
+{
+    "card_id": 101614020,
+    "foil_card_id": 101614021,
+    "card_set_id": 10001,
+    "card_name": "Summon Bloodkin",
+    "card_name_ruby": "",
+    "is_foil": 0,
+    "char_type": 4,
+    "clan": 6,
+    "tribe_name": "-",
+    "skill": "summon_token",
+    "skill_condition": "character=me&card_type=spell",
+    "skill_target": "none",
+    "skill_option": "summon_token=900611010:900611010",
+    "skill_preprocess": "none",
+    "skill_disc": "Summon 2 Forest Bats.",
+    "org_skill_disc": "Summon 2 [b]Forest Bats[/b].",
+    "evo_skill_disc": "",
+    "org_evo_skill_disc": "",
+    "cost": 2,
+    "atk": 0,
+    "life": 0,
+    "evo_atk": 0,
+    "evo_life": 0,
+    "rarity": 1,
+    "get_red_ether": 10,
+    "use_red_ether": 50,
+    "description": "She snaps her fingers, and the darkness begins to stir.",
+    "evo_description": "",
+    "cv": "",
+    "copyright": null,
+    "base_card_id": 101614020,
+    "normal_card_id": 101614020,
+    "format_type": 0,
+    "restricted_count": 3,
+    "restricted_count_co_main": 3,
+    "restricted_count_co_sub": 3,
+    "id_": 101614020,
+    "name_": "Summon Bloodkin",
+    "rotation_": false,
+    "baseEffect_": "Summon 2 [b]Forest Bats[/b].",
+    "evoEffect_": "",
+    "type_": "Spell",
+    "effectTokens": [],
+    "effectJson": [
+        [
+            {
+                "type": "Summon",
+                "effects": [
+                    {
+                        "quantifier": "2",
+                        "card_name": "Forest Bats",
+                        "card_type": "NamedCard"
+                    }
+                ]
+            }
+        ]
+    ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [],
+    "_evolveEffectTokens": [],
+    "_effectTokens": [
+        []
+    ]
+}

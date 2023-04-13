@@ -1,0 +1,98 @@
+{
+    "card_id": 900441120,
+    "foil_card_id": 900441121,
+    "card_set_id": 90000,
+    "card_name": "Lilium's Hatchling",
+    "card_name_ruby": "",
+    "is_foil": 0,
+    "char_type": 1,
+    "clan": 4,
+    "tribe_name": "Academic",
+    "skill": "guard,heal",
+    "skill_condition": "character=me,character=me",
+    "skill_target": "character=me,character=me&target=inplay&card_type=class",
+    "skill_option": "none,healing=2",
+    "skill_preprocess": "none,none",
+    "skill_disc": "Ward.<br>Last Words: Restore 2 defense to your leader.",
+    "org_skill_disc": "[b]Ward[/b].<br>[b]Last Words[/b]: Restore 2 defense to your leader.",
+    "evo_skill_disc": "(Same as the unevolved form.)",
+    "org_evo_skill_disc": "(Same as the unevolved form.)",
+    "cost": 0,
+    "atk": 1,
+    "life": 1,
+    "evo_atk": 3,
+    "evo_life": 3,
+    "rarity": 4,
+    "get_red_ether": 0,
+    "use_red_ether": 0,
+    "description": "I think the Princess could use a dragon to guard her chamber. Wouldn't you agree?<br>\u2014Lilium, the Wyrmwitch",
+    "evo_description": "She is my dragon. And now, your new playmate.<br>\u2014Lilium, the Wyrmwitch",
+    "cv": "",
+    "copyright": null,
+    "base_card_id": 900441120,
+    "normal_card_id": 900441120,
+    "format_type": 0,
+    "restricted_count": 3,
+    "restricted_count_co_main": 3,
+    "restricted_count_co_sub": 3,
+    "id_": 900441120,
+    "name_": "Lilium's Hatchling",
+    "rotation_": false,
+    "baseEffect_": "[b]Ward[/b].\n[b]Last Words[/b]: Restore 2 defense to your leader.",
+    "evoEffect_": "(Same as the unevolved form.)",
+    "type_": "Follower",
+    "effectTokens": [],
+    "effectJson": [
+        {
+            "type": "Ward"
+        },
+        {
+            "type": "Last Words",
+            "effects": [
+                {
+                    "type": "Restore",
+                    "effects": {
+                        "amount": "2",
+                        "owner": "self",
+                        "targets": "single",
+                        "entity": "leader",
+                        "randomCount": ""
+                    }
+                }
+            ]
+        }
+    ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [],
+    "_evolveEffectTokens": [
+        "(",
+        "Same",
+        "as",
+        "the",
+        "unevolved",
+        "form",
+        ".",
+        ")"
+    ],
+    "_effectTokens": [
+        [
+            "Ward",
+            "[/b]",
+            ".",
+            "\n"
+        ],
+        [
+            "Last",
+            "Words",
+            "[/b]",
+            ":",
+            "Restore",
+            "2",
+            "defense",
+            "to",
+            "your",
+            "leader",
+            "."
+        ]
+    ]
+}

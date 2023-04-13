@@ -1,0 +1,88 @@
+{
+    "card_id": 900444060,
+    "foil_card_id": 900444061,
+    "card_set_id": 90000,
+    "card_name": "Tidal Tyranny",
+    "card_name_ruby": "",
+    "is_foil": 0,
+    "char_type": 4,
+    "clan": 4,
+    "tribe_name": "Festive",
+    "skill": "damage,consume_ep_modifier",
+    "skill_condition": "character=op&target=inplay&card_type=unit,character=me&awake=true",
+    "skill_target": "character=op&target=inplay&card_type=unit&random_count=1,character=me&target=inplay&card_type=unit&base_card_id=124441010",
+    "skill_option": "damage=5,none",
+    "skill_preprocess": "none,none",
+    "skill_disc": "Deal 5 damage to a random enemy follower.<br>If Overflow is active for you, give all allied Si Long, Draconic God-Queens the ability to evolve for 0 evolution points.",
+    "org_skill_disc": "Deal 5 damage to a random enemy follower.<br>If [b]Overflow[/b] is active for you, give all allied [b]Si Long, Draconic God-Queen[/b][b]s[/b] the ability to evolve for 0 evolution points.",
+    "evo_skill_disc": "",
+    "org_evo_skill_disc": "",
+    "cost": 1,
+    "atk": 0,
+    "life": 0,
+    "evo_atk": 0,
+    "evo_life": 0,
+    "rarity": 4,
+    "get_red_ether": 0,
+    "use_red_ether": 0,
+    "description": "I am a dragon! A god-queen! No one\u2014NO ONE!\u2014tells me what I can or cannot do!",
+    "evo_description": "",
+    "cv": "",
+    "copyright": null,
+    "base_card_id": 900444060,
+    "normal_card_id": 900444060,
+    "format_type": 0,
+    "restricted_count": 3,
+    "restricted_count_co_main": 3,
+    "restricted_count_co_sub": 3,
+    "id_": 900444060,
+    "name_": "Tidal Tyranny",
+    "rotation_": false,
+    "baseEffect_": "Deal 5 damage to a random enemy follower.\nIf [b]Overflow[/b] is active for you, give all allied [b]Si Long, Draconic God-Queen[/b][b]s[/b] the ability to evolve for 0 evolution points.",
+    "evoEffect_": "",
+    "type_": "Spell",
+    "effectTokens": [],
+    "effectJson": [
+        [
+            {
+                "type": "Deal",
+                "effects": {
+                    "amount": "5",
+                    "owner": "enemy",
+                    "targets": "single",
+                    "entity": "follower",
+                    "randomCount": ""
+                }
+            }
+        ],
+        [
+            {
+                "type": "If",
+                "effects": {
+                    "conditions": [
+                        {
+                            "type": "CheckActiveState",
+                            "state": "Overflow",
+                            "stateEqualTo": true
+                        }
+                    ],
+                    "then": [
+                        {
+                            "type": "Give",
+                            "effects": [
+                                []
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [],
+    "_evolveEffectTokens": [],
+    "_effectTokens": [
+        [],
+        []
+    ]
+}

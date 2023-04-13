@@ -1,0 +1,108 @@
+{
+    "card_id": 126614010,
+    "foil_card_id": 126614011,
+    "card_set_id": 10026,
+    "card_name": "Infernal Orchestration",
+    "card_name_ruby": "",
+    "is_foil": 0,
+    "char_type": 4,
+    "clan": 6,
+    "tribe_name": "-",
+    "skill": "powerup,rush,damage,draw",
+    "skill_condition": "character=me,character=me,character=me&wrath=false,character=me&wrath=true",
+    "skill_target": "character=me&target=inplay&card_type=unit&select_count=1,character=me&target=last_target,character=me&target=inplay&card_type=class,character=me&target=deck&card_type=all&random_count=1",
+    "skill_option": "add_offense=1&add_life=1,none,damage=1,none",
+    "skill_preprocess": "none,none,none,none",
+    "skill_disc": "Give +1/+1 and Rush to an allied follower. <br>If Wrath is not active for you, deal 1 damage to your leader. Otherwise, draw a card.",
+    "org_skill_disc": "Give +1/+1 and [b]Rush[/b] to an allied follower. <br>If [b]Wrath[/b] is not active for you, deal 1 damage to your leader. Otherwise, draw a card.",
+    "evo_skill_disc": "",
+    "org_evo_skill_disc": "",
+    "cost": 1,
+    "atk": 0,
+    "life": 0,
+    "evo_atk": 0,
+    "evo_life": 0,
+    "rarity": 1,
+    "get_red_ether": 10,
+    "use_red_ether": 50,
+    "description": "Presto! The rhythm accelerates, leaving you choking on the first bar!<br>\u2014Ryoga Jasei",
+    "evo_description": "",
+    "cv": "",
+    "copyright": null,
+    "base_card_id": 126614010,
+    "normal_card_id": 126614010,
+    "format_type": 1,
+    "restricted_count": 3,
+    "restricted_count_co_main": 3,
+    "restricted_count_co_sub": 3,
+    "id_": 126614010,
+    "name_": "Infernal Orchestration",
+    "rotation_": true,
+    "baseEffect_": "Give +1/+1 and [b]Rush[/b] to an allied follower. \nIf [b]Wrath[/b] is not active for you, deal 1 damage to your leader. Otherwise, draw a card.",
+    "evoEffect_": "",
+    "type_": "Spell",
+    "effectTokens": [],
+    "effectJson": [
+        [
+            {
+                "type": "Give",
+                "effects": [
+                    [
+                        {
+                            "type": "StatChange",
+                            "operation": "+",
+                            "amount": "1"
+                        },
+                        {
+                            "type": "StatChange",
+                            "operation": "+",
+                            "amount": "1"
+                        }
+                    ]
+                ]
+            }
+        ],
+        [
+            {
+                "type": "If",
+                "effects": {
+                    "conditions": [
+                        {
+                            "type": "CheckActiveState",
+                            "state": "Wrath",
+                            "stateEqualTo": true
+                        }
+                    ],
+                    "then": [
+                        {
+                            "type": "Deal",
+                            "effects": {
+                                "amount": "1",
+                                "owner": "self",
+                                "targets": "single",
+                                "entity": "leader",
+                                "randomCount": ""
+                            }
+                        }
+                    ],
+                    "otherwise": {
+                        "type": "Otherwise",
+                        "effects": [
+                            {
+                                "type": "draw",
+                                "amount": "a"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [],
+    "_evolveEffectTokens": [],
+    "_effectTokens": [
+        [],
+        []
+    ]
+}

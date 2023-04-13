@@ -2,10 +2,10 @@ import functools
 import json
 import os
 import re
-import itertools
 from utils import consumeTokens, getValuesBetween, popArrayAfterSearch, popArrayTill, safeIndex
 import logging
 from constants import *
+from data import getCard
 
 logging.basicConfig(
     level=logging.INFO,
@@ -17,6 +17,7 @@ logging.basicConfig(
 )
 _levels = []
 log = logging.getLogger()
+
 
 
 def getLog(type):
@@ -298,6 +299,12 @@ def putToken(head, tokens):
     log.info("Entered Put Token %s", tokens)
     tokens.pop(0)
     units = parseCards(tokens, stopWord=intoStopWord)
+    for unit in units:
+        if(unit["card_type"] == "NamedCard"):
+            log.info("Getting card %s", unit["card_name"])
+            card = getCard(unit["card_name"])
+            log.info("Putting card %s into token pool", card)
+            putCardInTokenPool(card)
     log.debug("Left parse units ", tokens)
     destinationList = popArrayTill(tokens, 2)
     log.debug("Checking where to put units ", units)
@@ -539,7 +546,7 @@ def parseCondition(tokens):
 @useLog("changeHealthV2")
 def changeHealthV2(tokens, type=None):
     stopQuantifier = {
-        "leader", "follower", "allies", "enemies"
+        "leader", "follower", "allies", "enemies", "leaders"
     }
     allQuantifiers = {
         "allies", "enemies"
@@ -572,13 +579,15 @@ def changeHealthV2(tokens, type=None):
         token = tokens.pop(0)
         if(token.isnumeric() and tokens[0] == random):
             effect['randomCount'] = token
-        if(token == "all"):
+        if(token == "all" or token == "both"):
             effect['targets'] = "all"
         if(token in enemy):
             effect['owner'] = "enemy"
         if(token in allied):
             effect['owner'] = 'self'
         if(token in stopQuantifier):
+            if(token == "leaders"):
+                effect['entity'] = "leader"
             if(token == "leader"):
                 effect['entity'] = "leader"
             if(token in followerQuantifier):
@@ -813,8 +822,11 @@ def parseSubEffect(tokens):
                         log.info("Found %s", subEffect)
                         if (subEffect['type'] == otherwise and effects[-1]['type'] == iff):
                             effects[-1]['effects']['otherwise'] = subEffect
-                        elif (subEffect['type'] == "Parens"):
-                            effects[-1]['limit'] = subEffect
+                        elif (subEffect['type'] == "Parens" ):
+                            if(len(effects) > 0):
+                                effects[-1]['limit'] = subEffect
+                            else:
+                                effects.append(subEffect)
                         else:
                             effects.append(subEffect)
                         log.debug(
@@ -988,3 +1000,11 @@ def baseParser(card):
         card['evolveEffectJson'] = card['evolveEffectJson'] + effects
     log.info(json.dumps(card["effectJson"], indent=4))
     log.info(json.dumps(card["evolveEffectJson"], indent=4))
+
+
+
+tokenPool = {}
+def putCardInTokenPool(card):
+    baseParser(card)
+    if card["card_name"] not in tokenPool.keys():
+        tokenPool[card["card_name"]] = card

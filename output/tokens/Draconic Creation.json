@@ -1,0 +1,84 @@
+{
+    "card_id": 900444070,
+    "foil_card_id": 900444071,
+    "card_set_id": 90000,
+    "card_name": "Draconic Creation",
+    "card_name_ruby": "",
+    "is_foil": 0,
+    "char_type": 4,
+    "clan": 4,
+    "tribe_name": "Academic",
+    "skill": "discard,token_draw",
+    "skill_condition": "character=me&{me.hand_other_self.count}>=2,character=me",
+    "skill_target": "character=me&target=hand_other_self&card_type=all&select_count=2,none",
+    "skill_option": "none,token_draw=900441120:900441130",
+    "skill_preprocess": "none,none",
+    "skill_disc": "Discard 2 cards from your hand.<br>Put a Lilium's Hatchling and Lilium's Dragon into your hand.<br>(Can be played only when 2 targetable cards are in your hand.)",
+    "org_skill_disc": "Discard 2 cards from your hand.<br>Put a [b]Lilium's Hatchling[/b] and [b]Lilium's Dragon[/b] into your hand.<br>(Can be played only when 2 targetable cards are in your hand.)",
+    "evo_skill_disc": "",
+    "org_evo_skill_disc": "",
+    "cost": 2,
+    "atk": 0,
+    "life": 0,
+    "evo_atk": 0,
+    "evo_life": 0,
+    "rarity": 4,
+    "get_red_ether": 0,
+    "use_red_ether": 0,
+    "description": "My magic materializes my imagination. Anything I can dream of\u2014I can create.",
+    "evo_description": "",
+    "cv": "",
+    "copyright": null,
+    "base_card_id": 900444070,
+    "normal_card_id": 900444070,
+    "format_type": 0,
+    "restricted_count": 3,
+    "restricted_count_co_main": 3,
+    "restricted_count_co_sub": 3,
+    "id_": 900444070,
+    "name_": "Draconic Creation",
+    "rotation_": false,
+    "baseEffect_": "Discard 2 cards from your hand.\nPut a [b]Lilium's Hatchling[/b] and [b]Lilium's Dragon[/b] into your hand.\n(Can be played only when 2 targetable cards are in your hand.)",
+    "evoEffect_": "",
+    "type_": "Spell",
+    "effectTokens": [],
+    "effectJson": [
+        [
+            {
+                "type": "Discard",
+                "effects": {
+                    "cardsToDiscard": "2",
+                    "effects": []
+                }
+            }
+        ],
+        [
+            {
+                "type": "Put",
+                "effects": [
+                    {
+                        "quantifier": "a",
+                        "card_name": "Lilium's Hatchling",
+                        "card_type": "NamedCard",
+                        "effects": []
+                    }
+                ],
+                "destination": []
+            }
+        ],
+        [
+            {
+                "type": "Parens",
+                "condition": null
+            }
+        ]
+    ],
+    "evolveEffectTokens": [],
+    "evolveEffectJson": [],
+    "_evolveEffectTokens": [],
+    "_effectTokens": [
+        [],
+        [],
+        []
+    ]
+}

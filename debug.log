@@ -94,6 +94,12 @@
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.Put] - Entered Put Token ['Put', 'a', '[b]', 'Fairy', '[/b]', 'into', 'your', 'hand', '.']
 [INFO] [base.subeffect.Put.parseCards] - Entered with tokens: ['a', '[b]', 'Fairy', '[/b]', 'into', 'your', 'hand', '.']
+[INFO] [base.subeffect.Put] - Getting card Fairy
+[INFO] [base.subeffect.Put] - Putting card {'card_id': 900111010, 'foil_card_id': 900111011, 'card_set_id': 90000, 'card_name': 'Fairy', 'card_name_ruby': '', 'is_foil': 0, 'char_type': 1, 'clan': 1, 'tribe_name': '-', 'skill': 'none', 'skill_condition': 'none', 'skill_target': 'none', 'skill_option': 'none', 'skill_preprocess': 'none', 'skill_disc': '', 'org_skill_disc': '', 'evo_skill_disc': '', 'org_evo_skill_disc': '', 'cost': 1, 'atk': 1, 'life': 1, 'evo_atk': 3, 'evo_life': 3, 'rarity': 1, 'get_red_ether': 0, 'use_red_ether': 0, 'description': "There are fairies in forests, fountains, flower beds, and everywhere else. If you can't see them, it's because your heart is impure. Look, there's one right next to you!", 'evo_description': "Trickery, moodiness, mischief—while these are all aspects of fairies' characters, what's most important is the strength of their feelings. They are highly emotional and will sacrifice their lives to help their friends and families.", 'cv': '', 'copyright': None, 'base_card_id': 900111010, 'normal_card_id': 900111010, 'format_type': 0, 'restricted_count': 3, 'restricted_count_co_main': 3, 'restricted_count_co_sub': 3, 'id_': 900111010, 'name_': 'Fairy', 'rotation_': False, 'baseEffect_': '', 'evoEffect_': '', 'type_': 'Follower'} into token pool
+[INFO] [base.subeffect.Put.base] - Fairy
+[INFO] [base.subeffect.Put.base] - Follower
+[INFO] [base.subeffect.Put.base.evolveEffect] - []
+[INFO] [base.subeffect.Put.base.evolveEffect] - []
 [INFO] [base.subeffect] - Found {'type': 'Put', 'effects': [{'quantifier': 'a', 'card_name': 'Fairy', 'card_type': 'NamedCard'}], 'destination': 'hand'}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Fanfare', '[/b]', 'and', '[b]', 'Last', 'Words', '[/b]', ':', 'Put', 'a', '[b]', 'Fairy', '[/b]', 'into', 'your', 'hand', '.']
@@ -655,6 +661,122 @@
 [INFO] [base.subeffect.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.subeffect.Put] - Entered Put Token ['Put', 'a', '[b]', 'Draconic', 'Creation', '[/b]', 'into', 'your', 'hand', '.']
 [INFO] [base.subeffect.subeffect.Put.parseCards] - Entered with tokens: ['a', '[b]', 'Draconic', 'Creation', '[/b]', 'into', 'your', 'hand', '.']
+[INFO] [base.subeffect.subeffect.Put] - Getting card Draconic Creation
+[INFO] [base.subeffect.subeffect.Put] - Putting card {'card_id': 900444070, 'foil_card_id': 900444071, 'card_set_id': 90000, 'card_name': 'Draconic Creation', 'card_name_ruby': '', 'is_foil': 0, 'char_type': 4, 'clan': 4, 'tribe_name': 'Academic', 'skill': 'discard,token_draw', 'skill_condition': 'character=me&{me.hand_other_self.count}>=2,character=me', 'skill_target': 'character=me&target=hand_other_self&card_type=all&select_count=2,none', 'skill_option': 'none,token_draw=900441120:900441130', 'skill_preprocess': 'none,none', 'skill_disc': "Discard 2 cards from your hand.<br>Put a Lilium's Hatchling and Lilium's Dragon into your hand.<br>(Can be played only when 2 targetable cards are in your hand.)", 'org_skill_disc': "Discard 2 cards from your hand.<br>Put a [b]Lilium's Hatchling[/b] and [b]Lilium's Dragon[/b] into your hand.<br>(Can be played only when 2 targetable cards are in your hand.)", 'evo_skill_disc': '', 'org_evo_skill_disc': '', 'cost': 2, 'atk': 0, 'life': 0, 'evo_atk': 0, 'evo_life': 0, 'rarity': 4, 'get_red_ether': 0, 'use_red_ether': 0, 'description': 'My magic materializes my imagination. Anything I can dream of—I can create.', 'evo_description': '', 'cv': '', 'copyright': None, 'base_card_id': 900444070, 'normal_card_id': 900444070, 'format_type': 0, 'restricted_count': 3, 'restricted_count_co_main': 3, 'restricted_count_co_sub': 3, 'id_': 900444070, 'name_': 'Draconic Creation', 'rotation_': False, 'baseEffect_': "Discard 2 cards from your hand.\nPut a [b]Lilium's Hatchling[/b] and [b]Lilium's Dragon[/b] into your hand.\n(Can be played only when 2 targetable cards are in your hand.)", 'evoEffect_': '', 'type_': 'Spell'} into token pool
+[INFO] [base.subeffect.subeffect.Put.base] - Draconic Creation
+[INFO] [base.subeffect.subeffect.Put.base] - Spell
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Parsing subeffects with Tokens ['Discard', '2', 'cards', 'from', 'your', 'hand', '.', '\n']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Entered discard tokens ['Discard', '2', 'cards', 'from', 'your', 'hand', '.', '\n']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.subeffect] - Parsing subeffects with Tokens ['\n']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Found {'type': 'Discard', 'effects': {'cardsToDiscard': '2', 'effects': []}}
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.subeffect.Put.base] - Finished iteration []
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Parsing subeffects with Tokens ['Put', 'a', '[b]', "Lilium's", 'Hatchling', '[/b]', 'and', '[b]', "Lilium's", 'Dragon', '[/b]', 'into', 'your', 'hand', '.', '\n']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put] - Entered Put Token ['Put', 'a', '[b]', "Lilium's", 'Hatchling', '[/b]', 'and', '[b]', "Lilium's", 'Dragon', '[/b]', 'into', 'your', 'hand', '.', '\n']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.parseCards] - Entered with tokens: ['a', '[b]', "Lilium's", 'Hatchling', '[/b]', 'and', '[b]', "Lilium's", 'Dragon', '[/b]', 'into', 'your', 'hand', '.', '\n']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.parseCards] - Card has {'quantifier': 'a', 'card_name': "Lilium's Hatchling", 'card_type': 'NamedCard'} a trigger ['[b]', "Lilium's", 'Dragon', '[/b]', 'into', 'your', 'hand', '.', '\n']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.parseCards.subeffect] - Parsing subeffects with Tokens ['[b]', "Lilium's", 'Dragon', '[/b]', 'into', 'your', 'hand', '.', '\n']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.parseCards.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.parseCards.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.parseCards.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.parseCards.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.parseCards.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.parseCards.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.parseCards.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.parseCards.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.parseCards.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.parseCards.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put] - Getting card Lilium's Hatchling
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put] - Putting card {'card_id': 900441120, 'foil_card_id': 900441121, 'card_set_id': 90000, 'card_name': "Lilium's Hatchling", 'card_name_ruby': '', 'is_foil': 0, 'char_type': 1, 'clan': 4, 'tribe_name': 'Academic', 'skill': 'guard,heal', 'skill_condition': 'character=me,character=me', 'skill_target': 'character=me,character=me&target=inplay&card_type=class', 'skill_option': 'none,healing=2', 'skill_preprocess': 'none,none', 'skill_disc': 'Ward.<br>Last Words: Restore 2 defense to your leader.', 'org_skill_disc': '[b]Ward[/b].<br>[b]Last Words[/b]: Restore 2 defense to your leader.', 'evo_skill_disc': '(Same as the unevolved form.)', 'org_evo_skill_disc': '(Same as the unevolved form.)', 'cost': 0, 'atk': 1, 'life': 1, 'evo_atk': 3, 'evo_life': 3, 'rarity': 4, 'get_red_ether': 0, 'use_red_ether': 0, 'description': "I think the Princess could use a dragon to guard her chamber. Wouldn't you agree?<br>—Lilium, the Wyrmwitch", 'evo_description': 'She is my dragon. And now, your new playmate.<br>—Lilium, the Wyrmwitch', 'cv': '', 'copyright': None, 'base_card_id': 900441120, 'normal_card_id': 900441120, 'format_type': 0, 'restricted_count': 3, 'restricted_count_co_main': 3, 'restricted_count_co_sub': 3, 'id_': 900441120, 'name_': "Lilium's Hatchling", 'rotation_': False, 'baseEffect_': '[b]Ward[/b].\n[b]Last Words[/b]: Restore 2 defense to your leader.', 'evoEffect_': '(Same as the unevolved form.)', 'type_': 'Follower'} into token pool
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.base] - Lilium's Hatchling
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.base] - Follower
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.base] - Finished iteration ['Ward', '[/b]', '.', '\n']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.base.subeffect] - Parsing subeffects with Tokens [':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.base.subeffect] - Found {'type': 'Restore', 'effects': {'amount': '2', 'owner': 'self', 'targets': 'single', 'entity': 'leader', 'randomCount': ''}}
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.base.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.base] - Finished iteration ['Last', 'Words', '[/b]', ':', 'Restore', '2', 'defense', 'to', 'your', 'leader', '.']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.base.evolveEffect] - Finished iteration ['(', 'Same', 'as', 'the', 'unevolved', 'form', '.', ')']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.base.evolveEffect] - [
+    {
+        "type": "Ward"
+    },
+    {
+        "type": "Last Words",
+        "effects": [
+            {
+                "type": "Restore",
+                "effects": {
+                    "amount": "2",
+                    "owner": "self",
+                    "targets": "single",
+                    "entity": "leader",
+                    "randomCount": ""
+                }
+            }
+        ]
+    }
+]
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Put.base.evolveEffect] - []
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Found {'type': 'Put', 'effects': [{'quantifier': 'a', 'card_name': "Lilium's Hatchling", 'card_type': 'NamedCard', 'effects': []}], 'destination': []}
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.subeffect.Put.base] - Finished iteration []
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Parsing subeffects with Tokens ['(', 'Can', 'be', 'played', 'only', 'when', '2', 'targetable', 'cards', 'are', 'in', 'your', 'hand', '.', ')']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Found {'type': 'Parens', 'condition': None}
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.subeffect.Put.base] - Finished iteration []
+[INFO] [base.subeffect.subeffect.Put.base.evolveEffect] - [
+    [
+        {
+            "type": "Discard",
+            "effects": {
+                "cardsToDiscard": "2",
+                "effects": []
+            }
+        }
+    ],
+    [
+        {
+            "type": "Put",
+            "effects": [
+                {
+                    "quantifier": "a",
+                    "card_name": "Lilium's Hatchling",
+                    "card_type": "NamedCard",
+                    "effects": []
+                }
+            ],
+            "destination": []
+        }
+    ],
+    [
+        {
+            "type": "Parens",
+            "condition": null
+        }
+    ]
+]
+[INFO] [base.subeffect.subeffect.Put.base.evolveEffect] - []
 [INFO] [base.subeffect.subeffect] - Found {'type': 'Put', 'effects': [{'quantifier': 'a', 'card_name': 'Draconic Creation', 'card_type': 'NamedCard'}], 'destination': 'hand'}
 [INFO] [base.subeffect.subeffect] - Exiting with tokens: []
 [INFO] [base.subeffect] - Found {'type': 'Discard', 'effects': {'cardsToDiscard': 'a', 'effects': [{'type': 'Put', 'effects': [{'quantifier': 'a', 'card_name': 'Draconic Creation', 'card_type': 'NamedCard'}], 'destination': 'hand'}]}}
@@ -918,6 +1040,53 @@
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.Put] - Entered Put Token ['Put', 'a', '[b]', 'Gift', 'for', 'Bloodkin', '[/b]', 'into', 'your', 'hand', '.', 'Then', ',', 'if', '[b]', 'Vengeance', '[/b]', 'or', '[b]', 'Wrath', '[/b]', 'is', 'active', 'for', 'you', ',', 'put', 'a', '[b]', 'Summon', 'Bloodkin', '[/b]', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
 [INFO] [base.subeffect.Put.parseCards] - Entered with tokens: ['a', '[b]', 'Gift', 'for', 'Bloodkin', '[/b]', 'into', 'your', 'hand', '.', 'Then', ',', 'if', '[b]', 'Vengeance', '[/b]', 'or', '[b]', 'Wrath', '[/b]', 'is', 'active', 'for', 'you', ',', 'put', 'a', '[b]', 'Summon', 'Bloodkin', '[/b]', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
+[INFO] [base.subeffect.Put] - Getting card Gift for Bloodkin
+[INFO] [base.subeffect.Put] - Putting card {'card_id': 108634010, 'foil_card_id': 108634011, 'card_set_id': 10008, 'card_name': 'Gift for Bloodkin', 'card_name_ruby': '', 'is_foil': 0, 'char_type': 4, 'clan': 6, 'tribe_name': '-', 'skill': 'damage,summon_token,summon_token', 'skill_condition': 'character=me&card_type=spell,character=me&card_type=spell,character=me&card_type=spell', 'skill_target': 'character=both&target=inplay&card_type=class,none,none', 'skill_option': 'damage=1,summon_token=900611010,summon_token=900611010&summon_side=op', 'skill_preprocess': 'none,none,none', 'skill_disc': 'Deal 1 damage to both leaders.<br>Summon a Forest Bat for both leaders.', 'org_skill_disc': 'Deal 1 damage to both leaders.<br>Summon a [b]Forest Bat[/b] for both leaders.', 'evo_skill_disc': '', 'org_evo_skill_disc': '', 'cost': 0, 'atk': 0, 'life': 0, 'evo_atk': 0, 'evo_life': 0, 'rarity': 3, 'get_red_ether': 250, 'use_red_ether': 800, 'description': 'Hey, can I make you my bloodkin too? —Vania, Vampire Princess', 'evo_description': '', 'cv': '', 'copyright': None, 'base_card_id': 108634010, 'normal_card_id': 108634010, 'format_type': 0, 'restricted_count': 3, 'restricted_count_co_main': 3, 'restricted_count_co_sub': 3, 'id_': 108634010, 'name_': 'Gift for Bloodkin', 'rotation_': False, 'baseEffect_': 'Deal 1 damage to both leaders.\nSummon a [b]Forest Bat[/b] for both leaders.', 'evoEffect_': '', 'type_': 'Spell'} into token pool
+[INFO] [base.subeffect.Put.base] - Gift for Bloodkin
+[INFO] [base.subeffect.Put.base] - Spell
+[INFO] [base.subeffect.Put.base.subeffect] - Parsing subeffects with Tokens ['Deal', '1', 'damage', 'to', 'both', 'leaders', '.', '\n']
+[INFO] [base.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Put.base.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '1', 'owner': '', 'targets': 'all', 'entity': 'leader', 'randomCount': ''}}
+[INFO] [base.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Put.base.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.Put.base] - Finished iteration []
+[INFO] [base.subeffect.Put.base.subeffect] - Parsing subeffects with Tokens ['Summon', 'a', '[b]', 'Forest', 'Bat', '[/b]', 'for', 'both', 'leaders', '.']
+[INFO] [base.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Put.base.subeffect.Summon] - Entered with tokens ['Summon', 'a', '[b]', 'Forest', 'Bat', '[/b]', 'for', 'both', 'leaders', '.']
+[INFO] [base.subeffect.Put.base.subeffect.Summon.parseCards] - Entered with tokens: ['a', '[b]', 'Forest', 'Bat', '[/b]', 'for', 'both', 'leaders', '.']
+[INFO] [base.subeffect.Put.base.subeffect] - Found {'type': 'Summon', 'effects': [{'quantifier': 'a', 'card_name': 'Forest Bat', 'card_type': 'NamedCard'}]}
+[INFO] [base.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Put.base.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.Put.base] - Finished iteration []
+[INFO] [base.subeffect.Put.base.evolveEffect] - [
+    [
+        {
+            "type": "Deal",
+            "effects": {
+                "amount": "1",
+                "owner": "",
+                "targets": "all",
+                "entity": "leader",
+                "randomCount": ""
+            }
+        }
+    ],
+    [
+        {
+            "type": "Summon",
+            "effects": [
+                {
+                    "quantifier": "a",
+                    "card_name": "Forest Bat",
+                    "card_type": "NamedCard"
+                }
+            ]
+        }
+    ]
+]
+[INFO] [base.subeffect.Put.base.evolveEffect] - []
 [INFO] [base.subeffect] - Found {'type': 'Put', 'effects': [{'quantifier': 'a', 'card_name': 'Gift for Bloodkin', 'card_type': 'NamedCard'}], 'destination': 'hand'}
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.then] - Starting Then with ['Then', ',', 'if', '[b]', 'Vengeance', '[/b]', 'or', '[b]', 'Wrath', '[/b]', 'is', 'active', 'for', 'you', ',', 'put', 'a', '[b]', 'Summon', 'Bloodkin', '[/b]', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
@@ -936,6 +1105,32 @@
 [INFO] [base.subeffect.then.subeffect.If.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.then.subeffect.If.subeffect.Put] - Entered Put Token ['put', 'a', '[b]', 'Summon', 'Bloodkin', '[/b]', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points']
 [INFO] [base.subeffect.then.subeffect.If.subeffect.Put.parseCards] - Entered with tokens: ['a', '[b]', 'Summon', 'Bloodkin', '[/b]', 'into', 'your', 'hand', 'and', 'gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points']
+[INFO] [base.subeffect.then.subeffect.If.subeffect.Put] - Getting card Summon Bloodkin
+[INFO] [base.subeffect.then.subeffect.If.subeffect.Put] - Putting card {'card_id': 101614020, 'foil_card_id': 101614021, 'card_set_id': 10001, 'card_name': 'Summon Bloodkin', 'card_name_ruby': '', 'is_foil': 0, 'char_type': 4, 'clan': 6, 'tribe_name': '-', 'skill': 'summon_token', 'skill_condition': 'character=me&card_type=spell', 'skill_target': 'none', 'skill_option': 'summon_token=900611010:900611010', 'skill_preprocess': 'none', 'skill_disc': 'Summon 2 Forest Bats.', 'org_skill_disc': 'Summon 2 [b]Forest Bats[/b].', 'evo_skill_disc': '', 'org_evo_skill_disc': '', 'cost': 2, 'atk': 0, 'life': 0, 'evo_atk': 0, 'evo_life': 0, 'rarity': 1, 'get_red_ether': 10, 'use_red_ether': 50, 'description': 'She snaps her fingers, and the darkness begins to stir.', 'evo_description': '', 'cv': '', 'copyright': None, 'base_card_id': 101614020, 'normal_card_id': 101614020, 'format_type': 0, 'restricted_count': 3, 'restricted_count_co_main': 3, 'restricted_count_co_sub': 3, 'id_': 101614020, 'name_': 'Summon Bloodkin', 'rotation_': False, 'baseEffect_': 'Summon 2 [b]Forest Bats[/b].', 'evoEffect_': '', 'type_': 'Spell'} into token pool
+[INFO] [base.subeffect.then.subeffect.If.subeffect.Put.base] - Summon Bloodkin
+[INFO] [base.subeffect.then.subeffect.If.subeffect.Put.base] - Spell
+[INFO] [base.subeffect.then.subeffect.If.subeffect.Put.base.subeffect] - Parsing subeffects with Tokens ['Summon', '2', '[b]', 'Forest', 'Bats', '[/b]', '.']
+[INFO] [base.subeffect.then.subeffect.If.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.then.subeffect.If.subeffect.Put.base.subeffect.Summon] - Entered with tokens ['Summon', '2', '[b]', 'Forest', 'Bats', '[/b]', '.']
+[INFO] [base.subeffect.then.subeffect.If.subeffect.Put.base.subeffect.Summon.parseCards] - Entered with tokens: ['2', '[b]', 'Forest', 'Bats', '[/b]', '.']
+[INFO] [base.subeffect.then.subeffect.If.subeffect.Put.base.subeffect] - Found {'type': 'Summon', 'effects': [{'quantifier': '2', 'card_name': 'Forest Bats', 'card_type': 'NamedCard'}]}
+[INFO] [base.subeffect.then.subeffect.If.subeffect.Put.base.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.then.subeffect.If.subeffect.Put.base] - Finished iteration []
+[INFO] [base.subeffect.then.subeffect.If.subeffect.Put.base.evolveEffect] - [
+    [
+        {
+            "type": "Summon",
+            "effects": [
+                {
+                    "quantifier": "2",
+                    "card_name": "Forest Bats",
+                    "card_type": "NamedCard"
+                }
+            ]
+        }
+    ]
+]
+[INFO] [base.subeffect.then.subeffect.If.subeffect.Put.base.evolveEffect] - []
 [INFO] [base.subeffect.then.subeffect.If.subeffect] - Found {'type': 'Put', 'effects': [{'quantifier': 'a', 'card_name': 'Summon Bloodkin', 'card_type': 'NamedCard'}], 'destination': 'hand'}
 [INFO] [base.subeffect.then.subeffect.If.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.then.subeffect.If.subeffect.Gain] - Entered gain ['gain', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points']
@@ -1065,6 +1260,101 @@
 [INFO] [base.subeffect.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.subeffect.Put] - Entered Put Token ['put', 'an', '[b]', 'Infernal', 'Orchestration', '[/b]', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '0', '.', '\n']
 [INFO] [base.subeffect.subeffect.Put.parseCards] - Entered with tokens: ['an', '[b]', 'Infernal', 'Orchestration', '[/b]', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '0', '.', '\n']
+[INFO] [base.subeffect.subeffect.Put] - Getting card Infernal Orchestration
+[INFO] [base.subeffect.subeffect.Put] - Putting card {'card_id': 126614010, 'foil_card_id': 126614011, 'card_set_id': 10026, 'card_name': 'Infernal Orchestration', 'card_name_ruby': '', 'is_foil': 0, 'char_type': 4, 'clan': 6, 'tribe_name': '-', 'skill': 'powerup,rush,damage,draw', 'skill_condition': 'character=me,character=me,character=me&wrath=false,character=me&wrath=true', 'skill_target': 'character=me&target=inplay&card_type=unit&select_count=1,character=me&target=last_target,character=me&target=inplay&card_type=class,character=me&target=deck&card_type=all&random_count=1', 'skill_option': 'add_offense=1&add_life=1,none,damage=1,none', 'skill_preprocess': 'none,none,none,none', 'skill_disc': 'Give +1/+1 and Rush to an allied follower. <br>If Wrath is not active for you, deal 1 damage to your leader. Otherwise, draw a card.', 'org_skill_disc': 'Give +1/+1 and [b]Rush[/b] to an allied follower. <br>If [b]Wrath[/b] is not active for you, deal 1 damage to your leader. Otherwise, draw a card.', 'evo_skill_disc': '', 'org_evo_skill_disc': '', 'cost': 1, 'atk': 0, 'life': 0, 'evo_atk': 0, 'evo_life': 0, 'rarity': 1, 'get_red_ether': 10, 'use_red_ether': 50, 'description': 'Presto! The rhythm accelerates, leaving you choking on the first bar!<br>—Ryoga Jasei', 'evo_description': '', 'cv': '', 'copyright': None, 'base_card_id': 126614010, 'normal_card_id': 126614010, 'format_type': 1, 'restricted_count': 3, 'restricted_count_co_main': 3, 'restricted_count_co_sub': 3, 'id_': 126614010, 'name_': 'Infernal Orchestration', 'rotation_': True, 'baseEffect_': 'Give +1/+1 and [b]Rush[/b] to an allied follower. \nIf [b]Wrath[/b] is not active for you, deal 1 damage to your leader. Otherwise, draw a card.', 'evoEffect_': '', 'type_': 'Spell'} into token pool
+[INFO] [base.subeffect.subeffect.Put.base] - Infernal Orchestration
+[INFO] [base.subeffect.subeffect.Put.base] - Spell
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Parsing subeffects with Tokens ['Give', '+', '1', '/', '+', '1', 'and', '[b]', 'Rush', '[/b]', 'to', 'an', 'allied', 'follower', '.', '\n']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Give] - Entered give ['Give', '+', '1', '/', '+', '1', 'and', '[b]', 'Rush', '[/b]', 'to', 'an', 'allied', 'follower', '.', '\n']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Give.parseGain] - Starting with Token +
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Give.parseGain.statChange] - Entering stat change ['+', '1', '/', '+', '1', 'and', '[b]', 'Rush', '[/b]', 'to']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Give.findGiveTargets] - Finding targets for effect {'type': 'Give', 'effects': [[{'type': 'StatChange', 'operation': '+', 'amount': '1'}, {'type': 'StatChange', 'operation': '+', 'amount': '1'}]]} , with ['an', 'allied', 'follower', '.', '\n']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.Give.findGiveTargets] - an
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Found {'type': 'Give', 'effects': [[{'type': 'StatChange', 'operation': '+', 'amount': '1'}, {'type': 'StatChange', 'operation': '+', 'amount': '1'}]]}
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.subeffect.Put.base] - Finished iteration []
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Parsing subeffects with Tokens ['If', '[b]', 'Wrath', '[/b]', 'is', 'not', 'active', 'for', 'you', ',', 'deal', '1', 'damage', 'to', 'your', 'leader', '.', 'Otherwise', ',', 'draw', 'a', 'card', '.']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.If] - Starting if with ['If', '[b]', 'Wrath', '[/b]', 'is', 'not', 'active', 'for', 'you', ',', 'deal', '1', 'damage', 'to', 'your', 'leader', '.', 'Otherwise', ',', 'draw', 'a', 'card', '.']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.If.condition] - Entered conditions with tokens ['[b]', 'Wrath', '[/b]', 'is', 'not', 'active', 'for', 'you', ',', 'deal', '1', 'damage', 'to', 'your', 'leader', '.', 'Otherwise', ',', 'draw', 'a', 'card', '.']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.If.condition] - Condition Tokens ['[b]', 'Wrath', '[/b]', 'is', 'not', 'active', 'for', 'you', ',']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.If.condition] - Tokens after Popping ['deal', '1', 'damage', 'to', 'your', 'leader', '.', 'Otherwise', ',', 'draw', 'a', 'card', '.']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.If] - Parsing if subeffect ['deal', '1', 'damage', 'to', 'your', 'leader']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.If.subeffect] - Parsing subeffects with Tokens ['deal', '1', 'damage', 'to', 'your', 'leader']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.If.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.If.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '1', 'owner': 'self', 'targets': 'single', 'entity': 'leader', 'randomCount': ''}}
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.If.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Wrath', 'stateEqualTo': True}], 'then': [{'type': 'Deal', 'effects': {'amount': '1', 'owner': 'self', 'targets': 'single', 'entity': 'leader', 'randomCount': ''}}]}}
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.subeffect] - Parsing subeffects with Tokens ['draw', 'a', 'card', '.']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.subeffect.Draw] - Entering draw with ['draw', 'a', 'card', '.']
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.subeffect] - Found {'type': 'draw', 'amount': 'a'}
+[INFO] [base.subeffect.subeffect.Put.base.subeffect.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Found {'type': 'Otherwise', 'effects': [{'type': 'draw', 'amount': 'a'}]}
+[INFO] [base.subeffect.subeffect.Put.base.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.subeffect.Put.base] - Finished iteration []
+[INFO] [base.subeffect.subeffect.Put.base.evolveEffect] - [
+    [
+        {
+            "type": "Give",
+            "effects": [
+                [
+                    {
+                        "type": "StatChange",
+                        "operation": "+",
+                        "amount": "1"
+                    },
+                    {
+                        "type": "StatChange",
+                        "operation": "+",
+                        "amount": "1"
+                    }
+                ]
+            ]
+        }
+    ],
+    [
+        {
+            "type": "If",
+            "effects": {
+                "conditions": [
+                    {
+                        "type": "CheckActiveState",
+                        "state": "Wrath",
+                        "stateEqualTo": true
+                    }
+                ],
+                "then": [
+                    {
+                        "type": "Deal",
+                        "effects": {
+                            "amount": "1",
+                            "owner": "self",
+                            "targets": "single",
+                            "entity": "leader",
+                            "randomCount": ""
+                        }
+                    }
+                ],
+                "otherwise": {
+                    "type": "Otherwise",
+                    "effects": [
+                        {
+                            "type": "draw",
+                            "amount": "a"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+]
+[INFO] [base.subeffect.subeffect.Put.base.evolveEffect] - []
 [INFO] [base.subeffect.subeffect] - Found {'type': 'Put', 'effects': [{'quantifier': 'an', 'card_name': 'Infernal Orchestration', 'card_type': 'NamedCard'}], 'destination': 'hand'}
 [INFO] [base.subeffect.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.subeffect] - Found {'type': 'ChangeCard', 'target': 'context', 'attribute': 'cost', 'new': '0'}
@@ -1463,6 +1753,30 @@
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.alternativeCosts.subeffect.Put] - Entered Put Token ['Put', 'a', '[b]', 'Twilight', 'Blade', '[/b]', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '1', '.']
 [INFO] [base.subeffect.alternativeCosts.subeffect.Put.parseCards] - Entered with tokens: ['a', '[b]', 'Twilight', 'Blade', '[/b]', 'into', 'your', 'hand', 'and', 'change', 'its', 'cost', 'to', '1', '.']
+[INFO] [base.subeffect.alternativeCosts.subeffect.Put] - Getting card Twilight Blade
+[INFO] [base.subeffect.alternativeCosts.subeffect.Put] - Putting card {'card_id': 900244010, 'foil_card_id': 900244011, 'card_set_id': 90000, 'card_name': 'Twilight Blade', 'card_name_ruby': '', 'is_foil': 0, 'char_type': 4, 'clan': 2, 'tribe_name': '-', 'skill': 'damage', 'skill_condition': 'character=op&target=inplay&card_type=unit_and_class', 'skill_target': 'character=op&target=inplay&card_type=unit_and_class', 'skill_option': 'damage=5', 'skill_preprocess': 'none', 'skill_disc': 'Deal 5 damage to all enemies.', 'org_skill_disc': 'Deal 5 damage to all enemies.', 'evo_skill_disc': '', 'org_evo_skill_disc': '', 'cost': 5, 'atk': 0, 'life': 0, 'evo_atk': 0, 'evo_life': 0, 'rarity': 4, 'get_red_ether': 0, 'use_red_ether': 0, 'description': 'Darkness of despair, begone! Twilight Blade! —Lecia and Nano', 'evo_description': '', 'cv': '', 'copyright': None, 'base_card_id': 900244010, 'normal_card_id': 900244010, 'format_type': 0, 'restricted_count': 3, 'restricted_count_co_main': 3, 'restricted_count_co_sub': 3, 'id_': 900244010, 'name_': 'Twilight Blade', 'rotation_': False, 'baseEffect_': 'Deal 5 damage to all enemies.', 'evoEffect_': '', 'type_': 'Spell'} into token pool
+[INFO] [base.subeffect.alternativeCosts.subeffect.Put.base] - Twilight Blade
+[INFO] [base.subeffect.alternativeCosts.subeffect.Put.base] - Spell
+[INFO] [base.subeffect.alternativeCosts.subeffect.Put.base.subeffect] - Parsing subeffects with Tokens ['Deal', '5', 'damage', 'to', 'all', 'enemies', '.']
+[INFO] [base.subeffect.alternativeCosts.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.alternativeCosts.subeffect.Put.base.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '5', 'owner': 'enemy', 'targets': 'all', 'entity': 'leader_and_followers', 'randomCount': ''}}
+[INFO] [base.subeffect.alternativeCosts.subeffect.Put.base.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.alternativeCosts.subeffect.Put.base] - Finished iteration []
+[INFO] [base.subeffect.alternativeCosts.subeffect.Put.base.evolveEffect] - [
+    [
+        {
+            "type": "Deal",
+            "effects": {
+                "amount": "5",
+                "owner": "enemy",
+                "targets": "all",
+                "entity": "leader_and_followers",
+                "randomCount": ""
+            }
+        }
+    ]
+]
+[INFO] [base.subeffect.alternativeCosts.subeffect.Put.base.evolveEffect] - []
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Found {'type': 'Put', 'effects': [{'quantifier': 'a', 'card_name': 'Twilight Blade', 'card_type': 'NamedCard'}], 'destination': 'hand'}
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.alternativeCosts.subeffect] - Found {'type': 'ChangeCard', 'target': 'context', 'attribute': 'cost', 'new': '1'}
@@ -1540,6 +1854,75 @@
 [INFO] [base.subeffect] - Starting new loop of effect parsing
 [INFO] [base.subeffect.Put] - Entered Put Token ['Put', 'a', '[b]', 'Tidal', 'Tyranny', '[/b]', 'into', 'your', 'hand', '.']
 [INFO] [base.subeffect.Put.parseCards] - Entered with tokens: ['a', '[b]', 'Tidal', 'Tyranny', '[/b]', 'into', 'your', 'hand', '.']
+[INFO] [base.subeffect.Put] - Getting card Tidal Tyranny
+[INFO] [base.subeffect.Put] - Putting card {'card_id': 900444060, 'foil_card_id': 900444061, 'card_set_id': 90000, 'card_name': 'Tidal Tyranny', 'card_name_ruby': '', 'is_foil': 0, 'char_type': 4, 'clan': 4, 'tribe_name': 'Festive', 'skill': 'damage,consume_ep_modifier', 'skill_condition': 'character=op&target=inplay&card_type=unit,character=me&awake=true', 'skill_target': 'character=op&target=inplay&card_type=unit&random_count=1,character=me&target=inplay&card_type=unit&base_card_id=124441010', 'skill_option': 'damage=5,none', 'skill_preprocess': 'none,none', 'skill_disc': 'Deal 5 damage to a random enemy follower.<br>If Overflow is active for you, give all allied Si Long, Draconic God-Queens the ability to evolve for 0 evolution points.', 'org_skill_disc': 'Deal 5 damage to a random enemy follower.<br>If [b]Overflow[/b] is active for you, give all allied [b]Si Long, Draconic God-Queen[/b][b]s[/b] the ability to evolve for 0 evolution points.', 'evo_skill_disc': '', 'org_evo_skill_disc': '', 'cost': 1, 'atk': 0, 'life': 0, 'evo_atk': 0, 'evo_life': 0, 'rarity': 4, 'get_red_ether': 0, 'use_red_ether': 0, 'description': 'I am a dragon! A god-queen! No one—NO ONE!—tells me what I can or cannot do!', 'evo_description': '', 'cv': '', 'copyright': None, 'base_card_id': 900444060, 'normal_card_id': 900444060, 'format_type': 0, 'restricted_count': 3, 'restricted_count_co_main': 3, 'restricted_count_co_sub': 3, 'id_': 900444060, 'name_': 'Tidal Tyranny', 'rotation_': False, 'baseEffect_': 'Deal 5 damage to a random enemy follower.\nIf [b]Overflow[/b] is active for you, give all allied [b]Si Long, Draconic God-Queen[/b][b]s[/b] the ability to evolve for 0 evolution points.', 'evoEffect_': '', 'type_': 'Spell'} into token pool
+[INFO] [base.subeffect.Put.base] - Tidal Tyranny
+[INFO] [base.subeffect.Put.base] - Spell
+[INFO] [base.subeffect.Put.base.subeffect] - Parsing subeffects with Tokens ['Deal', '5', 'damage', 'to', 'a', 'random', 'enemy', 'follower', '.', '\n']
+[INFO] [base.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Put.base.subeffect] - Found {'type': 'Deal', 'effects': {'amount': '5', 'owner': 'enemy', 'targets': 'single', 'entity': 'follower', 'randomCount': ''}}
+[INFO] [base.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Put.base.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.Put.base] - Finished iteration []
+[INFO] [base.subeffect.Put.base.subeffect] - Parsing subeffects with Tokens ['If', '[b]', 'Overflow', '[/b]', 'is', 'active', 'for', 'you', ',', 'give', 'all', 'allied', '[b]', 'Si', 'Long', ',', 'Draconic', 'God', '-', 'Queen', '[/b]', '[b]', 's', '[/b]', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
+[INFO] [base.subeffect.Put.base.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Put.base.subeffect.If] - Starting if with ['If', '[b]', 'Overflow', '[/b]', 'is', 'active', 'for', 'you', ',', 'give', 'all', 'allied', '[b]', 'Si', 'Long', ',', 'Draconic', 'God', '-', 'Queen', '[/b]', '[b]', 's', '[/b]', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
+[INFO] [base.subeffect.Put.base.subeffect.If.condition] - Entered conditions with tokens ['[b]', 'Overflow', '[/b]', 'is', 'active', 'for', 'you', ',', 'give', 'all', 'allied', '[b]', 'Si', 'Long', ',', 'Draconic', 'God', '-', 'Queen', '[/b]', '[b]', 's', '[/b]', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
+[INFO] [base.subeffect.Put.base.subeffect.If.condition] - Condition Tokens ['[b]', 'Overflow', '[/b]', 'is', 'active', 'for', 'you', ',']
+[INFO] [base.subeffect.Put.base.subeffect.If.condition] - Tokens after Popping ['give', 'all', 'allied', '[b]', 'Si', 'Long', ',', 'Draconic', 'God', '-', 'Queen', '[/b]', '[b]', 's', '[/b]', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points', '.']
+[INFO] [base.subeffect.Put.base.subeffect.If] - Parsing if subeffect ['give', 'all', 'allied', '[b]', 'Si', 'Long', ',', 'Draconic', 'God', '-', 'Queen', '[/b]', '[b]', 's', '[/b]', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points']
+[INFO] [base.subeffect.Put.base.subeffect.If.subeffect] - Parsing subeffects with Tokens ['give', 'all', 'allied', '[b]', 'Si', 'Long', ',', 'Draconic', 'God', '-', 'Queen', '[/b]', '[b]', 's', '[/b]', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points']
+[INFO] [base.subeffect.Put.base.subeffect.If.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Put.base.subeffect.If.subeffect.Give] - Entered give ['give', 'all', 'allied', '[b]', 'Si', 'Long', ',', 'Draconic', 'God', '-', 'Queen', '[/b]', '[b]', 's', '[/b]', 'the', 'ability', 'to', 'evolve', 'for', '0', 'evolution', 'points']
+[INFO] [base.subeffect.Put.base.subeffect.If.subeffect.Give.parseGain] - Starting with Token all
+[WARNING] [base.subeffect.Put.base.subeffect.If.subeffect.Give.parseGain] - Found Unknown ['all', 'allied', '[b]', 'Si', 'Long', ',', 'Draconic', 'God', '-', 'Queen', '[/b]', '[b]', 's', '[/b]', 'the', 'ability', 'to']
+[INFO] [base.subeffect.Put.base.subeffect.If.subeffect.Give.findGiveTargets] - Finding targets for effect {'type': 'Give', 'effects': [[]]} , with ['evolve', 'for', '0', 'evolution', 'points']
+[INFO] [base.subeffect.Put.base.subeffect.If.subeffect.Give.findGiveTargets] - evolve
+[INFO] [base.subeffect.Put.base.subeffect.If.subeffect] - Found {'type': 'Give', 'effects': [[]]}
+[INFO] [base.subeffect.Put.base.subeffect.If.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Put.base.subeffect.If.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Put.base.subeffect.If.subeffect] - Starting new loop of effect parsing
+[INFO] [base.subeffect.Put.base.subeffect.If.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.Put.base.subeffect] - Found {'type': 'If', 'effects': {'conditions': [{'type': 'CheckActiveState', 'state': 'Overflow', 'stateEqualTo': True}], 'then': [{'type': 'Give', 'effects': [[]]}]}}
+[INFO] [base.subeffect.Put.base.subeffect] - Exiting with tokens: []
+[INFO] [base.subeffect.Put.base] - Finished iteration []
+[INFO] [base.subeffect.Put.base.evolveEffect] - [
+    [
+        {
+            "type": "Deal",
+            "effects": {
+                "amount": "5",
+                "owner": "enemy",
+                "targets": "single",
+                "entity": "follower",
+                "randomCount": ""
+            }
+        }
+    ],
+    [
+        {
+            "type": "If",
+            "effects": {
+                "conditions": [
+                    {
+                        "type": "CheckActiveState",
+                        "state": "Overflow",
+                        "stateEqualTo": true
+                    }
+                ],
+                "then": [
+                    {
+                        "type": "Give",
+                        "effects": [
+                            []
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+]
+[INFO] [base.subeffect.Put.base.evolveEffect] - []
 [INFO] [base.subeffect] - Found {'type': 'Put', 'effects': [{'quantifier': 'a', 'card_name': 'Tidal Tyranny', 'card_type': 'NamedCard'}], 'destination': 'hand'}
 [INFO] [base.subeffect] - Exiting with tokens: []
 [INFO] [base] - Finished iteration ['Fanfare', '[/b]', ':', 'Restore', '3', 'defense', 'to', 'your', 'leader', '.', 'Put', 'a', '[b]', 'Tidal', 'Tyranny', '[/b]', 'into', 'your', 'hand', '.']

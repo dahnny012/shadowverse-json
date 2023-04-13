@@ -1,7 +1,5 @@
 import json
 import os
-from parsers import *
-
 
 debug = True
 discardDragonDeck = {
@@ -41,7 +39,7 @@ typeMap = {
 }
 
 
-def getCardPoolFromShadowversePortal():
+def getCardPoolFromShadowversePortal(rotation=True, filterToDebug=debug):
     rotationCardPool = list()
     cardpool = []
     files = [
@@ -51,18 +49,16 @@ def getCardPoolFromShadowversePortal():
         with open(f'{os.getcwd()}/json/{file}.json', 'r') as f:
             cards = json.load(f)
             cardpool = cardpool + cards['cards']
-    filterToDebug(cardpool, rotationCardPool)
-    return rotationCardPool
-
-
-def filterToDebug(cardpool, rotationCardPool):
     for card in cardpool:
         SVP2SVPJSON(card)
-        if card['rotation_'] and (not debug or card["id_"] in testCardsId):
+        if (not rotation or card['rotation_']) and (not filterToDebug or card["id_"] in testCardsId):
             if (effectDebugSearch and effectSearch not in card["org_skill_disc"].lower()):
                 continue
             rotationCardPool.append(card)
     return rotationCardPool
+
+
+
 
 
 def SVP2SVPJSON(card):
@@ -94,14 +90,11 @@ def getCardPoolFromShadowverseJson():
                 rotationCardPool.append(card)
     return rotationCardPool
 
-_cards = getCardPoolFromShadowversePortal()
-
+_cards = getCardPoolFromShadowversePortal(rotation=False, filterToDebug=False)
 
 
 def getCard(name):
     for card in _cards:
+        print(card["card_name"])
         if(card["card_name"] == name):
             return card
-
-def putCardInTokenPool(card):
-    None
